@@ -1,0 +1,14 @@
+{
+	"enum": [
+		"master",
+		"music",
+		"record",
+		"weather",
+		"block",
+		"hostile",
+		"neutral",
+		"player",
+		"ambient",
+		"voice"
+	]
+}

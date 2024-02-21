@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"moduleResolution": "Bundler",
+		"sourceMap": true,
+		"rootDir": "src",
+		"strict": true
+	}
+}

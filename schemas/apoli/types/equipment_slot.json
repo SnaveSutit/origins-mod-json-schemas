@@ -1,0 +1,10 @@
+{
+	"enum": [
+		"mainhand",
+		"offhand",
+		"head",
+		"chest",
+		"legs",
+		"feet"
+	]
+}

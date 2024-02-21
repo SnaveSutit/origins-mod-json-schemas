@@ -1,0 +1,6 @@
+{
+	"enum": [
+		"inventory",
+		"power"
+	]
+}
