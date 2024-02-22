@@ -1,17 +1,25 @@
 import * as fs from 'fs'
-import { MDFile, apugliDocsUrl, originsDocsUrl } from './mdReader'
+import { MDFile, apugliDocsUrl } from './mdReader'
 import { JSONSchema, SimpleSchemaType } from './schema'
+import terminalkit from 'terminal-kit'
+const TERM = terminalkit.terminal
 // const docsPath = 'D:/github-repos/origins-docs/docs/types'
 // const docsUrl = `${originsDocsUrl}types`
-const docsPath = 'D:/github-repos/apugli-docs/docs/types'
-const docsUrl = `${apugliDocsUrl}types`
-const outDir = './debug_out'
+const DOCS_PATH = 'D:/github-repos/apugli-docs/docs/types'
+const DOCS_URL = `${apugliDocsUrl}types`
+const OUT_DIR = './debug_out'
 
 function attemptToMapType(
 	name: string,
-	property: NonNullable<JSONSchema['properties']>[string] & { type?: string },
+	property: NonNullable<JSONSchema['properties']>[string],
 	mdFile: MDFile
 ) {
+	// This is just for getting rid of red squiggles
+	if (Array.isArray(property.type)) {
+		TERM.brightRed('Found array type while attempting to map type. This should not happen.')
+		return
+	}
+
 	const field = mdFile.getField(name)
 	let type = property.type?.toLowerCase()
 	if (!type) return
@@ -188,25 +196,24 @@ function main() {
 		})
 		return files
 	}
-	const files = recurse(docsPath)
+	const files = recurse(DOCS_PATH)
 	for (const file of files) {
 		const schema: JSONSchema = {}
 		const mdFile = MDFile.fromFile(file)
 		schema.$schema = 'https://json-schema.org/draft-07/schema#'
-		schema.$docsUrl = `${docsUrl}${file.replace(docsPath, '').replace('.md', '')}/`
+		schema.$docsUrl = `${DOCS_URL}${file.replace(DOCS_PATH, '').replace('.md', '')}/`
 		if (mdFile.fields.length > 0) {
 			schema.type = 'object'
 			schema.$IGNORED_PROPERTIES = []
 			schema.required = []
 			schema.properties = {}
 			for (const field of mdFile.fields) {
-				if (field.depreciated) {
-					schema.$IGNORED_PROPERTIES.push(field.name)
-					continue
-				}
-
 				const property: NonNullable<JSONSchema['properties']>[string] = {}
 				property.type = field.type.toLowerCase() as SimpleSchemaType
+
+				if (field.depreciated) {
+					property.depreciated = true
+				}
 
 				if (!field.optional) {
 					if (field.defaultValue === undefined) {
@@ -216,7 +223,7 @@ function main() {
 					}
 				}
 
-				attemptToMapType(field.name, property as any, mdFile)
+				attemptToMapType(field.name, property, mdFile)
 
 				schema.properties[field.name] = property
 			}
@@ -227,7 +234,7 @@ function main() {
 			schema.enum = mdFile.values.map(v => v.value)
 		}
 
-		const outPath = file.replace(docsPath, outDir).replace('.md', '.json')
+		const outPath = file.replace(DOCS_PATH, OUT_DIR).replace('.md', '.json')
 		fs.mkdirSync(outPath.replace(/\/[^/]+$/, ''), { recursive: true })
 		fs.writeFileSync(outPath, JSON.stringify(schema, null, '\t'))
 	}

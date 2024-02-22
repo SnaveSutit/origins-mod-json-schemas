@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify FoV\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_fov).\n\nChanges the FoV of a player on their client.\n\nType ID: `apugli:modify_fov`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify FoV\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_fov).\n\nChanges the FoV of a player on their client.\n\nType ID: `apugli:modify_fov`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify FoV\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_fov).\n\nChanges the FoV of a player on their client.\n\nType ID: `apugli:modify_fov`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify FoV\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_fov).\n\nChanges the FoV of a player on their client.\n\nType ID: `apugli:modify_fov`\n\n---\n\n"
 		},
 		"modifier": {
 			"$ref": "../../apoli/types/attribute_modifier.json",

@@ -5,7 +5,7 @@
 	"required": ["name"],
 	"properties": {
 		"name": {
-			"type": "string"
+			"$ref": "$ref(apoli:types/damage_source_name)"
 		},
 		"bypasses_armor": {
 			"type": "boolean",

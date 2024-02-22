@@ -3,13 +3,15 @@
 	"$docsUrl": "https://origins.readthedocs.io/en/latest/types/entity_action_types/damage/",
 	"type": "object",
 	"required": ["amount", "damage_type"],
-	"$IGNORED_PROPERTIES": ["source"],
 	"properties": {
 		"amount": {
 			"type": "number"
 		},
+		"source": {
+			"$ref": "$ref(apoli:types/damage_source)"
+		},
 		"damage_type": {
-			"$ref": "$ref(apoli:types/identifier)"
+			"$ref": "$ref(apoli:types/autocomplete_helpers/damage_type_identifier)"
 		},
 		"modifier": {
 			"$ref": "$ref(apoli:types/attribute_modifier_arrayable)"

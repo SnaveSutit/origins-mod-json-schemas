@@ -5,8 +5,8 @@
 	],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Sprinting\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/freeze).\n\nFreezes the entity as if they were in powder snow.\n\nType ID: `apugli:freeze`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Sprinting\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/freeze).\n\nFreezes the entity as if they were in powder snow.\n\nType ID: `apugli:freeze`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Sprinting\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/freeze).\n\nFreezes the entity as if they were in powder snow.\n\nType ID: `apugli:freeze`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Sprinting\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/freeze).\n\nFreezes the entity as if they were in powder snow.\n\nType ID: `apugli:freeze`\n\n---\n\n"
 		},
 		"modifier": {
 			"$ref": "../../apoli/types/attribute_modifier.json",

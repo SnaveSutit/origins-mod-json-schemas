@@ -3,6 +3,7 @@
 		{
 			"type": "string",
 			"enum": [
+				"apoli:damage_over_time",
 				"minecraft:arrow",
 				"minecraft:bad_respawn_point",
 				"minecraft:cactus",

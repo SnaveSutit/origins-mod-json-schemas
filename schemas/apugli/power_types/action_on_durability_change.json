@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Durability Change\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_durability_change).\n\nExecutes entity actions whenever an item either gains durability, loses durability or breaks.\n\nType ID: `apugli:action_on_durability_change`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Durability Change\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_durability_change).\n\nExecutes entity actions whenever an item either gains durability, loses durability or breaks.\n\nType ID: `apugli:action_on_durability_change`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Durability Change\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_durability_change).\n\nExecutes entity actions whenever an item either gains durability, loses durability or breaks.\n\nType ID: `apugli:action_on_durability_change`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Durability Change\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_durability_change).\n\nExecutes entity actions whenever an item either gains durability, loses durability or breaks.\n\nType ID: `apugli:action_on_durability_change`\n\n---\n\n"
 		},
 		"slot": {
 			"$ref": "../../apoli/types/slot.json",

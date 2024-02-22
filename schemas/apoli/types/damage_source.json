@@ -5,7 +5,7 @@
 	],
 	"properties": {
 		"name": {
-			"type": "string",
+			"$ref": "damage_source_name.json",
 			"description": "The name of the damage source. Controls death message as well as other interactions. Consider the [List of Damage Source Names](https://origins.readthedocs.io/en/latest/types/data_types/damage_source) when picking a name.",
 			"markdownDescription": "The name of the damage source. Controls death message as well as other interactions. Consider the [List of Damage Source Names](https://origins.readthedocs.io/en/latest/types/data_types/damage_source) when picking a name."
 		},

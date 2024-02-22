@@ -19,7 +19,7 @@ export const skillfulDocsUrl = 'https://skillful-docs.readthedocs.io/en/latest/'
 
 const MD_LINK_REGEX = /\[(?<name>[^\n[]+?)\]\((?<target>[^\n ]+?)\)/g
 
-const DESCRIPTION_REGEX = /^#\s+(?<title>.+)(?<description>[^]+?)###\s+.+?$/gm
+const DESCRIPTION_REGEX = /^#\s*(?<title>.+)\n(?<description>[^]+?)\s*###\s*.*$/gm
 const FIELD_TITLE_REGEX = /Field\s*\|\s*Type\s*\|\s*Default\s*\|\s*Description\n-+\|-+\|-+\|-+\n/gm
 const FIELD_CAPTURE_REGEX =
 	/^(?<field>[^|\n\s]+?)\s*\|\s*(?<type>[^|\n]+?)\s*\|\s*(?<defaultValue>[^|\n]+?)?\s*\|\s*(?<description>[^|\n]+?)$/gm
@@ -120,12 +120,9 @@ export class Field {
 
 	private parseDefaultValue(defaultValue: string) {
 		if (!defaultValue) return
+		this.depreciated = !!defaultValue?.toLowerCase().includes('deprecated')
 		if (defaultValue.toLowerCase().includes(`optional`)) {
 			this.optional = true
-			return
-		}
-		if (defaultValue?.toLowerCase().includes('deprecated')) {
-			this.depreciated = true
 			return
 		}
 		this.defaultValue = defaultValue
@@ -133,12 +130,7 @@ export class Field {
 			.trim()
 			.replaceAll(/(?:^"|"$)/g, '')
 			.trim()
-		// console.log(this.defaultValue)
 	}
-
-	// get ref() {
-	// 	return './' + this.typePath.replace('.md', '.json')
-	// }
 }
 
 export class MDFile {

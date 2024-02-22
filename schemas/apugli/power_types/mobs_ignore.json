@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n---\n\n"
 		},
 		"mob_condition": {
 			"$ref": "../../apoli/entity_condition.json",

@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Step Height\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/step_height).\n\nAllows a player to walk into a block to step up it at certain heights.\n\nType ID: `apugli:step_height`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Step Height\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/step_height).\n\nAllows a player to walk into a block to step up it at certain heights.\n\nType ID: `apugli:step_height`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Step Height\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/step_height).\n\nAllows a player to walk into a block to step up it at certain heights.\n\nType ID: `apugli:step_height`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Step Height\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/step_height).\n\nAllows a player to walk into a block to step up it at certain heights.\n\nType ID: `apugli:step_height`\n\n---\n\n"
 		},
 		"lower_height": {
 			"type": "number",

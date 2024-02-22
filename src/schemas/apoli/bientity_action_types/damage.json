@@ -8,10 +8,10 @@
 			"type": "number"
 		},
 		"source": {
-			"type": "null"
+			"$ref": "$ref(apoli:types/damage_source)"
 		},
 		"damage_type": {
-			"$ref": "$ref(apoli:types/damage_source)"
+			"$ref": "$ref(apoli:types/autocomplete_helpers/damage_type_identifier)"
 		},
 		"modifier": {
 			"$ref": "$ref(apoli:types/attribute_modifier_arrayable)"

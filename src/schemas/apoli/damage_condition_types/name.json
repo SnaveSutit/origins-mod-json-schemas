@@ -5,7 +5,7 @@
 	"required": ["name"],
 	"properties": {
 		"name": {
-			"type": "string"
+			"$ref": "$ref(apoli:types/autocomplete_helpers/damage_type_identifier)"
 		}
 	}
 }

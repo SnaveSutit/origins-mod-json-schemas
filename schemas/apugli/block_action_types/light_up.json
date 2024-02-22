@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Light Up\n\n---\n\n\n\n[Block Action Type](https://apugli.readthedocs.io/en/latest/types/block_action_types/light_up).\n\nA block action that lights up furnaces, campfires and brewing stands.\n\nType ID: `apugli:light_up`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Light Up\n\n---\n\n\n\n[Block Action Type](https://apugli.readthedocs.io/en/latest/types/block_action_types/light_up).\n\nA block action that lights up furnaces, campfires and brewing stands.\n\nType ID: `apugli:light_up`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Light Up\n\n---\n\n\n[Block Action Type](https://apugli.readthedocs.io/en/latest/types/block_action_types/light_up).\n\nA block action that lights up furnaces, campfires and brewing stands.\n\nType ID: `apugli:light_up`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Light Up\n\n---\n\n\n[Block Action Type](https://apugli.readthedocs.io/en/latest/types/block_action_types/light_up).\n\nA block action that lights up furnaces, campfires and brewing stands.\n\nType ID: `apugli:light_up`\n\n---\n\n"
 		},
 		"burn_time": {
 			"type": "integer",

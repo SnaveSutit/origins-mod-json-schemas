@@ -54,15 +54,13 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 			schema.$docsUrl.match(/.+(?:action|condition|power)_types/)
 		) {
 			schema.properties ??= {}
-			schema.properties.type ??= {}
-			schema.properties.type.description ??= ''
-			schema.properties.type.description += [
-				'## ' + mdFile.title,
-				mdFile.description,
-				mdFile.examples,
-			].join('\n\n---\n\n')
-			schema.properties.type.description ??= ''
-			schema.properties.type.markdownDescription += [
+			const typeObj = (schema.properties.type ??= {})
+			typeObj.description ??= ''
+			typeObj.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
+				'\n\n---\n\n'
+			)
+			typeObj.markdownDescription ??= ''
+			typeObj.markdownDescription += [
 				'## ' + mdFile.title,
 				mdFile.description,
 				mdFile.examples,
@@ -81,12 +79,17 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 				for (const field of mdFile.fields) {
 					if (!propObj[field.name] || ignoredProperties.includes(field.name)) continue
 					foundFields.push(field.name)
-					propObj[field.name].description
-						? (propObj[field.name].description += field.description)
-						: (propObj[field.name].description = field.description)
-					propObj[field.name].markdownDescription
-						? (propObj[field.name].markdownDescription += field.description)
-						: (propObj[field.name].markdownDescription = field.description)
+
+					const fieldObj = propObj[field.name]
+					fieldObj.description ??= ''
+					fieldObj.description += field.description
+					fieldObj.markdownDescription ??= ''
+					fieldObj.markdownDescription += field.description
+					if (field.depreciated) {
+						const depreciatedPrefix = '#### 🚨 Depreciated 🚨\n\n'
+						fieldObj.description = depreciatedPrefix + fieldObj.description
+						fieldObj.markdownDescription = depreciatedPrefix + fieldObj.markdownDescription
+					}
 				}
 			}
 			for (const field of mdFile.fields) {
@@ -338,6 +341,8 @@ async function build(schemasToBuild: string[]) {
 	buildProgress?.stop()
 
 	TERM.brightGreen('Writing files...\n')
+	await fs.rm(OUT_DIR, { recursive: true }).catch(() => {})
+	await fs.mkdir(OUT_DIR, { recursive: true })
 	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	let writeProgress: terminalkit.Terminal.ProgressBarController | undefined
 	if (!process.argv.includes('--workflow') && !(fileIOQueue.length < 10)) {
@@ -360,9 +365,6 @@ async function build(schemasToBuild: string[]) {
 }
 
 async function main() {
-	await fs.rm(OUT_DIR, { recursive: true }).catch(() => {})
-	await fs.mkdir(OUT_DIR, { recursive: true })
-
 	await checkIfRegistryNeedsUpdate()
 
 	if (process.argv.includes('--once')) {

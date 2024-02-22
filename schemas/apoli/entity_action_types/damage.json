@@ -10,8 +10,13 @@
 			"description": "The amount of damage to deal.",
 			"markdownDescription": "The amount of damage to deal."
 		},
+		"source": {
+			"$ref": "../types/damage_source.json",
+			"description": "#### 🚨 Depreciated 🚨\n\nUse `damage_type` instead. [More information here](https://origins.readthedocs.io/en/latest/types/entity_action_types/damage).",
+			"markdownDescription": "#### 🚨 Depreciated 🚨\n\nUse `damage_type` instead. [More information here](https://origins.readthedocs.io/en/latest/types/entity_action_types/damage)."
+		},
 		"damage_type": {
-			"$ref": "../types/identifier.json",
+			"$ref": "../types/autocomplete_helpers/damage_type_identifier.json",
 			"description": "The damage type to be used. Controls e.g. the death message, invulnerabilities (e.g. towards fire), or whether armor is taken into account.",
 			"markdownDescription": "The damage type to be used. Controls e.g. the death message, invulnerabilities (e.g. towards fire), or whether armor is taken into account."
 		},
@@ -29,8 +34,8 @@
 			"markdownDescription": "If specified, these modifiers will be applied to the damage taken by the '*_target_*' entity."
 		},
 		"type": {
-			"description": "## Damage\n\n---\n\n\n\n[Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types/damage)\n\nApplies damage to an entity.\n\nType ID: `origins:damage`\n\n\n\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n    \"type\": \"origins:damage\",\n    \"amount\": 4,\n    \"damage_type\": \"minecraft:on_fire\"\n}\n```\n\nThis example will deal 2 hearts of `on_fire` damage, which by its tags in vanilla is considered fire damage and bypasses armor.\n",
-			"markdownDescription": "undefined## Damage\n\n---\n\n\n\n[Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types/damage)\n\nApplies damage to an entity.\n\nType ID: `origins:damage`\n\n\n\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n    \"type\": \"origins:damage\",\n    \"amount\": 4,\n    \"damage_type\": \"minecraft:on_fire\"\n}\n```\n\nThis example will deal 2 hearts of `on_fire` damage, which by its tags in vanilla is considered fire damage and bypasses armor.\n"
+			"description": "## Damage\n\n---\n\n\n[Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types/damage)\n\nApplies damage to an entity.\n\nType ID: `origins:damage`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n    \"type\": \"origins:damage\",\n    \"amount\": 4,\n    \"damage_type\": \"minecraft:on_fire\"\n}\n```\n\nThis example will deal 2 hearts of `on_fire` damage, which by its tags in vanilla is considered fire damage and bypasses armor.\n",
+			"markdownDescription": "## Damage\n\n---\n\n\n[Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types/damage)\n\nApplies damage to an entity.\n\nType ID: `origins:damage`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n    \"type\": \"origins:damage\",\n    \"amount\": 4,\n    \"damage_type\": \"minecraft:on_fire\"\n}\n```\n\nThis example will deal 2 hearts of `on_fire` damage, which by its tags in vanilla is considered fire damage and bypasses armor.\n"
 		}
 	}
 }

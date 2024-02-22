@@ -5,8 +5,8 @@
 	],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n---\n\n"
 		},
 		"cooldown": {
 			"type": "integer",

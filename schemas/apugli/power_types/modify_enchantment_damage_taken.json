@@ -6,8 +6,8 @@
 	],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify Enchantment Damage Taken\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_enchantment_damage_taken).\n\nModifies how much melee damage the entity that has the power takes based on how many levels of enchantments the attacker has.\n\nType ID: `apugli:modify_enchantment_damage_taken`\n\n\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify Enchantment Damage Taken\n\n---\n\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_enchantment_damage_taken).\n\nModifies how much melee damage the entity that has the power takes based on how many levels of enchantments the attacker has.\n\nType ID: `apugli:modify_enchantment_damage_taken`\n\n\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify Enchantment Damage Taken\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_enchantment_damage_taken).\n\nModifies how much melee damage the entity that has the power takes based on how many levels of enchantments the attacker has.\n\nType ID: `apugli:modify_enchantment_damage_taken`\n\n---\n\n",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify Enchantment Damage Taken\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_enchantment_damage_taken).\n\nModifies how much melee damage the entity that has the power takes based on how many levels of enchantments the attacker has.\n\nType ID: `apugli:modify_enchantment_damage_taken`\n\n---\n\n"
 		},
 		"enchantment": {
 			"$ref": "../../apoli/types/identifier.json",
