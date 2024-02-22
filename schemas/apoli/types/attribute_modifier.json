@@ -21,9 +21,7 @@
 			"markdownDescription": "If specified, the value of this power will be used instead of the value specified in the `value` field."
 		},
 		"name": {
-			"type": "string",
-			"description": "A descriptive name for the modifier, describing where it comes from.",
-			"markdownDescription": "A descriptive name for the modifier, describing where it comes from."
+			"type": "string"
 		},
 		"modifier": {
 			"$ref": "attribute_modifier_arrayable.json",
