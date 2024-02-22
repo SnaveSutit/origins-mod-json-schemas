@@ -7,6 +7,10 @@
 		"enchantment": {
 			"$ref": "$ref(apoli:types/autocomplete_helpers/enchantment_identifier)"
 		},
+		"use_modifications": {
+			"type": "boolean",
+			"default": false
+		},
 		"comparison": {
 			"$ref": "$ref(apoli:types/comparison)"
 		},

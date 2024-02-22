@@ -10,6 +10,12 @@
 			"description": "ID of the enchantment of interest, e.g. `minecraft:protection`. If not set, amount of enchantments will be checked instead.",
 			"markdownDescription": "ID of the enchantment of interest, e.g. `minecraft:protection`. If not set, amount of enchantments will be checked instead."
 		},
+		"use_modifications": {
+			"type": "boolean",
+			"default": false,
+			"description": "Determines whether to account for enchantments that were added/modified by unnatural means (e.g: via the [Modify Enchantment Level (Power Type)](https://origins.readthedocs.io/en/latest/types/item_condition_types/enchantment).)",
+			"markdownDescription": "Determines whether to account for enchantments that were added/modified by unnatural means (e.g: via the [Modify Enchantment Level (Power Type)](https://origins.readthedocs.io/en/latest/types/item_condition_types/enchantment).)"
+		},
 		"comparison": {
 			"$ref": "../types/comparison.json",
 			"description": "How to compare the enchantment level, or the amount of enchantments, to the specified value.",
