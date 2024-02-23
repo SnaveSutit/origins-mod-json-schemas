@@ -7,9 +7,11 @@ export const originsRawGithubUrl =
 	'https://raw.githubusercontent.com/apace100/origins-docs/latest/docs/'
 export const apugliRawGithubUrl =
 	'https://raw.githubusercontent.com/MerchantPug/apugli-docs/1.20/docs/'
-export const epoliRawGithubUrl = ''
-export const eggolibRawGithubUrl = ''
-export const skillfulRawGithubUrl = ''
+export const epoliRawGithubUrl =
+	'https://raw.githubusercontent.com/Exzotic5485/Epoli-Docs/main/docs/'
+export const eggolibRawGithubUrl = 'RAW DOCS LINK MISSING'
+export const skillfulRawGithubUrl =
+	'https://raw.githubusercontent.com/ThatRobin/skillful_docs/main/docs/'
 
 export const originsDocsUrl = 'https://origins.readthedocs.io/en/latest/'
 export const apugliDocsUrl = 'https://apugli.readthedocs.io/en/latest/'
@@ -91,18 +93,20 @@ export class Field {
 		public description: string,
 		mdFile: MDFile
 	) {
+		this.mdFile = mdFile
 		this.name = name.replaceAll('`', '')
 		this.description = description.trim()
 		this.parseType(type)
 		this.parseDefaultValue(defaultValue)
 		this.description = processDescription(description, mdFile)
-		this.mdFile = mdFile
 	}
 
 	private parseType(type: string) {
 		const url = parseMDLink(type)
 		if (!url) {
-			TERM.brightRed('Failed to parse type ')(type).brightRed(' for field ')(this.name)('\n')
+			TERM.brightRed('Failed to parse type ')(`'${type}'`)
+				.brightRed(' for field ')(`'${this.name}'`)
+				.brightRed(' of ')(`'${this.mdFile.id}'`)('\n')
 			this.type = type.trim().replaceAll(/(?:^["[]|["\]]$)/g, '')
 			return
 		}
@@ -195,18 +199,23 @@ export class MDFile {
 			.replace(eggolibDocsUrl, '')
 			.replace(skillfulDocsUrl, '')
 
+		TERM('---\n')
+		TERM('Path: ').brightBlue(path)('\n')
+		TERM('Docs URL: ').brightBlue(docsUrl)('\n')
+		TERM('Raw URL: ').brightBlue(rawUrl)('\n')
+
 		if (path.endsWith('/')) path = path.slice(0, -1) + '.md'
 		return new MDFile(path, docsUrl, rawUrl)
 	}
 
 	public static fromFile(path: string) {
-		TERM.gray(`Reading Markdown File `).brightBlue(path).gray('...\n')
+		// TERM.gray(`Reading Markdown File `).brightBlue(path).gray('...\n')
 
 		const file = new MDFile(path.replace(/\\/g, '/'))
 
 		file.content = fs.readFileSync(path, 'utf-8')
 		if (!file.content || file.content.includes('404: Not Found'))
-			throw new Error(`Failed to fetch content of '${file.path}': ${file.content}`)
+			throw new Error(`Failed to read content of '${file.path}':\n  ${file.content}`)
 		file.content = file.content.replace(/\r/g, '')
 
 		try {
@@ -216,7 +225,7 @@ export class MDFile {
 			file.captureValues()
 			file.captureExamples()
 		} catch (e: any) {
-			throw new Error(`Failed to parse content of '${file.path}': ${e.message}`)
+			throw new Error(`Failed to parse content of '${file.path}':\n  ${e.message}`)
 		}
 
 		return file
@@ -238,7 +247,7 @@ export class MDFile {
 			this.captureValues()
 			this.captureExamples()
 		} catch (e: any) {
-			throw new Error(`Failed to parse content of '${this.path}': ${e.message}`)
+			throw new Error(`Failed to parse content of '${this.path}':\n  ${e.message}`)
 		}
 
 		return this
@@ -253,7 +262,8 @@ export class MDFile {
 	private captureDescription() {
 		DESCRIPTION_REGEX.lastIndex = 0
 		const match = DESCRIPTION_REGEX.exec(this.content)
-		if (!match) throw new Error(`Failed to capture description for '${this.path}'`)
+		if (!match)
+			throw new Error(`Failed to capture description for '${this.path}': \n  ${this.content}`)
 		const { title, description } = match.groups!
 		this.title = title
 		this.description = processDescription(description, this)
@@ -287,7 +297,8 @@ export class MDFile {
 				)
 			}
 		}
-		if (!this.fields.length) throw new Error(`Failed to capture fields for '${this.path}'`)
+		if (!this.fields.length)
+			throw new Error(`Failed to capture fields for '${this.path}': \n  ${this.content}`)
 	}
 
 	private captureValues() {
@@ -304,7 +315,8 @@ export class MDFile {
 			const { value, description } = valueMatch.groups!
 			this.values.push({ value, description: processDescription(description, this) })
 		}
-		if (!this.values.length) throw new Error(`Failed to capture values for '${this.path}'`)
+		if (!this.values.length)
+			throw new Error(`Failed to capture values for '${this.path}': \n  ${this.content}`)
 	}
 
 	get docsUrl() {

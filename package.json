@@ -15,6 +15,7 @@
 	"scripts": {
 		"build": "tsx ./src/index.ts --once",
 		"dev": "tsx ./src/index.ts",
+		"generate-templates": "tsx ./src/generateTemplates.ts",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {

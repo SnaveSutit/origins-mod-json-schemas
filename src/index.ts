@@ -36,7 +36,7 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 		try {
 			mdFile = await MDFile.fromDocsURL(schema.$docsUrl).fetchContent()
 		} catch (e: any) {
-			TERM.brightRed(`Failed to read ${schema.$docsUrl}:\n  ${e}\n`)
+			TERM.brightRed(`Failed to read '${schema.$docsUrl}':\n  ${e}\n`)
 			return
 		}
 

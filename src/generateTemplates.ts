@@ -1,13 +1,68 @@
 import * as fs from 'fs'
-import { MDFile, apugliDocsUrl } from './mdReader'
+import { MDFile, apugliDocsUrl, epoliDocsUrl, originsDocsUrl, skillfulDocsUrl } from './mdReader'
 import { JSONSchema, SimpleSchemaType } from './schema'
+// import pathjs from 'path'
 import terminalkit from 'terminal-kit'
 const TERM = terminalkit.terminal
-// const docsPath = 'D:/github-repos/origins-docs/docs/types'
-// const docsUrl = `${originsDocsUrl}types`
-const DOCS_PATH = 'D:/github-repos/apugli-docs/docs/types'
-const DOCS_URL = `${apugliDocsUrl}types`
-const OUT_DIR = './debug_out'
+const OUT_DIR = './.generated'
+
+interface IModule {
+	name: string
+	docsUrl: string
+	localDocsPath: string
+	ignored?: string[]
+}
+
+const GLOBAL_IGNORED = [
+	'misc',
+	'guides',
+	'index.md',
+	'bientity_action_types.md',
+	'bientity_condition_types.md',
+	'biome_condition_types.md',
+	'block_action_types.md',
+	'block_condition_types.md',
+	'damage_condition_types.md',
+	'data_types.md',
+	'entity_action_types.md',
+	'entity_condition_types.md',
+	'fluid_condition_types.md',
+	'item_action_types.md',
+	'item_condition_types.md',
+]
+
+const MODULES: IModule[] = [
+	{
+		name: 'apoli',
+		docsUrl: originsDocsUrl,
+		localDocsPath: 'D:/github-repos/origins-docs/docs',
+		ignored: [...GLOBAL_IGNORED],
+	},
+	{
+		name: 'apugli',
+		docsUrl: apugliDocsUrl,
+		localDocsPath: 'D:/github-repos/apugli-docs/docs',
+		ignored: [...GLOBAL_IGNORED],
+	},
+	{
+		name: 'epoli',
+		docsUrl: epoliDocsUrl,
+		localDocsPath: 'D:/github-repos/epoli-docs/docs',
+		ignored: [...GLOBAL_IGNORED, 'redstone.md', 'powertypes.md'],
+	},
+	// {
+	// 	name: 'eggolib',
+	// 	docsUrl: eggolibDocsUrl,
+	// 	localDocsPath: 'D:/github-repos/eggolib-docs/docs',
+	// 	ignored: [...GLOBAL_IGNORED],
+	// },
+	{
+		name: 'skillful',
+		docsUrl: skillfulDocsUrl,
+		localDocsPath: 'D:/github-repos/skillful_docs/docs',
+		ignored: [...GLOBAL_IGNORED, 'key.md'],
+	},
+]
 
 function attemptToMapType(
 	name: string,
@@ -131,7 +186,7 @@ function attemptToMapType(
 		delete property.type
 		property.$ref = `$ref(apoli:types/space)`
 	} else if (type === 'boolean' && typeof property.default === 'string') {
-		property.default = property.default === 'true'
+		property.default = !(property.default === 'true')
 	} else if (type === 'comparison') {
 		delete property.type
 		property.$ref = '$ref(apoli:types/comparison)'
@@ -164,12 +219,15 @@ function attemptToMapType(
 		}
 	} else if (type === 'string') {
 		const matches = field?.description.matchAll(/`"?(.+?)"?`/g)
-		const values: string[] = []
 		if (matches) {
-			for (const value of matches) {
-				values.push(value[1])
+			const matchValues = [...matches]
+			if (matchValues.length > 0) {
+				const values: string[] = []
+				for (const value of matchValues) {
+					values.push(value[1])
+				}
+				property.enum = values
 			}
-			property.enum = values
 		}
 	}
 
@@ -183,25 +241,40 @@ function attemptToMapType(
 	}
 }
 
-function main() {
-	function recurse(path: string, files: string[] = []) {
-		fs.readdirSync(path).forEach(file => {
-			const filePath = `${path}/${file}`
-			if (file.endsWith('data_types')) return
-			if (fs.statSync(filePath).isDirectory()) {
-				recurse(filePath, files)
-			} else {
-				files.push(filePath)
-			}
-		})
-		return files
+function getAllMDFiles(path: string, files: string[] = [], ignored: string[] = []): string[] {
+	for (const file of fs.readdirSync(path)) {
+		const filePath = `${path}/${file}`
+		if (ignored.includes(file)) continue
+		if (fs.statSync(filePath).isDirectory()) {
+			getAllMDFiles(filePath, files, ignored)
+		} else {
+			if (!file.endsWith('.md')) continue
+			files.push(filePath)
+		}
 	}
-	const files = recurse(DOCS_PATH)
+	return files
+}
+
+function generateTemplates(module: IModule) {
+	TERM.brightGreen(`Generating templates for ${module.name}...\n`)
+
+	const files = getAllMDFiles(module.localDocsPath, [], module.ignored)
+
 	for (const file of files) {
-		const schema: JSONSchema = {}
-		const mdFile = MDFile.fromFile(file)
-		schema.$schema = 'https://json-schema.org/draft-07/schema#'
-		schema.$docsUrl = `${DOCS_URL}${file.replace(DOCS_PATH, '').replace('.md', '')}/`
+		let mdFile: MDFile
+		try {
+			mdFile = MDFile.fromFile(file)
+		} catch (e: any) {
+			TERM.brightRed(`Error parsing ${file}: \n  ${e.message}\n`)
+			// TERM.brightRed(`Error parsing ${file}: \n  ${e.message}\n  ${e.stack}\n`)
+			continue
+		}
+		const schema: JSONSchema = {
+			$schema: 'https://json-schema.org/draft-07/schema#',
+			$docsUrl:
+				module.docsUrl +
+				file.replace(module.localDocsPath, '').replace('.md', '/').replace(/^\//, ''),
+		}
 		if (mdFile.fields.length > 0) {
 			schema.type = 'object'
 			schema.$IGNORED_PROPERTIES = []
@@ -210,11 +283,9 @@ function main() {
 			for (const field of mdFile.fields) {
 				const property: NonNullable<JSONSchema['properties']>[string] = {}
 				property.type = field.type.toLowerCase() as SimpleSchemaType
-
 				if (field.depreciated) {
 					property.depreciated = true
 				}
-
 				if (!field.optional) {
 					if (field.defaultValue === undefined) {
 						schema.required.push(field.name)
@@ -234,9 +305,20 @@ function main() {
 			schema.enum = mdFile.values.map(v => v.value)
 		}
 
-		const outPath = file.replace(DOCS_PATH, OUT_DIR).replace('.md', '.json')
+		const outPath = file
+			.replace(module.localDocsPath, OUT_DIR + '/' + module.name)
+			.replace('.md', '.json')
 		fs.mkdirSync(outPath.replace(/\/[^/]+$/, ''), { recursive: true })
 		fs.writeFileSync(outPath, JSON.stringify(schema, null, '\t'))
+	}
+}
+
+function main() {
+	fs.rmSync(OUT_DIR, { recursive: true })
+	fs.mkdirSync(OUT_DIR, { recursive: true })
+
+	for (const module of MODULES) {
+		generateTemplates(module)
 	}
 }
 
