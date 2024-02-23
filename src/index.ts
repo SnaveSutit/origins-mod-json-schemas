@@ -341,8 +341,6 @@ async function build(schemasToBuild: string[]) {
 	buildProgress?.stop()
 
 	TERM.brightGreen('Writing files...\n')
-	await fs.rm(OUT_DIR, { recursive: true }).catch(() => {})
-	await fs.mkdir(OUT_DIR, { recursive: true })
 	// eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 	let writeProgress: terminalkit.Terminal.ProgressBarController | undefined
 	if (!process.argv.includes('--workflow') && !(fileIOQueue.length < 10)) {
@@ -380,6 +378,9 @@ async function main() {
 			}
 		}
 		await recurse(SRC_DIR)
+		// Clean old build results
+		await fs.rm(OUT_DIR, { recursive: true }).catch(() => {})
+		await fs.mkdir(OUT_DIR, { recursive: true }).catch(() => {})
 
 		await build(schemasToBuild)
 		return
