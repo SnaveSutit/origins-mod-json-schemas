@@ -1,5 +1,5 @@
 import * as fs from 'fs'
-import { MDFile, apugliDocsUrl, epoliDocsUrl, originsDocsUrl, skillfulDocsUrl } from './mdReader'
+import { MDFile, MODULES } from './mdReader'
 import { JSONSchema, SimpleSchemaType } from './schema'
 // import pathjs from 'path'
 import terminalkit from 'terminal-kit'
@@ -31,34 +31,34 @@ const GLOBAL_IGNORED = [
 	'item_condition_types.md',
 ]
 
-const MODULES: IModule[] = [
+const LOCAL_MODULES: IModule[] = [
 	{
 		name: 'apoli',
-		docsUrl: originsDocsUrl,
+		docsUrl: MODULES.origins.docsUrl,
 		localDocsPath: 'D:/github-repos/origins-docs/docs',
 		ignored: [...GLOBAL_IGNORED],
 	},
 	{
 		name: 'apugli',
-		docsUrl: apugliDocsUrl,
+		docsUrl: MODULES.apugli.docsUrl,
 		localDocsPath: 'D:/github-repos/apugli-docs/docs',
 		ignored: [...GLOBAL_IGNORED],
 	},
 	{
 		name: 'epoli',
-		docsUrl: epoliDocsUrl,
+		docsUrl: MODULES.epoli.docsUrl,
 		localDocsPath: 'D:/github-repos/epoli-docs/docs',
 		ignored: [...GLOBAL_IGNORED, 'redstone.md', 'powertypes.md'],
 	},
 	// {
 	// 	name: 'eggolib',
-	// 	docsUrl: eggolibDocsUrl,
+	// 	docsUrl: MODULES.eggolib.docsUrl,
 	// 	localDocsPath: 'D:/github-repos/eggolib-docs/docs',
 	// 	ignored: [...GLOBAL_IGNORED],
 	// },
 	{
 		name: 'skillful',
-		docsUrl: skillfulDocsUrl,
+		docsUrl: MODULES.skillful.docsUrl,
 		localDocsPath: 'D:/github-repos/skillful_docs/docs',
 		ignored: [...GLOBAL_IGNORED, 'key.md'],
 	},
@@ -318,7 +318,7 @@ function main() {
 	fs.rmSync(OUT_DIR, { recursive: true })
 	fs.mkdirSync(OUT_DIR, { recursive: true })
 
-	for (const module of MODULES) {
+	for (const module of LOCAL_MODULES) {
 		generateTemplates(module)
 	}
 }

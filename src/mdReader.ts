@@ -3,21 +3,32 @@ import * as fs from 'fs'
 import terminalkit from 'terminal-kit'
 const TERM = terminalkit.terminal
 
-export const originsRawGithubUrl =
-	'https://raw.githubusercontent.com/apace100/origins-docs/latest/docs/'
-export const apugliRawGithubUrl =
-	'https://raw.githubusercontent.com/MerchantPug/apugli-docs/1.20/docs/'
-export const epoliRawGithubUrl =
-	'https://raw.githubusercontent.com/Exzotic5485/Epoli-Docs/main/docs/'
-export const eggolibRawGithubUrl = 'RAW DOCS LINK MISSING'
-export const skillfulRawGithubUrl =
-	'https://raw.githubusercontent.com/ThatRobin/skillful_docs/main/docs/'
-
-export const originsDocsUrl = 'https://origins.readthedocs.io/en/latest/'
-export const apugliDocsUrl = 'https://apugli.readthedocs.io/en/latest/'
-export const epoliDocsUrl = 'https://epoli-docs.readthedocs.io/en/latest/'
-export const eggolibDocsUrl = 'https://eggolib.github.io/latest/'
-export const skillfulDocsUrl = 'https://skillful-docs.readthedocs.io/en/latest/'
+export const MODULES = {
+	origins: {
+		rawUrl: 'https://raw.githubusercontent.com/apace100/origins-docs/latest/docs/',
+		docsUrl: 'https://origins.readthedocs.io/en/latest/',
+	},
+	apugli: {
+		rawUrl: 'https://raw.githubusercontent.com/MerchantPug/apugli-docs/1.20/docs/',
+		docsUrl: 'https://apugli.readthedocs.io/en/latest/',
+	},
+	epoli: {
+		rawUrl: 'https://raw.githubusercontent.com/Exzotic5485/Epoli-Docs/main/docs/',
+		docsUrl: 'https://epoli-docs.readthedocs.io/en/latest/',
+	},
+	eggolib: {
+		rawUrl: 'RAW DOCS LINK MISSING',
+		docsUrl: 'https://eggolib.github.io/latest/',
+	},
+	skillful: {
+		rawUrl: 'https://raw.githubusercontent.com/ThatRobin/skillful_docs/main/docs/',
+		docsUrl: 'https://skillful-docs.readthedocs.io/en/latest/',
+	},
+	moborigins: {
+		rawUrl: 'https://raw.githubusercontent.com/UltrusBot/Mob-Origin-Docs/master/docs/',
+		docsUrl: 'https://moborigins.ultrusmods.me/en/latest/',
+	},
+}
 
 const MD_LINK_REGEX = /\[(?<name>[^\n[]+?)\]\((?<target>[^\n ]+?)\)/g
 
@@ -177,59 +188,34 @@ export class MDFile {
 		docsUrl?: string,
 		rawUrl?: string,
 	) {
-		this._rawUrl = rawUrl || pathToUrl(originsRawGithubUrl, path)
+		this._rawUrl = rawUrl || pathToUrl(MODULES.origins.rawUrl, path)
 		this.url = pathToUrl(this._rawUrl, path)
-		this._docsUrl = docsUrl || pathToUrl(originsDocsUrl, path)
+		this._docsUrl = docsUrl || pathToUrl(MODULES.origins.docsUrl, path)
 	}
 
 	public static fromRawURL(url: string) {
-		if (url.startsWith(originsRawGithubUrl)) {
-			const path = url.replace(originsRawGithubUrl, '')
-			return new MDFile(path, originsDocsUrl, originsRawGithubUrl)
-		} else if (url.startsWith(apugliRawGithubUrl)) {
-			const path = url.replace(apugliRawGithubUrl, '')
-			return new MDFile(path, apugliDocsUrl, apugliRawGithubUrl)
-		} else if (url.startsWith(epoliRawGithubUrl)) {
-			const path = url.replace(epoliRawGithubUrl, '')
-			return new MDFile(path, epoliDocsUrl, epoliRawGithubUrl)
-		} else if (url.startsWith(eggolibRawGithubUrl)) {
-			const path = url.replace(eggolibRawGithubUrl, '')
-			return new MDFile(path, eggolibDocsUrl, eggolibRawGithubUrl)
-		} else if (url.startsWith(skillfulRawGithubUrl)) {
-			const path = url.replace(skillfulRawGithubUrl, '')
-			return new MDFile(path, skillfulDocsUrl, skillfulRawGithubUrl)
-		} else throw new Error(`Failed to parse raw url '${url}'`)
+		for (const module of Object.values(MODULES)) {
+			if (url.startsWith(module.rawUrl)) {
+				const path = url.replace(module.rawUrl, '')
+				return new MDFile(path, module.docsUrl, module.rawUrl)
+			}
+		}
+		throw new Error(`Failed to parse raw url '${url}'`)
 	}
 
 	public static fromDocsURL(url: string) {
-		let docsUrl, rawUrl: string
-		if (url.includes(originsDocsUrl)) {
-			docsUrl = originsDocsUrl
-			rawUrl = originsRawGithubUrl
-		} else if (url.includes(apugliDocsUrl)) {
-			docsUrl = apugliDocsUrl
-			rawUrl = apugliRawGithubUrl
-		} else if (url.includes(epoliDocsUrl)) {
-			docsUrl = epoliDocsUrl
-			rawUrl = epoliRawGithubUrl
-		} else if (url.includes(eggolibDocsUrl)) {
-			docsUrl = eggolibDocsUrl
-			rawUrl = eggolibRawGithubUrl
-		} else if (url.includes(skillfulDocsUrl)) {
-			docsUrl = skillfulDocsUrl
-			rawUrl = skillfulRawGithubUrl
-		} else throw new Error(`Failed to parse docs url '${url}'`)
-		let path = url
-			.replace(originsDocsUrl, '')
-			.replace(apugliDocsUrl, '')
-			.replace(epoliDocsUrl, '')
-			.replace(eggolibDocsUrl, '')
-			.replace(skillfulDocsUrl, '')
+		let docsUrl = ''
+		let rawUrl = ''
 
-		// TERM('---\n')
-		// TERM('Path: ').brightBlue(path)('\n')
-		// TERM('Docs URL: ').brightBlue(docsUrl)('\n')
-		// TERM('Raw URL: ').brightBlue(rawUrl)('\n')
+		for (const module of Object.values(MODULES)) {
+			if (url.startsWith(module.docsUrl)) {
+				docsUrl = module.docsUrl
+				rawUrl = module.rawUrl
+				break
+			}
+		}
+		if (!docsUrl || !rawUrl) throw new Error(`Failed to parse docs url '${url}'`)
+		let path = url.replace(docsUrl, '')
 
 		if (path.endsWith('/')) path = path.slice(0, -1) + '.md'
 		return new MDFile(path, docsUrl, rawUrl)
