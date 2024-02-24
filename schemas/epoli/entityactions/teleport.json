@@ -22,7 +22,7 @@
 			"markdownDescription": "The z coordinate."
 		},
 		"dimension": {
-			"$ref": "../../apoli/types/autocomplete_helpers/dimension_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/dimension_identifier.json",
 			"description": "The dimension you wish to teleport to, use `current` for the dimension the entity is in.",
 			"markdownDescription": "The dimension you wish to teleport to, use `current` for the dimension the entity is in."
 		}

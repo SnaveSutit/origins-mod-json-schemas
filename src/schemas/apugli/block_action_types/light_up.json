@@ -20,13 +20,13 @@
 			"default": true
 		},
 		"particle": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/particle_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/particle_identifier)"
 		},
 		"particle_count": {
 			"type": "integer"
 		},
 		"sound": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/sound_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)"
 		}
 	}
 }

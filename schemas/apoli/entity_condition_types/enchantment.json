@@ -3,7 +3,7 @@
 	"required": ["enchantment", "comparison", "compare_to"],
 	"properties": {
 		"enchantment": {
-			"$ref": "../types/autocomplete_helpers/enchantment_identifier.json",
+			"$ref": "../types/autofill_helpers/enchantment_identifier.json",
 			"description": "The namespace and ID of the enchantment of interest.",
 			"markdownDescription": "The namespace and ID of the enchantment of interest."
 		},

@@ -2,7 +2,7 @@
 	"type": "object",
 	"properties": {
 		"recipe": {
-			"$ref": "../types/autocomplete_helpers/recipe_identifier.json",
+			"$ref": "../types/autofill_helpers/recipe_identifier.json",
 			"description": "If specified, modifies the result item of the recipe that matches the specified namespace and ID.",
 			"markdownDescription": "If specified, modifies the result item of the recipe that matches the specified namespace and ID."
 		},

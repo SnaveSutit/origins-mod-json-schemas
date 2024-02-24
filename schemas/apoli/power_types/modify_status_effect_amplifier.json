@@ -2,14 +2,14 @@
 	"type": "object",
 	"properties": {
 		"status_effect": {
-			"$ref": "../types/autocomplete_helpers/status_effect_identifier.json",
+			"$ref": "../types/autofill_helpers/status_effect_identifier.json",
 			"description": "If specified, only this status effect will have its amplifier modified upon being received.",
 			"markdownDescription": "If specified, only this status effect will have its amplifier modified upon being received."
 		},
 		"status_effects": {
 			"type": "array",
 			"items": {
-				"$ref": "../types/autocomplete_helpers/status_effect_identifier.json"
+				"$ref": "../types/autofill_helpers/status_effect_identifier.json"
 			},
 			"description": "If specified, only these status effect(s) will have its amplifier modified upon being received.",
 			"markdownDescription": "If specified, only these status effect(s) will have its amplifier modified upon being received."

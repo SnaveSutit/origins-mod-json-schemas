@@ -9,7 +9,7 @@
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
 		"entity_id": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/entity_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/entity_identifier)"
 		},
 		"radius": {
 			"type": "number",

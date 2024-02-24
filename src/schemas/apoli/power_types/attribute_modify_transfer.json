@@ -23,7 +23,7 @@
 			]
 		},
 		"attribute": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/attribute_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/attribute_identifier)"
 		},
 		"multiplier": {
 			"type": "number",

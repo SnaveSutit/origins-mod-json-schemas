@@ -5,7 +5,7 @@
 	"required": ["damage_type"],
 	"properties": {
 		"damage_type": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/damage_type_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/damage_type_identifier)"
 		},
 		"projectile": {
 			"$ref": "$ref(apoli:types/identifier)"

@@ -3,7 +3,7 @@
 	"required": ["advancement"],
 	"properties": {
 		"advancement": {
-			"$ref": "../types/autocomplete_helpers/advancement_identifier.json",
+			"$ref": "../types/autofill_helpers/advancement_identifier.json",
 			"description": "The namespace and ID of the advancement the player needs to have completed in order for this condition to evaluate to true.",
 			"markdownDescription": "The namespace and ID of the advancement the player needs to have completed in order for this condition to evaluate to true."
 		},

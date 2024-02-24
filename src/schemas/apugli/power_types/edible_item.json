@@ -22,7 +22,7 @@
 			"$ref": "$ref(apoli:types/item_stack)"
 		},
 		"sound": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/sound_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)"
 		},
 		"entity_action": {
 			"$ref": "$ref(apoli:entity_action)"

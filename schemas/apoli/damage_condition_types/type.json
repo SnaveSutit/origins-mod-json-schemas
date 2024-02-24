@@ -3,7 +3,7 @@
 	"required": ["damage_type"],
 	"properties": {
 		"damage_type": {
-			"$ref": "../types/autocomplete_helpers/damage_type_identifier.json",
+			"$ref": "../types/autofill_helpers/damage_type_identifier.json",
 			"description": "The ID of the damage type to compare the damage source to.",
 			"markdownDescription": "The ID of the damage type to compare the damage source to."
 		},

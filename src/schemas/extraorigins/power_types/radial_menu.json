@@ -1,0 +1,59 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": ["key", "sprite_location"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nAllows actions to be run from an in game menu, up to four directions (`up`, `down`, `left`, `right`).",
+			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nAllows actions to be run from an in game menu, up to four directions (`up`, `down`, `left`, `right`)."
+		},
+		"key": {
+			"$ref": "$ref(apoli:types/key)",
+			"description": "The key used to open the radial menu.",
+			"markdownDescription": "The key used to open the radial menu."
+		},
+		"sprite_location": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"description": "The sprite to use for the radial menu.",
+			"markdownDescription": "The sprite to use for the radial menu."
+		},
+		"up_action": {
+			"$ref": "$ref(apoli:entity_action)",
+			"description": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `up` option is selected.",
+			"markdownDescription": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `up` option is selected."
+		},
+		"down_action": {
+			"$ref": "$ref(apoli:entity_action)",
+			"description": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `down` option is selected.",
+			"markdownDescription": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `down` option is selected."
+		},
+		"left_action": {
+			"$ref": "$ref(apoli:entity_action)",
+			"description": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `left` option is selected.",
+			"markdownDescription": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `left` option is selected."
+		},
+		"right_action": {
+			"$ref": "$ref(apoli:entity_action)",
+			"description": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `right` option is selected.",
+			"markdownDescription": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when the `right` option is selected."
+		},
+		"lost_action": {
+			"$ref": "$ref(apoli:entity_action)",
+			"description": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when this power is removed from the entity.",
+			"markdownDescription": "An [Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types) to be executed when this power is removed from the entity."
+		},
+		"swap_time": {
+			"type": "integer",
+			"description": "The time it takes to swap between the different radial menu options.",
+			"markdownDescription": "The time it takes to swap between the different radial menu options.",
+			"default": 20
+		},
+		"default_direction": {
+			"type": "string",
+			"description": "The default direction the radial menu will open in.",
+			"markdownDescription": "The default direction the radial menu will open in.",
+			"enum": ["up", "down", "left", "right"],
+			"default": "up"
+		}
+	}
+}

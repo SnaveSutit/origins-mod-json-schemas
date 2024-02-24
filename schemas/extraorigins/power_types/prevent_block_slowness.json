@@ -1,0 +1,23 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nPrevents the entity from being slowed by blocks, such as Cobwebs.",
+			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nPrevents the entity from being slowed by blocks, such as Cobwebs."
+		},
+		"blocks": {
+			"type": "array",
+			"items": {
+				"$ref": "../../apoli/block_condition_types/block.json"
+			},
+			"description": "The blocks that the power will prevent slowness from.",
+			"markdownDescription": "The blocks that the power will prevent slowness from."
+		},
+		"inverted": {
+			"type": "boolean",
+			"description": "If true, the power will prevent slowness from all blocks except the specified blocks.",
+			"markdownDescription": "If true, the power will prevent slowness from all blocks except the specified blocks.",
+			"default": true
+		}
+	}
+}

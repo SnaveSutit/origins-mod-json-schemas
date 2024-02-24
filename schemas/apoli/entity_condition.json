@@ -1341,6 +1341,32 @@
 			"then": {
 				"$ref": "../apugli/entity_condition_types/velocity.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:piglin_safe"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/entity_condition_types/piglin_safe.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:radial_menu_direction"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/entity_condition_types/radial_menu_direction.json"
+			}
 		}
 	]
 }

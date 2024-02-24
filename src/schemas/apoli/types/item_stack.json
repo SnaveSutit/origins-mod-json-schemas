@@ -5,7 +5,7 @@
 	"required": ["item"],
 	"properties": {
 		"item": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/item_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/item_identifier)"
 		},
 		"amount": {
 			"type": "integer"

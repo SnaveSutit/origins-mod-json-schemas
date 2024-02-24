@@ -2,7 +2,7 @@
 	"type": "object",
 	"properties": {
 		"advancement": {
-			"$ref": "../types/autocomplete_helpers/advancement_identifier.json",
+			"$ref": "../types/autofill_helpers/advancement_identifier.json",
 			"description": "The namespace and ID of the advancement to be revoked from the player.",
 			"markdownDescription": "The namespace and ID of the advancement to be revoked from the player."
 		},

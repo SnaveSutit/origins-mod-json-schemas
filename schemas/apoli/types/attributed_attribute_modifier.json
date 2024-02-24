@@ -3,7 +3,7 @@
 	"required": ["attribute", "operation", "value"],
 	"properties": {
 		"attribute": {
-			"$ref": "autocomplete_helpers/attribute_identifier.json",
+			"$ref": "autofill_helpers/attribute_identifier.json",
 			"description": "ID of the attribute which will be modified by this modifier.",
 			"markdownDescription": "ID of the attribute which will be modified by this modifier."
 		},

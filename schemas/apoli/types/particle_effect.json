@@ -1,14 +1,14 @@
 {
 	"oneOf": [
 		{
-			"$ref": "autocomplete_helpers/particle_identifier.json"
+			"$ref": "autofill_helpers/particle_identifier.json"
 		},
 		{
 			"type": "object",
 			"required": ["type"],
 			"properties": {
 				"type": {
-					"$ref": "autocomplete_helpers/particle_identifier.json",
+					"$ref": "autofill_helpers/particle_identifier.json",
 					"description": "The namespace and ID of the particle type.",
 					"markdownDescription": "The namespace and ID of the particle type."
 				},

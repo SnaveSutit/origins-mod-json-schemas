@@ -8,7 +8,7 @@
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
 		"texture_location": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/texture_location)"
+			"$ref": "$ref(apoli:types/autofill_helpers/texture_location)"
 		},
 		"texture_url": {
 			"type": "string",

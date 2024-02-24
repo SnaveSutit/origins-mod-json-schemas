@@ -5,7 +5,7 @@
 	"required": ["block"],
 	"properties": {
 		"block": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/block_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/block_identifier)"
 		}
 	}
 }

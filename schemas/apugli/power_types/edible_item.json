@@ -28,7 +28,7 @@
 			"markdownDescription": "The item stack to replace the item with upon consumption."
 		},
 		"sound": {
-			"$ref": "../../apoli/types/autocomplete_helpers/sound_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json",
 			"description": "ID of the sound to play while eating an item affected by this power. If not set this will be the default eating/drinking sound.",
 			"markdownDescription": "ID of the sound to play while eating an item affected by this power. If not set this will be the default eating/drinking sound."
 		},

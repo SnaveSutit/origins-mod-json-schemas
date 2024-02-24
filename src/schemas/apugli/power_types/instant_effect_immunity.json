@@ -8,12 +8,12 @@
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
 		"effect": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/status_effect_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/status_effect_identifier)"
 		},
 		"effects": {
 			"type": "array",
 			"items": {
-				"$ref": "$ref(apoli:types/autocomplete_helpers/status_effect_identifier)"
+				"$ref": "$ref(apoli:types/autofill_helpers/status_effect_identifier)"
 			}
 		},
 		"inverted": {

@@ -2371,6 +2371,97 @@
 			"then": {
 				"$ref": "../epoli/powertypes/prevent_soulsand_slowness.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:can_walk_on_powder_snow"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/power_types/can_walk_on_powder_snow.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:food_effect_immunity"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/power_types/food_effect_immunity.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:mob_neutrality"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/power_types/mob_neutrality.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:modify_size"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/power_types/modify_size.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:prevent_block_slowness"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/power_types/prevent_block_slowness.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:radial_menu"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/power_types/radial_menu.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:start_riding"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/power_types/start_riding.json"
+			}
 		}
 	]
 }

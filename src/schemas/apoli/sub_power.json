@@ -71,6 +71,25 @@
 					"$ref": "$fileRef"
 				}
 			}
+		},
+
+		{
+			"type": "import_files_into_array",
+			"path": "$ref(extraorigins:power_types)",
+			"output_key": "allOf",
+			"schema_structure": {
+				"if": {
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"const": "extraorigins:$fileName"
+						}
+					}
+				},
+				"then": {
+					"$ref": "$fileRef"
+				}
+			}
 		}
 	],
 

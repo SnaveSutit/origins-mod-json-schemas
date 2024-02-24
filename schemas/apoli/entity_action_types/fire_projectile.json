@@ -3,7 +3,7 @@
 	"required": ["entity_type"],
 	"properties": {
 		"entity_type": {
-			"$ref": "../types/autocomplete_helpers/entity_identifier.json",
+			"$ref": "../types/autofill_helpers/entity_identifier.json",
 			"description": "The identifier of the projectile or entity that will be launched.",
 			"markdownDescription": "The identifier of the projectile or entity that will be launched."
 		},

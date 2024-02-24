@@ -23,7 +23,7 @@
 			"markdownDescription": "The ID of the class to transfer the value of an attribute modifier to. See [Value Modifying Power Classes](https://origins.readthedocs.io/en/latest/types/power_types/attribute_modify_transfer) for possible values."
 		},
 		"attribute": {
-			"$ref": "../types/autocomplete_helpers/attribute_identifier.json",
+			"$ref": "../types/autofill_helpers/attribute_identifier.json",
 			"description": "The namespace and ID of the attribute to get the value from.",
 			"markdownDescription": "The namespace and ID of the attribute to get the value from."
 		},

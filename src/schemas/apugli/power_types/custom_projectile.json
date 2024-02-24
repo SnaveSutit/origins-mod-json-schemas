@@ -16,7 +16,7 @@
 			"$ref": "$ref(apoli:types/hud_render)"
 		},
 		"texture_location": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/texture_location)"
+			"$ref": "$ref(apoli:types/autofill_helpers/texture_location)"
 		},
 		"texture_url": {
 			"type": "string",
@@ -43,7 +43,7 @@
 			"default": 1
 		},
 		"sound": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/sound_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)"
 		},
 		"tag": {
 			"$ref": "$ref(apoli:types/nbt)"

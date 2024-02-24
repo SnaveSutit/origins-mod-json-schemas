@@ -15,7 +15,7 @@
 			"$ref": "$ref(apoli:fluid_condition)"
 		},
 		"fluid": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/fluid_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/fluid_identifier)"
 		}
 	}
 }

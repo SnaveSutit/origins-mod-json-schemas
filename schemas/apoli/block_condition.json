@@ -444,6 +444,19 @@
 			"then": {
 				"$ref": "../apugli/block_condition_types/thundering.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "extraorigins:fertilizable"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../extraorigins/block_condition_types/fertilizable.json"
+			}
 		}
 	]
 }

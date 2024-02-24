@@ -6,7 +6,7 @@
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
 		"sound": {
-			"$ref": "../../apoli/types/autocomplete_helpers/sound_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json",
 			"description": "The namespace and ID of the sound to play.",
 			"markdownDescription": "The namespace and ID of the sound to play."
 		},

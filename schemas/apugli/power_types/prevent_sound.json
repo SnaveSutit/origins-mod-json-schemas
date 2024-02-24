@@ -28,14 +28,14 @@
 			"markdownDescription": "If specified, all sound events from these categories will be prevented from being heard by the entity that has the power. Can accept `\"ambient\"`, `\"blocks\"`, `\"hostile\"`, `\"master\"`, `\"music\"`, `\"neutral\"`, `\"players\"`, `\"records\"`, `\"voice\"` and `\"weather\"`."
 		},
 		"sound": {
-			"$ref": "../../apoli/types/autocomplete_helpers/sound_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json",
 			"description": "If specified, this sound event will be prevented from being heard by the entity that has the power.",
 			"markdownDescription": "If specified, this sound event will be prevented from being heard by the entity that has the power."
 		},
 		"sounds": {
 			"type": "array",
 			"items": {
-				"$ref": "../../apoli/types/autocomplete_helpers/sound_identifier.json"
+				"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json"
 			},
 			"description": "If specified, these sound events will be prevented from being heard by the entity that has the power.",
 			"markdownDescription": "If specified, these sound events will be prevented from being heard by the entity that has the power."

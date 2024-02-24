@@ -3,7 +3,7 @@
 	"required": ["name"],
 	"properties": {
 		"name": {
-			"$ref": "../types/autocomplete_helpers/damage_type_identifier.json",
+			"$ref": "../types/autofill_helpers/damage_type_identifier.json",
 			"description": "Name the damage source should have to pass the check. See [List of Damage Source Names](https://origins.readthedocs.io/en/latest/types/damage_condition_types/name) for possible values.",
 			"markdownDescription": "Name the damage source should have to pass the check. See [List of Damage Source Names](https://origins.readthedocs.io/en/latest/types/damage_condition_types/name) for possible values."
 		},

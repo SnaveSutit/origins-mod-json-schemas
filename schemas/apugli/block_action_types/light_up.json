@@ -24,7 +24,7 @@
 			"markdownDescription": "Whether this action should light up campfires."
 		},
 		"particle": {
-			"$ref": "../../apoli/types/autocomplete_helpers/particle_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/particle_identifier.json",
 			"description": "ID of the particle type to use.",
 			"markdownDescription": "ID of the particle type to use."
 		},
@@ -34,7 +34,7 @@
 			"markdownDescription": "The amount of particles to spawn when the block lights up."
 		},
 		"sound": {
-			"$ref": "../../apoli/types/autocomplete_helpers/sound_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json",
 			"description": "ID of the sound to play when the block lights up.",
 			"markdownDescription": "ID of the sound to play when the block lights up."
 		}

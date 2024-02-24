@@ -8,7 +8,7 @@
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
 		"sound": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/sound_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)"
 		},
 		"volume": {
 			"type": "number",

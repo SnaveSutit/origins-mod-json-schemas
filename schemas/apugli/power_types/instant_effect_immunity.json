@@ -6,14 +6,14 @@
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Instant Effect Immunity\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/instant_effect_immunity).\n\nPrevents instant status effects from being applied to the entity that has the power from direct sources.\n\nType ID: `apugli:instant_effect_immunity`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:instant_effect_immunity\",\n    \"effect\": \"minecraft:instant_damage\",\n    \"inverted\": true\n}\n```\nThis example makes the power holder immune to all instant status effects from direct sources that aren't instant damage."
 		},
 		"effect": {
-			"$ref": "../../apoli/types/autocomplete_helpers/status_effect_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/status_effect_identifier.json",
 			"description": "If specified, only the instant status effect with this namespace and ID can not be applied to the entity that has the power.",
 			"markdownDescription": "If specified, only the instant status effect with this namespace and ID can not be applied to the entity that has the power."
 		},
 		"effects": {
 			"type": "array",
 			"items": {
-				"$ref": "../../apoli/types/autocomplete_helpers/status_effect_identifier.json"
+				"$ref": "../../apoli/types/autofill_helpers/status_effect_identifier.json"
 			},
 			"description": "If specified, only the instant status effects with the specified namespace and IDs can not be applied to the entity that has the power.",
 			"markdownDescription": "If specified, only the instant status effects with the specified namespace and IDs can not be applied to the entity that has the power."

@@ -28,6 +28,9 @@ const FIELD_CAPTURE_REGEX =
 const VALUES_TITLE_REGEX = /Value\s+?\| Description\n-+\|-+\n/gm
 const VALUE_CAPTURE_REGEX = /^(?<value>[^|]+?)\s*\|\s*(?<description>[^|\n]+?)$/gm
 const EXAMPLES_REGEX = /###\s*?Examples?\s*([^]+)/
+const NOTE_REGEX = /^!!! (?<type>.+)\n\n(?<content>.+)$/gm
+
+const MDFILE_CACHE_PATH = './.mdFileCache.json'
 
 export function parseMDLink(url: string): { name: string; target: string } | undefined {
 	MD_LINK_REGEX.lastIndex = 0
@@ -41,7 +44,27 @@ export function pathToUrl(from: string, path: string) {
 	return url.href
 }
 
-const NOTE_REGEX = /^!!! (?<type>.+)\n\n(?<content>.+)$/gm
+let mdFileCache: Record<string, string> | undefined
+
+async function fetchMDFileCached(url: string): Promise<string> {
+	if (!mdFileCache) {
+		if (fs.existsSync(MDFILE_CACHE_PATH)) {
+			mdFileCache = JSON.parse(await fs.promises.readFile(MDFILE_CACHE_PATH, 'utf-8'))
+		} else {
+			mdFileCache = {}
+		}
+	}
+
+	if (mdFileCache![url]) return mdFileCache![url]
+
+	const content = await fetch(url).then(res => res.text())
+	if (!content || content.includes('404: Not Found'))
+		throw new Error(`Failed to fetch content of '${url}': ${content}`)
+
+	mdFileCache![url] = content
+	await fs.promises.writeFile(MDFILE_CACHE_PATH, JSON.stringify(mdFileCache))
+	return content
+}
 
 function processDescription(description: string, mdFile: MDFile) {
 	let link = MD_LINK_REGEX.exec(description)
@@ -239,10 +262,11 @@ export class MDFile {
 		const url = this._rawUrl + this.path
 		// term.gray(`Reading Markdown File `).brightBlue(url).gray('...\n')
 
-		this.content = await fetch(url).then(res => res.text())
-		if (!this.content || this.content.includes('404: Not Found'))
-			throw new Error(`Failed to fetch content of '${this.path}': ${this.content}`)
-		this.content = this.content.replace(/\r/g, '')
+		// this.content = await fetch(url).then(res => res.text())
+		// if (!this.content || this.content.includes('404: Not Found'))
+		// 	throw new Error(`Failed to fetch content of '${this.path}': ${this.content}`)
+		// this.content = this.content.replace(/\r/g, '')
+		this.content = (await fetchMDFileCached(url)).replace(/\r/g, '')
 
 		try {
 			this.id = this.path.split('/').pop()!.replace('.md', '')

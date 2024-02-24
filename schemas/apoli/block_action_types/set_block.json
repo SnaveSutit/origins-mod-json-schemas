@@ -3,7 +3,7 @@
 	"required": ["block"],
 	"properties": {
 		"block": {
-			"$ref": "../types/autocomplete_helpers/block_identifier.json",
+			"$ref": "../types/autofill_helpers/block_identifier.json",
 			"description": "The namespace and ID of the block to place.",
 			"markdownDescription": "The namespace and ID of the block to place."
 		},

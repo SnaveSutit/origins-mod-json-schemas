@@ -12,7 +12,7 @@
 		"icon": {
 			"oneOf": [
 				{
-					"$ref": "types/autocomplete_helpers/item_identifier.json"
+					"$ref": "types/autofill_helpers/item_identifier.json"
 				},
 				{
 					"$ref": "types/item_stack.json"

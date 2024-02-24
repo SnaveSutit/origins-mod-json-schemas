@@ -3,7 +3,7 @@
 	"required": ["fluid"],
 	"properties": {
 		"fluid": {
-			"$ref": "../types/autocomplete_helpers/fluid_identifier.json",
+			"$ref": "../types/autofill_helpers/fluid_identifier.json",
 			"description": "The namespace and ID of the fluid tag on which the player should be able to walk onto. Most important examples: `minecraft:water` and `minecraft:lava`.",
 			"markdownDescription": "The namespace and ID of the fluid tag on which the player should be able to walk onto. Most important examples: `minecraft:water` and `minecraft:lava`."
 		},

@@ -5,7 +5,7 @@
 	"required": ["attribute", "operation", "value"],
 	"properties": {
 		"attribute": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/attribute_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/attribute_identifier)"
 		},
 		"operation": {
 			"$ref": "$ref(apoli:types/attributed_attribute_modifier_operation)"

@@ -12,7 +12,7 @@
 			"markdownDescription": "#### 🚨 Depreciated 🚨\n\nUse `damage_type` instead. [More information here.](https://apugli.readthedocs.io/en/latest/types/entity_condition_types/can_take_damage)"
 		},
 		"damage_type": {
-			"$ref": "../../apoli/types/autocomplete_helpers/damage_type_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/damage_type_identifier.json",
 			"description": "The damage type to be tested by this condition.",
 			"markdownDescription": "The damage type to be tested by this condition."
 		}

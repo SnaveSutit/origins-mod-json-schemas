@@ -26,12 +26,12 @@
 			"type": "array"
 		},
 		"sound": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/sound_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)"
 		},
 		"sounds": {
 			"type": "array",
 			"items": {
-				"$ref": "$ref(apoli:types/autocomplete_helpers/sound_identifier)"
+				"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)"
 			}
 		},
 		"whitelist": {

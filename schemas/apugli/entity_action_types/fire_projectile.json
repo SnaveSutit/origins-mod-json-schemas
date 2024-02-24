@@ -24,7 +24,7 @@
 			"markdownDescription": "How much each projectile fired is affected by random spread."
 		},
 		"sound": {
-			"$ref": "../../apoli/types/autocomplete_helpers/sound_identifier.json",
+			"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json",
 			"description": "If set, the sound with this ID will be played when the power is used.",
 			"markdownDescription": "If set, the sound with this ID will be played when the power is used."
 		},

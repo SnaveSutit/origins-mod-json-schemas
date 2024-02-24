@@ -3,7 +3,7 @@
 	"required": ["effect"],
 	"properties": {
 		"effect": {
-			"$ref": "../types/autocomplete_helpers/status_effect_identifier.json",
+			"$ref": "../types/autofill_helpers/status_effect_identifier.json",
 			"description": "The namespace and ID of the status effect to check for.",
 			"markdownDescription": "The namespace and ID of the status effect to check for."
 		},

@@ -5,7 +5,7 @@
 	"required": ["effect"],
 	"properties": {
 		"effect": {
-			"$ref": "$ref(apoli:types/autocomplete_helpers/status_effect_identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/status_effect_identifier)"
 		},
 		"min_amplifier": {
 			"type": "integer",

@@ -8,7 +8,7 @@
 		"items": {
 			"type": "array",
 			"items": {
-				"$ref": "../../apoli/types/autocomplete_helpers/item_identifier.json"
+				"$ref": "../../apoli/types/autofill_helpers/item_identifier.json"
 			},
 			"description": "The type of items to add a cooldown to if it is present in the inventory.",
 			"markdownDescription": "The type of items to add a cooldown to if it is present in the inventory."

@@ -3,7 +3,7 @@
 	"required": ["sound"],
 	"properties": {
 		"sound": {
-			"$ref": "../types/autocomplete_helpers/sound_identifier.json",
+			"$ref": "../types/autofill_helpers/sound_identifier.json",
 			"description": "The ID of the sound event to play.",
 			"markdownDescription": "The ID of the sound event to play."
 		},

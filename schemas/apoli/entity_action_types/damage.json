@@ -13,7 +13,7 @@
 			"markdownDescription": "#### 🚨 Depreciated 🚨\n\nUse `damage_type` instead. [More information here](https://origins.readthedocs.io/en/latest/types/entity_action_types/damage)."
 		},
 		"damage_type": {
-			"$ref": "../types/autocomplete_helpers/damage_type_identifier.json",
+			"$ref": "../types/autofill_helpers/damage_type_identifier.json",
 			"description": "The damage type to be used. Controls e.g. the death message, invulnerabilities (e.g. towards fire), or whether armor is taken into account.",
 			"markdownDescription": "The damage type to be used. Controls e.g. the death message, invulnerabilities (e.g. towards fire), or whether armor is taken into account."
 		},

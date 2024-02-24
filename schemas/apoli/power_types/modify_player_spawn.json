@@ -3,17 +3,17 @@
 	"required": ["dimension"],
 	"properties": {
 		"dimension": {
-			"$ref": "../types/autocomplete_helpers/dimension_identifier.json",
+			"$ref": "../types/autofill_helpers/dimension_identifier.json",
 			"description": "The namespace and ID of the dimension the player should spawn in.",
 			"markdownDescription": "The namespace and ID of the dimension the player should spawn in."
 		},
 		"biome": {
-			"$ref": "../types/autocomplete_helpers/biome_identifier.json",
+			"$ref": "../types/autofill_helpers/biome_identifier.json",
 			"description": "If specified, the player will only spawn in the biome that matches the specified namespace and ID.",
 			"markdownDescription": "If specified, the player will only spawn in the biome that matches the specified namespace and ID."
 		},
 		"structure": {
-			"$ref": "../types/autocomplete_helpers/structure_identifier.json",
+			"$ref": "../types/autofill_helpers/structure_identifier.json",
 			"description": "If specified, the player will only spawn in the specified namespace and ID of the structure. __The structure needs to generate in the specified dimension.__",
 			"markdownDescription": "If specified, the player will only spawn in the specified namespace and ID of the structure. __The structure needs to generate in the specified dimension.__"
 		},

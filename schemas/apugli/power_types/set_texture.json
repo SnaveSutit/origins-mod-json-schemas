@@ -7,7 +7,7 @@
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Set Texture\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/set_texture).\n\nA power that sets an entity's base texture.\n\nType ID: `apugli:set_texture`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:set_texture\",\n    \"texture_location\": \"apugli:textures/test.png\",\n    \"player_model\": \"default\"\n}\n```\nThis power sets an entity's base texture to test.png, this texture is located in the textures folder in the apugli namespace."
 		},
 		"texture_location": {
-			"$ref": "../../apoli/types/autocomplete_helpers/texture_location.json",
+			"$ref": "../../apoli/types/autofill_helpers/texture_location.json",
 			"description": "Where the new texture is located.",
 			"markdownDescription": "Where the new texture is located."
 		},

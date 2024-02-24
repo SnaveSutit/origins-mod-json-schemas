@@ -10,7 +10,7 @@
 		"items": {
 			"type": "array",
 			"items": {
-				"$ref": "$ref(apoli:types/autocomplete_helpers/item_identifier)"
+				"$ref": "$ref(apoli:types/autofill_helpers/item_identifier)"
 			}
 		},
 		"item_tags": {
