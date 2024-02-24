@@ -3,6 +3,10 @@
 	"$docsUrl": "https://origins.readthedocs.io/en/latest/types/power_types/attribute/",
 	"type": "object",
 	"properties": {
+		"condition": {
+			"description": "### ⚠️ Caution\n\nThis power type does **not** support a `condition`. If the `condition` field is present, it will be ignored.\n\nIf you wish to check for an entity condition before applying the attribute modifier(s), you can use the [Conditioned Attribute](../power_types/conditioned_attribute.md) power type instead.\n\n",
+			"markdownDescription": "### ⚠️ Caution\n\nThis power type does **not** support a `condition`. If the `condition` field is present, it will be ignored.\n\nIf you wish to check for an entity condition before applying the attribute modifier(s), you can use the [Conditioned Attribute](../power_types/conditioned_attribute.md) power type instead.\n\n"
+		},
 		"modifier": {
 			"$ref": "$ref(apoli:types/attributed_attribute_modifier_arrayable)"
 		},

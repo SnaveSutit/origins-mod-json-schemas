@@ -2,6 +2,10 @@
 	"type": "object",
 	"required": ["block"],
 	"properties": {
+		"condition": {
+			"description": "### ⚠️ Caution\n\nThis power type does **not** support a `condition`. If the `condition` field is present, it will be ignored.\n\n",
+			"markdownDescription": "### ⚠️ Caution\n\nThis power type does **not** support a `condition`. If the `condition` field is present, it will be ignored.\n\n"
+		},
 		"block_condition": {
 			"$ref": "../block_condition.json",
 			"description": "If specified, only modify how the blocks that fulfill this condition would look like.",

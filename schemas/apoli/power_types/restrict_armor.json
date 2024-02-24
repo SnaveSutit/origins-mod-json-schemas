@@ -1,6 +1,10 @@
 {
 	"type": "object",
 	"properties": {
+		"condition": {
+			"description": "### ⚠️ Caution\n\nThis power type does **not** support a `condition`. If the `condition` field is present, it will be ignored.\n\nIf you wish to check for an entity condition before applying the restriction, you can use the [Conditioned Restrict Armor](conditioned_restrict_armor.md) power type instead.\n\n",
+			"markdownDescription": "### ⚠️ Caution\n\nThis power type does **not** support a `condition`. If the `condition` field is present, it will be ignored.\n\nIf you wish to check for an entity condition before applying the restriction, you can use the [Conditioned Restrict Armor](conditioned_restrict_armor.md) power type instead.\n\n"
+		},
 		"head": {
 			"$ref": "../item_condition.json",
 			"description": "If specified, items which fulfills this condition cannot be equipped in the head equipment slot.",
