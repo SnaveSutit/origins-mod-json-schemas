@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"advancement"
-	],
+	"required": ["advancement"],
 	"properties": {
 		"advancement": {
 			"$ref": "../types/autocomplete_helpers/advancement_identifier.json",

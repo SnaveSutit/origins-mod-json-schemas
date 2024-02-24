@@ -1,24 +1,14 @@
 {
 	"type": "object",
-	"required": [
-		"to"
-	],
+	"required": ["to"],
 	"properties": {
 		"from": {
-			"enum": [
-				"none",
-				"water",
-				"lava"
-			],
+			"enum": ["none", "water", "lava"],
 			"description": "If specified, only this submersion type will be modified. Accepts either `\"none\"` , `\"water\"` or `\"lava\"`",
 			"markdownDescription": "If specified, only this submersion type will be modified. Accepts either `\"none\"` , `\"water\"` or `\"lava\"`"
 		},
 		"to": {
-			"enum": [
-				"none",
-				"water",
-				"lava"
-			],
+			"enum": ["none", "water", "lava"],
 			"description": "Which submersion type to change to. Accepts either `\"none\"`, `\"water\"` or `\"lava\"`",
 			"markdownDescription": "Which submersion type to change to. Accepts either `\"none\"`, `\"water\"` or `\"lava\"`"
 		},

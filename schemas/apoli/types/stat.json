@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"type",
-		"id"
-	],
+	"required": ["type", "id"],
 	"properties": {
 		"type": {
 			"$ref": "autocomplete_helpers/stat_type_identifier.json",

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"texture"
-	],
+	"required": ["texture"],
 	"properties": {
 		"texture": {
 			"$ref": "../types/identifier.json",

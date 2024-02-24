@@ -1,0 +1,15 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://epoli-docs.readthedocs.io/en/latest/entityactions/teleport_to_spawn/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"player_spawn": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

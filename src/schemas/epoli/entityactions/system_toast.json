@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://epoli-docs.readthedocs.io/en/latest/entityactions/system_toast/",
+	"type": "object",
+	"required": ["title", "description"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"title": {
+			"$ref": "$ref(apoli:types/text_component)"
+		},
+		"description": {
+			"$ref": "$ref(apoli:types/text_component)"
+		}
+	}
+}

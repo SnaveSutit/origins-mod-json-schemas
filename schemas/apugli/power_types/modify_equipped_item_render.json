@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"slot",
-		"stack"
-	],
+	"required": ["slot", "stack"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Modify Equipped Item Render\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/modify_equipped_item_render).\n\nRenders an item on an entity as if it were worn by them.\n\nType ID: `apugli:modify_equipped_item_render`\n\n\n\n---\n\n### 📝 Note\n\nThis power type only works if said entity can visibly carry an item in that slot. For example villagers are only allowed head slot powers whereas players can use any slot with this power.\n\n\n\n---\n\n",

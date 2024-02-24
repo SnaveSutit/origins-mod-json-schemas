@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"texture",
-		"draw_mode",
-		"draw_phase"
-	],
+	"required": ["texture", "draw_mode", "draw_phase"],
 	"properties": {
 		"texture": {
 			"$ref": "../types/identifier.json",

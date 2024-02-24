@@ -1,15 +1,9 @@
 {
 	"type": "object",
-	"required": [
-		"comparison",
-		"compare_to"
-	],
+	"required": ["comparison", "compare_to"],
 	"properties": {
 		"light_type": {
-			"enum": [
-				"sky",
-				"block"
-			],
+			"enum": ["sky", "block"],
 			"description": "If specified, determines the type of light level to compare. Accepts `\"sky\"` or `\"block\"`.",
 			"markdownDescription": "If specified, determines the type of light level to compare. Accepts `\"sky\"` or `\"block\"`."
 		},

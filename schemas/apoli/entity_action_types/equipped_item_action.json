@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"equipment_slot",
-		"action"
-	],
+	"required": ["equipment_slot", "action"],
 	"properties": {
 		"equipment_slot": {
 			"$ref": "../types/equipment_slot.json",

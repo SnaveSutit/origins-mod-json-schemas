@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"predicate"
-	],
+	"required": ["predicate"],
 	"properties": {
 		"predicate": {
 			"$ref": "../types/identifier.json",

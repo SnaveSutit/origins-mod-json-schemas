@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"resource",
-		"provider"
-	],
+	"required": ["resource", "provider"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Resource Transfer\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/resource_transfer).\n\nTransfers a value from a \"provider\" resource into a resource.\n\nType ID: `apugli:resource_transfer`\n\n---\n\n",

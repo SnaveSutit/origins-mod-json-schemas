@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"adjacent_condition",
-		"comparison",
-		"compare_to"
-	],
+	"required": ["adjacent_condition", "comparison", "compare_to"],
 	"properties": {
 		"adjacent_condition": {
 			"$ref": "../block_condition.json",

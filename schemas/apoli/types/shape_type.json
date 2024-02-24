@@ -1,7 +1,3 @@
 {
-	"enum": [
-		"collider",
-		"outline",
-		"visual"
-	]
+	"enum": ["collider", "outline", "visual"]
 }

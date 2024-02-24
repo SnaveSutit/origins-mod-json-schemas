@@ -67,7 +67,7 @@ const MODULES: IModule[] = [
 function attemptToMapType(
 	name: string,
 	property: NonNullable<JSONSchema['properties']>[string],
-	mdFile: MDFile
+	mdFile: MDFile,
 ) {
 	// This is just for getting rid of red squiggles
 	if (Array.isArray(property.type)) {
@@ -174,11 +174,12 @@ function attemptToMapType(
 	} else if (type.includes('identifier')) {
 		delete property.type
 		property.$ref = `$ref(apoli:types/identifier)`
-	} else if (type === 'float') {
+	} else if (type === 'float' || type === 'double') {
 		property.type = 'number'
 		if (property.default) property.default = Number(property.default)
-	} else if (type === 'integer' && property.default !== undefined) {
-		property.default = Number(property.default)
+	} else if (type === 'int' || type === 'integer') {
+		property.type = 'integer'
+		if (property.default) property.default = Number(property.default)
 	} else if (type === 'attribute modifier') {
 		delete property.type
 		property.$ref = `$ref(apoli:types/attribute_modifier)`

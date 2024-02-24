@@ -1,20 +1,13 @@
 {
 	"type": "object",
-	"required": [
-		"type"
-	],
+	"required": ["type"],
 	"allOf": [
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:amount",
-							"origins:amount"
-						]
+						"enum": ["apoli:amount", "origins:amount"]
 					}
 				}
 			},
@@ -24,15 +17,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:armor_value",
-							"origins:armor_value"
-						]
+						"enum": ["apoli:armor_value", "origins:armor_value"]
 					}
 				}
 			},
@@ -42,15 +30,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:durability",
-							"origins:durability"
-						]
+						"enum": ["apoli:durability", "origins:durability"]
 					}
 				}
 			},
@@ -60,15 +43,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:empty",
-							"origins:empty"
-						]
+						"enum": ["apoli:empty", "origins:empty"]
 					}
 				}
 			},
@@ -78,15 +56,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:enchantable",
-							"origins:enchantable"
-						]
+						"enum": ["apoli:enchantable", "origins:enchantable"]
 					}
 				}
 			},
@@ -96,15 +69,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:enchantment",
-							"origins:enchantment"
-						]
+						"enum": ["apoli:enchantment", "origins:enchantment"]
 					}
 				}
 			},
@@ -114,15 +82,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fireproof",
-							"origins:fireproof"
-						]
+						"enum": ["apoli:fireproof", "origins:fireproof"]
 					}
 				}
 			},
@@ -132,15 +95,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:food",
-							"origins:food"
-						]
+						"enum": ["apoli:food", "origins:food"]
 					}
 				}
 			},
@@ -150,15 +108,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fuel",
-							"origins:fuel"
-						]
+						"enum": ["apoli:fuel", "origins:fuel"]
 					}
 				}
 			},
@@ -168,15 +121,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:harvest_level",
-							"origins:harvest_level"
-						]
+						"enum": ["apoli:harvest_level", "origins:harvest_level"]
 					}
 				}
 			},
@@ -186,15 +134,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:has_power",
-							"origins:has_power"
-						]
+						"enum": ["apoli:has_power", "origins:has_power"]
 					}
 				}
 			},
@@ -204,15 +147,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:ingredient",
-							"origins:ingredient"
-						]
+						"enum": ["apoli:ingredient", "origins:ingredient"]
 					}
 				}
 			},
@@ -222,15 +160,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:is_damageable",
-							"origins:is_damageable"
-						]
+						"enum": ["apoli:is_damageable", "origins:is_damageable"]
 					}
 				}
 			},
@@ -240,15 +173,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:is_equippable",
-							"origins:is_equippable"
-						]
+						"enum": ["apoli:is_equippable", "origins:is_equippable"]
 					}
 				}
 			},
@@ -258,15 +186,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:meat",
-							"origins:meat"
-						]
+						"enum": ["apoli:meat", "origins:meat"]
 					}
 				}
 			},
@@ -276,15 +199,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:nbt",
-							"origins:nbt"
-						]
+						"enum": ["apoli:nbt", "origins:nbt"]
 					}
 				}
 			},
@@ -294,15 +212,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:power_count",
-							"origins:power_count"
-						]
+						"enum": ["apoli:power_count", "origins:power_count"]
 					}
 				}
 			},
@@ -312,15 +225,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:relative_durability",
-							"origins:relative_durability"
-						]
+						"enum": ["apoli:relative_durability", "origins:relative_durability"]
 					}
 				}
 			},
@@ -330,15 +238,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:smeltable",
-							"origins:smeltable"
-						]
+						"enum": ["apoli:smeltable", "origins:smeltable"]
 					}
 				}
 			},
@@ -348,23 +251,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:and",
-							"origins:and"
-						]
+						"enum": ["apoli:and", "origins:and"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",
@@ -383,23 +279,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:chance",
-							"origins:chance"
-						]
+						"enum": ["apoli:chance", "origins:chance"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"chance"
-				],
+				"required": ["chance"],
 				"properties": {
 					"chance": {
 						"type": "number",
@@ -415,23 +304,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:constant",
-							"origins:constant"
-						]
+						"enum": ["apoli:constant", "origins:constant"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"value"
-				],
+				"required": ["value"],
 				"properties": {
 					"value": {
 						"type": "boolean",
@@ -447,23 +329,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:or",
-							"origins:or"
-						]
+						"enum": ["apoli:or", "origins:or"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",
@@ -482,9 +357,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:base_enchantment"
@@ -497,9 +370,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:on_cooldown"

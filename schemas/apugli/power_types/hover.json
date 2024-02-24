@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"step_assist"
-	],
+	"required": ["step_assist"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Hover\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/hover).\n\nMultiplies the Y velocity of the entity by 0, effectively making them stationary on the Y axis.\n\nType ID: `apugli:hover`\n\n---\n\n",

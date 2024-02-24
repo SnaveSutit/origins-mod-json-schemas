@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"hud_render"
-	],
+	"required": ["hud_render"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_tame_hit).\n\nRuns an action when an owner's `TameableEntity` harms a target.\n\nType ID: `apugli:action_on_tame_hit`\n\n---\n\n",

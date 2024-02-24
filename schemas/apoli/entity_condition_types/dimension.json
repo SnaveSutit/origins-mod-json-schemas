@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"dimension"
-	],
+	"required": ["dimension"],
 	"properties": {
 		"dimension": {
 			"$ref": "../types/autocomplete_helpers/dimension_identifier.json",

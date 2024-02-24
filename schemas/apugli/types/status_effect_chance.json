@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"effect"
-	],
+	"required": ["effect"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",

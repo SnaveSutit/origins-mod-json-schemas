@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"condition"
-	],
+	"required": ["condition"],
 	"properties": {
 		"condition": {
 			"$ref": "../bientity_condition.json",

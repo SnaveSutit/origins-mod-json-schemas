@@ -1,0 +1,34 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://epoli-docs.readthedocs.io/en/latest/powertypes/action_on_trigger/",
+	"type": "object",
+	"required": ["entity_action", "objective", "operation"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"entity_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"objective": {
+			"type": "string"
+		},
+		"operation": {
+			"type": "array",
+			"items": {
+				"enum": ["add", "set", "simple"]
+			},
+			"uniqueItems": true,
+			"minItems": 1
+		},
+		"comparison": {
+			"default": ">=",
+			"$ref": "$ref(apoli:types/comparison)"
+		},
+		"compare_to": {
+			"type": "integer",
+			"default": 0
+		}
+	}
+}

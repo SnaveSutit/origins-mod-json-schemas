@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"required": ["limit"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Damage Limit\n\n---\n\n_Power Type_\n\nMakes the player unable to take more than the specified damage limit, accepts a damage condition.\n\nType ID: `epoli:damage_limit`\n\n---\n\n### Examples\n\n```json\n{\n\t\"type\": \"epoli:damage_limit\",\n\t\"limit\": 2,\n\t\"damage_condition\": {\n\t\t\"type\": \"origins:attacker\",\n\t\t\"entity_condition\": {\n\t\t\t\"type\": \"origins:entity_type\",\n\t\t\t\"entity_type\": \"minecraft:zombie\"\n\t\t}\n\t}\n}\n```\nThis example will limit your damage taken from a zombie to a max of 2.\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Damage Limit\n\n---\n\n_Power Type_\n\nMakes the player unable to take more than the specified damage limit, accepts a damage condition.\n\nType ID: `epoli:damage_limit`\n\n---\n\n### Examples\n\n```json\n{\n\t\"type\": \"epoli:damage_limit\",\n\t\"limit\": 2,\n\t\"damage_condition\": {\n\t\t\"type\": \"origins:attacker\",\n\t\t\"entity_condition\": {\n\t\t\t\"type\": \"origins:entity_type\",\n\t\t\t\"entity_type\": \"minecraft:zombie\"\n\t\t}\n\t}\n}\n```\nThis example will limit your damage taken from a zombie to a max of 2.\n"
+		},
+		"limit": {
+			"type": "number",
+			"description": "The amount of damage to limit to (2 = 1 heart)",
+			"markdownDescription": "The amount of damage to limit to (2 = 1 heart)"
+		},
+		"damage_condition": {
+			"$ref": "../../apoli/damage_condition.json",
+			"description": "If specified, the limit will only apply to that condition.",
+			"markdownDescription": "If specified, the limit will only apply to that condition."
+		}
+	}
+}

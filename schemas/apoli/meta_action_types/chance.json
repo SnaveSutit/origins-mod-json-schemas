@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"action",
-		"chance"
-	],
+	"required": ["action", "chance"],
 	"properties": {
 		"action": {
 			"$ref": "$actionRef",

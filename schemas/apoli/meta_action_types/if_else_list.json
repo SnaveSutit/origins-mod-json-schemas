@@ -1,17 +1,12 @@
 {
 	"type": "object",
-	"required": [
-		"actions"
-	],
+	"required": ["actions"],
 	"properties": {
 		"actions": {
 			"type": "array",
 			"items": {
 				"type": "object",
-				"required": [
-					"action",
-					"condition"
-				],
+				"required": ["action", "condition"],
 				"properties": {
 					"action": {
 						"$ref": "$actionRef"

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"enchantment"
-	],
+	"required": ["enchantment"],
 	"properties": {
 		"enchantment": {
 			"$ref": "../types/autocomplete_helpers/enchantment_identifier.json",

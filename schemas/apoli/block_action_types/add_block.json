@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"action"
-	],
+	"required": ["action"],
 	"properties": {
 		"block": {
 			"$ref": "../types/autocomplete_helpers/block_identifier.json",

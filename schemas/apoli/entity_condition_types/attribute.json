@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"attribute",
-		"comparison",
-		"compare_to"
-	],
+	"required": ["attribute", "comparison", "compare_to"],
 	"properties": {
 		"attribute": {
 			"$ref": "../types/autocomplete_helpers/attribute_identifier.json",

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"entity_type"
-	],
+	"required": ["entity_type"],
 	"properties": {
 		"entity_type": {
 			"$ref": "../types/autocomplete_helpers/entity_identifier.json",

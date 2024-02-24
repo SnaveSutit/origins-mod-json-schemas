@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"fluid_condition"
-	],
+	"required": ["fluid_condition"],
 	"properties": {
 		"fluid_condition": {
 			"$ref": "../fluid_condition.json",

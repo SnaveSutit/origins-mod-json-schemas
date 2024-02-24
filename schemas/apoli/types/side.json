@@ -1,6 +1,3 @@
 {
-	"enum": [
-		"client",
-		"server"
-	]
+	"enum": ["client", "server"]
 }

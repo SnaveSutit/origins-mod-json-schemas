@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"stat",
-		"modifier"
-	],
+	"required": ["stat", "modifier"],
 	"properties": {
 		"stat": {
 			"$ref": "../types/stat.json",

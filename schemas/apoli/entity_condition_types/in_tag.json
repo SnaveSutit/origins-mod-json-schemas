@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"tag"
-	],
+	"required": ["tag"],
 	"properties": {
 		"tag": {
 			"$ref": "../types/identifier.json",

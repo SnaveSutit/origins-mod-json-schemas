@@ -4,9 +4,7 @@
 			"type": "object",
 			"oneOf": [
 				{
-					"required": [
-						"item"
-					],
+					"required": ["item"],
 					"properties": {
 						"item": {
 							"$ref": "autocomplete_helpers/item_identifier.json",
@@ -16,9 +14,7 @@
 					}
 				},
 				{
-					"required": [
-						"tag"
-					],
+					"required": ["tag"],
 					"properties": {
 						"tag": {
 							"$ref": "identifier.json",

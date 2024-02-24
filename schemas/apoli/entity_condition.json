@@ -1,20 +1,13 @@
 {
 	"type": "object",
-	"required": [
-		"type"
-	],
+	"required": ["type"],
 	"allOf": [
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:ability",
-							"origins:ability"
-						]
+						"enum": ["apoli:ability", "origins:ability"]
 					}
 				}
 			},
@@ -24,15 +17,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:advancement",
-							"origins:advancement"
-						]
+						"enum": ["apoli:advancement", "origins:advancement"]
 					}
 				}
 			},
@@ -42,15 +30,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:air",
-							"origins:air"
-						]
+						"enum": ["apoli:air", "origins:air"]
 					}
 				}
 			},
@@ -60,15 +43,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:attribute",
-							"origins:attribute"
-						]
+						"enum": ["apoli:attribute", "origins:attribute"]
 					}
 				}
 			},
@@ -78,15 +56,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:biome",
-							"origins:biome"
-						]
+						"enum": ["apoli:biome", "origins:biome"]
 					}
 				}
 			},
@@ -96,15 +69,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:block_collision",
-							"origins:block_collision"
-						]
+						"enum": ["apoli:block_collision", "origins:block_collision"]
 					}
 				}
 			},
@@ -114,15 +82,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:block_in_radius",
-							"origins:block_in_radius"
-						]
+						"enum": ["apoli:block_in_radius", "origins:block_in_radius"]
 					}
 				}
 			},
@@ -132,15 +95,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:brightness",
-							"origins:brightness"
-						]
+						"enum": ["apoli:brightness", "origins:brightness"]
 					}
 				}
 			},
@@ -150,15 +108,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:climbing",
-							"origins:climbing"
-						]
+						"enum": ["apoli:climbing", "origins:climbing"]
 					}
 				}
 			},
@@ -168,15 +121,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:collided_horizontally",
-							"origins:collided_horizontally"
-						]
+						"enum": ["apoli:collided_horizontally", "origins:collided_horizontally"]
 					}
 				}
 			},
@@ -186,15 +134,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:command",
-							"origins:command"
-						]
+						"enum": ["apoli:command", "origins:command"]
 					}
 				}
 			},
@@ -204,15 +147,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:creative_flying",
-							"origins:creative_flying"
-						]
+						"enum": ["apoli:creative_flying", "origins:creative_flying"]
 					}
 				}
 			},
@@ -222,15 +160,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:daytime",
-							"origins:daytime"
-						]
+						"enum": ["apoli:daytime", "origins:daytime"]
 					}
 				}
 			},
@@ -240,15 +173,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:dimension",
-							"origins:dimension"
-						]
+						"enum": ["apoli:dimension", "origins:dimension"]
 					}
 				}
 			},
@@ -258,15 +186,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:distance_from_coordinates",
-							"origins:distance_from_coordinates"
-						]
+						"enum": ["apoli:distance_from_coordinates", "origins:distance_from_coordinates"]
 					}
 				}
 			},
@@ -276,15 +199,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:elytra_flight_possible",
-							"origins:elytra_flight_possible"
-						]
+						"enum": ["apoli:elytra_flight_possible", "origins:elytra_flight_possible"]
 					}
 				}
 			},
@@ -294,15 +212,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:enchantment",
-							"origins:enchantment"
-						]
+						"enum": ["apoli:enchantment", "origins:enchantment"]
 					}
 				}
 			},
@@ -312,15 +225,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:entity_group",
-							"origins:entity_group"
-						]
+						"enum": ["apoli:entity_group", "origins:entity_group"]
 					}
 				}
 			},
@@ -330,15 +238,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:entity_type",
-							"origins:entity_type"
-						]
+						"enum": ["apoli:entity_type", "origins:entity_type"]
 					}
 				}
 			},
@@ -348,15 +251,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:equipped_item",
-							"origins:equipped_item"
-						]
+						"enum": ["apoli:equipped_item", "origins:equipped_item"]
 					}
 				}
 			},
@@ -366,15 +264,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:exists",
-							"origins:exists"
-						]
+						"enum": ["apoli:exists", "origins:exists"]
 					}
 				}
 			},
@@ -384,15 +277,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:exposed_to_sky",
-							"origins:exposed_to_sky"
-						]
+						"enum": ["apoli:exposed_to_sky", "origins:exposed_to_sky"]
 					}
 				}
 			},
@@ -402,15 +290,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:exposed_to_sun",
-							"origins:exposed_to_sun"
-						]
+						"enum": ["apoli:exposed_to_sun", "origins:exposed_to_sun"]
 					}
 				}
 			},
@@ -420,15 +303,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fall_distance",
-							"origins:fall_distance"
-						]
+						"enum": ["apoli:fall_distance", "origins:fall_distance"]
 					}
 				}
 			},
@@ -438,15 +316,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fall_flying",
-							"origins:fall_flying"
-						]
+						"enum": ["apoli:fall_flying", "origins:fall_flying"]
 					}
 				}
 			},
@@ -456,15 +329,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fluid_height",
-							"origins:fluid_height"
-						]
+						"enum": ["apoli:fluid_height", "origins:fluid_height"]
 					}
 				}
 			},
@@ -474,15 +342,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:food_level",
-							"origins:food_level"
-						]
+						"enum": ["apoli:food_level", "origins:food_level"]
 					}
 				}
 			},
@@ -492,15 +355,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:gamemode",
-							"origins:gamemode"
-						]
+						"enum": ["apoli:gamemode", "origins:gamemode"]
 					}
 				}
 			},
@@ -510,15 +368,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:glowing",
-							"origins:glowing"
-						]
+						"enum": ["apoli:glowing", "origins:glowing"]
 					}
 				}
 			},
@@ -528,15 +381,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:health",
-							"origins:health"
-						]
+						"enum": ["apoli:health", "origins:health"]
 					}
 				}
 			},
@@ -546,15 +394,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:inventory",
-							"origins:inventory"
-						]
+						"enum": ["apoli:inventory", "origins:inventory"]
 					}
 				}
 			},
@@ -564,15 +407,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:invisible",
-							"origins:invisible"
-						]
+						"enum": ["apoli:invisible", "origins:invisible"]
 					}
 				}
 			},
@@ -582,15 +420,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_block",
-							"origins:in_block"
-						]
+						"enum": ["apoli:in_block", "origins:in_block"]
 					}
 				}
 			},
@@ -600,15 +433,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_block_anywhere",
-							"origins:in_block_anywhere"
-						]
+						"enum": ["apoli:in_block_anywhere", "origins:in_block_anywhere"]
 					}
 				}
 			},
@@ -618,15 +446,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_rain",
-							"origins:in_rain"
-						]
+						"enum": ["apoli:in_rain", "origins:in_rain"]
 					}
 				}
 			},
@@ -636,15 +459,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_snow",
-							"origins:in_snow"
-						]
+						"enum": ["apoli:in_snow", "origins:in_snow"]
 					}
 				}
 			},
@@ -654,15 +472,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_tag",
-							"origins:in_tag"
-						]
+						"enum": ["apoli:in_tag", "origins:in_tag"]
 					}
 				}
 			},
@@ -672,15 +485,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_thunderstorm",
-							"origins:in_thunderstorm"
-						]
+						"enum": ["apoli:in_thunderstorm", "origins:in_thunderstorm"]
 					}
 				}
 			},
@@ -690,15 +498,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:living",
-							"origins:living"
-						]
+						"enum": ["apoli:living", "origins:living"]
 					}
 				}
 			},
@@ -708,15 +511,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:moving",
-							"origins:moving"
-						]
+						"enum": ["apoli:moving", "origins:moving"]
 					}
 				}
 			},
@@ -726,15 +524,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:nbt",
-							"origins:nbt"
-						]
+						"enum": ["apoli:nbt", "origins:nbt"]
 					}
 				}
 			},
@@ -744,15 +537,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:on_block",
-							"origins:on_block"
-						]
+						"enum": ["apoli:on_block", "origins:on_block"]
 					}
 				}
 			},
@@ -762,15 +550,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:on_fire",
-							"origins:on_fire"
-						]
+						"enum": ["apoli:on_fire", "origins:on_fire"]
 					}
 				}
 			},
@@ -780,15 +563,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:origin",
-							"origins:origin"
-						]
+						"enum": ["apoli:origin", "origins:origin"]
 					}
 				}
 			},
@@ -798,15 +576,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:passenger",
-							"origins:passenger"
-						]
+						"enum": ["apoli:passenger", "origins:passenger"]
 					}
 				}
 			},
@@ -816,15 +589,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:passenger_recursive",
-							"origins:passenger_recursive"
-						]
+						"enum": ["apoli:passenger_recursive", "origins:passenger_recursive"]
 					}
 				}
 			},
@@ -834,15 +602,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:power",
-							"origins:power"
-						]
+						"enum": ["apoli:power", "origins:power"]
 					}
 				}
 			},
@@ -852,15 +615,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:power_active",
-							"origins:power_active"
-						]
+						"enum": ["apoli:power_active", "origins:power_active"]
 					}
 				}
 			},
@@ -870,15 +628,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:power_type",
-							"origins:power_type"
-						]
+						"enum": ["apoli:power_type", "origins:power_type"]
 					}
 				}
 			},
@@ -888,15 +641,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:predicate",
-							"origins:predicate"
-						]
+						"enum": ["apoli:predicate", "origins:predicate"]
 					}
 				}
 			},
@@ -906,15 +654,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:raycast",
-							"origins:raycast"
-						]
+						"enum": ["apoli:raycast", "origins:raycast"]
 					}
 				}
 			},
@@ -924,15 +667,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:relative_health",
-							"origins:relative_health"
-						]
+						"enum": ["apoli:relative_health", "origins:relative_health"]
 					}
 				}
 			},
@@ -942,15 +680,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:resource",
-							"origins:resource"
-						]
+						"enum": ["apoli:resource", "origins:resource"]
 					}
 				}
 			},
@@ -960,15 +693,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:riding",
-							"origins:riding"
-						]
+						"enum": ["apoli:riding", "origins:riding"]
 					}
 				}
 			},
@@ -978,15 +706,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:riding_recursive",
-							"origins:riding_recursive"
-						]
+						"enum": ["apoli:riding_recursive", "origins:riding_recursive"]
 					}
 				}
 			},
@@ -996,15 +719,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:riding_root",
-							"origins:riding_root"
-						]
+						"enum": ["apoli:riding_root", "origins:riding_root"]
 					}
 				}
 			},
@@ -1014,15 +732,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:saturation_level",
-							"origins:saturation_level"
-						]
+						"enum": ["apoli:saturation_level", "origins:saturation_level"]
 					}
 				}
 			},
@@ -1032,15 +745,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:scoreboard",
-							"origins:scoreboard"
-						]
+						"enum": ["apoli:scoreboard", "origins:scoreboard"]
 					}
 				}
 			},
@@ -1050,15 +758,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:set_size",
-							"origins:set_size"
-						]
+						"enum": ["apoli:set_size", "origins:set_size"]
 					}
 				}
 			},
@@ -1068,15 +771,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:sneaking",
-							"origins:sneaking"
-						]
+						"enum": ["apoli:sneaking", "origins:sneaking"]
 					}
 				}
 			},
@@ -1086,15 +784,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:sprinting",
-							"origins:sprinting"
-						]
+						"enum": ["apoli:sprinting", "origins:sprinting"]
 					}
 				}
 			},
@@ -1104,15 +797,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:status_effect",
-							"origins:status_effect"
-						]
+						"enum": ["apoli:status_effect", "origins:status_effect"]
 					}
 				}
 			},
@@ -1122,15 +810,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:submerged_in",
-							"origins:submerged_in"
-						]
+						"enum": ["apoli:submerged_in", "origins:submerged_in"]
 					}
 				}
 			},
@@ -1140,15 +823,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:swimming",
-							"origins:swimming"
-						]
+						"enum": ["apoli:swimming", "origins:swimming"]
 					}
 				}
 			},
@@ -1158,15 +836,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:tamed",
-							"origins:tamed"
-						]
+						"enum": ["apoli:tamed", "origins:tamed"]
 					}
 				}
 			},
@@ -1176,15 +849,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:time_of_day",
-							"origins:time_of_day"
-						]
+						"enum": ["apoli:time_of_day", "origins:time_of_day"]
 					}
 				}
 			},
@@ -1194,15 +862,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:using_effective_tool",
-							"origins:using_effective_tool"
-						]
+						"enum": ["apoli:using_effective_tool", "origins:using_effective_tool"]
 					}
 				}
 			},
@@ -1212,15 +875,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:using_item",
-							"origins:using_item"
-						]
+						"enum": ["apoli:using_item", "origins:using_item"]
 					}
 				}
 			},
@@ -1230,15 +888,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:xp_levels",
-							"origins:xp_levels"
-						]
+						"enum": ["apoli:xp_levels", "origins:xp_levels"]
 					}
 				}
 			},
@@ -1248,15 +901,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:xp_points",
-							"origins:xp_points"
-						]
+						"enum": ["apoli:xp_points", "origins:xp_points"]
 					}
 				}
 			},
@@ -1266,23 +914,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:and",
-							"origins:and"
-						]
+						"enum": ["apoli:and", "origins:and"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",
@@ -1301,23 +942,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:chance",
-							"origins:chance"
-						]
+						"enum": ["apoli:chance", "origins:chance"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"chance"
-				],
+				"required": ["chance"],
 				"properties": {
 					"chance": {
 						"type": "number",
@@ -1333,23 +967,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:constant",
-							"origins:constant"
-						]
+						"enum": ["apoli:constant", "origins:constant"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"value"
-				],
+				"required": ["value"],
 				"properties": {
 					"value": {
 						"type": "boolean",
@@ -1365,23 +992,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:or",
-							"origins:or"
-						]
+						"enum": ["apoli:or", "origins:or"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",
@@ -1400,9 +1020,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:attacker_condition"
@@ -1415,9 +1033,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:attack_target_condition"
@@ -1430,9 +1046,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:base_enchantment"
@@ -1445,9 +1059,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:cached_block_in_radius"
@@ -1460,9 +1072,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:can_have_effect"
@@ -1475,9 +1085,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:can_take_damage"
@@ -1490,9 +1098,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:compare_resource"
@@ -1505,9 +1111,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:custom_entity_id"
@@ -1520,9 +1124,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:entity_in_radius"
@@ -1535,9 +1137,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:grounded"
@@ -1550,9 +1150,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:hostile"
@@ -1565,9 +1163,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:join_invulnerability_ticks"
@@ -1580,9 +1176,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:key_pressed"
@@ -1595,9 +1189,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:max_health"
@@ -1610,9 +1202,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:moving"
@@ -1625,9 +1215,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:particle_in_radius"
@@ -1640,9 +1228,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:player_model_type"
@@ -1655,9 +1241,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:raining"
@@ -1670,9 +1254,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:raycast"
@@ -1685,9 +1267,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:status_effect_tag"
@@ -1700,9 +1280,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:structure"
@@ -1715,9 +1293,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:thundering"
@@ -1730,9 +1306,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:trident_enchantment"
@@ -1745,9 +1319,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:velocity"

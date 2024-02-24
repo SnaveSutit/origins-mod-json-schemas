@@ -1,36 +1,23 @@
 {
 	"type": "object",
-	"required": [
-		"comparison",
-		"compare_to"
-	],
+	"required": ["comparison", "compare_to"],
 	"properties": {
 		"axes": {
 			"type": "array",
 			"items": {
-				"enum": [
-					"x",
-					"y",
-					"z"
-				],
+				"enum": ["x", "y", "z"],
 				"uniqueItems": true
 			},
 			"description": "The axes to get the angle values to calculate, and compare to.",
 			"markdownDescription": "The axes to get the angle values to calculate, and compare to."
 		},
 		"actor_rotation": {
-			"enum": [
-				"head",
-				"body"
-			],
+			"enum": ["head", "body"],
 			"description": "Determines the initial point of the rotation for the actor. Accepts `\"head\"` or `\"body\"`.",
 			"markdownDescription": "Determines the initial point of the rotation for the actor. Accepts `\"head\"` or `\"body\"`."
 		},
 		"target_rotation": {
-			"enum": [
-				"head",
-				"body"
-			],
+			"enum": ["head", "body"],
 			"description": "Determines the initial point of the rotation for the target. Accepts `\"head\"` or `\"body\"`.",
 			"markdownDescription": "Determines the initial point of the rotation for the target. Accepts `\"head\"` or `\"body\"`."
 		},

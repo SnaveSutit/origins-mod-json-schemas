@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"required": ["title", "description"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## System Toast\n\n---\n\n_Entity Action Type_\n\nThis is used to display a system toast / message at the top right of a players screen.\n\nType ID: `epoli:system_toast`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:system_toast\",\n\t\"title\": \"Evolved\",\n    \"description\": \"You have evolved\"\n}\n```\nThis example will display a system toast to the player.",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## System Toast\n\n---\n\n_Entity Action Type_\n\nThis is used to display a system toast / message at the top right of a players screen.\n\nType ID: `epoli:system_toast`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:system_toast\",\n\t\"title\": \"Evolved\",\n    \"description\": \"You have evolved\"\n}\n```\nThis example will display a system toast to the player."
+		},
+		"title": {
+			"$ref": "../../apoli/types/text_component.json",
+			"description": "Displayed as the top/title of the toast (You can use a json text component)",
+			"markdownDescription": "Displayed as the top/title of the toast (You can use a json text component)"
+		},
+		"description": {
+			"$ref": "../../apoli/types/text_component.json",
+			"description": "Displayed as the bottom/main text of the toast (You can use a json text component)",
+			"markdownDescription": "Displayed as the bottom/main text of the toast (You can use a json text component)"
+		}
+	}
+}

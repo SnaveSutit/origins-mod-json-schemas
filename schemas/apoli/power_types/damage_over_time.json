@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"damage"
-	],
+	"required": ["damage"],
 	"properties": {
 		"interval": {
 			"type": "integer",

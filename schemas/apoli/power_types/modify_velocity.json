@@ -4,11 +4,7 @@
 		"axes": {
 			"type": "array",
 			"items": {
-				"enum": [
-					"x",
-					"y",
-					"z"
-				]
+				"enum": ["x", "y", "z"]
 			},
 			"uniqueItems": true,
 			"description": "Used to specify the axes affected by this modifier. ",

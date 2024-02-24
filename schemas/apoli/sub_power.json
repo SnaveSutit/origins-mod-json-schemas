@@ -1,23 +1,14 @@
 {
 	"type": "object",
-	"required": [
-		"type"
-	],
+	"required": ["type"],
 	"allOf": [
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_being_used",
-							"origins:action_on_being_used"
-						]
+						"enum": ["apoli:action_on_being_used", "origins:action_on_being_used"]
 					}
 				}
 			},
@@ -27,18 +18,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_block_break",
-							"origins:action_on_block_break"
-						]
+						"enum": ["apoli:action_on_block_break", "origins:action_on_block_break"]
 					}
 				}
 			},
@@ -48,18 +32,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_block_place",
-							"origins:action_on_block_place"
-						]
+						"enum": ["apoli:action_on_block_place", "origins:action_on_block_place"]
 					}
 				}
 			},
@@ -69,18 +46,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_block_use",
-							"origins:action_on_block_use"
-						]
+						"enum": ["apoli:action_on_block_use", "origins:action_on_block_use"]
 					}
 				}
 			},
@@ -90,18 +60,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_callback",
-							"origins:action_on_callback"
-						]
+						"enum": ["apoli:action_on_callback", "origins:action_on_callback"]
 					}
 				}
 			},
@@ -111,18 +74,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_death",
-							"origins:action_on_death"
-						]
+						"enum": ["apoli:action_on_death", "origins:action_on_death"]
 					}
 				}
 			},
@@ -132,18 +88,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_entity_use",
-							"origins:action_on_entity_use"
-						]
+						"enum": ["apoli:action_on_entity_use", "origins:action_on_entity_use"]
 					}
 				}
 			},
@@ -153,18 +102,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_hit",
-							"origins:action_on_hit"
-						]
+						"enum": ["apoli:action_on_hit", "origins:action_on_hit"]
 					}
 				}
 			},
@@ -174,18 +116,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_item_pickup",
-							"origins:action_on_item_pickup"
-						]
+						"enum": ["apoli:action_on_item_pickup", "origins:action_on_item_pickup"]
 					}
 				}
 			},
@@ -195,18 +130,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_item_use",
-							"origins:action_on_item_use"
-						]
+						"enum": ["apoli:action_on_item_use", "origins:action_on_item_use"]
 					}
 				}
 			},
@@ -216,18 +144,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_land",
-							"origins:action_on_land"
-						]
+						"enum": ["apoli:action_on_land", "origins:action_on_land"]
 					}
 				}
 			},
@@ -237,18 +158,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_wake_up",
-							"origins:action_on_wake_up"
-						]
+						"enum": ["apoli:action_on_wake_up", "origins:action_on_wake_up"]
 					}
 				}
 			},
@@ -258,18 +172,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_over_time",
-							"origins:action_over_time"
-						]
+						"enum": ["apoli:action_over_time", "origins:action_over_time"]
 					}
 				}
 			},
@@ -279,18 +186,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_when_damage_taken",
-							"origins:action_when_damage_taken"
-						]
+						"enum": ["apoli:action_when_damage_taken", "origins:action_when_damage_taken"]
 					}
 				}
 			},
@@ -300,18 +200,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_when_hit",
-							"origins:action_when_hit"
-						]
+						"enum": ["apoli:action_when_hit", "origins:action_when_hit"]
 					}
 				}
 			},
@@ -321,18 +214,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:active_self",
-							"origins:active_self"
-						]
+						"enum": ["apoli:active_self", "origins:active_self"]
 					}
 				}
 			},
@@ -342,18 +228,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:attacker_action_when_hit",
-							"origins:attacker_action_when_hit"
-						]
+						"enum": ["apoli:attacker_action_when_hit", "origins:attacker_action_when_hit"]
 					}
 				}
 			},
@@ -363,18 +242,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:attribute",
-							"origins:attribute"
-						]
+						"enum": ["apoli:attribute", "origins:attribute"]
 					}
 				}
 			},
@@ -384,18 +256,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:attribute_modify_transfer",
-							"origins:attribute_modify_transfer"
-						]
+						"enum": ["apoli:attribute_modify_transfer", "origins:attribute_modify_transfer"]
 					}
 				}
 			},
@@ -405,18 +270,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:burn",
-							"origins:burn"
-						]
+						"enum": ["apoli:burn", "origins:burn"]
 					}
 				}
 			},
@@ -426,18 +284,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:climbing",
-							"origins:climbing"
-						]
+						"enum": ["apoli:climbing", "origins:climbing"]
 					}
 				}
 			},
@@ -447,18 +298,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:conditioned_attribute",
-							"origins:conditioned_attribute"
-						]
+						"enum": ["apoli:conditioned_attribute", "origins:conditioned_attribute"]
 					}
 				}
 			},
@@ -468,18 +312,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:conditioned_restrict_armor",
-							"origins:conditioned_restrict_armor"
-						]
+						"enum": ["apoli:conditioned_restrict_armor", "origins:conditioned_restrict_armor"]
 					}
 				}
 			},
@@ -489,18 +326,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:cooldown",
-							"origins:cooldown"
-						]
+						"enum": ["apoli:cooldown", "origins:cooldown"]
 					}
 				}
 			},
@@ -510,18 +340,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:creative_flight",
-							"origins:creative_flight"
-						]
+						"enum": ["apoli:creative_flight", "origins:creative_flight"]
 					}
 				}
 			},
@@ -531,18 +354,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:damage_over_time",
-							"origins:damage_over_time"
-						]
+						"enum": ["apoli:damage_over_time", "origins:damage_over_time"]
 					}
 				}
 			},
@@ -552,18 +368,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:disable_regen",
-							"origins:disable_regen"
-						]
+						"enum": ["apoli:disable_regen", "origins:disable_regen"]
 					}
 				}
 			},
@@ -573,18 +382,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:edible_item",
-							"origins:edible_item"
-						]
+						"enum": ["apoli:edible_item", "origins:edible_item"]
 					}
 				}
 			},
@@ -594,18 +396,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:effect_immunity",
-							"origins:effect_immunity"
-						]
+						"enum": ["apoli:effect_immunity", "origins:effect_immunity"]
 					}
 				}
 			},
@@ -615,18 +410,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:elytra_flight",
-							"origins:elytra_flight"
-						]
+						"enum": ["apoli:elytra_flight", "origins:elytra_flight"]
 					}
 				}
 			},
@@ -636,18 +424,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:entity_glow",
-							"origins:entity_glow"
-						]
+						"enum": ["apoli:entity_glow", "origins:entity_glow"]
 					}
 				}
 			},
@@ -657,18 +438,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:entity_group",
-							"origins:entity_group"
-						]
+						"enum": ["apoli:entity_group", "origins:entity_group"]
 					}
 				}
 			},
@@ -678,18 +452,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:entity_set",
-							"origins:entity_set"
-						]
+						"enum": ["apoli:entity_set", "origins:entity_set"]
 					}
 				}
 			},
@@ -699,18 +466,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:exhaust",
-							"origins:exhaust"
-						]
+						"enum": ["apoli:exhaust", "origins:exhaust"]
 					}
 				}
 			},
@@ -720,18 +480,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fire_immunity",
-							"origins:fire_immunity"
-						]
+						"enum": ["apoli:fire_immunity", "origins:fire_immunity"]
 					}
 				}
 			},
@@ -741,18 +494,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fire_projectile",
-							"origins:fire_projectile"
-						]
+						"enum": ["apoli:fire_projectile", "origins:fire_projectile"]
 					}
 				}
 			},
@@ -762,18 +508,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:freeze",
-							"origins:freeze"
-						]
+						"enum": ["apoli:freeze", "origins:freeze"]
 					}
 				}
 			},
@@ -783,18 +522,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:game_event_listener",
-							"origins:game_event_listener"
-						]
+						"enum": ["apoli:game_event_listener", "origins:game_event_listener"]
 					}
 				}
 			},
@@ -804,18 +536,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:grounded",
-							"origins:grounded"
-						]
+						"enum": ["apoli:grounded", "origins:grounded"]
 					}
 				}
 			},
@@ -825,18 +550,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:ignore_water",
-							"origins:ignore_water"
-						]
+						"enum": ["apoli:ignore_water", "origins:ignore_water"]
 					}
 				}
 			},
@@ -846,18 +564,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:inventory",
-							"origins:inventory"
-						]
+						"enum": ["apoli:inventory", "origins:inventory"]
 					}
 				}
 			},
@@ -867,18 +578,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:invisibility",
-							"origins:invisibility"
-						]
+						"enum": ["apoli:invisibility", "origins:invisibility"]
 					}
 				}
 			},
@@ -888,18 +592,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:invulnerability",
-							"origins:invulnerability"
-						]
+						"enum": ["apoli:invulnerability", "origins:invulnerability"]
 					}
 				}
 			},
@@ -909,18 +606,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:item_on_item",
-							"origins:item_on_item"
-						]
+						"enum": ["apoli:item_on_item", "origins:item_on_item"]
 					}
 				}
 			},
@@ -930,18 +620,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:keep_inventory",
-							"origins:keep_inventory"
-						]
+						"enum": ["apoli:keep_inventory", "origins:keep_inventory"]
 					}
 				}
 			},
@@ -951,18 +634,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:launch",
-							"origins:launch"
-						]
+						"enum": ["apoli:launch", "origins:launch"]
 					}
 				}
 			},
@@ -972,18 +648,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:lava_vision",
-							"origins:lava_vision"
-						]
+						"enum": ["apoli:lava_vision", "origins:lava_vision"]
 					}
 				}
 			},
@@ -993,18 +662,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:model_color",
-							"origins:model_color"
-						]
+						"enum": ["apoli:model_color", "origins:model_color"]
 					}
 				}
 			},
@@ -1014,18 +676,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_air_speed",
-							"origins:modify_air_speed"
-						]
+						"enum": ["apoli:modify_air_speed", "origins:modify_air_speed"]
 					}
 				}
 			},
@@ -1035,18 +690,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_attribute",
-							"origins:modify_attribute"
-						]
+						"enum": ["apoli:modify_attribute", "origins:modify_attribute"]
 					}
 				}
 			},
@@ -1056,18 +704,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_block_render",
-							"origins:modify_block_render"
-						]
+						"enum": ["apoli:modify_block_render", "origins:modify_block_render"]
 					}
 				}
 			},
@@ -1077,18 +718,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_break_speed",
-							"origins:modify_break_speed"
-						]
+						"enum": ["apoli:modify_break_speed", "origins:modify_break_speed"]
 					}
 				}
 			},
@@ -1098,18 +732,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_camera_submersion",
-							"origins:modify_camera_submersion"
-						]
+						"enum": ["apoli:modify_camera_submersion", "origins:modify_camera_submersion"]
 					}
 				}
 			},
@@ -1119,18 +746,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_crafting",
-							"origins:modify_crafting"
-						]
+						"enum": ["apoli:modify_crafting", "origins:modify_crafting"]
 					}
 				}
 			},
@@ -1140,18 +760,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_damage_dealt",
-							"origins:modify_damage_dealt"
-						]
+						"enum": ["apoli:modify_damage_dealt", "origins:modify_damage_dealt"]
 					}
 				}
 			},
@@ -1161,18 +774,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_damage_taken",
-							"origins:modify_damage_taken"
-						]
+						"enum": ["apoli:modify_damage_taken", "origins:modify_damage_taken"]
 					}
 				}
 			},
@@ -1182,18 +788,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_enchantment_level",
-							"origins:modify_enchantment_level"
-						]
+						"enum": ["apoli:modify_enchantment_level", "origins:modify_enchantment_level"]
 					}
 				}
 			},
@@ -1203,18 +802,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_exhaustion",
-							"origins:modify_exhaustion"
-						]
+						"enum": ["apoli:modify_exhaustion", "origins:modify_exhaustion"]
 					}
 				}
 			},
@@ -1224,18 +816,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_falling",
-							"origins:modify_falling"
-						]
+						"enum": ["apoli:modify_falling", "origins:modify_falling"]
 					}
 				}
 			},
@@ -1245,18 +830,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_fluid_render",
-							"origins:modify_fluid_render"
-						]
+						"enum": ["apoli:modify_fluid_render", "origins:modify_fluid_render"]
 					}
 				}
 			},
@@ -1266,18 +844,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_food",
-							"origins:modify_food"
-						]
+						"enum": ["apoli:modify_food", "origins:modify_food"]
 					}
 				}
 			},
@@ -1287,18 +858,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_grindstone",
-							"origins:modify_grindstone"
-						]
+						"enum": ["apoli:modify_grindstone", "origins:modify_grindstone"]
 					}
 				}
 			},
@@ -1308,18 +872,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_harvest",
-							"origins:modify_harvest"
-						]
+						"enum": ["apoli:modify_harvest", "origins:modify_harvest"]
 					}
 				}
 			},
@@ -1329,18 +886,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_healing",
-							"origins:modify_healing"
-						]
+						"enum": ["apoli:modify_healing", "origins:modify_healing"]
 					}
 				}
 			},
@@ -1350,18 +900,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_insomnia_ticks",
-							"origins:modify_insomnia_ticks"
-						]
+						"enum": ["apoli:modify_insomnia_ticks", "origins:modify_insomnia_ticks"]
 					}
 				}
 			},
@@ -1371,18 +914,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_jump",
-							"origins:modify_jump"
-						]
+						"enum": ["apoli:modify_jump", "origins:modify_jump"]
 					}
 				}
 			},
@@ -1392,18 +928,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_lava_speed",
-							"origins:modify_lava_speed"
-						]
+						"enum": ["apoli:modify_lava_speed", "origins:modify_lava_speed"]
 					}
 				}
 			},
@@ -1413,18 +942,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_player_spawn",
-							"origins:modify_player_spawn"
-						]
+						"enum": ["apoli:modify_player_spawn", "origins:modify_player_spawn"]
 					}
 				}
 			},
@@ -1434,18 +956,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_projectile_damage",
-							"origins:modify_projectile_damage"
-						]
+						"enum": ["apoli:modify_projectile_damage", "origins:modify_projectile_damage"]
 					}
 				}
 			},
@@ -1455,18 +970,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_slipperiness",
-							"origins:modify_slipperiness"
-						]
+						"enum": ["apoli:modify_slipperiness", "origins:modify_slipperiness"]
 					}
 				}
 			},
@@ -1476,12 +984,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"enum": [
@@ -1497,18 +1001,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_status_effect_duration",
-							"origins:modify_status_effect_duration"
-						]
+						"enum": ["apoli:modify_status_effect_duration", "origins:modify_status_effect_duration"]
 					}
 				}
 			},
@@ -1518,18 +1015,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_swim_speed",
-							"origins:modify_swim_speed"
-						]
+						"enum": ["apoli:modify_swim_speed", "origins:modify_swim_speed"]
 					}
 				}
 			},
@@ -1539,18 +1029,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_velocity",
-							"origins:modify_velocity"
-						]
+						"enum": ["apoli:modify_velocity", "origins:modify_velocity"]
 					}
 				}
 			},
@@ -1560,18 +1043,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_xp_gain",
-							"origins:modify_xp_gain"
-						]
+						"enum": ["apoli:modify_xp_gain", "origins:modify_xp_gain"]
 					}
 				}
 			},
@@ -1581,18 +1057,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:multiple",
-							"origins:multiple"
-						]
+						"enum": ["apoli:multiple", "origins:multiple"]
 					}
 				}
 			},
@@ -1602,18 +1071,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:night_vision",
-							"origins:night_vision"
-						]
+						"enum": ["apoli:night_vision", "origins:night_vision"]
 					}
 				}
 			},
@@ -1623,18 +1085,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:overlay",
-							"origins:overlay"
-						]
+						"enum": ["apoli:overlay", "origins:overlay"]
 					}
 				}
 			},
@@ -1644,18 +1099,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:particle",
-							"origins:particle"
-						]
+						"enum": ["apoli:particle", "origins:particle"]
 					}
 				}
 			},
@@ -1665,18 +1113,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:phasing",
-							"origins:phasing"
-						]
+						"enum": ["apoli:phasing", "origins:phasing"]
 					}
 				}
 			},
@@ -1686,18 +1127,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_being_used",
-							"origins:prevent_being_used"
-						]
+						"enum": ["apoli:prevent_being_used", "origins:prevent_being_used"]
 					}
 				}
 			},
@@ -1707,18 +1141,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_block_place",
-							"origins:prevent_block_place"
-						]
+						"enum": ["apoli:prevent_block_place", "origins:prevent_block_place"]
 					}
 				}
 			},
@@ -1728,18 +1155,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_block_selection",
-							"origins:prevent_block_selection"
-						]
+						"enum": ["apoli:prevent_block_selection", "origins:prevent_block_selection"]
 					}
 				}
 			},
@@ -1749,18 +1169,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_block_use",
-							"origins:prevent_block_use"
-						]
+						"enum": ["apoli:prevent_block_use", "origins:prevent_block_use"]
 					}
 				}
 			},
@@ -1770,18 +1183,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_death",
-							"origins:prevent_death"
-						]
+						"enum": ["apoli:prevent_death", "origins:prevent_death"]
 					}
 				}
 			},
@@ -1791,18 +1197,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_elytra_flight",
-							"origins:prevent_elytra_flight"
-						]
+						"enum": ["apoli:prevent_elytra_flight", "origins:prevent_elytra_flight"]
 					}
 				}
 			},
@@ -1812,18 +1211,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_entity_collision",
-							"origins:prevent_entity_collision"
-						]
+						"enum": ["apoli:prevent_entity_collision", "origins:prevent_entity_collision"]
 					}
 				}
 			},
@@ -1833,18 +1225,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_entity_render",
-							"origins:prevent_entity_render"
-						]
+						"enum": ["apoli:prevent_entity_render", "origins:prevent_entity_render"]
 					}
 				}
 			},
@@ -1854,18 +1239,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_entity_use",
-							"origins:prevent_entity_use"
-						]
+						"enum": ["apoli:prevent_entity_use", "origins:prevent_entity_use"]
 					}
 				}
 			},
@@ -1875,18 +1253,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_feature_render",
-							"origins:prevent_feature_render"
-						]
+						"enum": ["apoli:prevent_feature_render", "origins:prevent_feature_render"]
 					}
 				}
 			},
@@ -1896,18 +1267,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_game_event",
-							"origins:prevent_game_event"
-						]
+						"enum": ["apoli:prevent_game_event", "origins:prevent_game_event"]
 					}
 				}
 			},
@@ -1917,18 +1281,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_item_pickup",
-							"origins:prevent_item_pickup"
-						]
+						"enum": ["apoli:prevent_item_pickup", "origins:prevent_item_pickup"]
 					}
 				}
 			},
@@ -1938,18 +1295,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_item_use",
-							"origins:prevent_item_use"
-						]
+						"enum": ["apoli:prevent_item_use", "origins:prevent_item_use"]
 					}
 				}
 			},
@@ -1959,18 +1309,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_sleep",
-							"origins:prevent_sleep"
-						]
+						"enum": ["apoli:prevent_sleep", "origins:prevent_sleep"]
 					}
 				}
 			},
@@ -1980,18 +1323,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:prevent_sprinting",
-							"origins:prevent_sprinting"
-						]
+						"enum": ["apoli:prevent_sprinting", "origins:prevent_sprinting"]
 					}
 				}
 			},
@@ -2001,18 +1337,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:recipe",
-							"origins:recipe"
-						]
+						"enum": ["apoli:recipe", "origins:recipe"]
 					}
 				}
 			},
@@ -2022,18 +1351,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:replace_loot_table",
-							"origins:replace_loot_table"
-						]
+						"enum": ["apoli:replace_loot_table", "origins:replace_loot_table"]
 					}
 				}
 			},
@@ -2043,18 +1365,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:resource",
-							"origins:resource"
-						]
+						"enum": ["apoli:resource", "origins:resource"]
 					}
 				}
 			},
@@ -2064,18 +1379,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:restrict_armor",
-							"origins:restrict_armor"
-						]
+						"enum": ["apoli:restrict_armor", "origins:restrict_armor"]
 					}
 				}
 			},
@@ -2085,18 +1393,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:self_action_on_hit",
-							"origins:self_action_on_hit"
-						]
+						"enum": ["apoli:self_action_on_hit", "origins:self_action_on_hit"]
 					}
 				}
 			},
@@ -2106,18 +1407,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:self_action_on_kill",
-							"origins:self_action_on_kill"
-						]
+						"enum": ["apoli:self_action_on_kill", "origins:self_action_on_kill"]
 					}
 				}
 			},
@@ -2127,18 +1421,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:self_action_when_hit",
-							"origins:self_action_when_hit"
-						]
+						"enum": ["apoli:self_action_when_hit", "origins:self_action_when_hit"]
 					}
 				}
 			},
@@ -2148,18 +1435,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:self_glow",
-							"origins:self_glow"
-						]
+						"enum": ["apoli:self_glow", "origins:self_glow"]
 					}
 				}
 			},
@@ -2169,18 +1449,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:shader",
-							"origins:shader"
-						]
+						"enum": ["apoli:shader", "origins:shader"]
 					}
 				}
 			},
@@ -2190,18 +1463,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:shaking",
-							"origins:shaking"
-						]
+						"enum": ["apoli:shaking", "origins:shaking"]
 					}
 				}
 			},
@@ -2211,18 +1477,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:simple",
-							"origins:simple"
-						]
+						"enum": ["apoli:simple", "origins:simple"]
 					}
 				}
 			},
@@ -2232,18 +1491,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:stacking_status_effect",
-							"origins:stacking_status_effect"
-						]
+						"enum": ["apoli:stacking_status_effect", "origins:stacking_status_effect"]
 					}
 				}
 			},
@@ -2253,18 +1505,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:starting_equipment",
-							"origins:starting_equipment"
-						]
+						"enum": ["apoli:starting_equipment", "origins:starting_equipment"]
 					}
 				}
 			},
@@ -2274,18 +1519,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:status_bar_texture",
-							"origins:status_bar_texture"
-						]
+						"enum": ["apoli:status_bar_texture", "origins:status_bar_texture"]
 					}
 				}
 			},
@@ -2295,18 +1533,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:swimming",
-							"origins:swimming"
-						]
+						"enum": ["apoli:swimming", "origins:swimming"]
 					}
 				}
 			},
@@ -2316,18 +1547,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:target_action_on_hit",
-							"origins:target_action_on_hit"
-						]
+						"enum": ["apoli:target_action_on_hit", "origins:target_action_on_hit"]
 					}
 				}
 			},
@@ -2337,18 +1561,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:toggle",
-							"origins:toggle"
-						]
+						"enum": ["apoli:toggle", "origins:toggle"]
 					}
 				}
 			},
@@ -2358,18 +1575,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:toggle_night_vision",
-							"origins:toggle_night_vision"
-						]
+						"enum": ["apoli:toggle_night_vision", "origins:toggle_night_vision"]
 					}
 				}
 			},
@@ -2379,18 +1589,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:tooltip",
-							"origins:tooltip"
-						]
+						"enum": ["apoli:tooltip", "origins:tooltip"]
 					}
 				}
 			},
@@ -2400,18 +1603,11 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:walk_on_fluid",
-							"origins:walk_on_fluid"
-						]
+						"enum": ["apoli:walk_on_fluid", "origins:walk_on_fluid"]
 					}
 				}
 			},
@@ -2421,12 +1617,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_attacker_hurt"
@@ -2439,12 +1631,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_block_placed"
@@ -2457,12 +1645,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_bonemeal"
@@ -2475,12 +1659,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_durability_change"
@@ -2493,12 +1673,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_equip"
@@ -2511,12 +1687,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_harm"
@@ -2529,12 +1701,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_jump"
@@ -2547,12 +1715,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_projectile_hit"
@@ -2565,12 +1729,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_tame_hit"
@@ -2583,12 +1743,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_target_death"
@@ -2601,12 +1757,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_on_target_hurt"
@@ -2619,12 +1771,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_when_harmed"
@@ -2637,12 +1785,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_when_lightning_struck"
@@ -2655,12 +1799,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_when_projectile_hit"
@@ -2673,12 +1813,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:action_when_tame_hit"
@@ -2691,12 +1827,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:aerial_affinity"
@@ -2709,12 +1841,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:allow_anvil_enchant"
@@ -2727,12 +1855,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:bunny_hop"
@@ -2745,12 +1869,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:client_action_over_time"
@@ -2763,12 +1883,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:custom_death_sound"
@@ -2781,12 +1897,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:custom_footstep"
@@ -2799,12 +1911,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:custom_hurt_sound"
@@ -2817,12 +1925,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:custom_projectile"
@@ -2835,12 +1939,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:damage_nearby_on_hit"
@@ -2853,12 +1953,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:damage_nearby_when_hit"
@@ -2871,12 +1967,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:edible_item"
@@ -2889,12 +1981,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:energy_swirl"
@@ -2907,12 +1995,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:entity_texture_overlay"
@@ -2925,12 +2009,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:force_particle_render"
@@ -2943,12 +2023,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:freeze"
@@ -2961,12 +2037,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:hover"
@@ -2979,12 +2051,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:instant_effect_immunity"
@@ -2997,12 +2065,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:invert_instant_effects"
@@ -3015,12 +2079,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:mobs_ignore"
@@ -3033,12 +2093,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_block_placed"
@@ -3051,12 +2107,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_breeding_cooldown"
@@ -3069,12 +2121,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_dragon_fireball"
@@ -3087,12 +2135,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_durability_change"
@@ -3105,12 +2149,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_enchantment_damage_dealt"
@@ -3123,12 +2163,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_enchantment_damage_taken"
@@ -3141,12 +2177,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_enchantment_level"
@@ -3159,12 +2191,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_equipped_item_render"
@@ -3177,12 +2205,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_fov"
@@ -3195,12 +2219,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_scale"
@@ -3213,12 +2233,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:modify_soul_speed"
@@ -3231,12 +2247,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:player_model_type"
@@ -3249,12 +2261,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:prevent_bee_anger"
@@ -3267,12 +2275,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:prevent_breeding"
@@ -3285,12 +2289,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:prevent_label_render"
@@ -3303,12 +2303,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:prevent_movement_checks"
@@ -3321,12 +2317,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:prevent_sound"
@@ -3339,12 +2331,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:projectile_action_over_time"
@@ -3357,12 +2345,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:redirect_lightning"
@@ -3375,12 +2359,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:rocket_jump"
@@ -3393,12 +2373,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:set_texture"
@@ -3411,12 +2387,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:sprinting"
@@ -3429,12 +2401,8 @@
 		},
 		{
 			"if": {
-				"$IGNORED_PROPERTIES": [
-					"type"
-				],
-				"required": [
-					"type"
-				],
+				"$IGNORED_PROPERTIES": ["type"],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:step_height"
@@ -3443,6 +2411,97 @@
 			},
 			"then": {
 				"$ref": "../apugli/power_types/step_height.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:action_on_death"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/powertypes/action_on_death.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:action_on_trigger"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/powertypes/action_on_trigger.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:action_on_xp_gain"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/powertypes/action_on_xp_gain.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:damage_limit"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/powertypes/damage_limit.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:multiply_bow_speed"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/powertypes/multiply_bow_speed.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:passive"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/powertypes/passive.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:prevent_soulsand_slowness"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/powertypes/prevent_soulsand_slowness.json"
 			}
 		}
 	]

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"conditions"
-	],
+	"required": ["conditions"],
 	"properties": {
 		"conditions": {
 			"type": "array",

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"duration"
-	],
+	"required": ["duration"],
 	"properties": {
 		"duration": {
 			"type": "integer",

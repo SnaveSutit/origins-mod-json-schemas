@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"group"
-	],
+	"required": ["group"],
 	"properties": {
 		"group": {
 			"$ref": "../types/entity_group.json",

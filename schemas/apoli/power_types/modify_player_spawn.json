@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"dimension"
-	],
+	"required": ["dimension"],
 	"properties": {
 		"dimension": {
 			"$ref": "../types/autocomplete_helpers/dimension_identifier.json",
@@ -20,10 +18,7 @@
 			"markdownDescription": "If specified, the player will only spawn in the specified namespace and ID of the structure. __The structure needs to generate in the specified dimension.__"
 		},
 		"spawn_strategy": {
-			"enum": [
-				"default",
-				"center"
-			],
+			"enum": ["default", "center"],
 			"default": "default",
 			"description": "Determines whether the player should spawn near the world spawnpoint (0, 0) of the dimension (`\"center\"`) or near the coordinates of the Overworld spawnpoint (whilst considering the value of the `dimension_distance_multiplier` field) (`\"default\"`).",
 			"markdownDescription": "Determines whether the player should spawn near the world spawnpoint (0, 0) of the dimension (`\"center\"`) or near the coordinates of the Overworld spawnpoint (whilst considering the value of the `dimension_distance_multiplier` field) (`\"default\"`)."

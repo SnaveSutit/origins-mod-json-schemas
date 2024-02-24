@@ -1,20 +1,13 @@
 {
 	"type": "object",
-	"required": [
-		"type"
-	],
+	"required": ["type"],
 	"allOf": [
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:action_on_set",
-							"origins:action_on_set"
-						]
+						"enum": ["apoli:action_on_set", "origins:action_on_set"]
 					}
 				}
 			},
@@ -24,15 +17,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:add_velocity",
-							"origins:add_velocity"
-						]
+						"enum": ["apoli:add_velocity", "origins:add_velocity"]
 					}
 				}
 			},
@@ -42,15 +30,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:add_xp",
-							"origins:add_xp"
-						]
+						"enum": ["apoli:add_xp", "origins:add_xp"]
 					}
 				}
 			},
@@ -60,15 +43,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:apply_effect",
-							"origins:apply_effect"
-						]
+						"enum": ["apoli:apply_effect", "origins:apply_effect"]
 					}
 				}
 			},
@@ -78,15 +56,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:area_of_effect",
-							"origins:area_of_effect"
-						]
+						"enum": ["apoli:area_of_effect", "origins:area_of_effect"]
 					}
 				}
 			},
@@ -96,15 +69,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:block_action_at",
-							"origins:block_action_at"
-						]
+						"enum": ["apoli:block_action_at", "origins:block_action_at"]
 					}
 				}
 			},
@@ -114,15 +82,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:change_resource",
-							"origins:change_resource"
-						]
+						"enum": ["apoli:change_resource", "origins:change_resource"]
 					}
 				}
 			},
@@ -132,15 +95,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:clear_effect",
-							"origins:clear_effect"
-						]
+						"enum": ["apoli:clear_effect", "origins:clear_effect"]
 					}
 				}
 			},
@@ -150,15 +108,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:crafting_table",
-							"origins:crafting_table"
-						]
+						"enum": ["apoli:crafting_table", "origins:crafting_table"]
 					}
 				}
 			},
@@ -168,15 +121,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:damage",
-							"origins:damage"
-						]
+						"enum": ["apoli:damage", "origins:damage"]
 					}
 				}
 			},
@@ -186,15 +134,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:dismount",
-							"origins:dismount"
-						]
+						"enum": ["apoli:dismount", "origins:dismount"]
 					}
 				}
 			},
@@ -204,15 +147,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:drop_inventory",
-							"origins:drop_inventory"
-						]
+						"enum": ["apoli:drop_inventory", "origins:drop_inventory"]
 					}
 				}
 			},
@@ -222,15 +160,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:emit_game_event",
-							"origins:emit_game_event"
-						]
+						"enum": ["apoli:emit_game_event", "origins:emit_game_event"]
 					}
 				}
 			},
@@ -240,15 +173,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:ender_chest",
-							"origins:ender_chest"
-						]
+						"enum": ["apoli:ender_chest", "origins:ender_chest"]
 					}
 				}
 			},
@@ -258,15 +186,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:equipped_item_action",
-							"origins:equipped_item_action"
-						]
+						"enum": ["apoli:equipped_item_action", "origins:equipped_item_action"]
 					}
 				}
 			},
@@ -276,15 +199,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:execute_command",
-							"origins:execute_command"
-						]
+						"enum": ["apoli:execute_command", "origins:execute_command"]
 					}
 				}
 			},
@@ -294,15 +212,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:exhaust",
-							"origins:exhaust"
-						]
+						"enum": ["apoli:exhaust", "origins:exhaust"]
 					}
 				}
 			},
@@ -312,15 +225,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:explode",
-							"origins:explode"
-						]
+						"enum": ["apoli:explode", "origins:explode"]
 					}
 				}
 			},
@@ -330,15 +238,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:extinguish",
-							"origins:extinguish"
-						]
+						"enum": ["apoli:extinguish", "origins:extinguish"]
 					}
 				}
 			},
@@ -348,15 +251,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:feed",
-							"origins:feed"
-						]
+						"enum": ["apoli:feed", "origins:feed"]
 					}
 				}
 			},
@@ -366,15 +264,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:fire_projectile",
-							"origins:fire_projectile"
-						]
+						"enum": ["apoli:fire_projectile", "origins:fire_projectile"]
 					}
 				}
 			},
@@ -384,15 +277,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:gain_air",
-							"origins:gain_air"
-						]
+						"enum": ["apoli:gain_air", "origins:gain_air"]
 					}
 				}
 			},
@@ -402,15 +290,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:give",
-							"origins:give"
-						]
+						"enum": ["apoli:give", "origins:give"]
 					}
 				}
 			},
@@ -420,15 +303,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:grant_advancement",
-							"origins:grant_advancement"
-						]
+						"enum": ["apoli:grant_advancement", "origins:grant_advancement"]
 					}
 				}
 			},
@@ -438,15 +316,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:grant_power",
-							"origins:grant_power"
-						]
+						"enum": ["apoli:grant_power", "origins:grant_power"]
 					}
 				}
 			},
@@ -456,15 +329,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:heal",
-							"origins:heal"
-						]
+						"enum": ["apoli:heal", "origins:heal"]
 					}
 				}
 			},
@@ -474,15 +342,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_death_ticks",
-							"origins:modify_death_ticks"
-						]
+						"enum": ["apoli:modify_death_ticks", "origins:modify_death_ticks"]
 					}
 				}
 			},
@@ -492,15 +355,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_inventory",
-							"origins:modify_inventory"
-						]
+						"enum": ["apoli:modify_inventory", "origins:modify_inventory"]
 					}
 				}
 			},
@@ -510,15 +368,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_resource",
-							"origins:modify_resource"
-						]
+						"enum": ["apoli:modify_resource", "origins:modify_resource"]
 					}
 				}
 			},
@@ -528,15 +381,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_stat",
-							"origins:modify_stat"
-						]
+						"enum": ["apoli:modify_stat", "origins:modify_stat"]
 					}
 				}
 			},
@@ -546,15 +394,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:passenger_action",
-							"origins:passenger_action"
-						]
+						"enum": ["apoli:passenger_action", "origins:passenger_action"]
 					}
 				}
 			},
@@ -564,15 +407,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:play_sound",
-							"origins:play_sound"
-						]
+						"enum": ["apoli:play_sound", "origins:play_sound"]
 					}
 				}
 			},
@@ -582,15 +420,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:random_teleport",
-							"origins:random_teleport"
-						]
+						"enum": ["apoli:random_teleport", "origins:random_teleport"]
 					}
 				}
 			},
@@ -600,15 +433,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:raycast",
-							"origins:raycast"
-						]
+						"enum": ["apoli:raycast", "origins:raycast"]
 					}
 				}
 			},
@@ -618,15 +446,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:remove_power",
-							"origins:remove_power"
-						]
+						"enum": ["apoli:remove_power", "origins:remove_power"]
 					}
 				}
 			},
@@ -636,15 +459,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:replace_inventory",
-							"origins:replace_inventory"
-						]
+						"enum": ["apoli:replace_inventory", "origins:replace_inventory"]
 					}
 				}
 			},
@@ -654,15 +472,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:revoke_advancement",
-							"origins:revoke_advancement"
-						]
+						"enum": ["apoli:revoke_advancement", "origins:revoke_advancement"]
 					}
 				}
 			},
@@ -672,15 +485,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:revoke_all_powers",
-							"origins:revoke_all_powers"
-						]
+						"enum": ["apoli:revoke_all_powers", "origins:revoke_all_powers"]
 					}
 				}
 			},
@@ -690,15 +498,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:revoke_power",
-							"origins:revoke_power"
-						]
+						"enum": ["apoli:revoke_power", "origins:revoke_power"]
 					}
 				}
 			},
@@ -708,15 +511,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:riding_action",
-							"origins:riding_action"
-						]
+						"enum": ["apoli:riding_action", "origins:riding_action"]
 					}
 				}
 			},
@@ -726,15 +524,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:selector_action",
-							"origins:selector_action"
-						]
+						"enum": ["apoli:selector_action", "origins:selector_action"]
 					}
 				}
 			},
@@ -744,15 +537,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:set_fall_distance",
-							"origins:set_fall_distance"
-						]
+						"enum": ["apoli:set_fall_distance", "origins:set_fall_distance"]
 					}
 				}
 			},
@@ -762,15 +550,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:set_on_fire",
-							"origins:set_on_fire"
-						]
+						"enum": ["apoli:set_on_fire", "origins:set_on_fire"]
 					}
 				}
 			},
@@ -780,15 +563,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:spawn_effect_cloud",
-							"origins:spawn_effect_cloud"
-						]
+						"enum": ["apoli:spawn_effect_cloud", "origins:spawn_effect_cloud"]
 					}
 				}
 			},
@@ -798,15 +576,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:spawn_entity",
-							"origins:spawn_entity"
-						]
+						"enum": ["apoli:spawn_entity", "origins:spawn_entity"]
 					}
 				}
 			},
@@ -816,15 +589,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:spawn_particles",
-							"origins:spawn_particles"
-						]
+						"enum": ["apoli:spawn_particles", "origins:spawn_particles"]
 					}
 				}
 			},
@@ -834,15 +602,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:swing_hand",
-							"origins:swing_hand"
-						]
+						"enum": ["apoli:swing_hand", "origins:swing_hand"]
 					}
 				}
 			},
@@ -852,15 +615,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:toggle",
-							"origins:toggle"
-						]
+						"enum": ["apoli:toggle", "origins:toggle"]
 					}
 				}
 			},
@@ -870,15 +628,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:trigger_cooldown",
-							"origins:trigger_cooldown"
-						]
+						"enum": ["apoli:trigger_cooldown", "origins:trigger_cooldown"]
 					}
 				}
 			},
@@ -888,23 +641,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:and",
-							"origins:and"
-						]
+						"enum": ["apoli:and", "origins:and"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"actions"
-				],
+				"required": ["actions"],
 				"properties": {
 					"actions": {
 						"type": "array",
@@ -923,24 +669,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:chance",
-							"origins:chance"
-						]
+						"enum": ["apoli:chance", "origins:chance"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"action",
-					"chance"
-				],
+				"required": ["action", "chance"],
 				"properties": {
 					"action": {
 						"$ref": "#",
@@ -966,32 +704,22 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:choice",
-							"origins:choice"
-						]
+						"enum": ["apoli:choice", "origins:choice"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"actions"
-				],
+				"required": ["actions"],
 				"properties": {
 					"actions": {
 						"type": "array",
 						"items": {
 							"type": "object",
-							"required": [
-								"element",
-								"weight"
-							],
+							"required": ["element", "weight"],
 							"properties": {
 								"element": {
 									"$ref": "#"
@@ -1013,24 +741,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:delay",
-							"origins:delay"
-						]
+						"enum": ["apoli:delay", "origins:delay"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"action",
-					"ticks"
-				],
+				"required": ["action", "ticks"],
 				"properties": {
 					"action": {
 						"$ref": "#",
@@ -1051,24 +771,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:if_else",
-							"origins:if_else"
-						]
+						"enum": ["apoli:if_else", "origins:if_else"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"condition",
-					"if_action"
-				],
+				"required": ["condition", "if_action"],
 				"properties": {
 					"condition": {
 						"$ref": "entity_condition.json",
@@ -1094,32 +806,22 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:if_else_list",
-							"origins:if_else_list"
-						]
+						"enum": ["apoli:if_else_list", "origins:if_else_list"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"actions"
-				],
+				"required": ["actions"],
 				"properties": {
 					"actions": {
 						"type": "array",
 						"items": {
 							"type": "object",
-							"required": [
-								"action",
-								"condition"
-							],
+							"required": ["action", "condition"],
 							"properties": {
 								"action": {
 									"$ref": "#"
@@ -1141,15 +843,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:nothing",
-							"origins:nothing"
-						]
+						"enum": ["apoli:nothing", "origins:nothing"]
 					}
 				}
 			},
@@ -1165,24 +862,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:side",
-							"origins:side"
-						]
+						"enum": ["apoli:side", "origins:side"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"action",
-					"side"
-				],
+				"required": ["action", "side"],
 				"properties": {
 					"action": {
 						"$ref": "#",
@@ -1203,9 +892,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:add_velocity"
@@ -1218,9 +905,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:custom_projectile"
@@ -1233,9 +918,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:explode"
@@ -1248,9 +931,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:explosion_raycast"
@@ -1263,9 +944,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:fire_projectile"
@@ -1278,9 +957,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:item_cooldown"
@@ -1293,9 +970,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:raycast"
@@ -1308,9 +983,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:resource_transfer"
@@ -1323,9 +996,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:set_no_gravity"
@@ -1338,9 +1009,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:spawn_custom_effect_cloud"
@@ -1353,9 +1022,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:spawn_item"
@@ -1368,9 +1035,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:spawn_particles"
@@ -1383,9 +1048,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:zombify_villager"
@@ -1394,6 +1057,71 @@
 			},
 			"then": {
 				"$ref": "../apugli/entity_action_types/zombify_villager.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:save_location"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/entityactions/save_location.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:system_toast"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/entityactions/system_toast.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:teleport"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/entityactions/teleport.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:teleport_location"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/entityactions/teleport_location.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "epoli:teleport_to_spawn"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../epoli/entityactions/teleport_to_spawn.json"
 			}
 		}
 	],

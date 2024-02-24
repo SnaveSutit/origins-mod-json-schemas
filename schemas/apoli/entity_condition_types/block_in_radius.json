@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"block_condition",
-		"radius"
-	],
+	"required": ["block_condition", "radius"],
 	"properties": {
 		"block_condition": {
 			"$ref": "../block_condition.json",

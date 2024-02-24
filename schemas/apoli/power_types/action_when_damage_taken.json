@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"entity_action",
-		"cooldown"
-	],
+	"required": ["entity_action", "cooldown"],
 	"properties": {
 		"entity_action": {
 			"$ref": "../entity_action.json",

@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"item_condition",
-		"food_component"
-	],
+	"required": ["item_condition", "food_component"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Edible Item\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/edible_item).\n\nA power that makes any item that matches an item condition edible.\n\nType ID: `apugli:edible_item`\n\n!!! NOTE\n    The actual food saturation level is determined by the `food * saturation * 2` formula.\n\n!!! NOTE\n    This power type will only work on players.\n\n---\n\n",
@@ -21,10 +18,7 @@
 		},
 		"use_action": {
 			"type": "string",
-			"enum": [
-				"eat",
-				"drink"
-			],
+			"enum": ["eat", "drink"],
 			"description": "The action to associate with the player. One of `eat` or `drink`. Defaults to eat when null.",
 			"markdownDescription": "The action to associate with the player. One of `eat` or `drink`. Defaults to eat when null."
 		},

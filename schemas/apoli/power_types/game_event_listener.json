@@ -2,10 +2,7 @@
 	"type": "object",
 	"properties": {
 		"trigger_order": {
-			"enum": [
-				"by_distance",
-				"unspecified"
-			],
+			"enum": ["by_distance", "unspecified"],
 			"default": "unspecified",
 			"description": "Determines whether the power type should prioritize game events by distance (`\"by_distance\"`) or arbitrarily (`\"unspecified\"`).",
 			"markdownDescription": "Determines whether the power type should prioritize game events by distance (`\"by_distance\"`) or arbitrarily (`\"unspecified\"`)."

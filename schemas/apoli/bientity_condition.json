@@ -1,20 +1,13 @@
 {
 	"type": "object",
-	"required": [
-		"type"
-	],
+	"required": ["type"],
 	"allOf": [
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:actor_condition",
-							"origins:actor_condition"
-						]
+						"enum": ["apoli:actor_condition", "origins:actor_condition"]
 					}
 				}
 			},
@@ -24,15 +17,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:attacker",
-							"origins:attacker"
-						]
+						"enum": ["apoli:attacker", "origins:attacker"]
 					}
 				}
 			},
@@ -42,15 +30,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:attack_target",
-							"origins:attack_target"
-						]
+						"enum": ["apoli:attack_target", "origins:attack_target"]
 					}
 				}
 			},
@@ -60,15 +43,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:both",
-							"origins:both"
-						]
+						"enum": ["apoli:both", "origins:both"]
 					}
 				}
 			},
@@ -78,15 +56,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:can_see",
-							"origins:can_see"
-						]
+						"enum": ["apoli:can_see", "origins:can_see"]
 					}
 				}
 			},
@@ -96,15 +69,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:distance",
-							"origins:distance"
-						]
+						"enum": ["apoli:distance", "origins:distance"]
 					}
 				}
 			},
@@ -114,15 +82,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:either",
-							"origins:either"
-						]
+						"enum": ["apoli:either", "origins:either"]
 					}
 				}
 			},
@@ -132,15 +95,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:equal",
-							"origins:equal"
-						]
+						"enum": ["apoli:equal", "origins:equal"]
 					}
 				}
 			},
@@ -150,15 +108,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:invert",
-							"origins:invert"
-						]
+						"enum": ["apoli:invert", "origins:invert"]
 					}
 				}
 			},
@@ -168,15 +121,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_set",
-							"origins:in_set"
-						]
+						"enum": ["apoli:in_set", "origins:in_set"]
 					}
 				}
 			},
@@ -186,15 +134,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:owner",
-							"origins:owner"
-						]
+						"enum": ["apoli:owner", "origins:owner"]
 					}
 				}
 			},
@@ -204,15 +147,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:relative_rotation",
-							"origins:relative_rotation"
-						]
+						"enum": ["apoli:relative_rotation", "origins:relative_rotation"]
 					}
 				}
 			},
@@ -222,15 +160,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:riding",
-							"origins:riding"
-						]
+						"enum": ["apoli:riding", "origins:riding"]
 					}
 				}
 			},
@@ -240,15 +173,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:riding_recursive",
-							"origins:riding_recursive"
-						]
+						"enum": ["apoli:riding_recursive", "origins:riding_recursive"]
 					}
 				}
 			},
@@ -258,15 +186,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:riding_root",
-							"origins:riding_root"
-						]
+						"enum": ["apoli:riding_root", "origins:riding_root"]
 					}
 				}
 			},
@@ -276,15 +199,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:target_condition",
-							"origins:target_condition"
-						]
+						"enum": ["apoli:target_condition", "origins:target_condition"]
 					}
 				}
 			},
@@ -294,15 +212,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:undirected",
-							"origins:undirected"
-						]
+						"enum": ["apoli:undirected", "origins:undirected"]
 					}
 				}
 			},
@@ -312,23 +225,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:and",
-							"origins:and"
-						]
+						"enum": ["apoli:and", "origins:and"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",
@@ -347,23 +253,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:chance",
-							"origins:chance"
-						]
+						"enum": ["apoli:chance", "origins:chance"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"chance"
-				],
+				"required": ["chance"],
 				"properties": {
 					"chance": {
 						"type": "number",
@@ -379,23 +278,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:constant",
-							"origins:constant"
-						]
+						"enum": ["apoli:constant", "origins:constant"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"value"
-				],
+				"required": ["value"],
 				"properties": {
 					"value": {
 						"type": "boolean",
@@ -411,23 +303,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:or",
-							"origins:or"
-						]
+						"enum": ["apoli:or", "origins:or"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",
@@ -446,9 +331,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:hits_on_target"
@@ -461,9 +344,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:owner"

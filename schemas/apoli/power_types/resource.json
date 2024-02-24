@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"min",
-		"max"
-	],
+	"required": ["min", "max"],
 	"properties": {
 		"min": {
 			"type": "integer",

@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"required": ["saveid"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Redstone\n\n---\n\n_Entity Action Type_\n\nThis will teleport the entity to the saved position from the entity action: [`epoli:save_location`](https://epoli-docs.readthedocs.io/en/latest/entityactions/teleport_location)\n\nType ID: `epoli:teleportlocation`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:teleport_location\",\n\t\"saveid\": \"myorigin_save\"\n}\n```\nThis example will teleport the entity to the saved location \"myorigin_save\".\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Redstone\n\n---\n\n_Entity Action Type_\n\nThis will teleport the entity to the saved position from the entity action: [`epoli:save_location`](https://epoli-docs.readthedocs.io/en/latest/entityactions/teleport_location)\n\nType ID: `epoli:teleportlocation`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:teleport_location\",\n\t\"saveid\": \"myorigin_save\"\n}\n```\nThis example will teleport the entity to the saved location \"myorigin_save\".\n"
+		},
+		"saveid": {
+			"type": "string",
+			"description": "The same identifier used in `epoli:save_location`.",
+			"markdownDescription": "The same identifier used in `epoli:save_location`."
+		}
+	}
+}

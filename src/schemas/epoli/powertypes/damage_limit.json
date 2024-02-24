@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://epoli-docs.readthedocs.io/en/latest/powertypes/damage_limit/",
+	"type": "object",
+	"required": ["limit"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"limit": {
+			"type": "number"
+		},
+		"damage_condition": {
+			"$ref": "$ref(apoli:damage_condition)"
+		}
+	}
+}

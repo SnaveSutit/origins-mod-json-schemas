@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"source"
-	],
+	"required": ["source"],
 	"properties": {
 		"source": {
 			"$ref": "../types/identifier.json",

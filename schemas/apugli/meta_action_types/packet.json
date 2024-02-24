@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"side"
-	],
+	"required": ["side"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Packet\n\n---\n\n\n[Meta Action Type](https://apugli.readthedocs.io/en/latest/types/meta_action_types/packet)\n\nExecutes an action on a specified side, opposite to the one which the action is ran on.\n\nType ID: `apugli:packet`\n\n---\n\n",

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"sprite"
-	],
+	"required": ["sprite"],
 	"properties": {
 		"sprite": {
 			"$ref": "../types/identifier.json",

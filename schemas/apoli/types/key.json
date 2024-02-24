@@ -54,9 +54,7 @@
 		},
 		{
 			"type": "object",
-			"required": [
-				"key"
-			],
+			"required": ["key"],
 			"properties": {
 				"key": {
 					"$ref": "#/definitions/key",

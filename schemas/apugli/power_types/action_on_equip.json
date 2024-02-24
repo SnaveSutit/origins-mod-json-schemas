@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"action"
-	],
+	"required": ["action"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Equip\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_equip).\n\nExecutes an action when an item is equipped.\n\nType ID: `apugli:action_on_equip`\n\n---\n\n",

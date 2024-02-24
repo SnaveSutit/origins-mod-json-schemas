@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"particle",
-		"frequency"
-	],
+	"required": ["particle", "frequency"],
 	"properties": {
 		"particle": {
 			"$ref": "../types/particle_effect.json",

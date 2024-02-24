@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"enchantment",
-		"compare_to"
-	],
+	"required": ["enchantment", "compare_to"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Base Enchantment\n\n---\n\n\n[Item Condition Type](https://apugli.readthedocs.io/en/latest/types/item_condition_types/base_enchantment).\n\nChecks the level of an enchantment on an item based purely on item nbt.\n\nType ID: `apugli:base_enchantment`\n\n---\n\n",

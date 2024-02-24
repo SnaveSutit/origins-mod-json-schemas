@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"power",
-		"source"
-	],
+	"required": ["power", "source"],
 	"properties": {
 		"power": {
 			"$ref": "../types/identifier.json",

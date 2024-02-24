@@ -1,0 +1,30 @@
+{
+	"type": "object",
+	"required": ["x", "y", "z", "dimension"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Teleport\n\n---\n\n_Entity Action Type_\n\nThis is used to teleport without having to use `apoli:execute_command`.\n\nType ID: `epoli:teleport`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:teleport\",\n\t\"x\": 10,\n    \"y\": 11,\n    \"z\": 50,\n    \"dimension\": \"minecraft:overworld\"\n}\n```\nThis example will teleport the entity to 10, 11, 50 in the overworld.\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Teleport\n\n---\n\n_Entity Action Type_\n\nThis is used to teleport without having to use `apoli:execute_command`.\n\nType ID: `epoli:teleport`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:teleport\",\n\t\"x\": 10,\n    \"y\": 11,\n    \"z\": 50,\n    \"dimension\": \"minecraft:overworld\"\n}\n```\nThis example will teleport the entity to 10, 11, 50 in the overworld.\n"
+		},
+		"x": {
+			"type": "number",
+			"description": "The X coordinate.",
+			"markdownDescription": "The X coordinate."
+		},
+		"y": {
+			"type": "number",
+			"description": "The y coordinate.",
+			"markdownDescription": "The y coordinate."
+		},
+		"z": {
+			"type": "number",
+			"description": "The z coordinate.",
+			"markdownDescription": "The z coordinate."
+		},
+		"dimension": {
+			"$ref": "../../apoli/types/autocomplete_helpers/dimension_identifier.json",
+			"description": "The dimension you wish to teleport to, use `current` for the dimension the entity is in.",
+			"markdownDescription": "The dimension you wish to teleport to, use `current` for the dimension the entity is in."
+		}
+	}
+}

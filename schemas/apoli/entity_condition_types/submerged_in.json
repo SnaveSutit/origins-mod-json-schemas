@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"fluid"
-	],
+	"required": ["fluid"],
 	"properties": {
 		"fluid": {
 			"$ref": "../types/autocomplete_helpers/fluid_identifier.json",

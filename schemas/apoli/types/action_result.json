@@ -1,9 +1,3 @@
 {
-	"enum": [
-		"consume_partial",
-		"consume",
-		"fail",
-		"pass",
-		"success"
-	]
+	"enum": ["consume_partial", "consume", "fail", "pass", "success"]
 }

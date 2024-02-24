@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"stack"
-	],
+	"required": ["stack"],
 	"properties": {
 		"inventory_type": {
 			"$ref": "../types/inventory_type.json",

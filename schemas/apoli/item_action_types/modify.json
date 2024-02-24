@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"modifier"
-	],
+	"required": ["modifier"],
 	"properties": {
 		"modifier": {
 			"$ref": "../types/identifier.json",

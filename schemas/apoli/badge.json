@@ -14,21 +14,14 @@
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"allOf": [
 					{
 						"if": {
-							"required": [
-								"type"
-							],
+							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": [
-										"apoli:crafting_recipe",
-										"origins:crafting_recipe"
-									],
+									"enum": ["apoli:crafting_recipe", "origins:crafting_recipe"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}
@@ -40,15 +33,10 @@
 					},
 					{
 						"if": {
-							"required": [
-								"type"
-							],
+							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": [
-										"apoli:keybind",
-										"origins:keybind"
-									],
+									"enum": ["apoli:keybind", "origins:keybind"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}
@@ -60,15 +48,10 @@
 					},
 					{
 						"if": {
-							"required": [
-								"type"
-							],
+							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": [
-										"apoli:sprite",
-										"origins:sprite"
-									],
+									"enum": ["apoli:sprite", "origins:sprite"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}
@@ -80,15 +63,10 @@
 					},
 					{
 						"if": {
-							"required": [
-								"type"
-							],
+							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": [
-										"apoli:tooltip",
-										"origins:tooltip"
-									],
+									"enum": ["apoli:tooltip", "origins:tooltip"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}

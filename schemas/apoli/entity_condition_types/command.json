@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"command",
-		"comparison",
-		"compare_to"
-	],
+	"required": ["command", "comparison", "compare_to"],
 	"properties": {
 		"command": {
 			"type": "string",

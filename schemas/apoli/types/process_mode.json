@@ -1,6 +1,3 @@
 {
-	"enum": [
-		"items",
-		"stacks"
-	]
+	"enum": ["items", "stacks"]
 }

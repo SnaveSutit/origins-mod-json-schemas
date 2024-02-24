@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Trigger Item Cooldown\n\n---\n\n_Item Action Type_\n\nThis triggers the cooldown of an item like an enderpearl, shield etc (Though this will work on any items, e.g. block will not allow you to place)\n\nType ID: `epoli:trigger_item_cooldown`\n\n---\n\n### Examples\n\n```json\n\"item_action\": {\n\t\"type\": \"epoli:trigger_item_cooldown\",\n\t\"duration\": 20\n}\n```\nThis example will trigger an items cooldown for 20 ticks.",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Trigger Item Cooldown\n\n---\n\n_Item Action Type_\n\nThis triggers the cooldown of an item like an enderpearl, shield etc (Though this will work on any items, e.g. block will not allow you to place)\n\nType ID: `epoli:trigger_item_cooldown`\n\n---\n\n### Examples\n\n```json\n\"item_action\": {\n\t\"type\": \"epoli:trigger_item_cooldown\",\n\t\"duration\": 20\n}\n```\nThis example will trigger an items cooldown for 20 ticks."
+		},
+		"duration": {
+			"type": "integer",
+			"default": 20,
+			"description": "How long to trigger the cooldown for",
+			"markdownDescription": "How long to trigger the cooldown for"
+		}
+	}
+}

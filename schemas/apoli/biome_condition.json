@@ -1,20 +1,13 @@
 {
 	"type": "object",
-	"required": [
-		"type"
-	],
+	"required": ["type"],
 	"allOf": [
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:high_humidity",
-							"origins:high_humidity"
-						]
+						"enum": ["apoli:high_humidity", "origins:high_humidity"]
 					}
 				}
 			},
@@ -24,15 +17,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:in_tag",
-							"origins:in_tag"
-						]
+						"enum": ["apoli:in_tag", "origins:in_tag"]
 					}
 				}
 			},
@@ -42,15 +30,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:precipitation",
-							"origins:precipitation"
-						]
+						"enum": ["apoli:precipitation", "origins:precipitation"]
 					}
 				}
 			},
@@ -60,15 +43,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:temperature",
-							"origins:temperature"
-						]
+						"enum": ["apoli:temperature", "origins:temperature"]
 					}
 				}
 			},
@@ -78,23 +56,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:and",
-							"origins:and"
-						]
+						"enum": ["apoli:and", "origins:and"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",
@@ -113,23 +84,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:chance",
-							"origins:chance"
-						]
+						"enum": ["apoli:chance", "origins:chance"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"chance"
-				],
+				"required": ["chance"],
 				"properties": {
 					"chance": {
 						"type": "number",
@@ -145,23 +109,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:constant",
-							"origins:constant"
-						]
+						"enum": ["apoli:constant", "origins:constant"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"value"
-				],
+				"required": ["value"],
 				"properties": {
 					"value": {
 						"type": "boolean",
@@ -177,23 +134,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:or",
-							"origins:or"
-						]
+						"enum": ["apoli:or", "origins:or"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"conditions"
-				],
+				"required": ["conditions"],
 				"properties": {
 					"conditions": {
 						"type": "array",

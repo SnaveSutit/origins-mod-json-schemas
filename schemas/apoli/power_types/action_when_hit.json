@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"bientity_action"
-	],
+	"required": ["bientity_action"],
 	"properties": {
 		"bientity_action": {
 			"$ref": "../bientity_action.json",

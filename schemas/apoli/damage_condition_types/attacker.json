@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"entity_condition"
-	],
+	"required": ["entity_condition"],
 	"properties": {
 		"entity_condition": {
 			"$ref": "../entity_condition.json",

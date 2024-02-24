@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"set"
-	],
+	"required": ["set"],
 	"properties": {
 		"set": {
 			"type": "string",

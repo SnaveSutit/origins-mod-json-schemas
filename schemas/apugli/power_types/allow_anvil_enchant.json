@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"item_condition"
-	],
+	"required": ["item_condition"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Allow Anvil Enchant\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/allow_anvil_enchant)\n\nAllows a `PlayerEntity` to enchant an item with specified enchants that may not have been accessible to an item before.\n\nType ID: `apugli:allow_anvil_enchant`\n\n---\n\n",

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"power"
-	],
+	"required": ["power"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Explode\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/explode)\n\nSummons an explosion at the position of the entity.\n\nType ID: `apugli:explode`\n\n---\n\n",
@@ -16,11 +14,7 @@
 		"destruction_type": {
 			"type": "string",
 			"default": "break",
-			"enum": [
-				"destroy",
-				"break",
-				"none"
-			],
+			"enum": ["destroy", "break", "none"],
 			"description": "Determines if the explosion should destroy the terrain, destroy the terrain and drop the loot of the blocks, or none (`\"destroy\"`, `\"break\"` or `\"none\"` respectively).",
 			"markdownDescription": "Determines if the explosion should destroy the terrain, destroy the terrain and drop the loot of the blocks, or none (`\"destroy\"`, `\"break\"` or `\"none\"` respectively)."
 		},

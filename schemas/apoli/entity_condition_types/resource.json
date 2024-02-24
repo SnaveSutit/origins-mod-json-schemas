@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"resource",
-		"comparison",
-		"compare_to"
-	],
+	"required": ["resource", "comparison", "compare_to"],
 	"properties": {
 		"resource": {
 			"$ref": "../types/identifier.json",

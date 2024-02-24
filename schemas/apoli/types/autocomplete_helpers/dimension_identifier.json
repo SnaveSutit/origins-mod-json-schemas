@@ -2,11 +2,7 @@
 	"anyOf": [
 		{
 			"type": "string",
-			"enum": [
-				"minecraft:overworld",
-				"minecraft:the_end",
-				"minecraft:the_nether"
-			]
+			"enum": ["minecraft:overworld", "minecraft:the_end", "minecraft:the_nether"]
 		},
 		{
 			"$ref": "../identifier.json"

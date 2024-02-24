@@ -13,11 +13,7 @@
 			"markdownDescription": "If specified, the entity will only be able to move through these blocks (or *_not_* be able to move through these, depending on what `blacklist` is set to)."
 		},
 		"render_type": {
-			"enum": [
-				"blindness",
-				"remove_blocks",
-				"none"
-			],
+			"enum": ["blindness", "remove_blocks", "none"],
 			"default": "blindness",
 			"description": "Determines how the environment is rendered when \"phasing\" through (moving) blocks. Accepts `\"blindness\"`, `\"remove_blocks\"` or `\"none\"`.",
 			"markdownDescription": "Determines how the environment is rendered when \"phasing\" through (moving) blocks. Accepts `\"blindness\"`, `\"remove_blocks\"` or `\"none\"`."

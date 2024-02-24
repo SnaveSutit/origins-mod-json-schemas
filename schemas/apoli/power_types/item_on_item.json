@@ -43,10 +43,7 @@
 			"markdownDescription": "If specified, this action will be executed on the player after they used an item on an item."
 		},
 		"click_type": {
-			"enum": [
-				"secondary",
-				"primary"
-			],
+			"enum": ["secondary", "primary"],
 			"default": "secondary",
 			"description": "Determines whether to execute the actions if the player does a right-click (`0` or `\"primary\"`) or left-click (`1` or `\"secondary\"`) action.",
 			"markdownDescription": "Determines whether to execute the actions if the player does a right-click (`0` or `\"primary\"`) or left-click (`1` or `\"secondary\"`) action."

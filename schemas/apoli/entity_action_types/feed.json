@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"food",
-		"saturation"
-	],
+	"required": ["food", "saturation"],
 	"properties": {
 		"food": {
 			"type": "integer",

@@ -1,9 +1,3 @@
 {
-	"enum": [
-		"default",
-		"undead",
-		"arthropod",
-		"illager",
-		"aquatic"
-	]
+	"enum": ["default", "undead", "arthropod", "illager", "aquatic"]
 }

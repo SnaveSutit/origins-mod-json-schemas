@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"command"
-	],
+	"required": ["command"],
 	"properties": {
 		"command": {
 			"type": "string",

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"velocity"
-	],
+	"required": ["velocity"],
 	"properties": {
 		"velocity": {
 			"type": "number",

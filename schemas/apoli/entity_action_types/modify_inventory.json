@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"item_action"
-	],
+	"required": ["item_action"],
 	"properties": {
 		"inventory_type": {
 			"$ref": "../types/inventory_type.json",

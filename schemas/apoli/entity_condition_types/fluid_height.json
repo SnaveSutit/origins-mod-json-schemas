@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"fluid",
-		"comparison",
-		"compare_to"
-	],
+	"required": ["fluid", "comparison", "compare_to"],
 	"properties": {
 		"fluid": {
 			"$ref": "../types/autocomplete_helpers/fluid_identifier.json",

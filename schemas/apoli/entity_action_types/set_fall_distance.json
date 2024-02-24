@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"fall_distance"
-	],
+	"required": ["fall_distance"],
 	"properties": {
 		"fall_distance": {
 			"type": "number",

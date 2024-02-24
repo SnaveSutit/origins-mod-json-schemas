@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"selector"
-	],
+	"required": ["selector"],
 	"properties": {
 		"selector": {
 			"type": "string",

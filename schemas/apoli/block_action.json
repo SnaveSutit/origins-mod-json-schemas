@@ -1,20 +1,13 @@
 {
 	"type": "object",
-	"required": [
-		"type"
-	],
+	"required": ["type"],
 	"allOf": [
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:add_block",
-							"origins:add_block"
-						]
+						"enum": ["apoli:add_block", "origins:add_block"]
 					}
 				}
 			},
@@ -24,15 +17,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:area_of_effect",
-							"origins:area_of_effect"
-						]
+						"enum": ["apoli:area_of_effect", "origins:area_of_effect"]
 					}
 				}
 			},
@@ -42,15 +30,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:bonemeal",
-							"origins:bonemeal"
-						]
+						"enum": ["apoli:bonemeal", "origins:bonemeal"]
 					}
 				}
 			},
@@ -60,15 +43,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:execute_command",
-							"origins:execute_command"
-						]
+						"enum": ["apoli:execute_command", "origins:execute_command"]
 					}
 				}
 			},
@@ -78,15 +56,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:explode",
-							"origins:explode"
-						]
+						"enum": ["apoli:explode", "origins:explode"]
 					}
 				}
 			},
@@ -96,15 +69,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:modify_block_state",
-							"origins:modify_block_state"
-						]
+						"enum": ["apoli:modify_block_state", "origins:modify_block_state"]
 					}
 				}
 			},
@@ -114,15 +82,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:offset",
-							"origins:offset"
-						]
+						"enum": ["apoli:offset", "origins:offset"]
 					}
 				}
 			},
@@ -132,15 +95,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:set_block",
-							"origins:set_block"
-						]
+						"enum": ["apoli:set_block", "origins:set_block"]
 					}
 				}
 			},
@@ -150,15 +108,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:spawn_entity",
-							"origins:spawn_entity"
-						]
+						"enum": ["apoli:spawn_entity", "origins:spawn_entity"]
 					}
 				}
 			},
@@ -168,23 +121,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:and",
-							"origins:and"
-						]
+						"enum": ["apoli:and", "origins:and"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"actions"
-				],
+				"required": ["actions"],
 				"properties": {
 					"actions": {
 						"type": "array",
@@ -203,24 +149,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:chance",
-							"origins:chance"
-						]
+						"enum": ["apoli:chance", "origins:chance"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"action",
-					"chance"
-				],
+				"required": ["action", "chance"],
 				"properties": {
 					"action": {
 						"$ref": "#",
@@ -246,32 +184,22 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:choice",
-							"origins:choice"
-						]
+						"enum": ["apoli:choice", "origins:choice"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"actions"
-				],
+				"required": ["actions"],
 				"properties": {
 					"actions": {
 						"type": "array",
 						"items": {
 							"type": "object",
-							"required": [
-								"element",
-								"weight"
-							],
+							"required": ["element", "weight"],
 							"properties": {
 								"element": {
 									"$ref": "#"
@@ -293,24 +221,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:delay",
-							"origins:delay"
-						]
+						"enum": ["apoli:delay", "origins:delay"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"action",
-					"ticks"
-				],
+				"required": ["action", "ticks"],
 				"properties": {
 					"action": {
 						"$ref": "#",
@@ -331,24 +251,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:if_else",
-							"origins:if_else"
-						]
+						"enum": ["apoli:if_else", "origins:if_else"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"condition",
-					"if_action"
-				],
+				"required": ["condition", "if_action"],
 				"properties": {
 					"condition": {
 						"$ref": "block_condition.json",
@@ -374,32 +286,22 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:if_else_list",
-							"origins:if_else_list"
-						]
+						"enum": ["apoli:if_else_list", "origins:if_else_list"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"actions"
-				],
+				"required": ["actions"],
 				"properties": {
 					"actions": {
 						"type": "array",
 						"items": {
 							"type": "object",
-							"required": [
-								"action",
-								"condition"
-							],
+							"required": ["action", "condition"],
 							"properties": {
 								"action": {
 									"$ref": "#"
@@ -421,15 +323,10 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:nothing",
-							"origins:nothing"
-						]
+						"enum": ["apoli:nothing", "origins:nothing"]
 					}
 				}
 			},
@@ -445,24 +342,16 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:side",
-							"origins:side"
-						]
+						"enum": ["apoli:side", "origins:side"]
 					}
 				}
 			},
 			"then": {
 				"type": "object",
-				"required": [
-					"action",
-					"side"
-				],
+				"required": ["action", "side"],
 				"properties": {
 					"action": {
 						"$ref": "#",
@@ -483,9 +372,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:destroy"
@@ -498,9 +385,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:light_up"
@@ -513,9 +398,7 @@
 		},
 		{
 			"if": {
-				"required": [
-					"type"
-				],
+				"required": ["type"],
 				"properties": {
 					"type": {
 						"const": "apugli:schedule_tick"

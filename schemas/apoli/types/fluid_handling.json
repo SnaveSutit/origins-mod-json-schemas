@@ -1,7 +1,3 @@
 {
-	"enum": [
-		"any",
-		"none",
-		"source_only"
-	]
+	"enum": ["any", "none", "source_only"]
 }

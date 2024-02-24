@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://epoli-docs.readthedocs.io/en/latest/entityactions/save_location/",
+	"type": "object",
+	"required": ["saveid"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"saveid": {
+			"type": "string"
+		},
+		"overwrite": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

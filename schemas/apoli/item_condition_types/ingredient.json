@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"ingredient"
-	],
+	"required": ["ingredient"],
 	"properties": {
 		"ingredient": {
 			"$ref": "../types/ingredient.json",

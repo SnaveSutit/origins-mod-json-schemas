@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"fluid"
-	],
+	"required": ["fluid"],
 	"properties": {
 		"block_condition": {
 			"$ref": "../block_condition.json",

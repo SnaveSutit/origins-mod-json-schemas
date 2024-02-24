@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"s",
-		"v"
-	],
+	"required": ["s", "v"],
 	"properties": {
 		"s": {
 			"type": "number",

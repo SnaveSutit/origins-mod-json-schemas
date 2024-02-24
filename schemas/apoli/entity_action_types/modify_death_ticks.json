@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"modifier"
-	],
+	"required": ["modifier"],
 	"properties": {
 		"modifier": {
 			"$ref": "../types/attribute_modifier_arrayable.json",

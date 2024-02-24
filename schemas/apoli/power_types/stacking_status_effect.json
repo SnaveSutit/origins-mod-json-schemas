@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"min_stacks",
-		"max_stacks",
-		"duration_per_stack"
-	],
+	"required": ["min_stacks", "max_stacks", "duration_per_stack"],
 	"properties": {
 		"min_stacks": {
 			"type": "integer",

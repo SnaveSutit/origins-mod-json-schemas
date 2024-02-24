@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"sound"
-	],
+	"required": ["sound"],
 	"properties": {
 		"sound": {
 			"$ref": "../types/autocomplete_helpers/sound_identifier.json",

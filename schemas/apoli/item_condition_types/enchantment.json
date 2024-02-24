@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"comparison",
-		"compare_to"
-	],
+	"required": ["comparison", "compare_to"],
 	"properties": {
 		"enchantment": {
 			"$ref": "../types/autocomplete_helpers/enchantment_identifier.json",

@@ -2,12 +2,7 @@
 	"type": "object",
 	"properties": {
 		"result_type": {
-			"enum": [
-				"unchanged",
-				"specified",
-				"from_top",
-				"from_bottom"
-			],
+			"enum": ["unchanged", "specified", "from_top", "from_bottom"],
 			"default": "unchanged",
 			"description": "Determines whether to not change the initial item stack (`\"unchanged\"`), replace it with the item stack specified in the `result_stack` field (`\"specified\"`), replace it with the item stack from the top input slot of a Grindstone block (`\"from_top\"`) or replace it with the item stack from the bottom input slot of a Grindstone block (`\"from_bottom\"`).",
 			"markdownDescription": "Determines whether to not change the initial item stack (`\"unchanged\"`), replace it with the item stack specified in the `result_stack` field (`\"specified\"`), replace it with the item stack from the top input slot of a Grindstone block (`\"from_top\"`) or replace it with the item stack from the bottom input slot of a Grindstone block (`\"from_bottom\"`)."

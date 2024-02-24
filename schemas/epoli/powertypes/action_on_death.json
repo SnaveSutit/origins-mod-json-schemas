@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"required": ["entity_action"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Death\n\n---\n\n_Power Type_\n\nExecutes an [Entity Action Type](https://epoli-docs.readthedocs.io/en/latest/powertypes/action_on_death) when the player dies.\n\nType ID: `epoli:action_on_death`\n\n---\n\n### Examples\n\n```json\n{\n\t\"type\": \"epoli:action_on_death\",\n\t\"entity_action\": {\n\t\t\"type\": \"origins:execute_command\",\n\t\t\"command\": \"say Deathed\"\n\t},\n\t\"damage_condition\": {\n\t\t\"type\": \"origins:amount\",\n\t\t\"comparison\": \">=\",\n\t\t\"compare_to\": 5\n\t}\n}\n```\nThis example will execute the command `say Deathed` on the player when they die and the attacker damage amount is `5` or above.\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Death\n\n---\n\n_Power Type_\n\nExecutes an [Entity Action Type](https://epoli-docs.readthedocs.io/en/latest/powertypes/action_on_death) when the player dies.\n\nType ID: `epoli:action_on_death`\n\n---\n\n### Examples\n\n```json\n{\n\t\"type\": \"epoli:action_on_death\",\n\t\"entity_action\": {\n\t\t\"type\": \"origins:execute_command\",\n\t\t\"command\": \"say Deathed\"\n\t},\n\t\"damage_condition\": {\n\t\t\"type\": \"origins:amount\",\n\t\t\"comparison\": \">=\",\n\t\t\"compare_to\": 5\n\t}\n}\n```\nThis example will execute the command `say Deathed` on the player when they die and the attacker damage amount is `5` or above.\n"
+		},
+		"entity_action": {
+			"$ref": "../../apoli/entity_action.json",
+			"description": "The action to execute on the player.",
+			"markdownDescription": "The action to execute on the player."
+		},
+		"damage_condition": {
+			"$ref": "../../apoli/damage_condition.json",
+			"description": "If specified, the entity action will only be run if the condition passes.",
+			"markdownDescription": "If specified, the entity action will only be run if the condition passes."
+		}
+	}
+}

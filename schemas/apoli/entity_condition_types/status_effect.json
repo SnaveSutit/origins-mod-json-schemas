@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"effect"
-	],
+	"required": ["effect"],
 	"properties": {
 		"effect": {
 			"$ref": "../types/autocomplete_helpers/status_effect_identifier.json",

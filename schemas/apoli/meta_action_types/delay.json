@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"action",
-		"ticks"
-	],
+	"required": ["action", "ticks"],
 	"properties": {
 		"action": {
 			"$ref": "$actionRef",

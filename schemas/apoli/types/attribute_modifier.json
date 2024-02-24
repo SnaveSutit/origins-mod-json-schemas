@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"operation",
-		"value"
-	],
+	"required": ["operation", "value"],
 	"properties": {
 		"operation": {
 			"$ref": "attribute_modifier_operation.json",

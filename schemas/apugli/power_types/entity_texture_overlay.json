@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"texture_location"
-	],
+	"required": ["texture_location"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Entity Texture Overlay\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/entity_texture_overlay).\n\nOverlays a texture over an entity's texture.\n\nType ID: `apugli:entity_texture_overlay`\n\n---\n\n",
@@ -15,9 +13,7 @@
 		},
 		"texture_url": {
 			"type": "string",
-			"enum": [
-				"texture_location"
-			],
+			"enum": ["texture_location"],
 			"description": "If specified, the url to a .png file imported into the game as a texture for this power's use. This will be used as a fallback if `texture_location` is not specified or if a texture is not present.",
 			"markdownDescription": "If specified, the url to a .png file imported into the game as a texture for this power's use. This will be used as a fallback if `texture_location` is not specified or if a texture is not present."
 		},

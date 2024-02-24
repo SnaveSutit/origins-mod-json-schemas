@@ -2,10 +2,7 @@
 	"anyOf": [
 		{
 			"type": "string",
-			"enum": [
-				"minecraft:lava",
-				"minecraft:water"
-			]
+			"enum": ["minecraft:lava", "minecraft:water"]
 		},
 		{
 			"$ref": "../identifier.json"

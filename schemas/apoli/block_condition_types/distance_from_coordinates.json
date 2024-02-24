@@ -1,15 +1,9 @@
 {
 	"type": "object",
-	"required": [
-		"comparison",
-		"compare_to"
-	],
+	"required": ["comparison", "compare_to"],
 	"properties": {
 		"reference": {
-			"enum": [
-				"world_origin",
-				"world_spawn"
-			],
+			"enum": ["world_origin", "world_spawn"],
 			"description": "The point to compare the distance to. Accepts `\"world_origin\"` or `\"world_spawn\"`.",
 			"markdownDescription": "The point to compare the distance to. Accepts `\"world_origin\"` or `\"world_spawn\"`."
 		},
@@ -34,11 +28,7 @@
 			"markdownDescription": "Determines whether to consider the Z axis to be 0."
 		},
 		"shape": {
-			"enum": [
-				"cube",
-				"star",
-				"sphere"
-			],
+			"enum": ["cube", "star", "sphere"],
 			"description": "Determines the shape of the check. Accepts `\"cube\"`, `\"star\"` or `\"sphere\"`.",
 			"markdownDescription": "Determines the shape of the check. Accepts `\"cube\"`, `\"star\"` or `\"sphere\"`."
 		},

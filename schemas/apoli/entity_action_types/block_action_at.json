@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"block_action"
-	],
+	"required": ["block_action"],
 	"properties": {
 		"block_action": {
 			"$ref": "../block_action.json",

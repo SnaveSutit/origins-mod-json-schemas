@@ -17,13 +17,7 @@
 			"markdownDescription": "If specified, the actions will only execute if this condition is fulfilled by the item _before use._"
 		},
 		"trigger": {
-			"enum": [
-				"finish",
-				"start",
-				"stop",
-				"during",
-				"instant"
-			],
+			"enum": ["finish", "start", "stop", "during", "instant"],
 			"description": "Defines when the action is executed, see below table for accepted values.",
 			"markdownDescription": "Defines when the action is executed, see below table for accepted values."
 		},

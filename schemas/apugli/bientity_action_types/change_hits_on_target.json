@@ -13,10 +13,7 @@
 		"operation": {
 			"type": "string",
 			"default": "add",
-			"enum": [
-				"add",
-				"set"
-			],
+			"enum": ["add", "set"],
 			"description": "Determines if the action should add or set the value of the hits on target check. Accepts `\"add\"` or `\"set\"`.",
 			"markdownDescription": "Determines if the action should add or set the value of the hits on target check. Accepts `\"add\"` or `\"set\"`."
 		},
@@ -28,10 +25,7 @@
 		"timer_operation": {
 			"type": "string",
 			"default": "add",
-			"enum": [
-				"add",
-				"set"
-			],
+			"enum": ["add", "set"],
 			"description": "Determines if the action should add or set the value of the timer relating to hits on target. Accepts `\"add\"` or `\"set\"`.",
 			"markdownDescription": "Determines if the action should add or set the value of the timer relating to hits on target. Accepts `\"add\"` or `\"set\"`."
 		}

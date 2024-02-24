@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"nbt"
-	],
+	"required": ["nbt"],
 	"properties": {
 		"nbt": {
 			"$ref": "../types/nbt.json",

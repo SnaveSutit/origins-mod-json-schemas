@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"allow"
-	],
+	"required": ["allow"],
 	"properties": {
 		"block_condition": {
 			"$ref": "../block_condition.json",

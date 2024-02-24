@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"interval",
-		"burn_duration"
-	],
+	"required": ["interval", "burn_duration"],
 	"properties": {
 		"interval": {
 			"type": "integer",

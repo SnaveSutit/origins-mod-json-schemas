@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"amount"
-	],
+	"required": ["amount"],
 	"properties": {
 		"amount": {
 			"type": "number",

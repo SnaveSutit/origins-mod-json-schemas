@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"type",
-		"id",
-		"result"
-	],
+	"required": ["type", "id", "result"],
 	"properties": {
 		"id": {
 			"$ref": "identifier.json",
@@ -13,9 +9,7 @@
 		},
 		"result": {
 			"type": "object",
-			"required": [
-				"item"
-			],
+			"required": ["item"],
 			"properties": {
 				"item": {
 					"$ref": "autocomplete_helpers/item_identifier.json"
@@ -34,20 +28,14 @@
 			"if": {
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:crafting_shaped",
-							"origins:crafting_shaped"
-						],
+						"enum": ["apoli:crafting_shaped", "origins:crafting_shaped"],
 						"description": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported.",
 						"markdownDescription": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported."
 					}
 				}
 			},
 			"then": {
-				"required": [
-					"pattern",
-					"key"
-				],
+				"required": ["pattern", "key"],
 				"properties": {
 					"pattern": {
 						"type": "array",
@@ -75,19 +63,14 @@
 			"if": {
 				"properties": {
 					"type": {
-						"enum": [
-							"apoli:crafting_shapeless",
-							"origins:crafting_shapeless"
-						],
+						"enum": ["apoli:crafting_shapeless", "origins:crafting_shapeless"],
 						"description": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported.",
 						"markdownDescription": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported."
 					}
 				}
 			},
 			"then": {
-				"required": [
-					"ingredients"
-				],
+				"required": ["ingredients"],
 				"properties": {
 					"ingredients": {
 						"type": "array",

@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"comparison",
-		"compare_to"
-	],
+	"required": ["comparison", "compare_to"],
 	"properties": {
 		"slot": {
 			"type": "string",

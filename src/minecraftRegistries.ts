@@ -134,7 +134,7 @@ function updateMemoryRegistry() {
 	}
 	for (const key in registry) {
 		MINECRAFT_REGISTRY[key as keyof IRegistryJSON] = new MinecraftRegistryEntry(
-			registry[key as keyof IRegistryJSON]
+			registry[key as keyof IRegistryJSON],
 		)
 	}
 }

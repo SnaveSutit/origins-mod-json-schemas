@@ -62,6 +62,25 @@
 					"$ref": "$fileRef"
 				}
 			}
+		},
+
+		{
+			"type": "import_files_into_array",
+			"path": "$ref(epoli:itemactions)",
+			"output_key": "allOf",
+			"schema_structure": {
+				"if": {
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"const": "epoli:$fileName"
+						}
+					}
+				},
+				"then": {
+					"$ref": "$fileRef"
+				}
+			}
 		}
 	],
 

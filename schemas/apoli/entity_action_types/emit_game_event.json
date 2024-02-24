@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"event"
-	],
+	"required": ["event"],
 	"properties": {
 		"event": {
 			"$ref": "../types/identifier.json",

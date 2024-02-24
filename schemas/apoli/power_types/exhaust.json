@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"exhaustion"
-	],
+	"required": ["exhaustion"],
 	"properties": {
 		"interval": {
 			"type": "integer",

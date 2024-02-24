@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"render_elytra"
-	],
+	"required": ["render_elytra"],
 	"properties": {
 		"render_elytra": {
 			"type": "boolean",

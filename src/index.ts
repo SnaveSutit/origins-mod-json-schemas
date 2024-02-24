@@ -13,7 +13,7 @@ const OUT_DIR = 'schemas/'.replace(/\//g, pathjs.sep)
 
 function collectPropertyObjects(
 	schema: JSONSchema,
-	objects: Array<NonNullable<(JSONSchema & { type: 'object' })['properties']>>
+	objects: Array<NonNullable<(JSONSchema & { type: 'object' })['properties']>>,
 ) {
 	if (Array.isArray(schema)) {
 		for (const item of schema as JSONSchema[]) {
@@ -51,13 +51,15 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 		if (
 			mdFile.description &&
 			!ignoredProperties.includes('type') &&
-			schema.$docsUrl.match(/.+(?:action|condition|power)_types/)
+			(schema.$docsUrl.match(/.+(?:action|condition|power)_types/) ||
+				// Epoli uses a worse naming convention :(
+				schema.$docsUrl.match(/.+(?:action|condition|powertype)s/))
 		) {
 			schema.properties ??= {}
 			const typeObj = (schema.properties.type ??= {})
 			typeObj.description ??= ''
 			typeObj.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
-				'\n\n---\n\n'
+				'\n\n---\n\n',
 			)
 			typeObj.markdownDescription ??= ''
 			typeObj.markdownDescription += [
@@ -108,7 +110,7 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 function processImportFilesIntoArray(
 	layer: JSONSchema,
 	options: ProcessSchemaOptions,
-	importOptions: ImportOptions & { type: 'import_files_into_array' }
+	importOptions: ImportOptions & { type: 'import_files_into_array' },
 ) {
 	const path = SRC_DIR + importOptions.path.replace(/\$ref\((.+)\)/, '$1').replace(':', '/')
 	const stringStructure = JSON.stringify(importOptions.schema_structure)
@@ -116,8 +118,8 @@ function processImportFilesIntoArray(
 	if (layer[importOptions.output_key] === undefined) {
 		throw new Error(
 			`$IMPORT: output_key '${importOptions.output_key}' not found in schema:\n  ${JSON.stringify(
-				layer
-			)}`
+				layer,
+			)}`,
 		)
 	}
 
@@ -148,7 +150,7 @@ function processImportFilesIntoArray(
 async function processImportFileContentsIntoArray(
 	layer: JSONSchema,
 	options: ProcessSchemaOptions,
-	importOptions: ImportOptions & { type: 'import_file_contents_into_array' }
+	importOptions: ImportOptions & { type: 'import_file_contents_into_array' },
 ) {
 	const path = SRC_DIR + importOptions.path.replace(/\$ref\((.+)\)/, '$1').replace(':', '/')
 	const stringStructure = JSON.stringify(importOptions.schema_structure)
@@ -156,8 +158,8 @@ async function processImportFileContentsIntoArray(
 	if (layer[importOptions.output_key] === undefined) {
 		throw new Error(
 			`$IMPORT: output_key '${importOptions.output_key}' not found in schema:\n  ${JSON.stringify(
-				layer
-			)}`
+				layer,
+			)}`,
 		)
 	}
 
@@ -208,13 +210,13 @@ async function processImportFileContentsIntoArray(
 function processImportMinecraftRegistry(
 	layer: JSONSchema,
 	options: ProcessSchemaOptions,
-	importOptions: ImportOptions & { type: 'import_minecraft_registry' }
+	importOptions: ImportOptions & { type: 'import_minecraft_registry' },
 ) {
 	if (layer[importOptions.output_key] === undefined) {
 		throw new Error(
 			`$IMPORT: output_key '${importOptions.output_key}' not found in schema:\n  ${JSON.stringify(
-				layer
-			)}`
+				layer,
+			)}`,
 		)
 	}
 
@@ -238,7 +240,7 @@ function processImportMinecraftRegistry(
 async function processImport(
 	layer: JSONSchema,
 	options: ProcessSchemaOptions,
-	importOptions: ImportOptions
+	importOptions: ImportOptions,
 ) {
 	switch (importOptions.type) {
 		case 'import_files_into_array':

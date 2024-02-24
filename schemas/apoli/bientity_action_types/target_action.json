@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"action"
-	],
+	"required": ["action"],
 	"properties": {
 		"action": {
 			"$ref": "../entity_action.json",

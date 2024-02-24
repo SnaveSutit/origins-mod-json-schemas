@@ -1,7 +1,3 @@
 {
-	"enum": [
-		"addition",
-		"multiply_base",
-		"multiply_total"
-	]
+	"enum": ["addition", "multiply_base", "multiply_total"]
 }

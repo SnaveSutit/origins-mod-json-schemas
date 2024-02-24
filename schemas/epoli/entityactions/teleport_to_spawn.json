@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Redstone\n\n---\n\n_Entity Action Type_\n\nThis will teleport the player back to the world spawn or their spawn point.\n\nType ID: `epoli:teleport_to_spawn`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:teleport_to_spawn\",\n\t\"player_spawn\": false\n}\n```\nThis example will teleport the entity to the world spawn point.\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Redstone\n\n---\n\n_Entity Action Type_\n\nThis will teleport the player back to the world spawn or their spawn point.\n\nType ID: `epoli:teleport_to_spawn`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n\t\"type\": \"epoli:teleport_to_spawn\",\n\t\"player_spawn\": false\n}\n```\nThis example will teleport the entity to the world spawn point.\n"
+		},
+		"player_spawn": {
+			"type": "boolean",
+			"default": true,
+			"description": "If it will teleport to the players spawn not world spawn.",
+			"markdownDescription": "If it will teleport to the players spawn not world spawn."
+		}
+	}
+}

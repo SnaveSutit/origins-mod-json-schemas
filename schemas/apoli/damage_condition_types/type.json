@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"damage_type"
-	],
+	"required": ["damage_type"],
 	"properties": {
 		"damage_type": {
 			"$ref": "../types/autocomplete_helpers/damage_type_identifier.json",

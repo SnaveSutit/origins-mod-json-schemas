@@ -1,9 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"condition",
-		"if_action"
-	],
+	"required": ["condition", "if_action"],
 	"properties": {
 		"condition": {
 			"$ref": "$conditionRef",

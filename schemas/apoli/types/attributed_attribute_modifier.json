@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"attribute",
-		"operation",
-		"value"
-	],
+	"required": ["attribute", "operation", "value"],
 	"properties": {
 		"attribute": {
 			"$ref": "identifier.json",

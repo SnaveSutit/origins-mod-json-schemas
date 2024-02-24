@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"required": ["entity_condition"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Passive\n\n---\n\n_Power Type_\n\nMobs that match the entity condition will be passive towards the player.\n\nType ID: `epoli:passive`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"epoli:passive\",\n    \"entity_condition\": {\n        \"type\": \"origins:entity_type\",\n        \"entity_type\": \"minecraft:zombie\"\n    }\n}\n```\nThis example will make all zombies passive to the player.\n",
+			"markdownDescription": "### ⚠️ Requires [Epoli](https://epoli-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Passive\n\n---\n\n_Power Type_\n\nMobs that match the entity condition will be passive towards the player.\n\nType ID: `epoli:passive`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"epoli:passive\",\n    \"entity_condition\": {\n        \"type\": \"origins:entity_type\",\n        \"entity_type\": \"minecraft:zombie\"\n    }\n}\n```\nThis example will make all zombies passive to the player.\n"
+		},
+		"entity_condition": {
+			"$ref": "../../apoli/entity_condition.json",
+			"description": "The condition of the mob.",
+			"markdownDescription": "The condition of the mob."
+		}
+	}
+}

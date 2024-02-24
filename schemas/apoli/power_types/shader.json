@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"shader"
-	],
+	"required": ["shader"],
 	"properties": {
 		"shader": {
 			"$ref": "../types/identifier.json",

@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"ability"
-	],
+	"required": ["ability"],
 	"properties": {
 		"ability": {
 			"$ref": "../types/player_ability.json",

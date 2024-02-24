@@ -1,10 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"min",
-		"max",
-		"hud_render"
-	],
+	"required": ["min", "max", "hud_render"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Bunny Hop\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/bunny_hop).\n\nAdds movement velocity to the player whenever they aren't on the ground, in water, in lava, in a vehicle (boat, horse, etc) or fall flying.\n\nType ID: `apugli:bunny_hop`\n\n\n\n---\n\n### 📝 Note\n\nThis power type provides a variable that can be changed with the [Change Resource (Entity Action Type)](https://apugli.readthedocs.io/en/latest/types/power_types/bunny_hop), and check the value of with the [Resource (Entity Condition Type)](https://apugli.readthedocs.io/en/latest/types/power_types/bunny_hop).\n\n\n\n---\n\n",

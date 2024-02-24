@@ -1,8 +1,6 @@
 {
 	"type": "object",
-	"required": [
-		"cooldown"
-	],
+	"required": ["cooldown"],
 	"properties": {
 		"cooldown": {
 			"type": "integer",

@@ -91,7 +91,7 @@ export class Field {
 		type: string,
 		defaultValue: string,
 		public description: string,
-		mdFile: MDFile
+		mdFile: MDFile,
 	) {
 		this.mdFile = mdFile
 		this.name = name.replaceAll('`', '')
@@ -149,7 +149,11 @@ export class MDFile {
 	private _docsUrl: string = ''
 	private _rawUrl: string = ''
 
-	constructor(public path: string, docsUrl?: string, rawUrl?: string) {
+	constructor(
+		public path: string,
+		docsUrl?: string,
+		rawUrl?: string,
+	) {
 		this._rawUrl = rawUrl || pathToUrl(originsRawGithubUrl, path)
 		this.url = pathToUrl(this._rawUrl, path)
 		this._docsUrl = docsUrl || pathToUrl(originsDocsUrl, path)
@@ -199,10 +203,10 @@ export class MDFile {
 			.replace(eggolibDocsUrl, '')
 			.replace(skillfulDocsUrl, '')
 
-		TERM('---\n')
-		TERM('Path: ').brightBlue(path)('\n')
-		TERM('Docs URL: ').brightBlue(docsUrl)('\n')
-		TERM('Raw URL: ').brightBlue(rawUrl)('\n')
+		// TERM('---\n')
+		// TERM('Path: ').brightBlue(path)('\n')
+		// TERM('Docs URL: ').brightBlue(docsUrl)('\n')
+		// TERM('Raw URL: ').brightBlue(rawUrl)('\n')
 
 		if (path.endsWith('/')) path = path.slice(0, -1) + '.md'
 		return new MDFile(path, docsUrl, rawUrl)
@@ -293,7 +297,7 @@ export class MDFile {
 				if (!fieldMatch) break
 				const { field, type, defaultValue, description } = fieldMatch.groups!
 				this.fields.push(
-					new Field(field, type, defaultValue, processDescription(description, this), this)
+					new Field(field, type, defaultValue, processDescription(description, this), this),
 				)
 			}
 		}
