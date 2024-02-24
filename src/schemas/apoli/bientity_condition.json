@@ -5,6 +5,8 @@
 	"required": ["type"],
 	"properties": {
 		"inverted": {
+			"description": "If true, the condition will be inverted.",
+			"markdownDescription": "If true, the condition will be inverted.",
 			"type": "boolean",
 			"default": true
 		}
