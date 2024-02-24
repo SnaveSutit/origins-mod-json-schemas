@@ -1,8 +1,8 @@
 {
 	"properties": {
 		"type": {
-			"description": "## Magic\n\n---\n\n\n[Damage Condition Type](https://apugli.readthedocs.io/en/latest/types/damage_condition_types/magic).\n\nChecks whether the damage is magic damage (for example Splash Potions and Dragon Breath).\n\nType ID: `apugli:magic`\n\n---\n\n",
-			"markdownDescription": "## Magic\n\n---\n\n\n[Damage Condition Type](https://apugli.readthedocs.io/en/latest/types/damage_condition_types/magic).\n\nChecks whether the damage is magic damage (for example Splash Potions and Dragon Breath).\n\nType ID: `apugli:magic`\n\n---\n\n"
+			"description": "## Magic\n\n---\n\n\n[Damage Condition Type](https://apugli.readthedocs.io/en/latest/types/damage_condition_types/magic).\n\nChecks whether the damage is magic damage (for example Splash Potions and Dragon Breath).\n\nType ID: `apugli:magic`\n\n---\n\n### Example\n```json\n{\n    \"damage_condition\": {\n        \"type\": \"apugli:magic\"\n    }\n}\n```\nThis example checks if the damage taken/dealt is considered magic damage.",
+			"markdownDescription": "## Magic\n\n---\n\n\n[Damage Condition Type](https://apugli.readthedocs.io/en/latest/types/damage_condition_types/magic).\n\nChecks whether the damage is magic damage (for example Splash Potions and Dragon Breath).\n\nType ID: `apugli:magic`\n\n---\n\n### Example\n```json\n{\n    \"damage_condition\": {\n        \"type\": \"apugli:magic\"\n    }\n}\n```\nThis example checks if the damage taken/dealt is considered magic damage."
 		}
 	}
 }

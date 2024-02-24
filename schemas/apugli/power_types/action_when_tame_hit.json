@@ -3,8 +3,8 @@
 	"required": ["hud_render"],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:action_when_tame_hit\",\n    \"owner_bientity_action\": {\n        \"type\": \"origins:add_velocity\",\n        \"z\": 2\n    }\n}\n```\nThis example will push the owner away from any tame's attacker whenever it is hit.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action When Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_when_tame_hit).\n\nRuns an action when an owner's `TameableEntity` gets harmed by another entity.\n\nType ID: `apugli:action_when_tame_hit`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:action_when_tame_hit\",\n    \"owner_bientity_action\": {\n        \"type\": \"origins:add_velocity\",\n        \"z\": 2\n    }\n}\n```\nThis example will push the owner away from any tame's attacker whenever it is hit."
 		},
 		"cooldown": {
 			"type": "integer",

@@ -36,6 +36,9 @@
 			},
 			"description": "If set, it will display icon(s) after the name of the power.",
 			"markdownDescription": "If set, it will display icon(s) after the name of the power."
+		},
+		"skill": {
+			"$ref": "../skillful/additional_power_data.json"
 		}
 	},
 	"allOf": [

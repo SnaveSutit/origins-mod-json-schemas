@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:mobs_ignore\",\n    \"mob_condition\": {\n        \"type\": \"apoli:entity_type\",\n        \"entity_type\": \"minecraft:skeleton\"\n    }\n}\n```\nThis power causes skeletons to ignore the player.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Mobs Ignore\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/mobs_ignore)\n\nMakes hostile mobs ignore the player.\n\nType ID: `apugli:mobs_ignore`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:mobs_ignore\",\n    \"mob_condition\": {\n        \"type\": \"apoli:entity_type\",\n        \"entity_type\": \"minecraft:skeleton\"\n    }\n}\n```\nThis power causes skeletons to ignore the player."
 		},
 		"mob_condition": {
 			"$ref": "../../apoli/entity_condition.json",

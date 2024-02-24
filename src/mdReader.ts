@@ -21,13 +21,13 @@ export const skillfulDocsUrl = 'https://skillful-docs.readthedocs.io/en/latest/'
 
 const MD_LINK_REGEX = /\[(?<name>[^\n[]+?)\]\((?<target>[^\n ]+?)\)/g
 
-const DESCRIPTION_REGEX = /^#\s*(?<title>.+)\n(?<description>[^]+?)\s*###\s*.*$/gm
+const DESCRIPTION_REGEX = /^#+\s*(?<title>.+)\n(?<description>[^]+?)\s*###\s*.*$/gm
 const FIELD_TITLE_REGEX = /Field\s*\|\s*Type\s*\|\s*Default\s*\|\s*Description\n-+\|-+\|-+\|-+\n/gm
 const FIELD_CAPTURE_REGEX =
 	/^(?<field>[^|\n\s]+?)\s*\|\s*(?<type>[^|\n]+?)\s*\|\s*(?<defaultValue>[^|\n]+?)?\s*\|\s*(?<description>[^|\n]+?)$/gm
 const VALUES_TITLE_REGEX = /Value\s+?\| Description\n-+\|-+\n/gm
 const VALUE_CAPTURE_REGEX = /^(?<value>[^|]+?)\s*\|\s*(?<description>[^|\n]+?)$/gm
-const EXAMPLES_REGEX = /###\s*?Examples\n\n([^]+)/
+const EXAMPLES_REGEX = /###\s*?Examples?\s*([^]+)/
 
 export function parseMDLink(url: string): { name: string; target: string } | undefined {
 	MD_LINK_REGEX.lastIndex = 0

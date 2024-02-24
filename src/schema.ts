@@ -36,11 +36,6 @@ export type StringContentEncodingType =
 
 export type JSONSchema = {
 	$schema?: 'https://json-schema.org/draft-07/schema#'
-	/**
-	 * Extra property added specifically for this project.
-	 * Should link to the documentation for the schema.
-	 */
-	$docsUrl?: string
 	$id?: string
 	$ref?: string
 	/**
@@ -426,6 +421,11 @@ export type ImportOptions = {
 )
 
 export interface IJSONSchemaPreProcessorAdditions {
+	/**
+	 * Should link to the documentation page for the schema.
+	 */
+	$docsUrl?: string
 	$IMPORT?: ImportOptions | ImportOptions[]
 	$IGNORED_PROPERTIES?: string[]
+	$INCLUDE_MDFILE_DESCRIPTION?: boolean
 }

@@ -3,8 +3,8 @@
 	"required": ["hud_render"],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_tame_hit).\n\nRuns an action when an owner's `TameableEntity` harms a target.\n\nType ID: `apugli:action_on_tame_hit`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_tame_hit).\n\nRuns an action when an owner's `TameableEntity` harms a target.\n\nType ID: `apugli:action_on_tame_hit`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_tame_hit).\n\nRuns an action when an owner's `TameableEntity` harms a target.\n\nType ID: `apugli:action_on_tame_hit`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:action_on_tame_hit\",\n    \"bientity_action\": {\n        \"type\": \"apoli:mount\"\n    }\n}\n```\nThis example will cause the tamed entity to mount the target entity whenever the target is harmed by the tame.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Action On Tame Hit\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/action_on_tame_hit).\n\nRuns an action when an owner's `TameableEntity` harms a target.\n\nType ID: `apugli:action_on_tame_hit`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:action_on_tame_hit\",\n    \"bientity_action\": {\n        \"type\": \"apoli:mount\"\n    }\n}\n```\nThis example will cause the tamed entity to mount the target entity whenever the target is harmed by the tame."
 		},
 		"cooldown": {
 			"type": "integer",

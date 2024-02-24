@@ -48,25 +48,38 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 			delete schema.$IGNORED_PROPERTIES
 		}
 
-		if (
-			mdFile.description &&
-			!ignoredProperties.includes('type') &&
-			(schema.$docsUrl.match(/.+(?:action|condition|power)_types/) ||
-				// Epoli uses a worse naming convention :(
-				schema.$docsUrl.match(/.+(?:action|condition|powertype)s/))
-		) {
-			schema.properties ??= {}
-			const typeObj = (schema.properties.type ??= {})
-			typeObj.description ??= ''
-			typeObj.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
-				'\n\n---\n\n',
-			)
-			typeObj.markdownDescription ??= ''
-			typeObj.markdownDescription += [
-				'## ' + mdFile.title,
-				mdFile.description,
-				mdFile.examples,
-			].join('\n\n---\n\n')
+		if (mdFile.description) {
+			if (schema.$INCLUDE_MDFILE_DESCRIPTION) {
+				schema.description ??= ''
+				schema.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
+					'\n\n---\n\n',
+				)
+				schema.markdownDescription ??= ''
+				schema.markdownDescription += [
+					'## ' + mdFile.title,
+					mdFile.description,
+					mdFile.examples,
+				].join('\n\n---\n\n')
+			}
+			if (
+				!ignoredProperties.includes('type') &&
+				(schema.$docsUrl.match(/.+(?:action|condition|power)_types/) ||
+					// Epoli uses a worse naming convention :(
+					schema.$docsUrl.match(/.+(?:action|condition|powertype)s/))
+			) {
+				schema.properties ??= {}
+				const typeObj = (schema.properties.type ??= {})
+				typeObj.description ??= ''
+				typeObj.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
+					'\n\n---\n\n',
+				)
+				typeObj.markdownDescription ??= ''
+				typeObj.markdownDescription += [
+					'## ' + mdFile.title,
+					mdFile.description,
+					mdFile.examples,
+				].join('\n\n---\n\n')
+			}
 		}
 
 		if (mdFile.fields.length > 0) {
@@ -188,7 +201,10 @@ async function processImportFileContentsIntoArray(
 		// 	.replace(/\\/g, '/')
 
 		const fileContents: JSONSchema = JSON.parse(fsSync.readFileSync(inFilePath, 'utf-8'))
-		await processSchema(fileContents, { schemaPath: inFilePath, outPath: outFilePath })
+		await processSchema(fileContents, {
+			schemaPath: inFilePath,
+			outPath: outFilePath,
+		})
 		await processSchemaProperties(fileContents, inFilePath)
 
 		let fileStrContents = JSON.stringify(fileContents)

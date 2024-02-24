@@ -1,0 +1,19 @@
+{
+	"type": "object",
+	"required": ["skill_tree", "points"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Add Skill Points\n\n---\n\n\nAdds skill points to a players tree, allowing the developer to allocate points for certain actions.\n\nType ID: `skillful:add_skill_points`\n\n---\n\n### Example\n```json\n{\n    \"entity_action\": {\n        \"type\": \"skillful:add_skill_points\",\n        \"skill_tree\": \"example_pack:skill_tree\",\n        \"points\": 1\n    }\n}\n```\n\nThis example will add 1 point to the `example_pack:skill_tree` tree.\n",
+			"markdownDescription": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Add Skill Points\n\n---\n\n\nAdds skill points to a players tree, allowing the developer to allocate points for certain actions.\n\nType ID: `skillful:add_skill_points`\n\n---\n\n### Example\n```json\n{\n    \"entity_action\": {\n        \"type\": \"skillful:add_skill_points\",\n        \"skill_tree\": \"example_pack:skill_tree\",\n        \"points\": 1\n    }\n}\n```\n\nThis example will add 1 point to the `example_pack:skill_tree` tree.\n"
+		},
+		"skill_tree": {
+			"$ref": "../../apoli/types/identifier.json",
+			"description": "ID of the skill tree that the point will be given to (MUST BE THE ROOT OF THE SKILL TREE)",
+			"markdownDescription": "ID of the skill tree that the point will be given to (MUST BE THE ROOT OF THE SKILL TREE)"
+		},
+		"points": {
+			"type": "integer",
+			"description": "The number of points to add to the skill tree."
+		}
+	}
+}

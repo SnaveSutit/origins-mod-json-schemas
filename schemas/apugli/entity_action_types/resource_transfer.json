@@ -3,8 +3,8 @@
 	"required": ["resource", "provider"],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Resource Transfer\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/resource_transfer).\n\nTransfers a value from a \"provider\" resource into a resource.\n\nType ID: `apugli:resource_transfer`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Resource Transfer\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/resource_transfer).\n\nTransfers a value from a \"provider\" resource into a resource.\n\nType ID: `apugli:resource_transfer`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Resource Transfer\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/resource_transfer).\n\nTransfers a value from a \"provider\" resource into a resource.\n\nType ID: `apugli:resource_transfer`\n\n---\n\n### Example\n```json\n\"entity_action\": {\n    \"type\": \"apugli:resource_transfer\",\n    \"resource\": \"test:inactive_resource\",\n    \"provider\": \"test:active_resource\"\n}\n```\nThis action transfers the value from `test:active_resource` to `test:inactive_resource`",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Resource Transfer\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/resource_transfer).\n\nTransfers a value from a \"provider\" resource into a resource.\n\nType ID: `apugli:resource_transfer`\n\n---\n\n### Example\n```json\n\"entity_action\": {\n    \"type\": \"apugli:resource_transfer\",\n    \"resource\": \"test:inactive_resource\",\n    \"provider\": \"test:active_resource\"\n}\n```\nThis action transfers the value from `test:active_resource` to `test:inactive_resource`"
 		},
 		"resource": {
 			"$ref": "../../apoli/types/identifier.json",

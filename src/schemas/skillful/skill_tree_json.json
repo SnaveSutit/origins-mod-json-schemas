@@ -1,0 +1,44 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://skillful-docs.readthedocs.io/en/latest/skill_tree_json/",
+	"type": "object",
+	"required": ["name", "description"],
+	"$INCLUDE_MDFILE_DESCRIPTION": true,
+	"description": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+	"markdownDescription": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+	"properties": {
+		"name": {
+			"$ref": "$ref(apoli:types/text_component)"
+		},
+		"description": {
+			"$ref": "$ref(apoli:types/text_component)"
+		},
+		"icon": {
+			"$ref": "$ref(apoli:types/item_stack)"
+		},
+		"power": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"powers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/identifier)"
+			}
+		},
+		"parent": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"default_powers": {
+			"type": "array"
+		},
+		"background": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"condition": {
+			"$ref": "$ref(apoli:entity_condition)"
+		},
+		"cost": {
+			"type": "integer"
+		}
+	}
+}

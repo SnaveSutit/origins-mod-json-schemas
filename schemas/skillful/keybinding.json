@@ -1,0 +1,19 @@
+{
+	"type": "object",
+	"$INCLUDE_MDFILE_DESCRIPTION": true,
+	"description": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Keybinding JSON Format\n\n---\n\n\nThis is the format of a JSON file describing a keybinding. They need to be placed inside the `keybinds` folder within your namespace. Keybinds are used to activate active power types, and toggles.\n\n---\n\n### Example\n\n```json\n{\n    \"key\": \"key.keyboard.h\",\n    \"category\": \"key.category.test_category\"\n}\n```\nThis example keybind will create a keybind bound to the \"h\" key, in the category called `key.category.test_category`.",
+	"markdownDescription": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Keybinding JSON Format\n\n---\n\n\nThis is the format of a JSON file describing a keybinding. They need to be placed inside the `keybinds` folder within your namespace. Keybinds are used to activate active power types, and toggles.\n\n---\n\n### Example\n\n```json\n{\n    \"key\": \"key.keyboard.h\",\n    \"category\": \"key.category.test_category\"\n}\n```\nThis example keybind will create a keybind bound to the \"h\" key, in the category called `key.category.test_category`.",
+	"required": ["key", "category"],
+	"properties": {
+		"key": {
+			"$ref": "../apoli/types/key.json",
+			"description": "A string that defines what key this binding will use.",
+			"markdownDescription": "A string that defines what key this binding will use."
+		},
+		"category": {
+			"type": "string",
+			"description": "The category this key will fall under.",
+			"markdownDescription": "The category this key will fall under."
+		}
+	}
+}

@@ -3,8 +3,8 @@
 	"required": ["side"],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Packet\n\n---\n\n\n[Meta Action Type](https://apugli.readthedocs.io/en/latest/types/meta_action_types/packet)\n\nExecutes an action on a specified side, opposite to the one which the action is ran on.\n\nType ID: `apugli:packet`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Packet\n\n---\n\n\n[Meta Action Type](https://apugli.readthedocs.io/en/latest/types/meta_action_types/packet)\n\nExecutes an action on a specified side, opposite to the one which the action is ran on.\n\nType ID: `apugli:packet`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Packet\n\n---\n\n\n[Meta Action Type](https://apugli.readthedocs.io/en/latest/types/meta_action_types/packet)\n\nExecutes an action on a specified side, opposite to the one which the action is ran on.\n\nType ID: `apugli:packet`\n\n---\n\n### Examples\n```json\n\"entity_action\": {\n    \"type\": \"toomanyorigins:packet\",\n    \"side\": \"SERVER\",\n    \"action\": {\n        \"type\": \"origins:exhaust\",\n        \"amount\": 0.1\n    }\n}\n```\nIf ran on the client, this example action will exhaust the player for a value of `0.1` on the server.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Packet\n\n---\n\n\n[Meta Action Type](https://apugli.readthedocs.io/en/latest/types/meta_action_types/packet)\n\nExecutes an action on a specified side, opposite to the one which the action is ran on.\n\nType ID: `apugli:packet`\n\n---\n\n### Examples\n```json\n\"entity_action\": {\n    \"type\": \"toomanyorigins:packet\",\n    \"side\": \"SERVER\",\n    \"action\": {\n        \"type\": \"origins:exhaust\",\n        \"amount\": 0.1\n    }\n}\n```\nIf ran on the client, this example action will exhaust the player for a value of `0.1` on the server."
 		},
 		"side": {
 			"$ref": "../../apoli/types/side.json",

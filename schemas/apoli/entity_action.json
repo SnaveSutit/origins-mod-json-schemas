@@ -1123,6 +1123,19 @@
 			"then": {
 				"$ref": "../epoli/entityactions/teleport_to_spawn.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "skillful:add_skill_points"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../skillful/entity_actions/add_skill_points.json"
+			}
 		}
 	],
 	"properties": {

@@ -27,6 +27,9 @@
 			"items": {
 				"$ref": "$ref(apoli:badge)"
 			}
+		},
+		"skill": {
+			"$ref": "$ref(skillful:additional_power_data)"
 		}
 	},
 

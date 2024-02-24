@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Item Cooldown\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/item_cooldown).\n\nSets the cooldown of a specific item. (Does not operate on specific stacks).\n\nType ID: `apugli:item_cooldown`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Item Cooldown\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/item_cooldown).\n\nSets the cooldown of a specific item. (Does not operate on specific stacks).\n\nType ID: `apugli:item_cooldown`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Item Cooldown\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/item_cooldown).\n\nSets the cooldown of a specific item. (Does not operate on specific stacks).\n\nType ID: `apugli:item_cooldown`\n\n---\n\n### Example\n```json\n\"condition\": {\n    \"items\": [\n        \"minecraft:ender_pearl\"\n    ],\n    \"ticks\": 20\n}\n```\nThis example sets the cooldown to use any Ender Pearl to 20 ticks/1 second.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Item Cooldown\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/item_cooldown).\n\nSets the cooldown of a specific item. (Does not operate on specific stacks).\n\nType ID: `apugli:item_cooldown`\n\n---\n\n### Example\n```json\n\"condition\": {\n    \"items\": [\n        \"minecraft:ender_pearl\"\n    ],\n    \"ticks\": 20\n}\n```\nThis example sets the cooldown to use any Ender Pearl to 20 ticks/1 second."
 		},
 		"items": {
 			"type": "array",

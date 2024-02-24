@@ -3,8 +3,8 @@
 	"required": ["particle"],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Raycast Between\n\n---\n\n\n[Bi-entity Action Type](https://apugli.readthedocs.io/en/latest/types/bientity_action_types/raycast_between).\n\nRaycasts to the target entity from the actor entity.\n\nType ID: `apugli:raycast_between`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Raycast Between\n\n---\n\n\n[Bi-entity Action Type](https://apugli.readthedocs.io/en/latest/types/bientity_action_types/raycast_between).\n\nRaycasts to the target entity from the actor entity.\n\nType ID: `apugli:raycast_between`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Raycast Between\n\n---\n\n\n[Bi-entity Action Type](https://apugli.readthedocs.io/en/latest/types/bientity_action_types/raycast_between).\n\nRaycasts to the target entity from the actor entity.\n\nType ID: `apugli:raycast_between`\n\n---\n\n### Example\n```json\n\"bientity_action\": {\n    \"type\": \"apugli:raycast_between\",\n    \"particle\": \"minecraft:dragon_breath\"\n}\n```\nThis example is a visual raycast with the `minecraft:dragon_breath` particle type from the actor to the target.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Raycast Between\n\n---\n\n\n[Bi-entity Action Type](https://apugli.readthedocs.io/en/latest/types/bientity_action_types/raycast_between).\n\nRaycasts to the target entity from the actor entity.\n\nType ID: `apugli:raycast_between`\n\n---\n\n### Example\n```json\n\"bientity_action\": {\n    \"type\": \"apugli:raycast_between\",\n    \"particle\": \"minecraft:dragon_breath\"\n}\n```\nThis example is a visual raycast with the `minecraft:dragon_breath` particle type from the actor to the target."
 		},
 		"block_action": {
 			"$ref": "../../apoli/block_action.json",

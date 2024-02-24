@@ -3,8 +3,8 @@
 	"required": ["stack"],
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Spawn Item\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/spawn_item).\n\nDrops an item where the action is executed.\n\nType ID: `apugli:spawn_item`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Spawn Item\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/spawn_item).\n\nDrops an item where the action is executed.\n\nType ID: `apugli:spawn_item`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Spawn Item\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/spawn_item).\n\nDrops an item where the action is executed.\n\nType ID: `apugli:spawn_item`\n\n---\n\n### Example\n```json\n\"entity_action\": {\n    \"type\": \"apugli:spawn_item\",\n    \"stack\": {\n        \"item\": \"minecraft:coal\",\n        \"amount\": 64\n    }\n}\n```\nThis action drops an `ItemStack` of 64 coal where it was executed.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Spawn Item\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/spawn_item).\n\nDrops an item where the action is executed.\n\nType ID: `apugli:spawn_item`\n\n---\n\n### Example\n```json\n\"entity_action\": {\n    \"type\": \"apugli:spawn_item\",\n    \"stack\": {\n        \"item\": \"minecraft:coal\",\n        \"amount\": 64\n    }\n}\n```\nThis action drops an `ItemStack` of 64 coal where it was executed."
 		},
 		"stack": {
 			"$ref": "../../apoli/types/item_stack.json",

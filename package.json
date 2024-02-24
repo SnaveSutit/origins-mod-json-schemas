@@ -13,7 +13,7 @@
 		"url": "https://github.com/SnaveSutit/origins-mod-json-schemas"
 	},
 	"scripts": {
-		"build": "tsx ./src/index.ts --once",
+		"build": "tsx ./src/index.ts --once && yarn format",
 		"dev": "tsx ./src/index.ts",
 		"generate-templates": "tsx ./src/generateTemplates.ts",
 		"format": "prettier --write ."

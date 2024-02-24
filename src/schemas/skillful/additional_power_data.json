@@ -1,0 +1,25 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://skillful-docs.readthedocs.io/en/latest/additional_power_data/",
+	"type": "object",
+	"$INCLUDE_MDFILE_DESCRIPTION": true,
+	"description": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+	"markdownDescription": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+	"properties": {
+		"icon": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"parent": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"background": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"condition": {
+			"$ref": "$ref(apoli:entity_condition)"
+		},
+		"cost": {
+			"type": "integer"
+		}
+	}
+}

@@ -2,8 +2,8 @@
 	"type": "object",
 	"properties": {
 		"type": {
-			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Set No Gravity\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/set_no_gravity).\n\nSets whether the entity is affected by gravity or not.\n\nType ID: `apugli:set_no_gravity`\n\n---\n\n",
-			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Set No Gravity\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/set_no_gravity).\n\nSets whether the entity is affected by gravity or not.\n\nType ID: `apugli:set_no_gravity`\n\n---\n\n"
+			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Set No Gravity\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/set_no_gravity).\n\nSets whether the entity is affected by gravity or not.\n\nType ID: `apugli:set_no_gravity`\n\n---\n\n### Example\n```json\n\"entity_action\": {\n    \"type\": \"apugli:set_no_gravity\",\n    \"value\": true\n}\n```\nThis action makes the entity unaffected by gravity.",
+			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Set No Gravity\n\n---\n\n\n[Entity Action Type](https://apugli.readthedocs.io/en/latest/types/entity_action_types/set_no_gravity).\n\nSets whether the entity is affected by gravity or not.\n\nType ID: `apugli:set_no_gravity`\n\n---\n\n### Example\n```json\n\"entity_action\": {\n    \"type\": \"apugli:set_no_gravity\",\n    \"value\": true\n}\n```\nThis action makes the entity unaffected by gravity."
 		},
 		"value": {
 			"type": "boolean",

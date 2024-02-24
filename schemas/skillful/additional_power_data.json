@@ -1,0 +1,33 @@
+{
+	"type": "object",
+	"$INCLUDE_MDFILE_DESCRIPTION": true,
+	"description": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Skill Tree Power Data\n\n---\n\n\nSkillful makes some additions to apoli powers. This is done in the `skill` field.\n\n---\n\n### Example\n\n```json\n{\n\t\"skill\": {\n        \"icon\": {\n            \"item\": \"minecraft:feather\"\n        },\n        \"parent\": \"example_pack:skill_tree\",\n        \"cost\": 1\n    }\n}\n```\nThis example in-power skill will create a skill widget that when purchased, grants the power it is in.",
+	"markdownDescription": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Skill Tree Power Data\n\n---\n\n\nSkillful makes some additions to apoli powers. This is done in the `skill` field.\n\n---\n\n### Example\n\n```json\n{\n\t\"skill\": {\n        \"icon\": {\n            \"item\": \"minecraft:feather\"\n        },\n        \"parent\": \"example_pack:skill_tree\",\n        \"cost\": 1\n    }\n}\n```\nThis example in-power skill will create a skill widget that when purchased, grants the power it is in.",
+	"properties": {
+		"icon": {
+			"$ref": "../apoli/types/identifier.json",
+			"description": "The item which is displayed as the icon for the skill widget.",
+			"markdownDescription": "The item which is displayed as the icon for the skill widget."
+		},
+		"parent": {
+			"$ref": "../apoli/types/identifier.json",
+			"description": "The skill identifier that will be the parent of this widget.",
+			"markdownDescription": "The skill identifier that will be the parent of this widget."
+		},
+		"background": {
+			"$ref": "../apoli/types/identifier.json",
+			"description": "The ID of the texture that will be the background of the skill tree.",
+			"markdownDescription": "The ID of the texture that will be the background of the skill tree."
+		},
+		"condition": {
+			"$ref": "../apoli/entity_condition.json",
+			"description": "Makes it so that the player can only buy the skill if they meet this condition.",
+			"markdownDescription": "Makes it so that the player can only buy the skill if they meet this condition."
+		},
+		"cost": {
+			"type": "integer",
+			"description": "The amount of points that the player needs in order to purchase this skill.",
+			"markdownDescription": "The amount of points that the player needs in order to purchase this skill."
+		}
+	}
+}

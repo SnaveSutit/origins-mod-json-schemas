@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://skillful-docs.readthedocs.io/en/latest/entity_actions/add_skill_points/",
+	"type": "object",
+	"required": ["skill_tree", "points"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"skill_tree": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"points": {
+			"type": "integer",
+			"description": "The number of points to add to the skill tree."
+		}
+	}
+}

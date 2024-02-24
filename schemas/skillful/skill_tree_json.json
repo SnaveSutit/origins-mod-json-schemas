@@ -1,0 +1,62 @@
+{
+	"type": "object",
+	"required": ["name", "description"],
+	"$INCLUDE_MDFILE_DESCRIPTION": true,
+	"description": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Skill Tree JSON Format\n\n---\n\n\nThis is the format of a JSON file describing a skill. They need to be placed inside the `skill_trees` folder within your namespace. `default_powers` are used to create a way to earn points on your skill tree that you can implement yourself.\n\n---\n\n### Example\n\n```json\n{\n\t\"icon\": {\n\t\t\"item\": \"minecraft:stick\"\n\t},\n\t\"name\": \"Parkour Skills\",\n\t\"description\": \"A skill tree that lets you earn parkour skills\",\n\t\"power\": \"example_pack:gain_points\",\n\t\"default_powers\": [\n\t\t\"example_pack:gain_points\"\n\t],\n\t\"cost\": 0\n}\n```\nThis example skill will grant the `example_pack:gain_points` power to players on join. This is a root of a skill tree.",
+	"markdownDescription": "### ⚠️ Requires [Skillful](https://skillful-docs.readthedocs.io/en/latest/) to be installed! ⚠️\n\n## Skill Tree JSON Format\n\n---\n\n\nThis is the format of a JSON file describing a skill. They need to be placed inside the `skill_trees` folder within your namespace. `default_powers` are used to create a way to earn points on your skill tree that you can implement yourself.\n\n---\n\n### Example\n\n```json\n{\n\t\"icon\": {\n\t\t\"item\": \"minecraft:stick\"\n\t},\n\t\"name\": \"Parkour Skills\",\n\t\"description\": \"A skill tree that lets you earn parkour skills\",\n\t\"power\": \"example_pack:gain_points\",\n\t\"default_powers\": [\n\t\t\"example_pack:gain_points\"\n\t],\n\t\"cost\": 0\n}\n```\nThis example skill will grant the `example_pack:gain_points` power to players on join. This is a root of a skill tree.",
+	"properties": {
+		"name": {
+			"$ref": "../apoli/types/text_component.json",
+			"description": "The display name of the skill widget.",
+			"markdownDescription": "The display name of the skill widget."
+		},
+		"description": {
+			"$ref": "../apoli/types/text_component.json",
+			"description": "The description of the skill widget.",
+			"markdownDescription": "The description of the skill widget."
+		},
+		"icon": {
+			"$ref": "../apoli/types/item_stack.json",
+			"description": "The item which is displayed as the icon for the skill widget.",
+			"markdownDescription": "The item which is displayed as the icon for the skill widget."
+		},
+		"power": {
+			"$ref": "../apoli/types/identifier.json",
+			"description": "IDs of the power this skill will grant.",
+			"markdownDescription": "IDs of the power this skill will grant."
+		},
+		"powers": {
+			"type": "array",
+			"items": {
+				"$ref": "../apoli/types/identifier.json"
+			},
+			"description": "IDs of the powers this skill will grant.",
+			"markdownDescription": "IDs of the powers this skill will grant."
+		},
+		"parent": {
+			"$ref": "../apoli/types/identifier.json",
+			"description": "The skill identifier that will be the parent of this widget.",
+			"markdownDescription": "The skill identifier that will be the parent of this widget."
+		},
+		"default_powers": {
+			"type": "array",
+			"description": "IDs of the powers this tree will grant when the player joins the game. Will not be read if a `parent` exists.",
+			"markdownDescription": "IDs of the powers this tree will grant when the player joins the game. Will not be read if a `parent` exists."
+		},
+		"background": {
+			"$ref": "../apoli/types/identifier.json",
+			"description": "The ID of the texture that will be the background of the skill tree.",
+			"markdownDescription": "The ID of the texture that will be the background of the skill tree."
+		},
+		"condition": {
+			"$ref": "../apoli/entity_condition.json",
+			"description": "Makes it so that the player can only buy the skill if they meet this condition.",
+			"markdownDescription": "Makes it so that the player can only buy the skill if they meet this condition."
+		},
+		"cost": {
+			"type": "integer",
+			"description": "The amount of points that the player needs in order to purchase this skill.",
+			"markdownDescription": "The amount of points that the player needs in order to purchase this skill."
+		}
+	}
+}
