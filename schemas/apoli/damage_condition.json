@@ -1,6 +1,16 @@
 {
 	"type": "object",
 	"required": ["type"],
+	"properties": {
+		"inverted": {
+			"type": "boolean",
+			"default": true
+		},
+		"type": {
+			"description": "## Damage Condition Types\n\n---\n\n\nDamage Condition Types operate on a combination of `DamageSource` and `Float`, allowing to check not only the type of damage dealt, but also how much damage was dealt. These are available to power/condition types that provides a `damage_condition` object field.\n\n---\n\n",
+			"markdownDescription": "## Damage Condition Types\n\n---\n\n\nDamage Condition Types operate on a combination of `DamageSource` and `Float`, allowing to check not only the type of damage dealt, but also how much damage was dealt. These are available to power/condition types that provides a `damage_condition` object field.\n\n---\n\n"
+		}
+	},
 	"allOf": [
 		{
 			"if": {
@@ -199,11 +209,5 @@
 				"$ref": "../apugli/damage_condition_types/magic.json"
 			}
 		}
-	],
-	"properties": {
-		"type": {
-			"description": "## Damage Condition Types\n\n---\n\n\nDamage Condition Types operate on a combination of `DamageSource` and `Float`, allowing to check not only the type of damage dealt, but also how much damage was dealt. These are available to power/condition types that provides a `damage_condition` object field.\n\n---\n\n",
-			"markdownDescription": "## Damage Condition Types\n\n---\n\n\nDamage Condition Types operate on a combination of `DamageSource` and `Float`, allowing to check not only the type of damage dealt, but also how much damage was dealt. These are available to power/condition types that provides a `damage_condition` object field.\n\n---\n\n"
-		}
-	}
+	]
 }

@@ -1,6 +1,16 @@
 {
 	"type": "object",
 	"required": ["type"],
+	"properties": {
+		"inverted": {
+			"type": "boolean",
+			"default": true
+		},
+		"type": {
+			"description": "## Bi-entity Condition Types\n\n---\n\n\nBi-entity Condition Types operate on a `Pair<Entity, Entity>`, or in simpler terms: an actor and a target. The actor and target is determined depending on the used power type, and can be swapped. These are available to power/condition types that provides a `bientity_condition` object field.\n\n---\n\n",
+			"markdownDescription": "## Bi-entity Condition Types\n\n---\n\n\nBi-entity Condition Types operate on a `Pair<Entity, Entity>`, or in simpler terms: an actor and a target. The actor and target is determined depending on the used power type, and can be swapped. These are available to power/condition types that provides a `bientity_condition` object field.\n\n---\n\n"
+		}
+	},
 	"allOf": [
 		{
 			"if": {
@@ -355,11 +365,5 @@
 				"$ref": "../apugli/bientity_condition_types/owner.json"
 			}
 		}
-	],
-	"properties": {
-		"type": {
-			"description": "## Bi-entity Condition Types\n\n---\n\n\nBi-entity Condition Types operate on a `Pair<Entity, Entity>`, or in simpler terms: an actor and a target. The actor and target is determined depending on the used power type, and can be swapped. These are available to power/condition types that provides a `bientity_condition` object field.\n\n---\n\n",
-			"markdownDescription": "## Bi-entity Condition Types\n\n---\n\n\nBi-entity Condition Types operate on a `Pair<Entity, Entity>`, or in simpler terms: an actor and a target. The actor and target is determined depending on the used power type, and can be swapped. These are available to power/condition types that provides a `bientity_condition` object field.\n\n---\n\n"
-		}
-	}
+	]
 }

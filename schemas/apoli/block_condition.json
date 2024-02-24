@@ -1,6 +1,16 @@
 {
 	"type": "object",
 	"required": ["type"],
+	"properties": {
+		"inverted": {
+			"type": "boolean",
+			"default": true
+		},
+		"type": {
+			"description": "## Block Condition Types\n\n---\n\n\nBlock Condition Types operate on `CachedBlockPosition`, essentially a combination of `World` and `BlockPos`, which allows retrieving all necessary information about the block. These are available to power/condition types that provides a `block_condition` object field.\n\n---\n\n",
+			"markdownDescription": "## Block Condition Types\n\n---\n\n\nBlock Condition Types operate on `CachedBlockPosition`, essentially a combination of `World` and `BlockPos`, which allows retrieving all necessary information about the block. These are available to power/condition types that provides a `block_condition` object field.\n\n---\n\n"
+		}
+	},
 	"allOf": [
 		{
 			"if": {
@@ -433,11 +443,5 @@
 				"$ref": "../apugli/block_condition_types/thundering.json"
 			}
 		}
-	],
-	"properties": {
-		"type": {
-			"description": "## Block Condition Types\n\n---\n\n\nBlock Condition Types operate on `CachedBlockPosition`, essentially a combination of `World` and `BlockPos`, which allows retrieving all necessary information about the block. These are available to power/condition types that provides a `block_condition` object field.\n\n---\n\n",
-			"markdownDescription": "## Block Condition Types\n\n---\n\n\nBlock Condition Types operate on `CachedBlockPosition`, essentially a combination of `World` and `BlockPos`, which allows retrieving all necessary information about the block. These are available to power/condition types that provides a `block_condition` object field.\n\n---\n\n"
-		}
-	}
+	]
 }

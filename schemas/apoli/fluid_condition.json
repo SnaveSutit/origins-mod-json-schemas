@@ -1,6 +1,16 @@
 {
 	"type": "object",
 	"required": ["type"],
+	"properties": {
+		"inverted": {
+			"type": "boolean",
+			"default": true
+		},
+		"type": {
+			"description": "## Fluid Condition Types\n\n---\n\n\nFluid Condition Types operate on a `FluidState`, essentially which fluid (if any) exists, as well as properties of the fluid. These are available to power/condition types that provides a `fluid_condition` object field.\n\n---\n\n",
+			"markdownDescription": "## Fluid Condition Types\n\n---\n\n\nFluid Condition Types operate on a `FluidState`, essentially which fluid (if any) exists, as well as properties of the fluid. These are available to power/condition types that provides a `fluid_condition` object field.\n\n---\n\n"
+		}
+	},
 	"allOf": [
 		{
 			"if": {
@@ -147,11 +157,5 @@
 				}
 			}
 		}
-	],
-	"properties": {
-		"type": {
-			"description": "## Fluid Condition Types\n\n---\n\n\nFluid Condition Types operate on a `FluidState`, essentially which fluid (if any) exists, as well as properties of the fluid. These are available to power/condition types that provides a `fluid_condition` object field.\n\n---\n\n",
-			"markdownDescription": "## Fluid Condition Types\n\n---\n\n\nFluid Condition Types operate on a `FluidState`, essentially which fluid (if any) exists, as well as properties of the fluid. These are available to power/condition types that provides a `fluid_condition` object field.\n\n---\n\n"
-		}
-	}
+	]
 }

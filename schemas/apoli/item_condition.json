@@ -1,6 +1,16 @@
 {
 	"type": "object",
 	"required": ["type"],
+	"properties": {
+		"inverted": {
+			"type": "boolean",
+			"default": true
+		},
+		"type": {
+			"description": "## Item Condition Types\n\n---\n\n\nItem Condition Types operate on a combination of `World` and `ItemStack`, allowing to evaluate not only the stack of items, but also access the world for certain things, like accessing the recipe manager of the world (which is used by the [Smeltable (Item Condition Type)](https://origins.readthedocs.io/en/latest/types/item_condition_types)).\n\n---\n\n",
+			"markdownDescription": "## Item Condition Types\n\n---\n\n\nItem Condition Types operate on a combination of `World` and `ItemStack`, allowing to evaluate not only the stack of items, but also access the world for certain things, like accessing the recipe manager of the world (which is used by the [Smeltable (Item Condition Type)](https://origins.readthedocs.io/en/latest/types/item_condition_types)).\n\n---\n\n"
+		}
+	},
 	"allOf": [
 		{
 			"if": {
@@ -381,11 +391,5 @@
 				"$ref": "../apugli/item_condition_types/on_cooldown.json"
 			}
 		}
-	],
-	"properties": {
-		"type": {
-			"description": "## Item Condition Types\n\n---\n\n\nItem Condition Types operate on a combination of `World` and `ItemStack`, allowing to evaluate not only the stack of items, but also access the world for certain things, like accessing the recipe manager of the world (which is used by the [Smeltable (Item Condition Type)](https://origins.readthedocs.io/en/latest/types/item_condition_types)).\n\n---\n\n",
-			"markdownDescription": "## Item Condition Types\n\n---\n\n\nItem Condition Types operate on a combination of `World` and `ItemStack`, allowing to evaluate not only the stack of items, but also access the world for certain things, like accessing the recipe manager of the world (which is used by the [Smeltable (Item Condition Type)](https://origins.readthedocs.io/en/latest/types/item_condition_types)).\n\n---\n\n"
-		}
-	}
+	]
 }

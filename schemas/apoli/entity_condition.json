@@ -1,6 +1,16 @@
 {
 	"type": "object",
 	"required": ["type"],
+	"properties": {
+		"inverted": {
+			"type": "boolean",
+			"default": true
+		},
+		"type": {
+			"description": "## Entity Condition Types\n\n---\n\n\nEntity Condition Types operate on an Entity, which also allows access to the world. These are available to be used in most powers in the `condition` object field (or `entity_condition` in other power/condition types), which restricts when a power is active.\n\n---\n\n",
+			"markdownDescription": "## Entity Condition Types\n\n---\n\n\nEntity Condition Types operate on an Entity, which also allows access to the world. These are available to be used in most powers in the `condition` object field (or `entity_condition` in other power/condition types), which restricts when a power is active.\n\n---\n\n"
+		}
+	},
 	"allOf": [
 		{
 			"if": {
@@ -1330,11 +1340,5 @@
 				"$ref": "../apugli/entity_condition_types/velocity.json"
 			}
 		}
-	],
-	"properties": {
-		"type": {
-			"description": "## Entity Condition Types\n\n---\n\n\nEntity Condition Types operate on an Entity, which also allows access to the world. These are available to be used in most powers in the `condition` object field (or `entity_condition` in other power/condition types), which restricts when a power is active.\n\n---\n\n",
-			"markdownDescription": "## Entity Condition Types\n\n---\n\n\nEntity Condition Types operate on an Entity, which also allows access to the world. These are available to be used in most powers in the `condition` object field (or `entity_condition` in other power/condition types), which restricts when a power is active.\n\n---\n\n"
-		}
-	}
+	]
 }

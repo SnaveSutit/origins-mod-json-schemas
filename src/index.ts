@@ -5,11 +5,14 @@ import { type JSONSchema, type ImportOptions } from './schema'
 import { MINECRAFT_REGISTRY, checkIfRegistryNeedsUpdate } from './minecraftRegistries'
 import { MDFile } from './mdReader'
 import * as chokidar from 'chokidar'
+import prettier from 'prettier'
 import terminalkit from 'terminal-kit'
 const TERM = terminalkit.terminal
 
 const SRC_DIR = 'src/schemas/'.replace(/\//g, pathjs.sep)
 const OUT_DIR = 'schemas/'.replace(/\//g, pathjs.sep)
+
+let prettierConfig: prettier.Options
 
 function collectPropertyObjects(
 	schema: JSONSchema,
@@ -373,14 +376,23 @@ async function build(schemasToBuild: string[]) {
 	for (const { path, content } of fileIOQueue) {
 		writeProgress?.startItem(path)
 		await fs.mkdir(pathjs.dirname(path), { recursive: true })
-		await fs.writeFile(path, content)
+		await fs.writeFile(path, await prettier.format(content, prettierConfig))
 		writeProgress?.itemDone(path)
 	}
 	writeProgress?.stop()
-	TERM('\n')
+}
+
+async function loadPrettierConfig() {
+	const config = await prettier.resolveConfig(process.cwd(), { config: '.prettierrc.json' })
+	if (!config) {
+		throw new Error(`Failed to load prettier config.`)
+	}
+	prettierConfig = config
+	prettierConfig.parser = 'json'
 }
 
 async function main() {
+	await loadPrettierConfig()
 	await checkIfRegistryNeedsUpdate()
 
 	if (process.argv.includes('--once')) {
