@@ -1,7 +1,7 @@
 - [x] Add [Apugli](https://apugli.readthedocs.io/en/latest/) Support
 - [x] Add [Epoli](https://epoli-docs.readthedocs.io/en/latest/) Support
 - [ ] Add [EggoLib](https://eggolib.github.io/latest/) Support
-    - [ ] Get access to the raw documentation - Currently waiting on a response from the developer.
+  - [ ] Get access to the raw documentation - Currently waiting on a response from the developer.
 - [x] Add [Skillful](https://skillful-docs.readthedocs.io/en/latest/) Support
 - [ ] Add [ExtraOrigins](https://github.com/MoriyaShiine/extra-origins/wiki) Support
 

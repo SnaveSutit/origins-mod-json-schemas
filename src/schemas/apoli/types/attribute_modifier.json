@@ -14,7 +14,7 @@
 			"$ref": "$ref(apoli:types/identifier)"
 		},
 		"name": {
-			"type": "string"
+			"$ref": "$ref(apoli:types/identifier)"
 		},
 		"modifier": {
 			"$ref": "$ref(apoli:types/attribute_modifier_arrayable)"
