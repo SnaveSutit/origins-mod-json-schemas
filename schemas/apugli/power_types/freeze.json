@@ -21,8 +21,8 @@
 		},
 		"should_damage": {
 			"type": "boolean",
-			"description": "Whether this power type's freeze should damage the power holder. ",
-			"markdownDescription": "Whether this power type's freeze should damage the power holder. "
+			"description": "Whether this power type's freeze should damage the power holder.",
+			"markdownDescription": "Whether this power type's freeze should damage the power holder."
 		}
 	}
 }

@@ -1,5 +1,6 @@
 // import { dataTypes } from './dataTypes'
 import * as fs from 'fs'
+import pathjs from 'path'
 import terminalkit from 'terminal-kit'
 const TERM = terminalkit.terminal
 
@@ -28,14 +29,19 @@ export const MODULES = {
 		rawUrl: 'https://raw.githubusercontent.com/UltrusBot/Mob-Origin-Docs/master/docs/',
 		docsUrl: 'https://moborigins.ultrusmods.me/en/latest/',
 	},
+	// proviorigins: {
+	// 	rawUrl: 'https://raw.githubusercontent.com/ThatRobin/ProviOrigins/main/docs/',
+	// 	docsUrl: 'https://github.com/Provismet/Provi-Origins/wiki/',
+	// },
 }
 
 const MD_LINK_REGEX = /\[(?<name>[^\n[]+?)\]\((?<target>[^\n ]+?)\)/g
-
 const DESCRIPTION_REGEX = /^#+\s*(?<title>.+)\n(?<description>[^]+?)\s*###\s*.*$/gm
-const FIELD_TITLE_REGEX = /Field\s*\|\s*Type\s*\|\s*Default\s*\|\s*Description\n-+\|-+\|-+\|-+\n/gm
+const LOOSE_DESCRIPTION_REGEX = /(?<description>[^]+?)\s*#{1,3}\s*.*$/gm
+const FIELD_TITLE_REGEX =
+	/\|?\s*Field\s*\|\s*Type\s*\|\s*Default\s*\|\s*Description\s*\|?\n(\|?\s*:?-+\s*)+\|?\n/gm
 const FIELD_CAPTURE_REGEX =
-	/^(?<field>[^|\n\s]+?)\s*\|\s*(?<type>[^|\n]+?)\s*\|\s*(?<defaultValue>[^|\n]+?)?\s*\|\s*(?<description>[^|\n]+?)$/gm
+	/^\|?\s*(?<field>[^|\n\s]+?)\s*\|\s*(?<type>[^|\n]+?)\s*\|\s*(?<defaultValue>[^|\n]+?)?\s*\|\s*(?<description>[^|\n]+?)\s*?\|?$/gm
 const VALUES_TITLE_REGEX = /Value\s+?\| Description\n-+\|-+\n/gm
 const VALUE_CAPTURE_REGEX = /^(?<value>[^|]+?)\s*\|\s*(?<description>[^|\n]+?)$/gm
 const EXAMPLES_REGEX = /###\s*?Examples?\s*([^]+)/
@@ -248,12 +254,7 @@ export class MDFile {
 		const url = this._rawUrl + this.path
 		// term.gray(`Reading Markdown File `).brightBlue(url).gray('...\n')
 
-		// this.content = await fetch(url).then(res => res.text())
-		// if (!this.content || this.content.includes('404: Not Found'))
-		// 	throw new Error(`Failed to fetch content of '${this.path}': ${this.content}`)
-		// this.content = this.content.replace(/\r/g, '')
 		this.content = (await fetchMDFileCached(url)).replace(/\r/g, '')
-
 		try {
 			this.id = this.path.split('/').pop()!.replace('.md', '')
 			this.captureDescription()
@@ -276,8 +277,22 @@ export class MDFile {
 	private captureDescription() {
 		DESCRIPTION_REGEX.lastIndex = 0
 		const match = DESCRIPTION_REGEX.exec(this.content)
-		if (!match)
-			throw new Error(`Failed to capture description for '${this.path}': \n  ${this.content}`)
+		if (!match) {
+			TERM.brightRed(`No description found for `)(this.path).brightRed(
+				'. Attempting to capture loose description...\n',
+			)
+			LOOSE_DESCRIPTION_REGEX.lastIndex = 0
+			const looseMatch = LOOSE_DESCRIPTION_REGEX.exec(this.content)
+			if (!looseMatch) {
+				throw new Error(`Failed to capture description for '${this.path}': \n  ${this.content}`)
+			}
+			this.title = pathjs
+				.parse(this.path)
+				.name.replace(/[-_]+/g, ' ')
+				.replace(/\.\w+?$/, '')
+			this.description = processDescription(looseMatch[0], this)
+			return
+		}
 		const { title, description } = match.groups!
 		this.title = title
 		this.description = processDescription(description, this)

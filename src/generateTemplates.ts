@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import pathjs from 'path'
 import { MDFile, MODULES } from './mdReader'
 import { JSONSchema, SimpleSchemaType } from './schema'
 // import pathjs from 'path'
@@ -8,16 +9,20 @@ const OUT_DIR = './.generated'
 
 interface IModule {
 	name: string
-	docsUrl: string
+	docsUrl?: string
 	localDocsPath: string
 	ignored?: string[]
 }
 
 const GLOBAL_IGNORED = [
+	// Dev files
+	'.git',
+	'.vscode',
+	'.gitignore',
+	// Origins
 	'misc',
 	'guides',
 	'index.md',
-	// Origins
 	'bientity_action_types.md',
 	'bientity_condition_types.md',
 	'biome_condition_types.md',
@@ -80,6 +85,12 @@ const LOCAL_MODULES: IModule[] = [
 		name: 'moborigins',
 		docsUrl: MODULES.moborigins.docsUrl,
 		localDocsPath: 'D:/github-repos/Mob-Origin-Docs/docs',
+		ignored: [...GLOBAL_IGNORED],
+	},
+	{
+		name: 'proviorigins',
+		docsUrl: 'https://github.com/Provismet/Provi-Origins/wiki/',
+		localDocsPath: 'D:/github-repos/Provi-Origins.wiki',
 		ignored: [...GLOBAL_IGNORED],
 	},
 ]
@@ -316,15 +327,20 @@ function generateTemplates(module: IModule) {
 			mdFile = MDFile.fromFile(file)
 		} catch (e: any) {
 			TERM.brightRed(`Error parsing ${file}: \n  ${e.message}\n`)
-			// TERM.brightRed(`Error parsing ${file}: \n  ${e.message}\n  ${e.stack}\n`)
 			continue
 		}
 		const schema: JSONSchema = {
 			$schema: 'https://json-schema.org/draft-07/schema#',
-			$docsUrl:
-				module.docsUrl +
-				file.replace(module.localDocsPath, '').replace('.md', '/').replace(/^\//, ''),
 		}
+		if (module.docsUrl) {
+			schema.$docsUrl =
+				module.docsUrl +
+				file.replace(module.localDocsPath, '').replace('.md', '/').replace(/^\//, '')
+		}
+		if (module.localDocsPath) {
+			schema.$localDocsPath = file
+		}
+
 		if (mdFile.fields.length > 0) {
 			schema.type = 'object'
 			schema.$IGNORED_PROPERTIES = []
@@ -355,16 +371,20 @@ function generateTemplates(module: IModule) {
 			schema.enum = mdFile.values.map(v => v.value)
 		}
 
+		const oldName = pathjs.parse(file).name
+		const newName = pathjs.parse(file).name.toLowerCase().replace(/[- ]+/g, '_')
+
 		const outPath = file
 			.replace(module.localDocsPath, OUT_DIR + '/' + module.name)
 			.replace('.md', '.json')
+			.replace(oldName, newName)
 		fs.mkdirSync(outPath.replace(/\/[^/]+$/, ''), { recursive: true })
 		fs.writeFileSync(outPath, JSON.stringify(schema, null, '\t'))
 	}
 }
 
 function main() {
-	fs.rmSync(OUT_DIR, { recursive: true })
+	fs.rmSync(OUT_DIR, { recursive: true, force: true })
 	fs.mkdirSync(OUT_DIR, { recursive: true })
 
 	for (const module of LOCAL_MODULES) {

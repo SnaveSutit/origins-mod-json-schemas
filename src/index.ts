@@ -34,89 +34,100 @@ function collectPropertyObjects(
 }
 
 async function processSchemaProperties(schema: JSONSchema, path: string) {
-	if (schema.$docsUrl) {
-		let mdFile: MDFile
+	let mdFile: MDFile | undefined
+	let url: string | undefined
+	if (schema.$localDocsUrl) {
 		try {
-			mdFile = await MDFile.fromDocsURL(schema.$docsUrl).fetchContent()
+			mdFile = await MDFile.fromFile(schema.$localDocsUrl).fetchContent()
+			url = schema.$localDocsUrl
 		} catch (e: any) {
 			TERM.brightRed(`Failed to read '${schema.$docsUrl}':\n  ${e}\n`)
-			return
 		}
-
-		const propertyObjects = collectPropertyObjects(schema, [])
-
-		let ignoredProperties: string[] = []
-		if (Array.isArray(schema.$IGNORED_PROPERTIES)) {
-			ignoredProperties = schema.$IGNORED_PROPERTIES
-			delete schema.$IGNORED_PROPERTIES
+	} else if (schema.$docsUrl) {
+		try {
+			mdFile = await MDFile.fromDocsURL(schema.$docsUrl).fetchContent()
+			url = schema.$docsUrl
+		} catch (e: any) {
+			TERM.brightRed(`Failed to read '${schema.$docsUrl}':\n  ${e}\n`)
 		}
+	} else {
+		return
+	}
+	if (!mdFile || !url) return
 
-		if (mdFile.description) {
-			if (schema.$INCLUDE_MDFILE_DESCRIPTION) {
-				schema.description ??= ''
-				schema.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
-					'\n\n---\n\n',
-				)
-				schema.markdownDescription ??= ''
-				schema.markdownDescription += [
-					'## ' + mdFile.title,
-					mdFile.description,
-					mdFile.examples,
-				].join('\n\n---\n\n')
-			}
-			if (
-				!ignoredProperties.includes('type') &&
-				(schema.$docsUrl.match(/.+(?:action|condition|power)_types/) ||
-					// Epoli uses a worse naming convention :(
-					schema.$docsUrl.match(/.+(?:action|condition|powertype)s/))
-			) {
-				schema.properties ??= {}
-				const typeObj = (schema.properties.type ??= {})
-				typeObj.description ??= ''
-				typeObj.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
-					'\n\n---\n\n',
-				)
-				typeObj.markdownDescription ??= ''
-				typeObj.markdownDescription += [
-					'## ' + mdFile.title,
-					mdFile.description,
-					mdFile.examples,
-				].join('\n\n---\n\n')
-			}
+	const propertyObjects = collectPropertyObjects(schema, [])
+
+	let ignoredProperties: string[] = []
+	if (Array.isArray(schema.$IGNORED_PROPERTIES)) {
+		ignoredProperties = schema.$IGNORED_PROPERTIES
+		delete schema.$IGNORED_PROPERTIES
+	}
+
+	if (mdFile.description) {
+		if (schema.$INCLUDE_MDFILE_DESCRIPTION) {
+			schema.description ??= ''
+			schema.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
+				'\n\n---\n\n',
+			)
+			schema.markdownDescription ??= ''
+			schema.markdownDescription += [
+				'## ' + mdFile.title,
+				mdFile.description,
+				mdFile.examples,
+			].join('\n\n---\n\n')
 		}
+		if (
+			!ignoredProperties.includes('type') &&
+			(url.match(/.+(?:action|condition|power)_types/) ||
+				// Epoli uses a worse naming convention :(
+				url.match(/.+(?:action|condition|powertype)s/))
+		) {
+			schema.properties ??= {}
+			const typeObj = (schema.properties.type ??= {})
+			typeObj.description ??= ''
+			typeObj.description += ['## ' + mdFile.title, mdFile.description, mdFile.examples].join(
+				'\n\n---\n\n',
+			)
+			typeObj.markdownDescription ??= ''
+			typeObj.markdownDescription += [
+				'## ' + mdFile.title,
+				mdFile.description,
+				mdFile.examples,
+			].join('\n\n---\n\n')
+		}
+	}
 
-		if (mdFile.fields.length > 0) {
-			if (schema.type !== 'object' && propertyObjects.length < 1) {
-				TERM.brightRed('Schema ')
-					.brightYellow(path)
-					.brightRed(' is not an object, but has fields in ')
-					.brightYellow(mdFile.path)('\n')
-			}
-			const foundFields: string[] = [...ignoredProperties]
-			for (const propObj of propertyObjects) {
-				for (const field of mdFile.fields) {
-					if (!propObj[field.name] || ignoredProperties.includes(field.name)) continue
-					foundFields.push(field.name)
-
-					const fieldObj = propObj[field.name]
-					fieldObj.description ??= ''
-					fieldObj.description += field.description
-					fieldObj.markdownDescription ??= ''
-					fieldObj.markdownDescription += field.description
-					if (field.depreciated) {
-						const depreciatedPrefix = '#### 🚨 Depreciated 🚨\n\n'
-						fieldObj.description = depreciatedPrefix + fieldObj.description
-						fieldObj.markdownDescription = depreciatedPrefix + fieldObj.markdownDescription
-					}
-				}
-			}
+	if (mdFile.fields.length > 0) {
+		if (schema.type !== 'object' && propertyObjects.length < 1) {
+			TERM.brightRed('Schema ')
+				.brightYellow(path)
+				.brightRed(' is not an object, but has fields in ')
+				.brightYellow(mdFile.path)('\n')
+		}
+		const foundFields: string[] = [...ignoredProperties]
+		for (const propObj of propertyObjects) {
 			for (const field of mdFile.fields) {
-				if (!foundFields.includes(field.name)) {
-					TERM.brightRed('Field ')
-						.brightYellow(field.name)
-						.brightRed(' is missing from ')
-						.brightYellow(path)('\n')
+				if (!propObj[field.name] || ignoredProperties.includes(field.name)) continue
+				foundFields.push(field.name)
+
+				const fieldObj = propObj[field.name]
+				fieldObj.description ??= ''
+				fieldObj.description += field.description
+				fieldObj.markdownDescription ??= ''
+				fieldObj.markdownDescription += field.description
+				if (field.depreciated) {
+					const depreciatedPrefix = '#### 🚨 Depreciated 🚨\n\n'
+					fieldObj.description = depreciatedPrefix + fieldObj.description
+					fieldObj.markdownDescription = depreciatedPrefix + fieldObj.markdownDescription
 				}
+			}
+		}
+		for (const field of mdFile.fields) {
+			if (!foundFields.includes(field.name)) {
+				TERM.brightRed('Field ')
+					.brightYellow(field.name)
+					.brightRed(' is missing from ')
+					.brightYellow(path)('\n')
 			}
 		}
 	}

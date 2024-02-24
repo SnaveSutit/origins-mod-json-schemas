@@ -3,16 +3,16 @@
 	"properties": {
 		"stack": {
 			"$ref": "../types/positioned_item_stack.json",
-			"description": "If specified, this item will be given to the player (can be specified in an inventory slot). ",
-			"markdownDescription": "If specified, this item will be given to the player (can be specified in an inventory slot). "
+			"description": "If specified, this item will be given to the player (can be specified in an inventory slot).",
+			"markdownDescription": "If specified, this item will be given to the player (can be specified in an inventory slot)."
 		},
 		"stacks": {
 			"type": "array",
 			"items": {
 				"$ref": "../types/positioned_item_stack.json"
 			},
-			"description": "If specified, these items will be given to the player (can be specified in an inventory slot). ",
-			"markdownDescription": "If specified, these items will be given to the player (can be specified in an inventory slot). "
+			"description": "If specified, these items will be given to the player (can be specified in an inventory slot).",
+			"markdownDescription": "If specified, these items will be given to the player (can be specified in an inventory slot)."
 		},
 		"recurrent": {
 			"type": "boolean",

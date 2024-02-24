@@ -45,8 +45,8 @@
 		},
 		"action_on_hit": {
 			"$ref": "../../apoli/entity_action.json",
-			"description": "If set, the entity action(s) to execute upon hitting a block or entity with the raycast. ",
-			"markdownDescription": "If set, the entity action(s) to execute upon hitting a block or entity with the raycast. "
+			"description": "If set, the entity action(s) to execute upon hitting a block or entity with the raycast.",
+			"markdownDescription": "If set, the entity action(s) to execute upon hitting a block or entity with the raycast."
 		},
 		"destruction_type": {
 			"type": "string",
@@ -141,8 +141,8 @@
 		},
 		"charged_condition": {
 			"$ref": "../../apoli/entity_condition.json",
-			"description": "If set, determined when the `charged_modifier` and `charged_modifiers` fields will be used. ",
-			"markdownDescription": "If set, determined when the `charged_modifier` and `charged_modifiers` fields will be used. "
+			"description": "If set, determined when the `charged_modifier` and `charged_modifiers` fields will be used.",
+			"markdownDescription": "If set, determined when the `charged_modifier` and `charged_modifiers` fields will be used."
 		},
 		"charged_modifier": {
 			"$ref": "../../apoli/types/attribute_modifier.json",

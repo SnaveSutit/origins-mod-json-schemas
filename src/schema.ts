@@ -425,6 +425,10 @@ export interface IJSONSchemaPreProcessorAdditions {
 	 * Should link to the documentation page for the schema.
 	 */
 	$docsUrl?: string
+	/**
+	 * Should be a absolute path to an .md file that contains the documentation for the schema.
+	 */
+	$localDocsUrl?: string
 	$IMPORT?: ImportOptions | ImportOptions[]
 	$IGNORED_PROPERTIES?: string[]
 	$INCLUDE_MDFILE_DESCRIPTION?: boolean

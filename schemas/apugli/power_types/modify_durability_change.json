@@ -13,8 +13,8 @@
 		"comparison": {
 			"default": ">=",
 			"$ref": "../../apoli/types/comparison.json",
-			"description": "How the item's added damage value should be compared. ",
-			"markdownDescription": "How the item's added damage value should be compared. "
+			"description": "How the item's added damage value should be compared.",
+			"markdownDescription": "How the item's added damage value should be compared."
 		},
 		"compare_to": {
 			"type": "number",
