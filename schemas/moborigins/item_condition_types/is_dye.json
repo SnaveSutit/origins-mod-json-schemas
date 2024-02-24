@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Is Dye\n\n---\n\nChecks if the item is a dye.\n\n---\n\n### Example\n```json\n{\n    \"item_condition\": {\n        \"type\": \"moborigins:is_dye\"\n    }\n}\n```\nChecks if the item is a dye.\n",
+			"markdownDescription": "## Is Dye\n\n---\n\nChecks if the item is a dye.\n\n---\n\n### Example\n```json\n{\n    \"item_condition\": {\n        \"type\": \"moborigins:is_dye\"\n    }\n}\n```\nChecks if the item is a dye.\n"
+		}
+	}
+}

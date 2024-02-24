@@ -1,0 +1,19 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Has Item Cooldown\n\n---\n\nChecks if the player has an item cooldown.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:has_item_cooldown\",\n    \"item\": \"minecraft:iron_sword\"\n}\n```\nChecks if the player has an item cooldown for iron swords.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Has Item Cooldown\n\n---\n\nChecks if the player has an item cooldown.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:has_item_cooldown\",\n    \"item\": \"minecraft:iron_sword\"\n}\n```\nChecks if the player has an item cooldown for iron swords.\n"
+		},
+		"item": {
+			"$ref": "../../apoli/types/autofill_helpers/item_identifier.json",
+			"description": "The item to set the cooldown of.",
+			"markdownDescription": "The item to set the cooldown of."
+		},
+		"hand": {
+			"$ref": "../../apoli/types/hands.json",
+			"description": "The hand to check for an item to set the cooldown of, if set, will ignore the item parameter. Valid values are `MAIN_HAND` and `OFF_HAND`.",
+			"markdownDescription": "The hand to check for an item to set the cooldown of, if set, will ignore the item parameter. Valid values are `MAIN_HAND` and `OFF_HAND`."
+		}
+	}
+}

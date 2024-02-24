@@ -1,0 +1,19 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Channeling Override\n\n---\n\nAllows using the channeling enchantment without having the enchantment, and allows you to specify an action to be performed on the trident thrower or the entity hit by the lightning bolt.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:channeling_override\",\n  \"entity_action\": {\n    \"type\": \"origins:explode\",\n    \"power\": 4\n  },\n  \"hit_entity_action\": {\n    \"type\": \"origins:add_velocity\",\n    \"y\": 2\n  }\n}\n```\nThis power allows using the channeling enchantment without having the enchantment, and causes the trident thrower to explode and the entity hit by the lightning bolt to be launched into the air.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Channeling Override\n\n---\n\nAllows using the channeling enchantment without having the enchantment, and allows you to specify an action to be performed on the trident thrower or the entity hit by the lightning bolt.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:channeling_override\",\n  \"entity_action\": {\n    \"type\": \"origins:explode\",\n    \"power\": 4\n  },\n  \"hit_entity_action\": {\n    \"type\": \"origins:add_velocity\",\n    \"y\": 2\n  }\n}\n```\nThis power allows using the channeling enchantment without having the enchantment, and causes the trident thrower to explode and the entity hit by the lightning bolt to be launched into the air.\n"
+		},
+		"entity_action": {
+			"$ref": "../../apoli/entity_action.json",
+			"description": "The action to be performed on the trident thrower.",
+			"markdownDescription": "The action to be performed on the trident thrower."
+		},
+		"hit_entity_action": {
+			"$ref": "../../apoli/entity_action.json",
+			"description": "The action to be performed on the entity hit by the lightning bolt.",
+			"markdownDescription": "The action to be performed on the entity hit by the lightning bolt."
+		}
+	}
+}

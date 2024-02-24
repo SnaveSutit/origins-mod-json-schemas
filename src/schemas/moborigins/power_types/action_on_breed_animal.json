@@ -1,0 +1,17 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://moborigins.ultrusmods.me/en/latest/power_types/action_on_breed_animal/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		}
+	}
+}

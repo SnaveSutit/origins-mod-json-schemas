@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Is Solid\n\n---\n\nChecks if the block is solid.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_solid\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is solid.\n",
+			"markdownDescription": "## Is Solid\n\n---\n\nChecks if the block is solid.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_solid\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is solid.\n"
+		}
+	}
+}

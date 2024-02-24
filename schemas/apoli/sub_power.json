@@ -2594,6 +2594,266 @@
 			"then": {
 				"$ref": "../extraorigins/power_types/start_riding.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:action_on_breed_animal"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/action_on_breed_animal.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:action_on_entity_tame"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/action_on_entity_tame.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:add_experience_to_resource"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/add_experience_to_resource.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:biome_model_color"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/biome_model_color.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:bouncy"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/bouncy.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:channeling_override"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/channeling_override.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:custom_sleep_block"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/custom_sleep_block.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:dyeable_model_color"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/dyeable_model_color.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:fall_sounds"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/fall_sounds.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:fog"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/fog.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:hostile_axolotls"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/hostile_axolotls.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:illuminate"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/illuminate.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:mimic_enchant"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/mimic_enchant.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:modify_attack_distance_scaling_factor"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/modify_attack_distance_scaling_factor.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:modify_villager_reputation"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/modify_villager_reputation.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:remove_mob_hostility"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/remove_mob_hostility.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:riptide_override"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/riptide_override.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:snow_trail"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/snow_trail.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:totem_chance"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/totem_chance.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:walk_on_powder_snow"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/power_types/walk_on_powder_snow.json"
+			}
 		}
 	]
 }

@@ -1,0 +1,27 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Modify Villager Reputation\n\n---\n\nThis power type allows you to effectively modify the reputation of a villager when you interact with it.\n\nYou can learn more about reputation [here](https://moborigins.ultrusmods.me/en/latest/power_types/modify_villager_reputation).\n\n!!! tip \"The 'actor' is the villager, while the 'target' is the entity with the power, that is interacting with the villager.\"\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:modify_villager_reputation\",\n  \"modifier\": {\n    \"operation\": \"addition\",\n    \"value\": 100.0\n  }\n}\n```\nThis power massively increases your reputation with villagers, allowing you to trade with them for much cheaper.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Modify Villager Reputation\n\n---\n\nThis power type allows you to effectively modify the reputation of a villager when you interact with it.\n\nYou can learn more about reputation [here](https://moborigins.ultrusmods.me/en/latest/power_types/modify_villager_reputation).\n\n!!! tip \"The 'actor' is the villager, while the 'target' is the entity with the power, that is interacting with the villager.\"\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:modify_villager_reputation\",\n  \"modifier\": {\n    \"operation\": \"addition\",\n    \"value\": 100.0\n  }\n}\n```\nThis power massively increases your reputation with villagers, allowing you to trade with them for much cheaper.\n"
+		},
+		"bientity_condition": {
+			"$ref": "../../apoli/bientity_condition.json",
+			"description": "This is a bi-entity condtion with the actor, the villager, and the target, the player.",
+			"markdownDescription": "This is a bi-entity condtion with the actor, the villager, and the target, the player."
+		},
+		"modifier": {
+			"$ref": "../../apoli/types/attribute_modifier.json",
+			"description": "This is a modifier that will be applied to your reputation with the villager.",
+			"markdownDescription": "This is a modifier that will be applied to your reputation with the villager."
+		},
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "../../apoli/types/attribute_modifier.json"
+			},
+			"description": "This is a list of modifiers that will be applied to your reputation with the villager.",
+			"markdownDescription": "This is a list of modifiers that will be applied to your reputation with the villager."
+		}
+	}
+}

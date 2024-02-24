@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Walk on Powder Snow\n\n---\n\nThis power type allows you to walk on powder snow.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:walk_on_powder_snow\"\n}\n```\nThis lets you walk on powder snow.\n",
+			"markdownDescription": "## Walk on Powder Snow\n\n---\n\nThis power type allows you to walk on powder snow.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:walk_on_powder_snow\"\n}\n```\nThis lets you walk on powder snow.\n"
+		}
+	}
+}

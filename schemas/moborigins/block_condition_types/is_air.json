@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Is Air\n\n---\n\nChecks if the block is air.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_air\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is air.\n",
+			"markdownDescription": "## Is Air\n\n---\n\nChecks if the block is air.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_air\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is air.\n"
+		}
+	}
+}

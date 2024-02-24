@@ -392,6 +392,19 @@
 			"then": {
 				"$ref": "../apugli/item_condition_types/on_cooldown.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:is_dye"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/item_condition_types/is_dye.json"
+			}
 		}
 	]
 }

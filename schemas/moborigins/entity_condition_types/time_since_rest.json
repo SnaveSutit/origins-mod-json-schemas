@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"required": ["comparison", "compare_to"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Time Since Rest\n\n---\n\nChecks how long the player has been sleeping, time is in ticks.\n\n---\n\n### Example\n```json\n{\n        \"entity_condition\": {\n            \"type\": \"moborigins:time_since_rest\",\n            \"comparison\": \"greater_than\",\n            \"compare_to\": 100\n        }\n    }\n```\nChecks how long the player has been sleeping.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Time Since Rest\n\n---\n\nChecks how long the player has been sleeping, time is in ticks.\n\n---\n\n### Example\n```json\n{\n        \"entity_condition\": {\n            \"type\": \"moborigins:time_since_rest\",\n            \"comparison\": \"greater_than\",\n            \"compare_to\": 100\n        }\n    }\n```\nChecks how long the player has been sleeping.\n"
+		},
+		"comparison": {
+			"$ref": "../../apoli/types/comparison.json",
+			"description": "The comparison to use.",
+			"markdownDescription": "The comparison to use."
+		},
+		"compare_to": {
+			"type": "integer",
+			"description": "The value to compare to.",
+			"markdownDescription": "The value to compare to."
+		}
+	}
+}

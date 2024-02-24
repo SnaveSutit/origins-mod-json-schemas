@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Summon Slime\n\n---\n\nSummons a mob origins slime, which is a slime that has the player name, is owned by the player, and has the same color as the player, if they have the Dyeable Model Color Power.\n\n---\n\n### Example\n```json\n{\n    \"entity_action\": {\n        \"type\": \"moborigins:summon_slime\",\n    }\n}\n```\nSummons a mob origins slime.\n",
+			"markdownDescription": "## Summon Slime\n\n---\n\nSummons a mob origins slime, which is a slime that has the player name, is owned by the player, and has the same color as the player, if they have the Dyeable Model Color Power.\n\n---\n\n### Example\n```json\n{\n    \"entity_action\": {\n        \"type\": \"moborigins:summon_slime\",\n    }\n}\n```\nSummons a mob origins slime.\n"
+		}
+	}
+}

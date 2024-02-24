@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Grow Block\n\n---\n\nGrows a block if it is fertilizable.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_on_block_use\",\n  \"block_condition\": {\n    \"type\": \"apoli:block\",\n    \"block\": \"minecraft:carrots\"\n  },\n  \"block_action\": {\n    \"type\": \"moborigins:grow\"\n  }\n}\n```\nThis power will grow carrots when right clicked.\n",
+			"markdownDescription": "## Grow Block\n\n---\n\nGrows a block if it is fertilizable.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_on_block_use\",\n  \"block_condition\": {\n    \"type\": \"apoli:block\",\n    \"block\": \"minecraft:carrots\"\n  },\n  \"block_action\": {\n    \"type\": \"moborigins:grow\"\n  }\n}\n```\nThis power will grow carrots when right clicked.\n"
+		}
+	}
+}

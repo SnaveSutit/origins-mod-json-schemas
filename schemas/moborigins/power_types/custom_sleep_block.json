@@ -1,0 +1,14 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Custom Sleep Block\n\n---\n\nThis power type allows you to sleep on blocks other than beds.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:custom_sleep_block\",\n  \"block_condition\": {\n    \"type\": \"origins:in_tag\",\n    \"tag\": \"minecraft:logs\"\n  }\n}\n```\nThis power will make it so that you can sleep on any log block.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Custom Sleep Block\n\n---\n\nThis power type allows you to sleep on blocks other than beds.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:custom_sleep_block\",\n  \"block_condition\": {\n    \"type\": \"origins:in_tag\",\n    \"tag\": \"minecraft:logs\"\n  }\n}\n```\nThis power will make it so that you can sleep on any log block.\n"
+		},
+		"block_condition": {
+			"$ref": "../../apoli/block_condition.json",
+			"description": "This determines what type of block you can sleep on, if null, any block will work.",
+			"markdownDescription": "This determines what type of block you can sleep on, if null, any block will work."
+		}
+	}
+}

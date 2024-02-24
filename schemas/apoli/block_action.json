@@ -408,6 +408,32 @@
 			"then": {
 				"$ref": "../apugli/block_action_types/schedule_tick.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:decrement_cauldron_fluid"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/block_action_types/decrement_cauldron_fluid.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:grow_block"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/block_action_types/grow_block.json"
+			}
 		}
 	],
 	"properties": {

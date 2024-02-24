@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Is First Person\n\n---\n\nChecks if the player is in first person.\n\n---\n\n### Example\n```json\n{\n    \"entity_condition\": {\n        \"type\": \"moborigins:is_first_person\"\n    }\n}\n```\nChecks if the player is in first person.\n",
+			"markdownDescription": "## Is First Person\n\n---\n\nChecks if the player is in first person.\n\n---\n\n### Example\n```json\n{\n    \"entity_condition\": {\n        \"type\": \"moborigins:is_first_person\"\n    }\n}\n```\nChecks if the player is in first person.\n"
+		}
+	}
+}

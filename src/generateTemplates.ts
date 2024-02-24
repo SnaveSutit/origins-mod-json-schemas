@@ -17,6 +17,7 @@ const GLOBAL_IGNORED = [
 	'misc',
 	'guides',
 	'index.md',
+	// Origins
 	'bientity_action_types.md',
 	'bientity_condition_types.md',
 	'biome_condition_types.md',
@@ -29,6 +30,19 @@ const GLOBAL_IGNORED = [
 	'fluid_condition_types.md',
 	'item_action_types.md',
 	'item_condition_types.md',
+	// Mob Origins
+	'bi_entity_actions.md',
+	'bi_entity_conditions.md',
+	'biome_conditions.md',
+	'block_actions.md',
+	'block_conditions.md',
+	'damage_conditions.md',
+	'entity_actions.md',
+	'entity_conditions.md',
+	'fluid_conditions.md',
+	'item_actions.md',
+	'item_conditions.md',
+	'power_types.md',
 ]
 
 const LOCAL_MODULES: IModule[] = [
@@ -62,7 +76,21 @@ const LOCAL_MODULES: IModule[] = [
 		localDocsPath: 'D:/github-repos/skillful_docs/docs',
 		ignored: [...GLOBAL_IGNORED, 'key.md'],
 	},
+	{
+		name: 'moborigins',
+		docsUrl: MODULES.moborigins.docsUrl,
+		localDocsPath: 'D:/github-repos/Mob-Origin-Docs/docs',
+		ignored: [...GLOBAL_IGNORED],
+	},
 ]
+
+function numberFromMessyString(str: string): number {
+	const num = Number(str.replace(/[^0-9.]/g, ''))
+	if (isNaN(num)) {
+		throw new Error(`Could not parse number from string: '${str}'`)
+	}
+	return num
+}
 
 function attemptToMapType(
 	name: string,
@@ -94,7 +122,7 @@ function attemptToMapType(
 		if (type.includes('identifier')) {
 			name = name.toLowerCase()
 			delete property.type
-			property.$ref = '$ref(apoli:types/autocomplete_helpers/entity_identifier)'
+			property.$ref = '$ref(apoli:types/autofill_helpers/entity_identifier)'
 		}
 	} else if (name === 'tag') {
 		if (type.includes('nbt') || field?.description.includes('NBT')) {
@@ -115,20 +143,20 @@ function attemptToMapType(
 			property.$ref = '$ref(apoli:types/particle_effect)'
 		} else if (type.includes('identifier')) {
 			delete property.type
-			property.$ref = '$ref(apoli:types/autocomplete_helpers/particle_identifier)'
+			property.$ref = '$ref(apoli:types/autofill_helpers/particle_identifier)'
 		}
-	} else if (name === 'sound') {
-		if (type.includes('identifier')) {
-			delete property.type
-			property.$ref = '$ref(apoli:types/autocomplete_helpers/sound_identifier)'
-		} else if (type.includes('weighted sound event')) {
+	} else if (name === 'sound' || type === 'sound_event') {
+		if (type.includes('weighted sound event')) {
 			delete property.type
 			property.$ref = '$ref(apugli:types/weighted_sound_event)'
+		} else {
+			delete property.type
+			property.$ref = '$ref(apoli:types/autofill_helpers/sound_identifier)'
 		}
 	} else if (name === 'effect') {
 		if (type.includes('identifier')) {
 			delete property.type
-			property.$ref = '$ref(apoli:types/autocomplete_helpers/status_effect_identifier)'
+			property.$ref = '$ref(apoli:types/autofill_helpers/status_effect_identifier)'
 		}
 	} else if (name === 'damage_type') {
 		if (type.includes('identifier')) {
@@ -153,7 +181,7 @@ function attemptToMapType(
 	} else if (name === 'texture_location') {
 		if (type.includes('identifier')) {
 			delete property.type
-			property.$ref = '$ref(apoli:types/autocomplete_helpers/texture_location)'
+			property.$ref = '$ref(apoli:types/autofill_helpers/texture_location)'
 		}
 	} else if (name === 'hud_render') {
 		if (type.includes('hud render')) {
@@ -176,11 +204,11 @@ function attemptToMapType(
 		property.$ref = `$ref(apoli:types/identifier)`
 	} else if (type === 'float' || type === 'double') {
 		property.type = 'number'
-		if (property.default) property.default = Number(property.default)
+		if (property.default) property.default = numberFromMessyString(property.default as string)
 	} else if (type === 'int' || type === 'integer') {
 		property.type = 'integer'
-		if (property.default) property.default = Number(property.default)
-	} else if (type === 'attribute modifier') {
+		if (property.default) property.default = numberFromMessyString(property.default as string)
+	} else if (type === 'attribute modifier' || type === 'modifier') {
 		delete property.type
 		property.$ref = `$ref(apoli:types/attribute_modifier)`
 	} else if (type === 'space') {
@@ -197,9 +225,27 @@ function attemptToMapType(
 	} else if (type.includes('food component')) {
 		delete property.type
 		property.$ref = '$ref(apoli:types/food_component)'
-	} else if (type.includes('item stack')) {
+	} else if (type.includes('item stack') || type.includes('itemstack')) {
 		delete property.type
 		property.$ref = '$ref(apoli:types/item_stack)'
+	} else if (type === 'item') {
+		delete property.type
+		property.$ref = '$ref(apoli:types/autofill_helpers/item_identifier)'
+	} else if (type === 'enchantment') {
+		delete property.type
+		property.$ref = '$ref(apoli:types/autofill_helpers/enchantment_identifier)'
+	} else if (type === 'hand' || type === 'hands') {
+		delete property.type
+		property.$ref = '$ref(apoli:types/hands)'
+	} else if (type.includes('equipmentslot') || type.includes('equipment slot')) {
+		delete property.type
+		property.$ref = '$ref(apoli:types/equipment_slot)'
+	} else if (type.includes('power type') || type.includes('powertype')) {
+		delete property.type
+		property.$ref = '$ref(apoli:power)'
+	} else if (type.includes('math operator')) {
+		delete property.type
+		property.$ref = '$ref(moborigins:types/math_operator)'
 	} else if (
 		name === 'items' &&
 		type === 'array' &&
@@ -207,7 +253,7 @@ function attemptToMapType(
 	) {
 		property.type = 'array'
 		property.items = {
-			$ref: '$ref(apoli:types/autocomplete_helpers/item_identifier)',
+			$ref: '$ref(apoli:types/autofill_helpers/item_identifier)',
 		}
 	} else if (
 		name === 'item_tags' &&
@@ -230,6 +276,8 @@ function attemptToMapType(
 				property.enum = values
 			}
 		}
+	} else {
+		TERM.brightYellow(`Could not map type for '${name}' of type '${type}'\n`)
 	}
 
 	if (plural) {
@@ -262,6 +310,7 @@ function generateTemplates(module: IModule) {
 	const files = getAllMDFiles(module.localDocsPath, [], module.ignored)
 
 	for (const file of files) {
+		TERM.gray(`  Generating template for ${file}\n`)
 		let mdFile: MDFile
 		try {
 			mdFile = MDFile.fromFile(file)

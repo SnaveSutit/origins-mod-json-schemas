@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://moborigins.ultrusmods.me/en/latest/conditions/entity/nearby_entities/",
+	"type": "object",
+	"required": ["multiplier", "comparison", "compare_to"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"multiplier": {
+			"type": "number"
+		},
+		"comparison": {
+			"$ref": "$ref(apoli:types/comparison)"
+		},
+		"compare_to": {
+			"type": "integer"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		}
+	}
+}

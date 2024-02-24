@@ -1,0 +1,23 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://moborigins.ultrusmods.me/en/latest/actions/entity/set_dyeable_model_color/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"red": {
+			"type": "number",
+			"default": 1
+		},
+		"green": {
+			"type": "number",
+			"default": 1
+		},
+		"blue": {
+			"type": "number",
+			"default": 1
+		}
+	}
+}

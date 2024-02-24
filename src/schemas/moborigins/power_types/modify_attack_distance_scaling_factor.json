@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://moborigins.ultrusmods.me/en/latest/power_types/modify_attack_distance_scaling_factor/",
+	"type": "object",
+	"required": ["bientity_condition", "modifier", "modifiers"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		},
+		"modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		}
+	}
+}

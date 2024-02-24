@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Is Magic\n\n---\n\nChecks if the damage source is magic.\n\n---\n\n### Example\n```json\n{\n    \"damage_condition\": {\n        \"type\": \"moborigins:is_magic\"\n    }\n}\n```\nChecks if the damage source is magic.\n",
+			"markdownDescription": "## Is Magic\n\n---\n\nChecks if the damage source is magic.\n\n---\n\n### Example\n```json\n{\n    \"damage_condition\": {\n        \"type\": \"moborigins:is_magic\"\n    }\n}\n```\nChecks if the damage source is magic.\n"
+		}
+	}
+}

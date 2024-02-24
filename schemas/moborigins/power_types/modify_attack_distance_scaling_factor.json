@@ -1,0 +1,28 @@
+{
+	"type": "object",
+	"required": ["bientity_condition", "modifier", "modifiers"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Modify Attack Distance Scaling Factor\n\n---\n\nModifies the distance in which mobs will begin to attack the player.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:modify_attack_distance_scale\",\n  \"modifier\": {\n    \"operation\": \"multiply_total\",\n    \"value\": -1\n  },\n  \"bientity_condition\": {\n    \"type\": \"origins:actor_condition\",\n    \"condition\": {\n      \"type\": \"origins:in_tag\",\n      \"tag\": \"minecraft:raiders\"\n    }\n  }\n}\n```\nMakes it so raiders are peaceful towards the player, but will attack them if the player attacks them first.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Modify Attack Distance Scaling Factor\n\n---\n\nModifies the distance in which mobs will begin to attack the player.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:modify_attack_distance_scale\",\n  \"modifier\": {\n    \"operation\": \"multiply_total\",\n    \"value\": -1\n  },\n  \"bientity_condition\": {\n    \"type\": \"origins:actor_condition\",\n    \"condition\": {\n      \"type\": \"origins:in_tag\",\n      \"tag\": \"minecraft:raiders\"\n    }\n  }\n}\n```\nMakes it so raiders are peaceful towards the player, but will attack them if the player attacks them first.\n"
+		},
+		"bientity_condition": {
+			"$ref": "../../apoli/bientity_condition.json",
+			"description": "A bi-entity condition with the actor, the mob, and the target, the player.",
+			"markdownDescription": "A bi-entity condition with the actor, the mob, and the target, the player."
+		},
+		"modifier": {
+			"$ref": "../../apoli/types/attribute_modifier.json",
+			"description": "The modifier to apply to the scaling factor.",
+			"markdownDescription": "The modifier to apply to the scaling factor."
+		},
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "../../apoli/types/attribute_modifier.json"
+			},
+			"description": "A list of modifiers to apply to the scaling factor.",
+			"markdownDescription": "A list of modifiers to apply to the scaling factor."
+		}
+	}
+}

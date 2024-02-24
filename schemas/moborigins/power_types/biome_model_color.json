@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Biome Model Color\n\n---\n\nChanges the entity's model color to the biomes grass color.\n\n---\n\n### Example\n```json\n{\n      \"type\": \"moborigins:biome_model_color\",\n      \"alpha\": 0.5\n    }\n```\nChanges the entity's model color to the biomes grass color with an alpha value of 0.5.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Biome Model Color\n\n---\n\nChanges the entity's model color to the biomes grass color.\n\n---\n\n### Example\n```json\n{\n      \"type\": \"moborigins:biome_model_color\",\n      \"alpha\": 0.5\n    }\n```\nChanges the entity's model color to the biomes grass color with an alpha value of 0.5.\n"
+		},
+		"alpha": {
+			"type": "number",
+			"default": 1,
+			"description": "The alpha value of the color.",
+			"markdownDescription": "The alpha value of the color."
+		}
+	}
+}

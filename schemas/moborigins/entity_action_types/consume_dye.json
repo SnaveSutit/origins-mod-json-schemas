@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Consume Dye\n\n---\n\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n\n---\n\n### Example\n```json\n{\n \"entity_action\": {\n     \"type\": \"moborigins:consume_dye\"\n }\n}\n```\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n",
+			"markdownDescription": "## Consume Dye\n\n---\n\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n\n---\n\n### Example\n```json\n{\n \"entity_action\": {\n     \"type\": \"moborigins:consume_dye\"\n }\n}\n```\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n"
+		}
+	}
+}

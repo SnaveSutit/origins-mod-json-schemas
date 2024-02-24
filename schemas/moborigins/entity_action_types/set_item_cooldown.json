@@ -1,0 +1,25 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Set Item Cooldown\n\n---\n\nSets the cooldown of an item for a player.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:set_item_cooldown\",\n    \"item\": \"minecraft:shield\",\n    \"ticks\": 100\n}\n```\nSets the cooldown of the shield item to 100 ticks.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Set Item Cooldown\n\n---\n\nSets the cooldown of an item for a player.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:set_item_cooldown\",\n    \"item\": \"minecraft:shield\",\n    \"ticks\": 100\n}\n```\nSets the cooldown of the shield item to 100 ticks.\n"
+		},
+		"item": {
+			"$ref": "../../apoli/types/autofill_helpers/item_identifier.json",
+			"description": "The item to set the cooldown of.",
+			"markdownDescription": "The item to set the cooldown of."
+		},
+		"ticks": {
+			"type": "integer",
+			"default": 0,
+			"description": "The amount of ticks to set the cooldown to.",
+			"markdownDescription": "The amount of ticks to set the cooldown to."
+		},
+		"hand": {
+			"$ref": "../../apoli/types/hands.json",
+			"description": "The hand to check for an item to set the cooldown of, if set, will ignore the item parameter. Valid values are `MAIN_HAND` and `OFF_HAND`.",
+			"markdownDescription": "The hand to check for an item to set the cooldown of, if set, will ignore the item parameter. Valid values are `MAIN_HAND` and `OFF_HAND`."
+		}
+	}
+}

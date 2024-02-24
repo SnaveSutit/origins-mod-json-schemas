@@ -1,0 +1,15 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://moborigins.ultrusmods.me/en/latest/power_types/add_experience_to_resource/",
+	"type": "object",
+	"required": ["resource"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"resource": {
+			"$ref": "$ref(apoli:types/identifier)"
+		}
+	}
+}

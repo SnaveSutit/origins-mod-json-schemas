@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://moborigins.ultrusmods.me/en/latest/actions/entity/resource_math/",
+	"type": "object",
+	"required": ["power_type", "math_operator"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n"
+		},
+		"power_type": {
+			"$ref": "$ref(apoli:power)"
+		},
+		"math_operator": {
+			"$ref": "$ref(moborigins:types/math_operator)"
+		}
+	}
+}

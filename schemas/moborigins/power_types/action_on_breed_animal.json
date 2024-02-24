@@ -1,0 +1,19 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Action On Breed Animal\n\n---\n\nThis power type allows you to run a bi-entity action when you breed a mob.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:action_on_entity_tame\",\n  \"bientity_condition\": {\n    \"type\": \"origins:target_condition\",\n    \"condition\": {\n      \"type\": \"origins:entity_type\",\n      \"entity_type\": \"minecraft:pig\"\n    }\n  },\n  \"bientity_action\": {\n    \"type\": \"origins:target_action\",\n    \"action\": {\n       \"type\": \"origins:spawn_entity\",\n       \"entity_type\": \"minecraft:pig\",\n       \"tag\": \"{Age:-24000}\"\n    }\n  }\n}\n```\nThis power will make it so when you breed two pigs, another baby pig spawns.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Action On Breed Animal\n\n---\n\nThis power type allows you to run a bi-entity action when you breed a mob.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:action_on_entity_tame\",\n  \"bientity_condition\": {\n    \"type\": \"origins:target_condition\",\n    \"condition\": {\n      \"type\": \"origins:entity_type\",\n      \"entity_type\": \"minecraft:pig\"\n    }\n  },\n  \"bientity_action\": {\n    \"type\": \"origins:target_action\",\n    \"action\": {\n       \"type\": \"origins:spawn_entity\",\n       \"entity_type\": \"minecraft:pig\",\n       \"tag\": \"{Age:-24000}\"\n    }\n  }\n}\n```\nThis power will make it so when you breed two pigs, another baby pig spawns.\n"
+		},
+		"bientity_action": {
+			"$ref": "../../apoli/bientity_action.json",
+			"description": "This is a bi-entity action with the actor, the player, and the target, the animal you breed last.",
+			"markdownDescription": "This is a bi-entity action with the actor, the player, and the target, the animal you breed last."
+		},
+		"bientity_condition": {
+			"$ref": "../../apoli/bientity_condition.json",
+			"description": "This is a bi-entity condtion with the actor, the player, and the target, the animal you breed last.",
+			"markdownDescription": "This is a bi-entity condtion with the actor, the player, and the target, the animal you breed last."
+		}
+	}
+}

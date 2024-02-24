@@ -457,6 +457,32 @@
 			"then": {
 				"$ref": "../extraorigins/block_condition_types/fertilizable.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:is_air"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/block_condition_types/is_air.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:is_solid"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/block_condition_types/is_solid.json"
+			}
 		}
 	]
 }

@@ -1,0 +1,27 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Fall Sounds\n\n---\n\nChanges the entity's fall sounds.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:fall_sounds\",\n  \"big_fall_sound\": \"minecraft:entity.slime.squish\",\n  \"small_fall_sound\": \"minecraft:entity.slime.squish_small\"\n}\n```\nChanges the entity's fall sounds to the slimes squish sounds.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Fall Sounds\n\n---\n\nChanges the entity's fall sounds.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:fall_sounds\",\n  \"big_fall_sound\": \"minecraft:entity.slime.squish\",\n  \"small_fall_sound\": \"minecraft:entity.slime.squish_small\"\n}\n```\nChanges the entity's fall sounds to the slimes squish sounds.\n"
+		},
+		"distance": {
+			"type": "integer",
+			"default": 4,
+			"description": "The distance the entity must fall to play the big fall sound.",
+			"markdownDescription": "The distance the entity must fall to play the big fall sound."
+		},
+		"small_fall_sound": {
+			"default": "minecraft:entity.generic.small_fall",
+			"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json",
+			"description": "The sound to play when the entity falls a small distance.",
+			"markdownDescription": "The sound to play when the entity falls a small distance."
+		},
+		"big_fall_sound": {
+			"default": "minecraft:entity.generic.big_fall",
+			"$ref": "../../apoli/types/autofill_helpers/sound_identifier.json",
+			"description": "The sound to play when the entity falls a big distance.",
+			"markdownDescription": "The sound to play when the entity falls a big distance."
+		}
+	}
+}

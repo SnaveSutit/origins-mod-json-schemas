@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"required": ["equipment_slot", "amount"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Damage Equipment\n\n---\n\nDamages an entity's equipment at a specified slot by a specified amount.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_over_time\",\n  \"entity_action\": {\n    \"type\": \"moborigins:damage_equipment\",\n    \"equipment_slot\": \"head\",\n    \"amount\": 1\n  },\n  \"interval\": 40,\n  \"condition\": {\n    \"type\": \"apoli:exposed_to_sun\"\n  }\n}\n```\nDamages the entity's helmet slot item by 1 every 2 seconds while they are exposed to the sun.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Damage Equipment\n\n---\n\nDamages an entity's equipment at a specified slot by a specified amount.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_over_time\",\n  \"entity_action\": {\n    \"type\": \"moborigins:damage_equipment\",\n    \"equipment_slot\": \"head\",\n    \"amount\": 1\n  },\n  \"interval\": 40,\n  \"condition\": {\n    \"type\": \"apoli:exposed_to_sun\"\n  }\n}\n```\nDamages the entity's helmet slot item by 1 every 2 seconds while they are exposed to the sun.\n"
+		},
+		"equipment_slot": {
+			"$ref": "../../apoli/types/equipment_slot.json",
+			"description": "The equipment slot to damage, options are: `\"mainhand\"`, `\"offhand\"`, `\"head\"`, `\"chest\"`, `\"legs\"`, `\"feet\"`",
+			"markdownDescription": "The equipment slot to damage, options are: `\"mainhand\"`, `\"offhand\"`, `\"head\"`, `\"chest\"`, `\"legs\"`, `\"feet\"`"
+		},
+		"amount": {
+			"type": "integer",
+			"description": "The amount of damage to deal to the equipment.",
+			"markdownDescription": "The amount of damage to deal to the equipment."
+		}
+	}
+}

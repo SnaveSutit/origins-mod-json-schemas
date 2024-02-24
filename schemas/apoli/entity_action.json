@@ -1136,6 +1136,136 @@
 			"then": {
 				"$ref": "../skillful/entity_actions/add_skill_points.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:consume_dye"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/consume_dye.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:damage_equipment"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/damage_equipment.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:jump"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/jump.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:resource_math"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/resource_math.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:set_dyeable_model_color"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/set_dyeable_model_color.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:set_freeze_ticks"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/set_freeze_ticks.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:set_item_cooldown"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/set_item_cooldown.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:show_floating_item"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/show_floating_item.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:summon_fangs"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/summon_fangs.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:summon_slime"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_action_types/summon_slime.json"
+			}
 		}
 	],
 	"properties": {

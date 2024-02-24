@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Snow Trail\n\n---\n\nLeaves a trail of snow wherever the entity walks.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:snow_trail\"\n}\n```\nLeaves a trail of snow wherever the entity walks.\n",
+			"markdownDescription": "## Snow Trail\n\n---\n\nLeaves a trail of snow wherever the entity walks.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:snow_trail\"\n}\n```\nLeaves a trail of snow wherever the entity walks.\n"
+		}
+	}
+}

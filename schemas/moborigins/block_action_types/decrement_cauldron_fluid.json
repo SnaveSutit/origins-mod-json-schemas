@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Decrement Cauldron Fluid\n\n---\n\nDecrements the fluid level of a cauldron.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_on_block_use\",\n  \"block_condition\": {\n    \"type\": \"apoli:block\",\n    \"block\": \"minecraft:water_cauldron\"\n  },\n  \"block_action\": {\n    \"type\": \"moborigins:decrement_cauldron_fluid\"\n  },\n  \"entity_action\": {\n    \"type\": \"moborigins:set_dyeable_model_color\",\n    \"red\": 1.0,\n    \"green\": 1.0,\n    \"blue\": 1.0\n  }\n}\n```\nThis power will make it so when you click on a water cauldron, it will decrement the fluid level and reset your dyeable model color to white.\n",
+			"markdownDescription": "## Decrement Cauldron Fluid\n\n---\n\nDecrements the fluid level of a cauldron.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_on_block_use\",\n  \"block_condition\": {\n    \"type\": \"apoli:block\",\n    \"block\": \"minecraft:water_cauldron\"\n  },\n  \"block_action\": {\n    \"type\": \"moborigins:decrement_cauldron_fluid\"\n  },\n  \"entity_action\": {\n    \"type\": \"moborigins:set_dyeable_model_color\",\n    \"red\": 1.0,\n    \"green\": 1.0,\n    \"blue\": 1.0\n  }\n}\n```\nThis power will make it so when you click on a water cauldron, it will decrement the fluid level and reset your dyeable model color to white.\n"
+		}
+	}
+}

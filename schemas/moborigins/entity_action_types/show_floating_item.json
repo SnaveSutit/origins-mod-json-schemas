@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"required": ["item_stack"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Show Floating Item\n\n---\n\nShows a floating item to the player.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"origins:action_when_damage_taken\",\n  \"entity_action\": {\n    \"type\": \"moborigins:show_floating_item\",\n    \"item_stack\": {\n      \"item\": \"minecraft:creeper_head\"\n    }\n  },\n  \"cooldown\": 1\n}\n```\nShows a floating creeper head to the player when they take damage.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Show Floating Item\n\n---\n\nShows a floating item to the player.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"origins:action_when_damage_taken\",\n  \"entity_action\": {\n    \"type\": \"moborigins:show_floating_item\",\n    \"item_stack\": {\n      \"item\": \"minecraft:creeper_head\"\n    }\n  },\n  \"cooldown\": 1\n}\n```\nShows a floating creeper head to the player when they take damage.\n"
+		},
+		"item_stack": {
+			"$ref": "../../apoli/types/item_stack.json",
+			"description": "The item stack to show.",
+			"markdownDescription": "The item stack to show."
+		}
+	}
+}

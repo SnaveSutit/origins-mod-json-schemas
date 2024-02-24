@@ -1,0 +1,33 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Dyeable Model Color\n\n---\n\nSets the color of a model, while allowing it to be dyed by the [Set Dyeable Model Color](https://moborigins.ultrusmods.me/en/latest/power_types/dyeable_model_color) action, or the [Consume Dye](https://moborigins.ultrusmods.me/en/latest/power_types/dyeable_model_color) action.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:dyeable_model_color\",\n    \"red\": 0.0,\n    \"green\": 0.0,\n    \"blue\": 1.0,\n    \"alpha\": 0.9\n}\n```\nSets the color of a model to blue, and slightly translucent.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Dyeable Model Color\n\n---\n\nSets the color of a model, while allowing it to be dyed by the [Set Dyeable Model Color](https://moborigins.ultrusmods.me/en/latest/power_types/dyeable_model_color) action, or the [Consume Dye](https://moborigins.ultrusmods.me/en/latest/power_types/dyeable_model_color) action.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:dyeable_model_color\",\n    \"red\": 0.0,\n    \"green\": 0.0,\n    \"blue\": 1.0,\n    \"alpha\": 0.9\n}\n```\nSets the color of a model to blue, and slightly translucent.\n"
+		},
+		"red": {
+			"type": "number",
+			"default": 1,
+			"description": "The red component of the color.",
+			"markdownDescription": "The red component of the color."
+		},
+		"green": {
+			"type": "number",
+			"default": 1,
+			"description": "The green component of the color.",
+			"markdownDescription": "The green component of the color."
+		},
+		"blue": {
+			"type": "number",
+			"default": 1,
+			"description": "The blue component of the color.",
+			"markdownDescription": "The blue component of the color."
+		},
+		"alpha": {
+			"type": "number",
+			"default": 1,
+			"description": "The alpha component of the color.",
+			"markdownDescription": "The alpha component of the color."
+		}
+	}
+}

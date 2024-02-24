@@ -421,6 +421,19 @@
 			"then": {
 				"$ref": "../apugli/bientity_action_types/spawn_custom_effect_cloud.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:set_angered_at"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/bientity_action_types/set_angered_at.json"
+			}
 		}
 	],
 	"properties": {

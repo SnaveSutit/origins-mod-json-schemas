@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"required": ["entity_condition"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Remove Mob Hostility\n\n---\n\nThis power allows you to remove the hostility of certain mobs. It's limited to certain mobs which have the TargetGoal goal type. This means entities with brains (Piglins, Hoglins, and Villagers) won't be affected by this power.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:remove_mob_hostility\",\n    \"entity_condition\": {\n        \"type\": \"origins:entity_group\",\n        \"group\": \"undead\"\n    }\n}\n```\nRemoves the hostility of undead mobs towards the player.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Remove Mob Hostility\n\n---\n\nThis power allows you to remove the hostility of certain mobs. It's limited to certain mobs which have the TargetGoal goal type. This means entities with brains (Piglins, Hoglins, and Villagers) won't be affected by this power.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:remove_mob_hostility\",\n    \"entity_condition\": {\n        \"type\": \"origins:entity_group\",\n        \"group\": \"undead\"\n    }\n}\n```\nRemoves the hostility of undead mobs towards the player.\n"
+		},
+		"entity_condition": {
+			"$ref": "../../apoli/entity_condition.json",
+			"description": "The condition that the mob must meet to be affected by this power.",
+			"markdownDescription": "The condition that the mob must meet to be affected by this power."
+		}
+	}
+}

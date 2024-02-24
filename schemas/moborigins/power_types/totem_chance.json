@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Totem Chance\n\n---\n\nGives the entity a chance to not consume a totem of undying when they die.\n\n---\n\n### Example\n```json\n{\n      \"type\": \"moborigins:totem_chance\",\n      \"chance\": 0.5\n    }\n```\nGives the entity a 50% chance to not consume a totem of undying when they die.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Totem Chance\n\n---\n\nGives the entity a chance to not consume a totem of undying when they die.\n\n---\n\n### Example\n```json\n{\n      \"type\": \"moborigins:totem_chance\",\n      \"chance\": 0.5\n    }\n```\nGives the entity a 50% chance to not consume a totem of undying when they die.\n"
+		},
+		"chance": {
+			"type": "number",
+			"default": 0.1,
+			"description": "The chance that the entity will not consume a totem of undying when they die.",
+			"markdownDescription": "The chance that the entity will not consume a totem of undying when they die."
+		}
+	}
+}

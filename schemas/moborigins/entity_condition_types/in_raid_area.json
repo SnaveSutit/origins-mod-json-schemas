@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## In Raid Area\n\n---\n\nThis condition checks if the entity is in a raid area.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"origins:conditioned_attribute\",\n    \"modifier\": {\n        \"attribute\": \"minecraft:generic.attack_damage\",\n        \"operation\": \"addition\",\n        \"value\": 2.0,\n        \"name\": \"Increased damage in raid\"\n    },\n    \"tick_rate\": 20,\n    \"condition\": {\n        \"type\": \"moborigins:in_raid_area\"\n    }\n}\n```\nThis power will increase the player's attack damage by 2.0 while in a raid.\n",
+			"markdownDescription": "## In Raid Area\n\n---\n\nThis condition checks if the entity is in a raid area.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"origins:conditioned_attribute\",\n    \"modifier\": {\n        \"attribute\": \"minecraft:generic.attack_damage\",\n        \"operation\": \"addition\",\n        \"value\": 2.0,\n        \"name\": \"Increased damage in raid\"\n    },\n    \"tick_rate\": 20,\n    \"condition\": {\n        \"type\": \"moborigins:in_raid_area\"\n    }\n}\n```\nThis power will increase the player's attack damage by 2.0 while in a raid.\n"
+		}
+	}
+}

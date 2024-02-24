@@ -1367,6 +1367,84 @@
 			"then": {
 				"$ref": "../extraorigins/entity_condition_types/radial_menu_direction.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:has_item_cooldown"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_condition_types/has_item_cooldown.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:in_raid_area"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_condition_types/in_raid_area.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:is_first_person"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_condition_types/is_first_person.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:is_full_moon"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_condition_types/is_full_moon.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:nearby_entities"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_condition_types/nearby_entities.json"
+			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:time_since_rest"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/entity_condition_types/time_since_rest.json"
+			}
 		}
 	]
 }

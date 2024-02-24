@@ -1,0 +1,9 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "## Hostile Axolotls\n\n---\n\nMakes the axolotls hostile to the entity.\n\n---\n\n### Example\n```json\n{\n        \"type\": \"moborigins:hostile_axolotls\"\n    }\n```\nThis makes axolotls hostile to the entity.\n",
+			"markdownDescription": "## Hostile Axolotls\n\n---\n\nMakes the axolotls hostile to the entity.\n\n---\n\n### Example\n```json\n{\n        \"type\": \"moborigins:hostile_axolotls\"\n    }\n```\nThis makes axolotls hostile to the entity.\n"
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Bouncy\n\n---\n\nMakes the entity bounce off the ground when it lands.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:bouncy\",\n    \"multiplier\": -1.00\n}\n```\nThis makes the entity bounce off the ground when it lands, without losing any velocity.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Bouncy\n\n---\n\nMakes the entity bounce off the ground when it lands.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:bouncy\",\n    \"multiplier\": -1.00\n}\n```\nThis makes the entity bounce off the ground when it lands, without losing any velocity.\n"
+		},
+		"multiplier": {
+			"type": "number",
+			"description": "The multiplier to apply to the entity's velocity when it lands.",
+			"markdownDescription": "The multiplier to apply to the entity's velocity when it lands."
+		}
+	}
+}

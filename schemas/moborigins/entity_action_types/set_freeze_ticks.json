@@ -1,0 +1,15 @@
+{
+	"type": "object",
+	"required": ["ticks"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Set Freeze Ticks\n\n---\n\nSets the freeze ticks of an entity.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:set_freeze_ticks\",\n    \"ticks\": 20\n}\n```\nSets the freeze ticks of an entity to 20 ticks.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Set Freeze Ticks\n\n---\n\nSets the freeze ticks of an entity.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:set_freeze_ticks\",\n    \"ticks\": 20\n}\n```\nSets the freeze ticks of an entity to 20 ticks.\n"
+		},
+		"ticks": {
+			"type": "integer",
+			"description": "The amount of ticks to set the freeze ticks to.",
+			"markdownDescription": "The amount of ticks to set the freeze ticks to."
+		}
+	}
+}

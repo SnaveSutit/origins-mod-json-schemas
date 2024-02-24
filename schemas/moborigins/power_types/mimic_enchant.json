@@ -1,0 +1,20 @@
+{
+	"type": "object",
+	"required": ["enchantment", "level"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Mimic Enchant\n\n---\n\nMimics an enchantment on the entity, acting as if the entity had the enchantment, while not actually having it.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:mimic_enchant\",\n  \"enchantment\": \"minecraft:frost_walker\",\n  \"level\": 3\n}\n```\nMimics the Frost Walker enchantment on the entity.\n\n ### Extra Info\n\n\n\nThis will also change the result of the `origins:enchantment` entity condition.\n\n\n\nThis doesn't work on all enchantments due to limitations in minecraft. These are the ones that do work:\n\n - All Protection Enchantments\n\n - Sweeping Edge\n\n - Knockback\n\n - Fire Aspect\n\n - Respiration\n\n - Depth Strider\n\n - Efficiency\n\n - Looting\n\n - Aqua Affinity\n\n - Frost Walker\n\n - Soul Speed\n\n - Power\n\n - Punch\n\n - Flame\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Mimic Enchant\n\n---\n\nMimics an enchantment on the entity, acting as if the entity had the enchantment, while not actually having it.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:mimic_enchant\",\n  \"enchantment\": \"minecraft:frost_walker\",\n  \"level\": 3\n}\n```\nMimics the Frost Walker enchantment on the entity.\n\n ### Extra Info\n\n\n\nThis will also change the result of the `origins:enchantment` entity condition.\n\n\n\nThis doesn't work on all enchantments due to limitations in minecraft. These are the ones that do work:\n\n - All Protection Enchantments\n\n - Sweeping Edge\n\n - Knockback\n\n - Fire Aspect\n\n - Respiration\n\n - Depth Strider\n\n - Efficiency\n\n - Looting\n\n - Aqua Affinity\n\n - Frost Walker\n\n - Soul Speed\n\n - Power\n\n - Punch\n\n - Flame\n"
+		},
+		"enchantment": {
+			"$ref": "../../apoli/types/autofill_helpers/enchantment_identifier.json",
+			"description": "The enchantment to mimic.",
+			"markdownDescription": "The enchantment to mimic."
+		},
+		"level": {
+			"type": "integer",
+			"description": "The level of the enchantment to mimic.",
+			"markdownDescription": "The level of the enchantment to mimic."
+		}
+	}
+}

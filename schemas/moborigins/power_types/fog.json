@@ -1,0 +1,35 @@
+{
+	"type": "object",
+	"required": ["red", "green", "blue", "start", "end"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Fog\n\n---\n\nChanges the fog color of the entity.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:fog\",\n  \"red\": 1,\n  \"green\": 1,\n  \"blue\": 1,\n  \"start\": -1,\n  \"end\": 30,\n  \"condition\": {\n    \"type\": \"apoli:sneaking\",\n    \"inverted\": true\n  }\n}\n```\nThis makes it so the player has a thick white fog, which can be disabled by sneaking.\n\nThis looks like:\n\n![Fog Image](https://moborigins.ultrusmods.me/en/latest/power_types/fog)\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Fog\n\n---\n\nChanges the fog color of the entity.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:fog\",\n  \"red\": 1,\n  \"green\": 1,\n  \"blue\": 1,\n  \"start\": -1,\n  \"end\": 30,\n  \"condition\": {\n    \"type\": \"apoli:sneaking\",\n    \"inverted\": true\n  }\n}\n```\nThis makes it so the player has a thick white fog, which can be disabled by sneaking.\n\nThis looks like:\n\n![Fog Image](https://moborigins.ultrusmods.me/en/latest/power_types/fog)\n"
+		},
+		"red": {
+			"type": "number",
+			"description": "The red value of the fog color.",
+			"markdownDescription": "The red value of the fog color."
+		},
+		"green": {
+			"type": "number",
+			"description": "The green value of the fog color.",
+			"markdownDescription": "The green value of the fog color."
+		},
+		"blue": {
+			"type": "number",
+			"description": "The blue value of the fog color.",
+			"markdownDescription": "The blue value of the fog color."
+		},
+		"start": {
+			"type": "integer",
+			"description": "The start distance of the fog.",
+			"markdownDescription": "The start distance of the fog."
+		},
+		"end": {
+			"type": "integer",
+			"description": "The end distance of the fog.",
+			"markdownDescription": "The end distance of the fog."
+		}
+	}
+}

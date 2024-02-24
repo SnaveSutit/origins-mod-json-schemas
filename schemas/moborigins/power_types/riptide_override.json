@@ -1,0 +1,14 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Riptide Override\n\n---\n\nAllows using the riptide enchantment without having the enchantment, with a configurable durability cost.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:riptide_override\",\n  \"trident_damage\": 10,\n  \"condition\": {\n    \"type\": \"origins:daytime\",\n    \"inverted\": true\n  }\n}\n```\nThis allows using the riptide enchantment without having the enchantment, only during the night, at the cost of 10 durability.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Riptide Override\n\n---\n\nAllows using the riptide enchantment without having the enchantment, with a configurable durability cost.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:riptide_override\",\n  \"trident_damage\": 10,\n  \"condition\": {\n    \"type\": \"origins:daytime\",\n    \"inverted\": true\n  }\n}\n```\nThis allows using the riptide enchantment without having the enchantment, only during the night, at the cost of 10 durability.\n"
+		},
+		"trident_damage": {
+			"type": "integer",
+			"description": "The amount of durability to take from the trident when using the riptide enchantment.",
+			"markdownDescription": "The amount of durability to take from the trident when using the riptide enchantment."
+		}
+	}
+}

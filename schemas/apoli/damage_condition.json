@@ -223,6 +223,19 @@
 			"then": {
 				"$ref": "../extraorigins/damage_condition_types/crossbow_arrow.json"
 			}
+		},
+		{
+			"if": {
+				"required": ["type"],
+				"properties": {
+					"type": {
+						"const": "moborigins:is_magic"
+					}
+				}
+			},
+			"then": {
+				"$ref": "../moborigins/damage_condition_types/is_magic.json"
+			}
 		}
 	]
 }

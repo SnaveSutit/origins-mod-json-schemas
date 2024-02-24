@@ -1,0 +1,27 @@
+{
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Set Dyeable Model Color\n\n---\n\nSets the color of the entity's Dyeable Model Color Power, if it has one.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"origins:action_over_time\",\n    \"duration\": 100,\n    \"entity_action\": {\n        \"type\": \"origins:if_else\",\n        \"condition\": {\n             \"type\": \"origins:daytime\"\n        },\n        \"if_action\": {\n            \"type\": \"moborigins:set_dyeable_model_color\",\n            \"red\": 1.0,\n            \"green\": 1.0,\n            \"blue\": 1.0\n        },\n        \"else_action\": {\n            \"type\": \"moborigins:set_dyeable_model_color\",\n            \"red\": 10.0,\n            \"green\": 0.0,\n            \"blue\": 0.0\n        }\n    }\n }\n```\nAt night, the entity will be red. During the day, the entity will be white.\n",
+			"markdownDescription": "### ⚠️ Requires [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) to be installed! ⚠️\n\n## Set Dyeable Model Color\n\n---\n\nSets the color of the entity's Dyeable Model Color Power, if it has one.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"origins:action_over_time\",\n    \"duration\": 100,\n    \"entity_action\": {\n        \"type\": \"origins:if_else\",\n        \"condition\": {\n             \"type\": \"origins:daytime\"\n        },\n        \"if_action\": {\n            \"type\": \"moborigins:set_dyeable_model_color\",\n            \"red\": 1.0,\n            \"green\": 1.0,\n            \"blue\": 1.0\n        },\n        \"else_action\": {\n            \"type\": \"moborigins:set_dyeable_model_color\",\n            \"red\": 10.0,\n            \"green\": 0.0,\n            \"blue\": 0.0\n        }\n    }\n }\n```\nAt night, the entity will be red. During the day, the entity will be white.\n"
+		},
+		"red": {
+			"type": "number",
+			"default": 1,
+			"description": "The red value of the color to set the DyeableModelColorPower to.",
+			"markdownDescription": "The red value of the color to set the DyeableModelColorPower to."
+		},
+		"green": {
+			"type": "number",
+			"default": 1,
+			"description": "The green value of the color to set the DyeableModelColorPower to.",
+			"markdownDescription": "The green value of the color to set the DyeableModelColorPower to."
+		},
+		"blue": {
+			"type": "number",
+			"default": 1,
+			"description": "The blue value of the color to set the DyeableModelColorPower to.",
+			"markdownDescription": "The blue value of the color to set the DyeableModelColorPower to."
+		}
+	}
+}
