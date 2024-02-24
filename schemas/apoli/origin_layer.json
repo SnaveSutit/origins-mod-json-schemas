@@ -9,7 +9,14 @@
 		"origins": {
 			"type": "array",
 			"items": {
-				"$ref": "types/identifier.json"
+				"oneOf": [
+					{
+						"$ref": "types/identifier.json"
+					},
+					{
+						"$ref": "conditioned_origin.json"
+					}
+				]
 			},
 			"description": "Defines the origins that should be in this layer. [Identifier](https://origins.readthedocs.io/en/latest/json/origin_layer) strings and [Conditioned Origin](https://origins.readthedocs.io/en/latest/json/origin_layer) objects can be mixed in the same array.",
 			"markdownDescription": "Defines the origins that should be in this layer. [Identifier](https://origins.readthedocs.io/en/latest/json/origin_layer) strings and [Conditioned Origin](https://origins.readthedocs.io/en/latest/json/origin_layer) objects can be mixed in the same array."

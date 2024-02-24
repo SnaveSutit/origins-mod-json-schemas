@@ -9,7 +9,14 @@
 		"origins": {
 			"type": "array",
 			"items": {
-				"$ref": "$ref(apoli:types/identifier)"
+				"oneOf": [
+					{
+						"$ref": "$ref(apoli:types/identifier)"
+					},
+					{
+						"$ref": "$ref(apoli:conditioned_origin)"
+					}
+				]
 			}
 		},
 		"enabled": {
