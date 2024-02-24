@@ -1,6 +1,0 @@
-{
-	"$schema": "./schemas/apoli/power.json",
-
-	"type": "apoli:damage_over_time",
-	"damage": 5
-}
