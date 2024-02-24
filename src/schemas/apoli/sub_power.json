@@ -3,15 +3,12 @@
 	"$docsUrl": "https://origins.readthedocs.io/en/latest/json/power/",
 	"type": "object",
 	"required": ["type"],
-	"$IGNORED_PROPERTIES": [
-		"type",
-		"name",
-		"description",
-		"hidden",
-		"condition",
-		"loading_priority",
-		"badges"
-	],
+	"$IGNORED_PROPERTIES": ["type", "name", "description", "hidden", "loading_priority", "badges"],
+	"properties": {
+		"condition": {
+			"$ref": "$ref(apoli:entity_condition)"
+		}
+	},
 
 	"$IMPORT": [
 		{
