@@ -1,8 +1,8 @@
 {
 	"$schema": "https://json-schema.org/draft-07/schema#",
 	"type": "string",
-	"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\n",
-	"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\n",
+	"description": "### ⚠️ Requires [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds) to be installed! ⚠️\n\n",
+	"markdownDescription": "### ⚠️ Requires [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds) to be installed! ⚠️\n\n",
 	"enum": [
 		"key.origins.ternary_active",
 		"key.origins.quaternary_active",
