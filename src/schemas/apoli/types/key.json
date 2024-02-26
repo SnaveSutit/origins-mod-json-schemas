@@ -9,7 +9,7 @@
 	],
 	"definitions": {
 		"key": {
-			"oneOf": [
+			"anyOf": [
 				{
 					"type": "string",
 					"enum": [
@@ -53,6 +53,12 @@
 				},
 				{
 					"$ref": "$ref(skillful:types/key)"
+				},
+				{
+					"$ref": "$ref(extraorigins:types/key)"
+				},
+				{
+					"type": "string"
 				}
 			]
 		}

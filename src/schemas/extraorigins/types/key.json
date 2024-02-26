@@ -1,0 +1,16 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"type": "string",
+	"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\n",
+	"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\n",
+	"enum": [
+		"key.origins.ternary_active",
+		"key.origins.quaternary_active",
+		"key.origins.quinary_active",
+		"key.origins.senary_active",
+		"key.origins.septenary_active",
+		"key.origins.octonary_active",
+		"key.origins.nonary_active",
+		"key.origins.denary_active"
+	]
+}
