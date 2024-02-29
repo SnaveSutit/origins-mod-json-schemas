@@ -8,6 +8,9 @@
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
+		"distance": {
+			"type": "number"
+		},
 		"particle": {
 			"$ref": "$ref(apoli:types/particle_effect)"
 		},

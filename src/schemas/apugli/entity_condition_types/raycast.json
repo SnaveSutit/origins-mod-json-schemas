@@ -7,6 +7,9 @@
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
+		"distance": {
+			"type": "number"
+		},
 		"block_condition": {
 			"$ref": "$ref(apoli:block_condition)"
 		},
