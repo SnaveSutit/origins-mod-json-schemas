@@ -6,13 +6,13 @@
 		"entity_types": {
 			"type": "array",
 			"items": {
-				"$ref": "$ref(apoli:types/identifier)"
+				"$ref": "$ref(apoli:types/autofill_helpers/entity_identifier)"
 			}
 		},
 		"powers": {
 			"type": "array",
 			"items": {
-				"$ref": "$ref(apoli:power)"
+				"$ref": "$ref(apoli:types/identifier)"
 			}
 		},
 		"order": {
