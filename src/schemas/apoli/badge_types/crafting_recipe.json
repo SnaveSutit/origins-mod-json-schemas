@@ -5,7 +5,7 @@
 	"required": ["sprite", "recipe"],
 	"properties": {
 		"sprite": {
-			"$ref": "$ref(apoli:types/identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/badge_sprite_location)"
 		},
 		"recipe": {
 			"$ref": "$ref(apoli:types/crafting_recipe)"

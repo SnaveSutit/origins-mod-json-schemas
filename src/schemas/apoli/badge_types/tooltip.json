@@ -5,7 +5,7 @@
 	"required": ["sprite", "text"],
 	"properties": {
 		"sprite": {
-			"$ref": "$ref(apoli:types/identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/badge_sprite_location)"
 		},
 		"text": {
 			"$ref": "$ref(apoli:types/text_component)"

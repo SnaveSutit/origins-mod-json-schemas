@@ -3,7 +3,7 @@
 	"required": ["sprite", "text"],
 	"properties": {
 		"sprite": {
-			"$ref": "../types/identifier.json",
+			"$ref": "../types/autofill_helpers/badge_sprite_location.json",
 			"description": "The namespace, path and ID of the texture to use as the icon of the badge.",
 			"markdownDescription": "The namespace, path and ID of the texture to use as the icon of the badge."
 		},

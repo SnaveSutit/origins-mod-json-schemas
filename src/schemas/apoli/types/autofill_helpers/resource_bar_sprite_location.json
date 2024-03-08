@@ -1,0 +1,20 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "string",
+	"anyOf": [
+		{
+			"enum": [
+				"origins:textures/gui/resource_bar.png",
+				"origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+				"origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+				"origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+				"origins:textures/gui/community/spiderkolo/resource_bar_points_01.png",
+				"origins:textures/gui/community/huang/resource_bar_01.png",
+				"origins:textures/gui/community/huang/resource_bar_02.png"
+			]
+		},
+		{
+			"$ref": "$ref(apoli:types/identifier)"
+		}
+	]
+}

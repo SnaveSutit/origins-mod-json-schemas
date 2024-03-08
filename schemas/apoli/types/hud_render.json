@@ -8,7 +8,7 @@
 			"markdownDescription": "Whether the bar should be visible or not."
 		},
 		"sprite_location": {
-			"$ref": "identifier.json",
+			"$ref": "autofill_helpers/resource_bar_sprite_location.json",
 			"description": "The path to the file in the assets which contains what the bar looks like. See the [List of sprites](https://origins.readthedocs.io/en/latest/types/data_types/hud_render) for a list of files included by default in the mod.",
 			"markdownDescription": "The path to the file in the assets which contains what the bar looks like. See the [List of sprites](https://origins.readthedocs.io/en/latest/types/data_types/hud_render) for a list of files included by default in the mod."
 		},
