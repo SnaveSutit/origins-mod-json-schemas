@@ -9,7 +9,7 @@
 		},
 		"destruction_type": {
 			"$ref": "../types/destruction_type.json",
-			"default": "\"break\"",
+			"default": "break",
 			"description": "Determines the effect of the explosion to the terrain.",
 			"markdownDescription": "Determines the effect of the explosion to the terrain."
 		},

@@ -9,7 +9,7 @@
 		},
 		"destruction_type": {
 			"$ref": "$ref(apoli:types/destruction_type)",
-			"default": "\"break\""
+			"default": "break"
 		},
 		"damage_self": {
 			"type": "boolean",
