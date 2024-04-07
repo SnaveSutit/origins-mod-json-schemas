@@ -31,13 +31,13 @@
 		},
 		"space": {
 			"$ref": "../types/space.json",
-			"description": "The space to execute the raycast in. Defaults to `\"local\"` unless `direction` has been specified, in which case it will default to `\"world\"`.",
-			"markdownDescription": "The space to execute the raycast in. Defaults to `\"local\"` unless `direction` has been specified, in which case it will default to `\"world\"`."
+			"description": "Determines how the direction will be calculated. <span style=\"color: goldenrod;\"><b>Only used if <code>direction</code> is specified.</b></span>",
+			"markdownDescription": "Determines how the direction will be calculated. <span style=\"color: goldenrod;\"><b>Only used if <code>direction</code> is specified.</b></span>"
 		},
 		"direction": {
 			"type": "object",
-			"description": "Used to specify the direction of the raycast. Can have a `x`, `y` and `z` [Floats](https://origins.readthedocs.io/en/latest/types/entity_action_types/raycast).",
-			"markdownDescription": "Used to specify the direction of the raycast. Can have a `x`, `y` and `z` [Floats](https://origins.readthedocs.io/en/latest/types/entity_action_types/raycast)."
+			"description": "If specified, determines the direction of the raycast. Otherwise, defaults to the direction at the entity is facing (as if `space` is `\"local\"`.)",
+			"markdownDescription": "If specified, determines the direction of the raycast. Otherwise, defaults to the direction at the entity is facing (as if `space` is `\"local\"`.)"
 		},
 		"bientity_condition": {
 			"$ref": "../bientity_condition.json",

@@ -21,8 +21,8 @@
 		},
 		"space": {
 			"$ref": "../types/space.json",
-			"description": "The space to perform the addition/setting of velocity in.",
-			"markdownDescription": "The space to perform the addition/setting of velocity in."
+			"description": "Determines how the direction of the velocity to add/set will be calculated.",
+			"markdownDescription": "Determines how the direction of the velocity to add/set will be calculated."
 		},
 		"client": {
 			"type": "boolean",

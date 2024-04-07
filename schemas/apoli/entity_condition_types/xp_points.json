@@ -4,13 +4,13 @@
 	"properties": {
 		"comparison": {
 			"$ref": "../types/comparison.json",
-			"description": "How the experience points of the player should be compared to the specified value.",
-			"markdownDescription": "How the experience points of the player should be compared to the specified value."
+			"description": "Determines how the experience points of the player should be compared to the specified value.",
+			"markdownDescription": "Determines how the experience points of the player should be compared to the specified value."
 		},
 		"compare_to": {
 			"type": "integer",
-			"description": "Which value the experience points should be compared to.",
-			"markdownDescription": "Which value the experience points should be compared to."
+			"description": "The value at which the experience points of the player will be compared to.",
+			"markdownDescription": "The value at which the experience points of the player will be compared to."
 		},
 		"type": {
 			"description": "## XP Points\n\n---\n\n\n[Entity Condition Type](https://origins.readthedocs.io/en/latest/types/entity_condition_types/xp_points)\n\nChecks the experience points of the entity.\n\nType ID: `origins:xp_points`\n\n\n\n---\n\n### 📝 Note\n\n__This entity condition type will only work on players.__\n\n\n\n---\n\n### Examples\n\n```json\n\"condition\": {\n    \"type\": \"origins:xp_points\",\n    \"comparison\": \">=\",\n    \"compare_to\": 90\n}\n```\n\nThis example will check if the player has 90 or more experience points, which is only achieveable if the player have at least 7 levels.\n",

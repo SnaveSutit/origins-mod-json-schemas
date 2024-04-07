@@ -21,7 +21,7 @@
 							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": ["apoli:crafting_recipe", "origins:crafting_recipe"],
+									"enum": ["origins:crafting_recipe"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}
@@ -36,7 +36,7 @@
 							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": ["apoli:keybind", "origins:keybind"],
+									"enum": ["origins:keybind"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}
@@ -51,7 +51,7 @@
 							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": ["apoli:sprite", "origins:sprite"],
+									"enum": ["origins:sprite"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}
@@ -66,7 +66,7 @@
 							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": ["apoli:tooltip", "origins:tooltip"],
+									"enum": ["origins:tooltip"],
 									"description": "The namespace and ID of the desired badge type.",
 									"markdownDescription": "The namespace and ID of the desired badge type."
 								}

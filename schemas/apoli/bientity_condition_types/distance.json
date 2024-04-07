@@ -4,13 +4,13 @@
 	"properties": {
 		"comparison": {
 			"$ref": "../types/comparison.json",
-			"description": "How to compare the distance against the specified value.",
-			"markdownDescription": "How to compare the distance against the specified value."
+			"description": "Determines how the distance (in blocks) between the actor and target entities should be compared to the specified value.",
+			"markdownDescription": "Determines how the distance (in blocks) between the actor and target entities should be compared to the specified value."
 		},
 		"compare_to": {
 			"type": "number",
-			"description": "The distance (in blocks) to compare the distance between the actor and target to.",
-			"markdownDescription": "The distance (in blocks) to compare the distance between the actor and target to."
+			"description": "The value at which the distance (in blocks) between the actor and target entities will be compared to.",
+			"markdownDescription": "The value at which the distance (in blocks) between the actor and target entities will be compared to."
 		},
 		"type": {
 			"description": "## Distance\n\n---\n\n\n[Bi-entity Condition Type](https://origins.readthedocs.io/en/latest/types/bientity_condition_types/distance)\n\nChecks the distance between the target entity and the actor entity.\n\nType ID: `origins:distance`\n\n---\n\n### Examples\n\n```json\n\"bientity_condition\": {\n    \"type\": \"origins:distance\",\n    \"comparison\": \"<=\",\n    \"compare_to\": 30\n}\n```\n\nThis example will check if the target entity is within 30 blocks radius relative from the actor entity.\n",

@@ -27,7 +27,7 @@
 							"required": ["type"],
 							"properties": {
 								"type": {
-									"enum": ["apoli:$fileName", "origins:$fileName"]
+									"enum": ["origins:$fileName"]
 								}
 							}
 						},

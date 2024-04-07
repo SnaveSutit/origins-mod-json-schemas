@@ -4,8 +4,8 @@
 	"properties": {
 		"enchantment": {
 			"$ref": "../types/autofill_helpers/enchantment_identifier.json",
-			"description": "ID of the enchantment of interest, e.g. `minecraft:protection`. If not set, amount of enchantments will be checked instead.",
-			"markdownDescription": "ID of the enchantment of interest, e.g. `minecraft:protection`. If not set, amount of enchantments will be checked instead."
+			"description": "If specified, the level of the enchantment that corresponds to this identifier will be compared. Otherwise, the amount of enchantments in the item stack will be compared instead.",
+			"markdownDescription": "If specified, the level of the enchantment that corresponds to this identifier will be compared. Otherwise, the amount of enchantments in the item stack will be compared instead."
 		},
 		"use_modifications": {
 			"type": "boolean",
@@ -15,13 +15,13 @@
 		},
 		"comparison": {
 			"$ref": "../types/comparison.json",
-			"description": "How to compare the enchantment level, or the amount of enchantments, to the specified value.",
-			"markdownDescription": "How to compare the enchantment level, or the amount of enchantments, to the specified value."
+			"description": "Determines how the level of the specified enchantment, or the amount of enchantments in the item stack, should be compared to the specified value.",
+			"markdownDescription": "Determines how the level of the specified enchantment, or the amount of enchantments in the item stack, should be compared to the specified value."
 		},
 		"compare_to": {
 			"type": "integer",
-			"description": "Which value to compare the enchantment level or amount against.",
-			"markdownDescription": "Which value to compare the enchantment level or amount against."
+			"description": "The value at which the level of the specified enchantment, or the amount of the enchantments in the item stack, will be compared to.",
+			"markdownDescription": "The value at which the level of the specified enchantment, or the amount of the enchantments in the item stack, will be compared to."
 		},
 		"type": {
 			"description": "## Enchantment\n\n---\n\n\n[Item Condition Type](https://origins.readthedocs.io/en/latest/types/item_condition_types/enchantment)\n\nChecks the level of a certain enchantment, or the amount of individual enchantments on the item.\n\nType ID: `origins:enchantment`\n\n---\n\n### Examples\n\n```json\n\"item_condition\": {\n    \"type\": \"origins:enchantment\",\n    \"enchantment\": \"minecraft:fortune\",\n    \"comparison\": \"==\",\n    \"compare_to\": 3\n}\n```\n\nThis example will check if the item has the Fortune III enchantment.\n\n```json\n\"item_condition\": {\n    \"type\": \"origins:enchantment\",\n    \"comparison\": \">=\",\n    \"compare_to\": 3\n}\n```\n\nThis example will check if the item has 3 or more enchantments.\n",
