@@ -28,6 +28,24 @@
 			]
 		},
 		{
+			"enum": [
+				"additionalentityattributes:bonus_loot_count_rolls",
+				"additionalentityattributes:bonus_rare_loot_rolls",
+				"additionalentityattributes:critical_bonus_damage",
+				"additionalentityattributes:dig_speed",
+				"additionalentityattributes:dropped_experience",
+				"additionalentityattributes:lava_speed",
+				"additionalentityattributes:lava_visibility",
+				"additionalentityattributes:lung_capacity",
+				"additionalentityattributes:magic_protection",
+				"additionalentityattributes:water_speed",
+				"additionalentityattributes:water_visbility"
+			]
+		},
+		{
+			"enum": ["reach-entity-attributes:attack_range", "reach-entity-attributes:reach"]
+		},
+		{
 			"$ref": "../identifier.json"
 		}
 	]

@@ -6,6 +6,14 @@
 	"properties": {
 		"texture": {
 			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"texture_map": {
+			"type": "object",
+			"patternProperties": {
+				"^(([a-z0-9_\\/\\-\\.\\*]+):)?[a-z0-9_\\/\\-\\.\\*]+$": {
+					"$ref": "$ref(apoli:types/identifier)"
+				}
+			}
 		}
 	}
 }

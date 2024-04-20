@@ -26,6 +26,11 @@
 		"set": {
 			"type": "boolean",
 			"default": false
+		},
+		"reference": {
+			"type": "string",
+			"enum": ["position", "rotation"],
+			"default": "position"
 		}
 	}
 }
