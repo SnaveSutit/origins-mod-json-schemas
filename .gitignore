@@ -135,3 +135,4 @@ test.json
 .minecraftRegistry.json
 .minecraftRegistryVersion.json
 .mdFileCache.json
+.idea/

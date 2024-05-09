@@ -7,6 +7,7 @@
 				"minecraft:arrow",
 				"minecraft:bad_respawn_point",
 				"minecraft:cactus",
+				"minecraft:campfire",
 				"minecraft:cramming",
 				"minecraft:dragon_breath",
 				"minecraft:drown",
@@ -47,6 +48,7 @@
 				"minecraft:thrown",
 				"minecraft:trident",
 				"minecraft:unattributed_fireball",
+				"minecraft:wind_charge",
 				"minecraft:wither",
 				"minecraft:wither_skull"
 			]
