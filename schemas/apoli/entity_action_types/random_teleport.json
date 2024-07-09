@@ -15,8 +15,8 @@
 		},
 		"heightmap": {
 			"type": "string",
-			"description": "If specified, the location will be anchored to the of the specified surface of the world.",
-			"markdownDescription": "If specified, the location will be anchored to the of the specified surface of the world."
+			"description": "If specified, the location will be anchored above the highest Y level of the world determined by this heightmap type.",
+			"markdownDescription": "If specified, the location will be anchored above the highest Y level of the world determined by this heightmap type."
 		},
 		"attempts": {
 			"type": "integer",
