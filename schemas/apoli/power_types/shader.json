@@ -3,7 +3,7 @@
 	"required": ["shader"],
 	"properties": {
 		"shader": {
-			"$ref": "../types/identifier.json",
+			"$ref": "../types/autofill_helpers/shader_identifier.json",
 			"description": "Specifies the location of the shader resource file to use.",
 			"markdownDescription": "Specifies the location of the shader resource file to use."
 		},

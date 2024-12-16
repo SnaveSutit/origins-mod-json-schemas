@@ -3,6 +3,71 @@
 	"anyOf": [
 		{
 			"enum": [
+				"minecraft:armor",
+				"minecraft:armor_toughness",
+				"minecraft:attack_damage",
+				"minecraft:attack_knockback",
+				"minecraft:attack_speed",
+				"minecraft:block_break_speed",
+				"minecraft:block_interaction_range",
+				"minecraft:burning_time",
+				"minecraft:entity_interaction_range",
+				"minecraft:explosion_knockback_resistance",
+				"minecraft:fall_damage_multiplier",
+				"minecraft:flying_speed",
+				"minecraft:follow_range",
+				"minecraft:gravity",
+				"minecraft:jump_strength",
+				"minecraft:knockback_resistance",
+				"minecraft:luck",
+				"minecraft:max_absorption",
+				"minecraft:max_health",
+				"minecraft:mining_efficiency",
+				"minecraft:movement_efficiency",
+				"minecraft:movement_speed",
+				"minecraft:oxygen_bonus",
+				"minecraft:safe_fall_distance",
+				"minecraft:scale",
+				"minecraft:sneaking_speed",
+				"minecraft:spawn_reinforcements",
+				"minecraft:step_height",
+				"minecraft:submerged_mining_speed",
+				"minecraft:sweeping_damage_ratio",
+				"minecraft:tempt_range",
+				"minecraft:water_movement_efficiency"
+			]
+		},
+		{
+			"enum": [
+				"additionalentityattributes:bonus_loot_count_rolls",
+				"additionalentityattributes:bonus_rare_loot_rolls",
+				"additionalentityattributes:critical_bonus_damage",
+				"additionalentityattributes:dig_speed",
+				"additionalentityattributes:dropped_experience",
+				"additionalentityattributes:lava_speed",
+				"additionalentityattributes:lava_visibility",
+				"additionalentityattributes:lung_capacity",
+				"additionalentityattributes:magic_protection",
+				"additionalentityattributes:water_speed",
+				"additionalentityattributes:water_visbility"
+			]
+		},
+		{
+			"enum": ["reach-entity-attributes:attack_range", "reach-entity-attributes:reach"]
+		},
+		{
+			"enum": [
+				"forge:block_reach",
+				"forge:entity_gravity",
+				"forge:entity_reach",
+				"forge:nametag_distance",
+				"forge:step_height_addition",
+				"forge:swim_speed"
+			]
+		},
+		{
+			"$comment": "Old Vanilla attribute identifiers",
+			"enum": [
 				"minecraft:generic.armor",
 				"minecraft:generic.armor_toughness",
 				"minecraft:generic.attack_damage",
@@ -35,24 +100,6 @@
 				"minecraft:player.sweeping_damage_ratio",
 				"minecraft:zombie.spawn_reinforcements"
 			]
-		},
-		{
-			"enum": [
-				"additionalentityattributes:bonus_loot_count_rolls",
-				"additionalentityattributes:bonus_rare_loot_rolls",
-				"additionalentityattributes:critical_bonus_damage",
-				"additionalentityattributes:dig_speed",
-				"additionalentityattributes:dropped_experience",
-				"additionalentityattributes:lava_speed",
-				"additionalentityattributes:lava_visibility",
-				"additionalentityattributes:lung_capacity",
-				"additionalentityattributes:magic_protection",
-				"additionalentityattributes:water_speed",
-				"additionalentityattributes:water_visbility"
-			]
-		},
-		{
-			"enum": ["reach-entity-attributes:attack_range", "reach-entity-attributes:reach"]
 		},
 		{
 			"$ref": "../identifier.json"

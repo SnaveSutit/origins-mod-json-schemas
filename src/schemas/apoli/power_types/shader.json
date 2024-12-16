@@ -5,7 +5,7 @@
 	"required": ["shader"],
 	"properties": {
 		"shader": {
-			"$ref": "$ref(apoli:types/identifier)"
+			"$ref": "$ref(apoli:types/autofill_helpers/shader_identifier)"
 		},
 		"toggleable": {
 			"type": "boolean",

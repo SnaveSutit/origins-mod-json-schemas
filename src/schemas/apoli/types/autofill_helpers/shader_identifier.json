@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "string",
+	"anyOf": [
+		{
+			"enum": [
+				"minecraft:shaders/post/antialias.json",
+				"minecraft:shaders/post/art.json",
+				"minecraft:shaders/post/bits.json",
+				"minecraft:shaders/post/blobs.json",
+				"minecraft:shaders/post/blobs2.json",
+				"minecraft:shaders/post/blur.json",
+				"minecraft:shaders/post/bumpy.json",
+				"minecraft:shaders/post/color_convolve.json",
+				"minecraft:shaders/post/creeper.json",
+				"minecraft:shaders/post/deconverge.json",
+				"minecraft:shaders/post/desaturate.json",
+				"minecraft:shaders/post/entity_outline.json",
+				"minecraft:shaders/post/flip.json",
+				"minecraft:shaders/post/fxaa.json",
+				"minecraft:shaders/post/green.json",
+				"minecraft:shaders/post/invert.json",
+				"minecraft:shaders/post/notch.json",
+				"minecraft:shaders/post/ntsc.json",
+				"minecraft:shaders/post/outline.json",
+				"minecraft:shaders/post/pencil.json",
+				"minecraft:shaders/post/phosphor.json",
+				"minecraft:shaders/post/scan_pincushion.json",
+				"minecraft:shaders/post/sobel.json",
+				"minecraft:shaders/post/spider.json",
+				"minecraft:shaders/post/wobble.jso"
+			]
+		},
+		{
+			"$ref": "$ref(apoli:types/identifier)"
+		}
+	]
+}
