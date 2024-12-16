@@ -5,7 +5,14 @@
 	"required": ["gamemode"],
 	"properties": {
 		"gamemode": {
-			"type": "string"
+			"anyOf": [
+				{
+					"enum": ["adventure", "creative", "survival", "spectator"]
+				},
+				{
+					"type": "string"
+				}
+			]
 		}
 	}
 }

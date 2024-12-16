@@ -28,7 +28,7 @@
 			"if": {
 				"properties": {
 					"type": {
-						"enum": ["apoli:crafting_shaped", "origins:crafting_shaped"],
+						"enum": ["minecraft:crafting_shaped"],
 						"description": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported.",
 						"markdownDescription": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported."
 					}
@@ -63,7 +63,7 @@
 			"if": {
 				"properties": {
 					"type": {
-						"enum": ["apoli:crafting_shapeless", "origins:crafting_shapeless"],
+						"enum": ["minecraft:crafting_shapeless"],
 						"description": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported.",
 						"markdownDescription": "The type of recipe. Either `minecraft:crafting_shaped` or `minecraft:crafting_shapeless`. Other recipe types are not supported."
 					}

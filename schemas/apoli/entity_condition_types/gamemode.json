@@ -3,7 +3,14 @@
 	"required": ["gamemode"],
 	"properties": {
 		"gamemode": {
-			"type": "string",
+			"anyOf": [
+				{
+					"enum": ["adventure", "creative", "survival", "spectator"]
+				},
+				{
+					"type": "string"
+				}
+			],
 			"description": "Name of the gamemode the player should have in order for this condition to evaluate to true.",
 			"markdownDescription": "Name of the gamemode the player should have in order for this condition to evaluate to true."
 		},
