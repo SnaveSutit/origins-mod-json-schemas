@@ -3,13 +3,7 @@
 	"type": "string",
 	"anyOf": [
 		{
-			"$IMPORT": {
-				"type": "import_minecraft_registry",
-				"registry_key": "damage_type",
-				"output_key": "enum",
-				"schema_structure": "minecraft:$item"
-			},
-			"enum": ["apoli:damage_over_time"]
+			"$ref": "$ref(apoli:types/damage_source_name)"
 		},
 		{
 			"$ref": "$ref(apoli:types/identifier)"
