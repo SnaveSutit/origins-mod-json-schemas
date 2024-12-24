@@ -34,15 +34,30 @@
 			"description": "If set, this condition must be met with the attacker as the actor and the power holder as the target to apply damage to nearby entities.",
 			"markdownDescription": "If set, this condition must be met with the attacker as the actor and the power holder as the target to apply damage to nearby entities."
 		},
+		"attacker_self_bientity_action": {
+			"$ref": "../../apoli/bientity_action.json",
+			"description": "If set, this applies an action with the attacker as the actor and the power holder as the target.",
+			"markdownDescription": "If set, this applies an action with the attacker as the actor and the power holder as the target."
+		},
 		"attacker_nearby_bientity_condition": {
 			"$ref": "../../apoli/bientity_condition.json",
 			"description": "If set, this condition must be met with the attacker as the actor and an entity that should be damaged by this power as the target to apply damage to that entity.",
 			"markdownDescription": "If set, this condition must be met with the attacker as the actor and an entity that should be damaged by this power as the target to apply damage to that entity."
 		},
+		"attacker_nearby_bientity_action": {
+			"$ref": "../../apoli/bientity_action.json",
+			"description": "If set, this applies an action with the attacker as the actor and any entities that were damaged by this power as the target.",
+			"markdownDescription": "If set, this applies an action with the attacker as the actor and any entities that were damaged by this power as the target."
+		},
 		"self_nearby_bientity_condition": {
 			"$ref": "../../apoli/bientity_condition.json",
 			"description": "If set, this condition must be met with the power holder as the actor and an entity that should be damaged by this power as the target to apply damage to that entity.",
 			"markdownDescription": "If set, this condition must be met with the power holder as the actor and an entity that should be damaged by this power as the target to apply damage to that entity."
+		},
+		"self_nearby_bientity_action": {
+			"$ref": "../../apoli/bientity_action.json",
+			"description": "If set, this applies an action with the power holder as the actor and any entities that were damaged by this power as the target.",
+			"markdownDescription": "If set, this applies an action with the power holder as the actor and any entities that were damaged by this power as the target."
 		},
 		"radius": {
 			"type": "number",

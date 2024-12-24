@@ -27,11 +27,20 @@
 		"self_target_bientity_condition": {
 			"$ref": "$ref(apoli:bientity_condition)"
 		},
+		"self_target_bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
 		"self_nearby_bientity_condition": {
 			"$ref": "$ref(apoli:bientity_condition)"
 		},
+		"self_nearby_bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
 		"target_nearby_bientity_condition": {
 			"$ref": "$ref(apoli:bientity_condition)"
+		},
+		"target_nearby_bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
 		},
 		"radius": {
 			"type": "number",

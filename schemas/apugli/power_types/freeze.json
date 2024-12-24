@@ -19,10 +19,15 @@
 			"description": "If set, these modifiers will apply to the time it takes to fully freeze an entity.",
 			"markdownDescription": "If set, these modifiers will apply to the time it takes to fully freeze an entity."
 		},
+		"should_damage_condition": {
+			"$ref": "../../apoli/damage_condition.json",
+			"description": "If set, the entity will only receive damage if this is true. If not set, this entity will always take damage.",
+			"markdownDescription": "If set, the entity will only receive damage if this is true. If not set, this entity will always take damage."
+		},
 		"should_damage": {
 			"type": "boolean",
-			"description": "Whether this power type's freeze should damage the power holder.",
-			"markdownDescription": "Whether this power type's freeze should damage the power holder."
+			"description": "#### 🚨 Depreciated 🚨\n\nWhether this power type's freeze should damage the power holder.",
+			"markdownDescription": "#### 🚨 Depreciated 🚨\n\nWhether this power type's freeze should damage the power holder."
 		}
 	}
 }

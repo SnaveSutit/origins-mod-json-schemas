@@ -32,6 +32,10 @@
 			"items": {
 				"$ref": "$ref(apoli:types/attribute_modifier)"
 			}
+		},
+		"function": {
+			"type": "string",
+			"enum": ["floor", "ceiling", "round"]
 		}
 	}
 }

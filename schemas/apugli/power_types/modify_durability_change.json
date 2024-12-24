@@ -42,6 +42,12 @@
 			},
 			"description": "If set, these modifiers will apply to any time that an item meets the item condition's has a change in durability.",
 			"markdownDescription": "If set, these modifiers will apply to any time that an item meets the item condition's has a change in durability."
+		},
+		"function": {
+			"type": "string",
+			"enum": ["floor", "ceiling", "round"],
+			"description": "Determines an operation to use for non-integer values. One of: `\"floor\"`, `\"round\"`, `\"ceiling\"`.",
+			"markdownDescription": "Determines an operation to use for non-integer values. One of: `\"floor\"`, `\"round\"`, `\"ceiling\"`."
 		}
 	}
 }

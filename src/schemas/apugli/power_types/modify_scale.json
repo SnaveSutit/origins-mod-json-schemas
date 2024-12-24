@@ -28,6 +28,19 @@
 		"delay": {
 			"type": "number",
 			"default": 0
+		},
+		"delay_modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"delay_modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		},
+		"priority": {
+			"type": "number",
+			"default": 0
 		}
 	}
 }

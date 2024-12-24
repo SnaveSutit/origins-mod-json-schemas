@@ -28,10 +28,10 @@
 			"maximum": 3
 		},
 		"name": {
-			"type": "string"
+			"oneOf": [{ "type": "string" }, { "$ref": "$ref(apoli:types/text_component)" }]
 		},
 		"description": {
-			"type": "string"
+			"oneOf": [{ "type": "string" }, { "$ref": "$ref(apoli:types/text_component)" }]
 		},
 		"upgrades": {
 			"type": "array",

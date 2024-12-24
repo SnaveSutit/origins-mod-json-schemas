@@ -17,6 +17,9 @@
 				"$ref": "$ref(apoli:types/attribute_modifier)"
 			}
 		},
+		"should_damage_condition": {
+			"$ref": "$ref(apoli:damage_condition)"
+		},
 		"should_damage": {
 			"type": "boolean"
 		}
