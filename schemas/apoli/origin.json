@@ -40,26 +40,12 @@
 			"markdownDescription": "Specifies the impact of this origin with a number from 0 (none) to 3 (high)."
 		},
 		"name": {
-			"oneOf": [
-				{
-					"type": "string"
-				},
-				{
-					"$ref": "types/text_component.json"
-				}
-			],
+			"$ref": "types/text_component.json",
 			"description": "The display name of the origin.",
 			"markdownDescription": "The display name of the origin."
 		},
 		"description": {
-			"oneOf": [
-				{
-					"type": "string"
-				},
-				{
-					"$ref": "types/text_component.json"
-				}
-			],
+			"$ref": "types/text_component.json",
 			"description": "The description of the origin.",
 			"markdownDescription": "The description of the origin."
 		},

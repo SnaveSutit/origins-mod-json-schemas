@@ -9,25 +9,31 @@
 			}
 		},
 		"colors": {
-			"type": "string",
-			"examples": [
-				"#ffffff",
-				"dark_red",
-				"red",
-				"gold",
-				"yellow",
-				"dark_green",
-				"green",
-				"aqua",
-				"dark_aqua",
-				"dark_blue",
-				"blue",
-				"light_purple",
-				"dark_purple",
-				"white",
-				"gray",
-				"dark_gray",
-				"black"
+			"oneOf": [
+				{
+					"enum": [
+						"dark_red",
+						"red",
+						"gold",
+						"yellow",
+						"dark_green",
+						"green",
+						"aqua",
+						"dark_aqua",
+						"dark_blue",
+						"blue",
+						"light_purple",
+						"dark_purple",
+						"white",
+						"gray",
+						"dark_gray",
+						"black"
+					]
+				},
+				{
+					"type": "string",
+					"pattern": "#[0-9a-fA-F]{6}"
+				}
 			]
 		}
 	},
@@ -39,13 +45,70 @@
 			"$ref": "#/definitions/jsonTextArray"
 		},
 		{
+			"dependencies": {
+				"text": {
+					"not": {
+						"anyOf": [
+							{ "required": ["tl"] },
+							{ "required": ["selector"] },
+							{ "required": ["score"] },
+							{ "required": ["nbt"] },
+							{ "required": ["keybind"] }
+						]
+					}
+				},
+				"selector": {
+					"not": {
+						"anyOf": [
+							{ "required": ["text"] },
+							{ "required": ["tl"] },
+							{ "required": ["score"] },
+							{ "required": ["nbt"] },
+							{ "required": ["keybind"] }
+						]
+					}
+				},
+				"score": {
+					"not": {
+						"anyOf": [
+							{ "required": ["text"] },
+							{ "required": ["tl"] },
+							{ "required": ["selector"] },
+							{ "required": ["nbt"] },
+							{ "required": ["keybind"] }
+						]
+					}
+				},
+				"nbt": {
+					"not": {
+						"anyOf": [
+							{ "required": ["text"] },
+							{ "required": ["tl"] },
+							{ "required": ["selector"] },
+							{ "required": ["score"] },
+							{ "required": ["keybind"] }
+						]
+					}
+				},
+				"keybind": {
+					"not": {
+						"anyOf": [
+							{ "required": ["text"] },
+							{ "required": ["tl"] },
+							{ "required": ["selector"] },
+							{ "required": ["score"] },
+							{ "required": ["nbt"] }
+						]
+					}
+				}
+			},
 			"type": "object",
 			"properties": {
 				"text": {
 					"type": "string"
 				},
 				"color": {
-					"type": "string"
+					"$ref": "#/definitions/colors"
 				},
 				"bold": {
 					"type": "boolean"
