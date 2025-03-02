@@ -422,6 +422,15 @@ export type ImportOptions = {
 			path: string
 			variables: Record<string, any>
 	  }
+	| {
+			type: 'import_files_as_object_properties'
+			/**
+			 * Where to find the files to import.
+			 */
+			path: string
+			variables: Record<string, any>
+			property_name_template: string
+	  }
 )
 
 export interface IJSONSchemaPreProcessorAdditions {
