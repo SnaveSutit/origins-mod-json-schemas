@@ -1,9 +1,1 @@
-{
-	"type": "object",
-	"properties": {
-		"type": {
-			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nAllows an entity to walk on Powder Snow as if they were wearing Leather Boots.",
-			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nAllows an entity to walk on Powder Snow as if they were wearing Leather Boots."
-		}
-	}
-}
+{"type":"object","properties":{"type":{"description":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nAllows an entity to walk on Powder Snow as if they were wearing Leather Boots.","markdownDescription":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nAllows an entity to walk on Powder Snow as if they were wearing Leather Boots."}}}

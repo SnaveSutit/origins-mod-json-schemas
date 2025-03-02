@@ -1,13 +1,1 @@
-{
-	"oneOf": [
-		{
-			"$ref": "attribute_modifier.json"
-		},
-		{
-			"type": "array",
-			"items": {
-				"$ref": "attribute_modifier.json"
-			}
-		}
-	]
-}
+{"oneOf":[{"$ref":"attribute_modifier.json"},{"type":"array","items":{"$ref":"attribute_modifier.json"}}]}

@@ -10,6 +10,12 @@ import terminalkit from 'terminal-kit'
 import { marked } from 'marked'
 const TERM = terminalkit.terminal
 
+const DEV_FLAG = !!process.argv.find(v => v === '--dev')
+const BUILD_ONCE_FLAG = !!process.argv.find(v => v === '--once')
+
+console.log('DEV_FLAG:', DEV_FLAG)
+console.log('BUILD_ONCE_FLAG:', BUILD_ONCE_FLAG)
+
 const SRC_DIR = 'src/schemas/'.replace(/\//g, pathjs.sep)
 const OUT_DIR = 'schemas/'.replace(/\//g, pathjs.sep)
 
@@ -351,7 +357,7 @@ async function build(schemasToBuild: string[]) {
 		await processSchema(contents, { schemaPath, outPath })
 		await processSchemaProperties(contents, schemaPath)
 
-		let strContents = JSON.stringify(contents, null, '\t')
+		let strContents = JSON.stringify(contents)
 		strContents = strContents.replace(/\$ref\((.+?)\)/gm, substring => {
 			substring = substring.slice(5, -1)
 			const srcPath = SRC_DIR + substring.replace(':', pathjs.sep) + '.json'
@@ -390,9 +396,14 @@ async function build(schemasToBuild: string[]) {
 	for (const { path, content } of fileIOQueue) {
 		writeProgress?.startItem(path)
 		await fs.mkdir(pathjs.dirname(path), { recursive: true })
-		await fs.writeFile(path, await prettier.format(content, prettierConfig))
+		if (DEV_FLAG) {
+			await fs.writeFile(path, await prettier.format(content, prettierConfig))
+		} else {
+			await fs.writeFile(path, content)
+		}
 		writeProgress?.itemDone(path)
 	}
+
 	writeProgress?.stop()
 }
 
@@ -409,7 +420,7 @@ async function main() {
 	await loadPrettierConfig()
 	await checkIfRegistryNeedsUpdate()
 
-	if (process.argv.includes('--once')) {
+	if (BUILD_ONCE_FLAG) {
 		const schemasToBuild: string[] = []
 		async function recurse(path: string) {
 			for (const file of await fs.readdir(path)) {

@@ -1,9 +1,1 @@
-{
-	"type": "object",
-	"properties": {
-		"type": {
-			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the entity is an Arrow shot from a Crossbow.",
-			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the entity is an Arrow shot from a Crossbow."
-		}
-	}
-}
+{"type":"object","properties":{"type":{"description":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the entity is an Arrow shot from a Crossbow.","markdownDescription":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the entity is an Arrow shot from a Crossbow."}}}

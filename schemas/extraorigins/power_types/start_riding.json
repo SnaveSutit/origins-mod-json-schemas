@@ -1,15 +1,1 @@
-{
-	"type": "object",
-	"required": ["key"],
-	"properties": {
-		"type": {
-			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nCauses an entity to ride a player.",
-			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nCauses an entity to ride a player."
-		},
-		"key": {
-			"$ref": "../../apoli/types/key.json",
-			"description": "The key of the entity condition to check for.",
-			"markdownDescription": "The key of the entity condition to check for."
-		}
-	}
-}
+{"type":"object","required":["key"],"properties":{"type":{"description":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nCauses an entity to ride a player.","markdownDescription":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nCauses an entity to ride a player."},"key":{"$ref":"../../apoli/types/key.json","description":"The key of the entity condition to check for.","markdownDescription":"The key of the entity condition to check for."}}}
