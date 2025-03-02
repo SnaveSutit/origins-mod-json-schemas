@@ -1,0 +1,39 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": ["modifiers"],
+	"properties": {
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "#/definitions/modifier"
+			}
+		},
+		"show_in_tooltip": {
+			"type": "boolean"
+		}
+	},
+	"definitions": {
+		"modifier": {
+			"type": "object",
+			"required": ["type", "id", "amount", "operation"],
+			"properties": {
+				"type": {
+					"$ref": "$ref(apoli:types/autofill_helpers/attribute_identifier)"
+				},
+				"slot": {
+					"anyOf": [{ "$ref": "$ref(apoli:types/equipment_slot)" }, { "enum": ["any"] }]
+				},
+				"id": {
+					"$ref": "$ref(apoli:types/identifier)"
+				},
+				"amount": {
+					"type": "number"
+				},
+				"operation": {
+					"enum": ["add_value", "add_multiplied_base", "add_multiplied_total"]
+				}
+			}
+		}
+	}
+}
