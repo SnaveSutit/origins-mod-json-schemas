@@ -5,5 +5,6 @@
 			"description": "## Riding Recursive\n\n---\n\n\n[Bi-entity Condition Type](https://origins.readthedocs.io/en/latest/types/bientity_condition_types/riding_recursive)\n\nChecks if the actor entity is riding the target entity, regardless of where the target entity is in the riding chain. \n\nType ID: `origins:riding_recursive`\n\n---\n\n### Examples\n\n```json\n\"bientity_condition\": {\n\t\"type\": \"origins:riding_recursive\"\n}\n```",
 			"markdownDescription": "## Riding Recursive\n\n---\n\n\n[Bi-entity Condition Type](https://origins.readthedocs.io/en/latest/types/bientity_condition_types/riding_recursive)\n\nChecks if the actor entity is riding the target entity, regardless of where the target entity is in the riding chain. \n\nType ID: `origins:riding_recursive`\n\n---\n\n### Examples\n\n```json\n\"bientity_condition\": {\n\t\"type\": \"origins:riding_recursive\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Riding Recursive (Bi-entity Condition Type)\ndate: 2021-10-08</h2>\n<h1>Riding Recursive</h1>\n<p><a href=\"../bientity_condition_types.md\">Bi-entity Condition Type</a></p>\n<p>Checks if the actor entity is riding the target entity, regardless of where the target entity is in the riding chain. </p>\n<p>Type ID: <code>origins:riding_recursive</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;bientity_condition&quot;: {\n\t&quot;type&quot;: &quot;origins:riding_recursive&quot;\n}\n</code></pre>\n"
 }

@@ -5,5 +5,6 @@
 			"description": "## Exists\n\n---\n\n\n[Entity Condition Type](https://origins.readthedocs.io/en/latest/types/entity_condition_types/exists)\n\nChecks if the entity exists.\n\nType ID: `origins:exists`\n\n---\n\n### Examples\n\n```json\n\"condition\": {\n    \"type\": \"origins:exists\"\n}\n```",
 			"markdownDescription": "## Exists\n\n---\n\n\n[Entity Condition Type](https://origins.readthedocs.io/en/latest/types/entity_condition_types/exists)\n\nChecks if the entity exists.\n\nType ID: `origins:exists`\n\n---\n\n### Examples\n\n```json\n\"condition\": {\n    \"type\": \"origins:exists\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Exists (Entity Condition Type)\ndate: 2021-10-02</h2>\n<h1>Exists</h1>\n<p><a href=\"../entity_condition_types.md\">Entity Condition Type</a></p>\n<p>Checks if the entity exists.</p>\n<p>Type ID: <code>origins:exists</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;condition&quot;: {\n    &quot;type&quot;: &quot;origins:exists&quot;\n}\n</code></pre>\n"
 }

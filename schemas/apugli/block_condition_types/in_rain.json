@@ -4,5 +4,6 @@
 			"description": "## In Rain\n\n---\n\n\n[Block Condition Type](https://apugli.readthedocs.io/en/latest/types/block_condition_types/in_rain).\n\nChecks whether it's raining above a block.\n\nType ID: `apugli:in_rain`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:in_rain\"\n}\n```",
 			"markdownDescription": "## In Rain\n\n---\n\n\n[Block Condition Type](https://apugli.readthedocs.io/en/latest/types/block_condition_types/in_rain).\n\nChecks whether it's raining above a block.\n\nType ID: `apugli:in_rain`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:in_rain\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: In Rain (Block Condition Type)\ndate: 2021-08-11</h2>\n<h1>In Rain</h1>\n<p><a href=\"../block_condition_types.md\">Block Condition Type</a>.</p>\n<p>Checks whether it&#39;s raining above a block.</p>\n<p>Type ID: <code>apugli:in_rain</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;apugli:in_rain&quot;\n}\n</code></pre>\n"
 }

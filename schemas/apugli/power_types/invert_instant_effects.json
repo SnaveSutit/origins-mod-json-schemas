@@ -4,5 +4,6 @@
 			"description": "## Invert Instant Effects\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/invert_instant_effects).\n\nInverts the effects of the Instant Health and Instant Damage status effects.\n\nType ID: `apugli:invert_instant_effects`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:invert_instant_effects\"\n}\n```",
 			"markdownDescription": "## Invert Instant Effects\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/invert_instant_effects).\n\nInverts the effects of the Instant Health and Instant Damage status effects.\n\nType ID: `apugli:invert_instant_effects`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:invert_instant_effects\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Invert Instant Effects (Power Type)\ndate: 2022-03-05</h2>\n<h1>Invert Instant Effects</h1>\n<p><a href=\"../power_types.md\">Power Type</a>.</p>\n<p>Inverts the effects of the Instant Health and Instant Damage status effects.</p>\n<p>Type ID: <code>apugli:invert_instant_effects</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;apugli:invert_instant_effects&quot;\n}\n</code></pre>\n"
 }

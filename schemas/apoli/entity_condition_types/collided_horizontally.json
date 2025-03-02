@@ -5,5 +5,6 @@
 			"description": "## Collided Horizontally\n\n---\n\n\n[Entity Condition Type](https://origins.readthedocs.io/en/latest/types/entity_condition_types/collided_horizontally)\n\nChecks whether the entity is colliding horizontally (walking against a block).\n\nType ID: `origins:collided_horizontally`\n\n---\n\n### Examples\n```json\n\"condition\": {\n    \"type\": \"origins:collided_horizontally\"\n}\n```",
 			"markdownDescription": "## Collided Horizontally\n\n---\n\n\n[Entity Condition Type](https://origins.readthedocs.io/en/latest/types/entity_condition_types/collided_horizontally)\n\nChecks whether the entity is colliding horizontally (walking against a block).\n\nType ID: `origins:collided_horizontally`\n\n---\n\n### Examples\n```json\n\"condition\": {\n    \"type\": \"origins:collided_horizontally\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Collided Horizontally (Entity Condition Type)\ndate: 2021-04-04</h2>\n<h1>Collided Horizontally</h1>\n<p><a href=\"../entity_condition_types.md\">Entity Condition Type</a></p>\n<p>Checks whether the entity is colliding horizontally (walking against a block).</p>\n<p>Type ID: <code>origins:collided_horizontally</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;condition&quot;: {\n    &quot;type&quot;: &quot;origins:collided_horizontally&quot;\n}\n</code></pre>\n"
 }

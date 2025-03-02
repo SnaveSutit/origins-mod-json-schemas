@@ -4,5 +4,6 @@
 			"description": "## On Cooldown\n\n---\n\n\n[Item Condition Type](https://apugli.readthedocs.io/en/latest/types/item_condition_types/on_cooldown).\n\nChecks if the item is currently on cooldown (for example; an ender pearl after it has been thrown).\n\nType ID: `apugli:base_enchantment`\n\n---\n\n### Example\n```json\n\"condition\": {\n    \"type\": \"apugli:on_cooldown\"\n}\n```\nThis example checks if the item is currently on cooldown.",
 			"markdownDescription": "## On Cooldown\n\n---\n\n\n[Item Condition Type](https://apugli.readthedocs.io/en/latest/types/item_condition_types/on_cooldown).\n\nChecks if the item is currently on cooldown (for example; an ender pearl after it has been thrown).\n\nType ID: `apugli:base_enchantment`\n\n---\n\n### Example\n```json\n\"condition\": {\n    \"type\": \"apugli:on_cooldown\"\n}\n```\nThis example checks if the item is currently on cooldown."
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: On Cooldown (Item Condition Type)\ndate: 2023-10-29</h2>\n<h1>On Cooldown</h1>\n<p><a href=\"../item_condition_types.md\">Item Condition Type</a>.</p>\n<p>Checks if the item is currently on cooldown (for example; an ender pearl after it has been thrown).</p>\n<p>Type ID: <code>apugli:base_enchantment</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">&quot;condition&quot;: {\n    &quot;type&quot;: &quot;apugli:on_cooldown&quot;\n}\n</code></pre>\n<p>This example checks if the item is currently on cooldown.</p>\n"
 }

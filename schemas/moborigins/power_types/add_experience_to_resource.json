@@ -11,5 +11,6 @@
 			"description": "The resource to add experience to",
 			"markdownDescription": "The resource to add experience to"
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Add Experience to Resource</h1>\n<p>This power type adds experience points to a resource when collected by the player through an experience orb.</p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>resource</td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/identifier/\">Identifier</a></td>\n<td></td>\n<td>The resource to add experience to</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;apoli:multiple&quot;,\n  &quot;energy&quot;: {\n    &quot;type&quot;: &quot;origins:resource&quot;,\n    &quot;min&quot;: 0,\n    &quot;max&quot;: 100,\n    &quot;hud_render&quot;: {\n      &quot;sprite_location&quot;: &quot;origins:textures/gui/community/spiderkolo/resource_bar_01.png&quot;,\n      &quot;bar_index&quot;: 3\n    }\n  },\n  &quot;exp&quot;: {\n    &quot;type&quot;: &quot;moborigins:add_experience_to_resource&quot;,\n    &quot;resource&quot;: &quot;*:*_energy&quot;\n  }\n}\n</code></pre>\n<p>Defines a resource, and adds xp to it.</p>\n"
 }

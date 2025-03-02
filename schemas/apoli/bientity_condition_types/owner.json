@@ -5,5 +5,6 @@
 			"description": "## Owner\n\n---\n\n\n[Bi-entity Condition Type](https://origins.readthedocs.io/en/latest/types/bientity_condition_types/owner)\n\nChecks whether the actor entity is the owner of the tamable target entity.\n\nType ID: `origins:owner`\n\n---\n\n### Examples\n\n```json\n\"bientity_condition\": {\n    \"type\": \"origins:owner\"\n}\n```",
 			"markdownDescription": "## Owner\n\n---\n\n\n[Bi-entity Condition Type](https://origins.readthedocs.io/en/latest/types/bientity_condition_types/owner)\n\nChecks whether the actor entity is the owner of the tamable target entity.\n\nType ID: `origins:owner`\n\n---\n\n### Examples\n\n```json\n\"bientity_condition\": {\n    \"type\": \"origins:owner\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Owner (Bi-entity Condition Type)\ndate: 2021-10-08</h2>\n<h1>Owner</h1>\n<p><a href=\"../bientity_condition_types.md\">Bi-entity Condition Type</a></p>\n<p>Checks whether the actor entity is the owner of the tamable target entity.</p>\n<p>Type ID: <code>origins:owner</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;bientity_condition&quot;: {\n    &quot;type&quot;: &quot;origins:owner&quot;\n}\n</code></pre>\n"
 }

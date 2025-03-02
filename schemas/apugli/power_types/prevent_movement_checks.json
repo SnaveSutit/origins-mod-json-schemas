@@ -4,5 +4,6 @@
 			"description": "## Prevent Movement Checks\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/prevent_movement_checks).\n\nPrevents the game from checking for if the power holder has \"moved wrongly\".\n\nType ID: `apugli:prevent_movement_checks`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:prevent_movement_checks\"\n}\n```",
 			"markdownDescription": "## Prevent Movement Checks\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/prevent_movement_checks).\n\nPrevents the game from checking for if the power holder has \"moved wrongly\".\n\nType ID: `apugli:prevent_movement_checks`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:prevent_movement_checks\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Prevent Movement Checks (Power Type)\ndate: 2023-11-11</h2>\n<h1>Prevent Movement Checks</h1>\n<p><a href=\"../power_types.md\">Power Type</a>.</p>\n<p>Prevents the game from checking for if the power holder has &quot;moved wrongly&quot;.</p>\n<p>Type ID: <code>apugli:prevent_movement_checks</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;apugli:prevent_movement_checks&quot;\n}\n</code></pre>\n"
 }

@@ -5,5 +5,6 @@
 			"description": "## Snow Trail\n\n---\n\nLeaves a trail of snow wherever the entity walks.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:snow_trail\"\n}\n```\nLeaves a trail of snow wherever the entity walks.\n",
 			"markdownDescription": "## Snow Trail\n\n---\n\nLeaves a trail of snow wherever the entity walks.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"moborigins:snow_trail\"\n}\n```\nLeaves a trail of snow wherever the entity walks.\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Snow Trail</h1>\n<p>Leaves a trail of snow wherever the entity walks.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;moborigins:snow_trail&quot;\n}\n</code></pre>\n<p>Leaves a trail of snow wherever the entity walks.</p>\n"
 }

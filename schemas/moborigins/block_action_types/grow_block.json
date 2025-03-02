@@ -5,5 +5,6 @@
 			"description": "## Grow Block\n\n---\n\nGrows a block if it is fertilizable.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_on_block_use\",\n  \"block_condition\": {\n    \"type\": \"apoli:block\",\n    \"block\": \"minecraft:carrots\"\n  },\n  \"block_action\": {\n    \"type\": \"moborigins:grow\"\n  }\n}\n```\nThis power will grow carrots when right clicked.\n",
 			"markdownDescription": "## Grow Block\n\n---\n\nGrows a block if it is fertilizable.\n\n---\n\n### Example\n```json\n{\n  \"type\": \"apoli:action_on_block_use\",\n  \"block_condition\": {\n    \"type\": \"apoli:block\",\n    \"block\": \"minecraft:carrots\"\n  },\n  \"block_action\": {\n    \"type\": \"moborigins:grow\"\n  }\n}\n```\nThis power will grow carrots when right clicked.\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Grow Block</h1>\n<p>Grows a block if it is fertilizable.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;apoli:action_on_block_use&quot;,\n  &quot;block_condition&quot;: {\n    &quot;type&quot;: &quot;apoli:block&quot;,\n    &quot;block&quot;: &quot;minecraft:carrots&quot;\n  },\n  &quot;block_action&quot;: {\n    &quot;type&quot;: &quot;moborigins:grow&quot;\n  }\n}\n</code></pre>\n<p>This power will grow carrots when right clicked.</p>\n"
 }

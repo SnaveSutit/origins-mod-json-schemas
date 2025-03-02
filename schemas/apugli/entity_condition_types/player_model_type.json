@@ -12,5 +12,6 @@
 			"description": "The model type to check for. Can be either `\"default\"` OR `\"slim`.",
 			"markdownDescription": "The model type to check for. Can be either `\"default\"` OR `\"slim`."
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Player Model Type (Entity Condition Type)\ndate: 2022-07-29</h2>\n<h1>Player Model Type</h1>\n<p><a href=\"../entity_condition_types.md\">Entity Condition Type</a>.</p>\n<p>Check whether an <code>AbstractClientPlayerEntity</code> uses the <code>DEFAULT</code> or <code>SLIM</code> model type.</p>\n<p>Type ID: <code>apugli:player_model_type</code></p>\n<p>!!! caution</p>\n<pre><code>This condition is only effective client-side. That means any server-sided power types will not work as intended.\n</code></pre>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>model_type</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td></td>\n<td>The model type to check for. Can be either <code>&quot;default&quot;</code> OR <code>&quot;slim</code>.</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">&quot;condition&quot;: {\n    &quot;type&quot;: &quot;apugli:player_model_type&quot;,\n    &quot;model_type&quot;: &quot;default&quot;\n}\n</code></pre>\n<p>This condition checks whether the <code>AbstractClientPlayerEntity</code> has a default (Steve) player model type.</p>\n"
 }

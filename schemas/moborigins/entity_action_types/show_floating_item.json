@@ -11,5 +11,6 @@
 			"description": "The item stack to show.",
 			"markdownDescription": "The item stack to show."
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Show Floating Item</h1>\n<p>Shows a floating item to the player.</p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>item_stack</td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/item_stack/\">ItemStack</a></td>\n<td></td>\n<td>The item stack to show.</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;origins:action_when_damage_taken&quot;,\n  &quot;entity_action&quot;: {\n    &quot;type&quot;: &quot;moborigins:show_floating_item&quot;,\n    &quot;item_stack&quot;: {\n      &quot;item&quot;: &quot;minecraft:creeper_head&quot;\n    }\n  },\n  &quot;cooldown&quot;: 1\n}\n</code></pre>\n<p>Shows a floating creeper head to the player when they take damage.</p>\n"
 }

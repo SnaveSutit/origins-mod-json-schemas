@@ -11,5 +11,6 @@
 			"description": "If it will teleport to the players spawn not world spawn.",
 			"markdownDescription": "If it will teleport to the players spawn not world spawn."
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Teleport To Spawn (Entity Action Type)\ndate: 22-04-2022</h2>\n<h1>Redstone</h1>\n<p><em>Entity Action Type</em></p>\n<p>This will teleport the player back to the world spawn or their spawn point.</p>\n<p>Type ID: <code>epoli:teleport_to_spawn</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>player_spawn</code></td>\n<td><a href=\"boolean.md\">Boolean</a></td>\n<td><code>false</code></td>\n<td>If it will teleport to the players spawn not world spawn.</td>\n</tr>\n</tbody></table>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;entity_action&quot;: {\n\t&quot;type&quot;: &quot;epoli:teleport_to_spawn&quot;,\n\t&quot;player_spawn&quot;: false\n}\n</code></pre>\n<p>This example will teleport the entity to the world spawn point.</p>\n"
 }

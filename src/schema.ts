@@ -68,6 +68,10 @@ export type JSONSchema = {
 	 */
 	markdownDescription?: string
 	/**
+	 * A raw HTML string used by intellij to render a prettier description.
+	 */
+	'x-intellij-html-description'?: string
+	/**
 	 * The `default` keyword specifies a default value.
 	 * This value is not used to fill in missing values during the validation process.
 	 * Non-validation tools such as documentation generators or form generators may use this value to give hints to users about how to use a value.

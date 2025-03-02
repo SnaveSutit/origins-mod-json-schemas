@@ -15,5 +15,6 @@
 			"description": "The category this key will fall under.",
 			"markdownDescription": "The category this key will fall under."
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Keybinding JSON Format</h1>\n<p>This is the format of a JSON file describing a keybinding. They need to be placed inside the <code>keybinds</code> folder within your namespace. Keybinds are used to activate active power types, and toggles.</p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>key</code></td>\n<td><a href=\"data_types/key.md\">Key</a></td>\n<td></td>\n<td>A string that defines what key this binding will use.</td>\n</tr>\n<tr>\n<td><code>category</code></td>\n<td><a href=\"data_types/string.md\">String</a></td>\n<td></td>\n<td>The category this key will fall under.</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;key&quot;: &quot;key.keyboard.h&quot;,\n    &quot;category&quot;: &quot;key.category.test_category&quot;\n}\n</code></pre>\n<p>This example keybind will create a keybind bound to the &quot;h&quot; key, in the category called <code>key.category.test_category</code>.</p>\n"
 }
