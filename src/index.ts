@@ -13,9 +13,6 @@ const TERM = terminalkit.terminal
 const DEV_FLAG = !!process.argv.find(v => v === '--dev')
 const BUILD_ONCE_FLAG = !!process.argv.find(v => v === '--once')
 
-console.log('DEV_FLAG:', DEV_FLAG)
-console.log('BUILD_ONCE_FLAG:', BUILD_ONCE_FLAG)
-
 const SRC_DIR = 'src/schemas/'.replace(/\//g, pathjs.sep)
 const OUT_DIR = 'schemas/'.replace(/\//g, pathjs.sep)
 
