@@ -246,6 +246,49 @@ async function processImportFileContentsIntoArray(
 	layer.$IMPORT = undefined
 }
 
+function processImportFilesAsObjectProperties(
+	layer: JSONSchema,
+	options: ProcessSchemaOptions,
+	importOptions: ImportOptions & { type: 'import_files_as_object_properties' },
+) {
+	const path = SRC_DIR + importOptions.path.replace(/\$ref\((.+)\)/, '$1').replace(':', '/')
+	const stringStructure = JSON.stringify(importOptions.schema_structure)
+
+	if (layer[importOptions.output_key] === undefined) {
+		throw new Error(
+			`$IMPORT: output_key '${importOptions.output_key}' not found in schema:\n  ${JSON.stringify(
+				layer,
+			)}`,
+		)
+	}
+	layer[importOptions.output_key].properties ??= {}
+
+	let files: string[] = []
+	try {
+		files = fsSync.readdirSync(path).filter(f => f.endsWith('.json'))
+	} catch (e: any) {
+		throw new Error(`Failed to process $IMPORT while trying to read directory:\n  ${e}`)
+	}
+
+	for (const file of files) {
+		const fileName = file.replace('.json', '')
+		if (importOptions.exclude?.includes(fileName)) continue
+		const outFilePath = (path + '/' + file).replace(SRC_DIR, OUT_DIR)
+		const refPath = pathjs
+			.relative(pathjs.dirname(options.outPath), outFilePath)
+			.replace(/\\/g, '/')
+		const structure = stringStructure
+			.replace(/\$fileRef/g, refPath)
+			.replace(/\$fileName/g, fileName)
+
+		const propertyName = importOptions.property_name_template.replace(/\$fileName/g, fileName)
+
+		layer[importOptions.output_key].properties[propertyName] = JSON.parse(structure)
+	}
+
+	layer.$IMPORT = undefined
+}
+
 function processImportMinecraftRegistry(
 	layer: JSONSchema,
 	options: ProcessSchemaOptions,
@@ -290,6 +333,9 @@ async function processImport(
 			break
 		case 'import_minecraft_registry':
 			processImportMinecraftRegistry(layer, options, importOptions)
+			break
+		case 'import_files_as_object_properties':
+			processImportFilesAsObjectProperties(layer, options, importOptions)
 			break
 		default:
 			// @ts-ignore

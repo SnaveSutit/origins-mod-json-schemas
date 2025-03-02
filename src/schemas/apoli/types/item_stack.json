@@ -3,6 +3,10 @@
 	"$docsUrl": "https://origins.readthedocs.io/en/latest/types/data_types/item_stack/",
 	"type": "object",
 	"required": ["item"],
+	"dependencies": {
+		"components": { "not": { "required": ["tag"] } },
+		"tag": { "not": { "required": ["components"] } }
+	},
 	"properties": {
 		"item": {
 			"$ref": "$ref(apoli:types/autofill_helpers/item_identifier)"
@@ -12,6 +16,16 @@
 		},
 		"tag": {
 			"$ref": "$ref(apoli:types/nbt)"
-		}
+		},
+		"$IMPORT": {
+			"type": "import_files_as_object_properties",
+			"path": "$ref(minecraft:item_components)",
+			"output_key": "components",
+			"property_name_template": "minecraft:$fileName",
+			"schema_structure": {
+				"$ref": "$fileRef"
+			}
+		},
+		"components": {}
 	}
 }
