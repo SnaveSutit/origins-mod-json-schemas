@@ -1,7 +1,7 @@
 {
 	"type": "string",
-	"description": "### ⚠️ Requires [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds) to be installed! ⚠️\n\n",
-	"markdownDescription": "### ⚠️ Requires [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds) to be installed! ⚠️\n\n",
+	"description": "### ⚠️ Requires Addon Mods! ⚠️\nEither [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds) OR [Forge: Extra Keybinds 1.1](https://www.curseforge.com/minecraft/mc-mods/extra-keybinds) must be installed!\n\n",
+	"markdownDescription": "### ⚠️ Requires Addon Mods! ⚠️\nEither [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds) OR [Forge: Extra Keybinds 1.1](https://www.curseforge.com/minecraft/mc-mods/extra-keybinds) must be installed!\n\n",
 	"enum": [
 		"key.origins.ternary_active",
 		"key.origins.quaternary_active",

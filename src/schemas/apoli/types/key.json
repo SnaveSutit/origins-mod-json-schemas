@@ -58,6 +58,9 @@
 					"$ref": "$ref(extraorigins:types/key)"
 				},
 				{
+					"$ref": "$ref(extra_keybinds:types/key)"
+				},
+				{
 					"type": "string"
 				}
 			]
