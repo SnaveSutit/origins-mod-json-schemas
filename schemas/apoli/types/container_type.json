@@ -1,3 +1,1 @@
-{
-	"enum": ["chest", "hopper", "dropper", "dispenser", "double_chest"]
-}
+{"enum":["chest","hopper","dropper","dispenser","double_chest"]}

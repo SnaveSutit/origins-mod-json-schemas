@@ -1,7 +1,1 @@
-{
-	"type": "array",
-	"items": {
-		"enum": ["up", "down", "north", "south", "east", "west"]
-	},
-	"uniqueItems": true
-}
+{"type":"array","items":{"enum":["up","down","north","south","east","west"]},"uniqueItems":true}

@@ -1,10 +1,1 @@
-{
-	"type": "object",
-	"properties": {
-		"type": {
-			"description": "## Is Solid\n\n---\n\nChecks if the block is solid.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_solid\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is solid.\n",
-			"markdownDescription": "## Is Solid\n\n---\n\nChecks if the block is solid.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_solid\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is solid.\n"
-		}
-	},
-	"x-intellij-html-description": "<h1>Is Solid</h1>\n<p>Checks if the block is solid.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;moborigins:is_solid&quot;,\n    &quot;block&quot;: &quot;minecraft:stone&quot;\n}\n</code></pre>\n<p>Checks if the block is solid.</p>\n"
-}
+{"type":"object","properties":{"type":{"description":"## Is Solid\n\n---\n\nChecks if the block is solid.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_solid\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is solid.\n","markdownDescription":"## Is Solid\n\n---\n\nChecks if the block is solid.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_solid\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is solid.\n"}},"x-intellij-html-description":"<h1>Is Solid</h1>\n<p>Checks if the block is solid.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;moborigins:is_solid&quot;,\n    &quot;block&quot;: &quot;minecraft:stone&quot;\n}\n</code></pre>\n<p>Checks if the block is solid.</p>\n"}

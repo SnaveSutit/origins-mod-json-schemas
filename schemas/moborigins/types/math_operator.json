@@ -1,4 +1,1 @@
-{
-	"type": "string",
-	"enum": ["add", "subtract", "multiply", "divide", "mod", "exponent", "set"]
-}
+{"type":"string","enum":["add","subtract","multiply","divide","mod","exponent","set"]}

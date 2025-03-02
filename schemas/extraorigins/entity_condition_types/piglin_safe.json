@@ -1,9 +1,1 @@
-{
-	"type": "object",
-	"properties": {
-		"type": {
-			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the dimension the entity is in is safe for Piglins.",
-			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the dimension the entity is in is safe for Piglins."
-		}
-	}
-}
+{"type":"object","properties":{"type":{"description":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the dimension the entity is in is safe for Piglins.","markdownDescription":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the dimension the entity is in is safe for Piglins."}}}

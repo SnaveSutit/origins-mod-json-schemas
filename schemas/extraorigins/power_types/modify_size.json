@@ -1,18 +1,1 @@
-{
-	"type": "object",
-	"required": ["scale_types", "scale"],
-	"properties": {
-		"type": {
-			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) AND [Pehkui](https://modrinth.com/mod/pehkui) to be installed! ⚠️\n\nChanges the entity's scale.",
-			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) AND [Pehkui](https://modrinth.com/mod/pehkui) to be installed! ⚠️\n\nChanges the entity's scale."
-		},
-		"scale_types": {
-			"$ref": "../../pehkui/types/scale_types.json"
-		},
-		"scale": {
-			"type": "number",
-			"description": "The amount to scale the specified type(s) by.",
-			"markdownDescription": "The amount to scale the specified type(s) by."
-		}
-	}
-}
+{"type":"object","required":["scale_types","scale"],"properties":{"type":{"description":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) AND [Pehkui](https://modrinth.com/mod/pehkui) to be installed! ⚠️\n\nChanges the entity's scale.","markdownDescription":"### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) AND [Pehkui](https://modrinth.com/mod/pehkui) to be installed! ⚠️\n\nChanges the entity's scale."},"scale_types":{"$ref":"../../pehkui/types/scale_types.json"},"scale":{"type":"number","description":"The amount to scale the specified type(s) by.","markdownDescription":"The amount to scale the specified type(s) by."}}}

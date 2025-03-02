@@ -1,10 +1,1 @@
-{
-	"type": "object",
-	"properties": {
-		"type": {
-			"description": "## Is Air\n\n---\n\nChecks if the block is air.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_air\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is air.\n",
-			"markdownDescription": "## Is Air\n\n---\n\nChecks if the block is air.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_air\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is air.\n"
-		}
-	},
-	"x-intellij-html-description": "<h1>Is Air</h1>\n<p>Checks if the block is air.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;moborigins:is_air&quot;,\n    &quot;block&quot;: &quot;minecraft:stone&quot;\n}\n</code></pre>\n<p>Checks if the block is air.</p>\n"
-}
+{"type":"object","properties":{"type":{"description":"## Is Air\n\n---\n\nChecks if the block is air.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_air\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is air.\n","markdownDescription":"## Is Air\n\n---\n\nChecks if the block is air.\n\n---\n\n### Example\n```json\n{\n    \"type\": \"moborigins:is_air\",\n    \"block\": \"minecraft:stone\"\n}\n```\nChecks if the block is air.\n"}},"x-intellij-html-description":"<h1>Is Air</h1>\n<p>Checks if the block is air.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;moborigins:is_air&quot;,\n    &quot;block&quot;: &quot;minecraft:stone&quot;\n}\n</code></pre>\n<p>Checks if the block is air.</p>\n"}

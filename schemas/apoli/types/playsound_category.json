@@ -1,14 +1,1 @@
-{
-	"enum": [
-		"master",
-		"music",
-		"record",
-		"weather",
-		"blocks",
-		"hostile",
-		"neutral",
-		"players",
-		"ambient",
-		"voice"
-	]
-}
+{"enum":["master","music","record","weather","blocks","hostile","neutral","players","ambient","voice"]}
