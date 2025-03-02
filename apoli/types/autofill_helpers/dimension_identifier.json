@@ -1,0 +1,1 @@
+{"type":"string","anyOf":[{"enum":["minecraft:overworld","minecraft:the_end","minecraft:the_nether"]},{"$ref":"../identifier.json"}]}
