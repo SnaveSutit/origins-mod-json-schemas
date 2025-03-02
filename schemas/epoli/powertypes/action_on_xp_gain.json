@@ -11,5 +11,6 @@
 			"description": "The action to execute on the player.",
 			"markdownDescription": "The action to execute on the player."
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Action On XP Gain (Power Type)\ndate: 22-04-2022</h2>\n<h1>Action On XP Gain</h1>\n<p><em>Power Type</em></p>\n<p>Executes an <a href=\"https://origins.readthedocs.io/en/latest/types/entity_action_types/\">Entity Action Type</a> when the player gains experience.</p>\n<p>Type ID: <code>epoli:action_on_xp_gain</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>entity_action</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/entity_action_types/\">Entity Action Type</a></td>\n<td></td>\n<td>The action to execute on the player.</td>\n</tr>\n</tbody></table>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;epoli:action_on_xp_gain&quot;,\n    &quot;entity_action&quot;: {\n        &quot;type&quot;: &quot;origins:execute_command&quot;,\n        &quot;command&quot;: &quot;say Gained XP :)&quot;\n    }\n}\n</code></pre>\n<p>This example will execute the command <code>Say Gained XP :)</code> on the player when they gain experience.</p>\n"
 }

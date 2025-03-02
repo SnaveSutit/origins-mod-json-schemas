@@ -11,5 +11,6 @@
 			"description": "The same identifier used in `epoli:save_location`.",
 			"markdownDescription": "The same identifier used in `epoli:save_location`."
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Teleport Location (Entity Action Type)\ndate: 22-04-2022</h2>\n<h1>Redstone</h1>\n<p><em>Entity Action Type</em></p>\n<p>This will teleport the entity to the saved position from the entity action: <a href=\"save_location.md\"><code>epoli:save_location</code></a></p>\n<p>Type ID: <code>epoli:teleportlocation</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>saveid</code></td>\n<td><a href=\"string.md\">String</a></td>\n<td></td>\n<td>The same identifier used in <code>epoli:save_location</code>.</td>\n</tr>\n</tbody></table>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;entity_action&quot;: {\n\t&quot;type&quot;: &quot;epoli:teleport_location&quot;,\n\t&quot;saveid&quot;: &quot;myorigin_save&quot;\n}\n</code></pre>\n<p>This example will teleport the entity to the saved location &quot;myorigin_save&quot;.</p>\n"
 }

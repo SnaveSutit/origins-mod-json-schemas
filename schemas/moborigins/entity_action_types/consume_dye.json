@@ -5,5 +5,6 @@
 			"description": "## Consume Dye\n\n---\n\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n\n---\n\n### Example\n```json\n{\n \"entity_action\": {\n     \"type\": \"moborigins:consume_dye\"\n }\n}\n```\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n",
 			"markdownDescription": "## Consume Dye\n\n---\n\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n\n---\n\n### Example\n```json\n{\n \"entity_action\": {\n     \"type\": \"moborigins:consume_dye\"\n }\n}\n```\nConsumes a dye item and blends the color with the entity's Dyeable Model Color Power, if it has one.\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Consume Dye</h1>\n<p>Consumes a dye item and blends the color with the entity&#39;s Dyeable Model Color Power, if it has one.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n &quot;entity_action&quot;: {\n     &quot;type&quot;: &quot;moborigins:consume_dye&quot;\n }\n}\n</code></pre>\n<p>Consumes a dye item and blends the color with the entity&#39;s Dyeable Model Color Power, if it has one.</p>\n"
 }

@@ -4,5 +4,6 @@
 			"description": "## Sprinting\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/sprinting).\n\nSets the entity to sprint.\n\nType ID: `apugli:sprinting`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:sprinting\"\n}\n```",
 			"markdownDescription": "## Sprinting\n\n---\n\n\n[Power Type](https://apugli.readthedocs.io/en/latest/types/power_types/sprinting).\n\nSets the entity to sprint.\n\nType ID: `apugli:sprinting`\n\n---\n\n### Example\n```json\n{\n    \"type\": \"apugli:sprinting\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Sprinting (Power Type)\ndate: 2023-11-11</h2>\n<h1>Sprinting</h1>\n<p><a href=\"../power_types.md\">Power Type</a>.</p>\n<p>Sets the entity to sprint.</p>\n<p>Type ID: <code>apugli:sprinting</code></p>\n<h3>Fields</h3>\n<p><code>requires_input</code> | <a href=\"https://origins.readthedocs.io/en/latest/types/data_types/boolean/\">Boolean</a> | <code>false</code> | Whether a player requires forward input (double tap forward key/use sprint key) to sprint. </p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;apugli:sprinting&quot;\n}\n</code></pre>\n"
 }

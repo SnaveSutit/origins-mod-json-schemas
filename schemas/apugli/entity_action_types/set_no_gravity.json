@@ -10,5 +10,6 @@
 			"description": "The value to set the `NoGravity` flag to. If not set it'll change the value to the opposite of what it currently is.",
 			"markdownDescription": "The value to set the `NoGravity` flag to. If not set it'll change the value to the opposite of what it currently is."
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Set No Gravity (Entity Action Type)\ndate: 2022-07-29</h2>\n<h1>Set No Gravity</h1>\n<p><a href=\"../entity_action_types.md\">Entity Action Type</a>.</p>\n<p>Sets whether the entity is affected by gravity or not.</p>\n<p>Type ID: <code>apugli:set_no_gravity</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>value</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/boolean/\">Boolean</a></td>\n<td><em>optional</em></td>\n<td>The value to set the <code>NoGravity</code> flag to. If not set it&#39;ll change the value to the opposite of what it currently is.</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">&quot;entity_action&quot;: {\n    &quot;type&quot;: &quot;apugli:set_no_gravity&quot;,\n    &quot;value&quot;: true\n}\n</code></pre>\n<p>This action makes the entity unaffected by gravity.</p>\n"
 }

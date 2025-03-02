@@ -16,5 +16,6 @@
 			"description": "The value to compare to.",
 			"markdownDescription": "The value to compare to."
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Time Since Rest</h1>\n<p>Checks how long the player has been sleeping, time is in ticks.</p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>comparison</td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td></td>\n<td>The comparison to use.</td>\n</tr>\n<tr>\n<td>compare_to</td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td></td>\n<td>The value to compare to.</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n        &quot;entity_condition&quot;: {\n            &quot;type&quot;: &quot;moborigins:time_since_rest&quot;,\n            &quot;comparison&quot;: &quot;greater_than&quot;,\n            &quot;compare_to&quot;: 100\n        }\n    }\n</code></pre>\n<p>Checks how long the player has been sleeping.</p>\n"
 }

@@ -4,5 +4,6 @@
 			"description": "## Crafting Table\n\n---\n\n\n[Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types/crafting_table)\n\nBrings up the Crafting Table GUI as if the player has interacted with one.\n\nType ID: `origins:crafting_table`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n    \"type\": \"origins:crafting_table\"\n}\n```\n",
 			"markdownDescription": "## Crafting Table\n\n---\n\n\n[Entity Action Type](https://origins.readthedocs.io/en/latest/types/entity_action_types/crafting_table)\n\nBrings up the Crafting Table GUI as if the player has interacted with one.\n\nType ID: `origins:crafting_table`\n\n---\n\n### Examples\n\n```json\n\"entity_action\": {\n    \"type\": \"origins:crafting_table\"\n}\n```\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Crafting Table (Entity Action Type)\ndate: 2021-12-03</h2>\n<h1>Crafting Table</h1>\n<p><a href=\"../entity_action_types.md\">Entity Action Type</a></p>\n<p>Brings up the Crafting Table GUI as if the player has interacted with one.</p>\n<p>Type ID: <code>origins:crafting_table</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;entity_action&quot;: {\n    &quot;type&quot;: &quot;origins:crafting_table&quot;\n}\n</code></pre>\n"
 }

@@ -5,5 +5,6 @@
 			"description": "## Ignore Water\n\n---\n\n\n[Power Type](https://origins.readthedocs.io/en/latest/types/power_types/ignore_water)\n\nPrevents the movement of the entity that has the power from being affected by water.\n\nType ID: `origins:ignore_water`\n\n---\n\n### Examples\n\n```json\n{\n  \t\"type\": \"origins:ignore_water\"\n}\n```\n\nThis example makes the entity that has the power ignore water. :)\n",
 			"markdownDescription": "## Ignore Water\n\n---\n\n\n[Power Type](https://origins.readthedocs.io/en/latest/types/power_types/ignore_water)\n\nPrevents the movement of the entity that has the power from being affected by water.\n\nType ID: `origins:ignore_water`\n\n---\n\n### Examples\n\n```json\n{\n  \t\"type\": \"origins:ignore_water\"\n}\n```\n\nThis example makes the entity that has the power ignore water. :)\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Ignore Water (Power Type)\ndate: 2021-04-08</h2>\n<h1>Ignore Water</h1>\n<p><a href=\"../power_types.md\">Power Type</a></p>\n<p>Prevents the movement of the entity that has the power from being affected by water.</p>\n<p>Type ID: <code>origins:ignore_water</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  \t&quot;type&quot;: &quot;origins:ignore_water&quot;\n}\n</code></pre>\n<p>This example makes the entity that has the power ignore water. :)</p>\n"
 }

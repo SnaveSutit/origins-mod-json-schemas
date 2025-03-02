@@ -5,5 +5,6 @@
 			"description": "## Water Loggable\n\n---\n\n\n[Block Condition Type](https://origins.readthedocs.io/en/latest/types/block_condition_types/water_loggable)\n\nChecks whether the block is waterloggable, meaning that there can be fluid in the same block space (e.g. stairs).\n\nType ID: `origins:water_loggable`\n\n---\n\n### Examples\n\n```json\n\"block_condition\": {\n    \"type\": \"origins:water_loggable\"\n}\n```",
 			"markdownDescription": "## Water Loggable\n\n---\n\n\n[Block Condition Type](https://origins.readthedocs.io/en/latest/types/block_condition_types/water_loggable)\n\nChecks whether the block is waterloggable, meaning that there can be fluid in the same block space (e.g. stairs).\n\nType ID: `origins:water_loggable`\n\n---\n\n### Examples\n\n```json\n\"block_condition\": {\n    \"type\": \"origins:water_loggable\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Water Loggable (Block Condition Type)\ndate: 2021-04-05</h2>\n<h1>Water Loggable</h1>\n<p><a href=\"../block_condition_types.md\">Block Condition Type</a></p>\n<p>Checks whether the block is waterloggable, meaning that there can be fluid in the same block space (e.g. stairs).</p>\n<p>Type ID: <code>origins:water_loggable</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;block_condition&quot;: {\n    &quot;type&quot;: &quot;origins:water_loggable&quot;\n}\n</code></pre>\n"
 }

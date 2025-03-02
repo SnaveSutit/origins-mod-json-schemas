@@ -5,5 +5,6 @@
 			"description": "## Hostile Axolotls\n\n---\n\nMakes the axolotls hostile to the entity.\n\n---\n\n### Example\n```json\n{\n        \"type\": \"moborigins:hostile_axolotls\"\n    }\n```\nThis makes axolotls hostile to the entity.\n",
 			"markdownDescription": "## Hostile Axolotls\n\n---\n\nMakes the axolotls hostile to the entity.\n\n---\n\n### Example\n```json\n{\n        \"type\": \"moborigins:hostile_axolotls\"\n    }\n```\nThis makes axolotls hostile to the entity.\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Hostile Axolotls</h1>\n<p>Makes the axolotls hostile to the entity.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n        &quot;type&quot;: &quot;moborigins:hostile_axolotls&quot;\n    }\n</code></pre>\n<p>This makes axolotls hostile to the entity.</p>\n"
 }

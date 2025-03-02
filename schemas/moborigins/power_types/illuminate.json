@@ -11,5 +11,6 @@
 			"description": "The light level the mob will emit.",
 			"markdownDescription": "The light level the mob will emit."
 		}
-	}
+	},
+	"x-intellij-html-description": "<h1>Illuminate</h1>\n<p>This power type allows you to make a mob emit light like a glow squid.</p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>light</td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td><em>15</em></td>\n<td>The light level the mob will emit.</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;moborigins:illuminate&quot;,\n    &quot;light&quot;: 15,\n    &quot;condition&quot;: {\n        &quot;type&quot;: &quot;origins:exposed_to_sun&quot;,\n        &quot;inverted&quot;: true\n    }\n}\n</code></pre>\n<p>This power makes it so when you are not exposed to the sun (eg: in a cave, or at night) you glow just like a glow squid.</p>\n"
 }

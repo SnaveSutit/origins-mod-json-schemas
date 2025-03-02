@@ -7,6 +7,7 @@ import { MDFile } from './mdReader'
 import * as chokidar from 'chokidar'
 import prettier from 'prettier'
 import terminalkit from 'terminal-kit'
+import { marked } from 'marked'
 const TERM = terminalkit.terminal
 
 const SRC_DIR = 'src/schemas/'.replace(/\//g, pathjs.sep)
@@ -75,6 +76,7 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 				mdFile.description,
 				mdFile.examples,
 			].join('\n\n---\n\n')
+			schema['x-intellij-html-description'] = await marked(mdFile.content)
 		}
 		if (
 			!ignoredProperties.includes('type') &&
@@ -94,6 +96,7 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 				mdFile.description,
 				mdFile.examples,
 			].join('\n\n---\n\n')
+			schema['x-intellij-html-description'] = await marked(mdFile.content)
 		}
 	}
 

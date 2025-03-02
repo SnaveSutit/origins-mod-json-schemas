@@ -15,5 +15,6 @@
 			"type": "integer",
 			"description": "The number of points to add to the skill tree."
 		}
-	}
+	},
+	"x-intellij-html-description": "<h3>Add Skill Points</h3>\n<p>Adds skill points to a players tree, allowing the developer to allocate points for certain actions.</p>\n<p>Type ID: <code>skillful:add_skill_points</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>skill_tree</code></td>\n<td><a href=\"../data_types/identifier.md\">Identifier</a></td>\n<td></td>\n<td>ID of the skill tree that the point will be given to (MUST BE THE ROOT OF THE SKILL TREE)</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;entity_action&quot;: {\n        &quot;type&quot;: &quot;skillful:add_skill_points&quot;,\n        &quot;skill_tree&quot;: &quot;example_pack:skill_tree&quot;,\n        &quot;points&quot;: 1\n    }\n}\n</code></pre>\n<p>This example will add 1 point to the <code>example_pack:skill_tree</code> tree.</p>\n"
 }

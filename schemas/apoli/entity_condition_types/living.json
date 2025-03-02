@@ -5,5 +5,6 @@
 			"description": "## Living\n\n---\n\n\n[Entity Condition Type](https://origins.readthedocs.io/en/latest/types/entity_condition_types/living)\n\nChecks if the entity is an instance of [`LivingEntity`](https://origins.readthedocs.io/en/latest/types/entity_condition_types/living), or in simple terms, a mob or a player.\n\nType ID: `origins:living`\n\n---\n\n### Examples\n\n```json\n\"condition\": {\n    \"type\": \"origins:living\"\n}\n```\n",
 			"markdownDescription": "## Living\n\n---\n\n\n[Entity Condition Type](https://origins.readthedocs.io/en/latest/types/entity_condition_types/living)\n\nChecks if the entity is an instance of [`LivingEntity`](https://origins.readthedocs.io/en/latest/types/entity_condition_types/living), or in simple terms, a mob or a player.\n\nType ID: `origins:living`\n\n---\n\n### Examples\n\n```json\n\"condition\": {\n    \"type\": \"origins:living\"\n}\n```\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Living (Entity Condition Type)\ndate: 2021-10-07</h2>\n<h1>Living</h1>\n<p><a href=\"../entity_condition_types.md\">Entity Condition Type</a></p>\n<p>Checks if the entity is an instance of <a href=\"https://maven.fabricmc.net/docs/yarn-1.19+build.4/net/minecraft/entity/LivingEntity.html\"><code>LivingEntity</code></a>, or in simple terms, a mob or a player.</p>\n<p>Type ID: <code>origins:living</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;condition&quot;: {\n    &quot;type&quot;: &quot;origins:living&quot;\n}\n</code></pre>\n"
 }

@@ -5,5 +5,6 @@
 			"description": "## Light Blocking\n\n---\n\n\n[Block Condition Type](https://origins.readthedocs.io/en/latest/types/block_condition_types/light_blocking)\n\nChecks whether the block is marked in code as blocking light. Glass for example would not fulfill this condition.\n\nType ID: `origins:light_blocking`\n\n---\n\n### Examples\n\n```json\n\"block_condition\": {\n    \"type\": \"origins:light_blocking\"\n}\n```",
 			"markdownDescription": "## Light Blocking\n\n---\n\n\n[Block Condition Type](https://origins.readthedocs.io/en/latest/types/block_condition_types/light_blocking)\n\nChecks whether the block is marked in code as blocking light. Glass for example would not fulfill this condition.\n\nType ID: `origins:light_blocking`\n\n---\n\n### Examples\n\n```json\n\"block_condition\": {\n    \"type\": \"origins:light_blocking\"\n}\n```"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Light Blocking (Block Condition Type)\ndate: 2021-04-05</h2>\n<h1>Light Blocking</h1>\n<p><a href=\"../block_condition_types.md\">Block Condition Type</a></p>\n<p>Checks whether the block is marked in code as blocking light. Glass for example would not fulfill this condition.</p>\n<p>Type ID: <code>origins:light_blocking</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;block_condition&quot;: {\n    &quot;type&quot;: &quot;origins:light_blocking&quot;\n}\n</code></pre>\n"
 }

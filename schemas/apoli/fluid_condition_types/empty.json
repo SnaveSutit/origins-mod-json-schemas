@@ -5,5 +5,6 @@
 			"description": "## Empty\n\n---\n\n\n[Fluid Condition Type](https://origins.readthedocs.io/en/latest/types/fluid_condition_types/empty)\n\nChecks whether there is no fluid in this state.\n\nType ID: `origins:empty`\n\n---\n\n### Examples\n\n```json\n\"fluid_condition\": {\n    \"type\": \"origins:empty\"\n}\n```\n",
 			"markdownDescription": "## Empty\n\n---\n\n\n[Fluid Condition Type](https://origins.readthedocs.io/en/latest/types/fluid_condition_types/empty)\n\nChecks whether there is no fluid in this state.\n\nType ID: `origins:empty`\n\n---\n\n### Examples\n\n```json\n\"fluid_condition\": {\n    \"type\": \"origins:empty\"\n}\n```\n"
 		}
-	}
+	},
+	"x-intellij-html-description": "<hr>\n<h2>title: Empty (Fluid Condition Type)\ndate: 2021-04-04</h2>\n<h1>Empty</h1>\n<p><a href=\"../fluid_condition_types.md\">Fluid Condition Type</a></p>\n<p>Checks whether there is no fluid in this state.</p>\n<p>Type ID: <code>origins:empty</code></p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">&quot;fluid_condition&quot;: {\n    &quot;type&quot;: &quot;origins:empty&quot;\n}\n</code></pre>\n"
 }
