@@ -15,7 +15,8 @@
 	"scripts": {
 		"build": "tsx ./src/index.ts --once",
 		"dev": "tsx ./src/index.ts --dev",
-		"generate-templates": "tsx ./src/generateTemplates.ts"
+		"generate-templates": "tsx ./src/generateTemplates.ts",
+		"format": "prettier --write src/**/*"
 	},
 	"devDependencies": {
 		"@types/eslint": "^8.56.2",
