@@ -228,6 +228,7 @@
 				"minecraft:bastion/units/wall_units/unit_0",
 				"minecraft:bastion/units/walls/connected_wall",
 				"minecraft:bastion/units/walls/wall_base",
+				"minecraft:empty",
 				"minecraft:end_city/base_floor",
 				"minecraft:end_city/base_roof",
 				"minecraft:end_city/bridge_end",
