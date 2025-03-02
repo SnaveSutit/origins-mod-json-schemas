@@ -18,7 +18,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Schemas
-        run: yarn build
+        run: yarn build --workflow
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
