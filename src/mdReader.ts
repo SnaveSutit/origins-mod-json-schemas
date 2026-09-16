@@ -86,10 +86,13 @@ async function fetchMDFileCached(url: string): Promise<string> {
 function processDescription(description: string, mdFile: MDFile) {
 	let link = MD_LINK_REGEX.exec(description)
 	while (link) {
-		// term.brightRed(link[0])('\n')
-		const { name } = link.groups!
-		// term.brightGreen(`[${name}](${mdFile.docsUrl})`)('\n')
-		description = description.replace(link[0], `[${name}](${mdFile.docsUrl})`)
+		const { name, target } = link.groups!
+		// Absolute URLs (eg. links to other doc sites) are left untouched, relative
+		// links are resolved against the current file's path to find their docsUrl.
+		const url = /^https?:\/\//.test(target)
+			? target
+			: MDFile.fromRawURL(pathToUrl(mdFile.url, target)).docsUrl
+		description = description.replace(link[0], `[${name}](${url})`)
 		link = MD_LINK_REGEX.exec(description)
 	}
 
