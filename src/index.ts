@@ -4,6 +4,7 @@ import * as pathjs from 'path'
 import { type JSONSchema, type ImportOptions } from './schema'
 import { MINECRAFT_REGISTRY, checkIfRegistryNeedsUpdate } from './minecraftRegistries'
 import { MDFile } from './mdReader'
+import { bundleSchemas } from './bundleSchemas'
 import * as chokidar from 'chokidar'
 import prettier from 'prettier'
 import terminalkit from 'terminal-kit'
@@ -435,6 +436,7 @@ async function main() {
 		await fs.mkdir(OUT_DIR, { recursive: true }).catch(() => {})
 
 		await build(schemasToBuild)
+		await bundleSchemas(OUT_DIR)
 		return
 	}
 

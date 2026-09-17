@@ -19,6 +19,7 @@
 		"format": "prettier --write src/**/*"
 	},
 	"devDependencies": {
+		"@apidevtools/json-schema-ref-parser": "^16.0.2",
 		"@types/eslint": "^8.56.2",
 		"@types/marked": "^6.0.0",
 		"@types/node": "^20.11.19",

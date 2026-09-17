@@ -78,6 +78,9 @@ When writing a JSON File, you can add the following field to the top of each JSO
   ```
   ⚠️ Requires the [Skillful](https://skillful-docs.readthedocs.io/en/latest/) mod to be installed!
 
+> [!TIP]
+> Building a tool that loads these schemas from **local files** rather than over HTTP (e.g. a VS Code extension bundling them via `contributes.jsonValidation`)? Use the self-contained versions under [`schemas/bundled/`](https://github.com/SnaveSutit/origins-mod-json-schemas/tree/schemas/bundled) instead of the per-file schemas elsewhere in the `schemas` branch. VS Code's local (`file://`) schema resolver has a longstanding bug where relative `$ref`s between files resolve against the wrong directory once a schema has more than ~10 `allOf`/`if`-`then` branches - the bundled files avoid that entirely by inlining everything into one file per entry point.
+
 ## 🧑‍💻 Contributing
 
 ### 💻 Setting up the Development Environment
