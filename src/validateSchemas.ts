@@ -99,6 +99,14 @@ function validateBundledSchemas(files: string[]): ValidationError[] {
 					path,
 					message: `Bundled schema has a non-local $ref, it should be fully self-contained: "${match[1]}"`,
 				})
+			} else if (match[1].endsWith('/')) {
+				// A trailing slash adds a final empty-string pointer token (RFC 6901), so eg. "#/"
+				// points at root[""], not root - Ajv resolves it leniently anyway, but VS Code's
+				// JSON language service treats it as unresolvable and drops validation entirely.
+				errors.push({
+					path,
+					message: `$ref "${match[1]}" has a trailing slash - not a valid JSON Pointer to the intended target`,
+				})
 			}
 		}
 

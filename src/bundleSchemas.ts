@@ -41,6 +41,9 @@ function decycle(root: unknown): unknown {
 	const seen = new Map<object, Array<string | number>>()
 
 	function pointerFor(pathParts: Array<string | number>): string {
+		if (pathParts.length === 0) {
+			return '#'
+		}
 		return '#/' + pathParts.map(p => String(p).replace(/~/g, '~0').replace(/\//g, '~1')).join('/')
 	}
 
