@@ -66,6 +66,25 @@
 
 		{
 			"type": "import_files_into_array",
+			"path": "$ref(extraorigins:entity_action_types)",
+			"output_key": "allOf",
+			"schema_structure": {
+				"if": {
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"const": "extraorigins:$fileName"
+						}
+					}
+				},
+				"then": {
+					"$ref": "$fileRef"
+				}
+			}
+		},
+
+		{
+			"type": "import_files_into_array",
 			"path": "$ref(epoli:entityactions)",
 			"output_key": "allOf",
 			"schema_structure": {

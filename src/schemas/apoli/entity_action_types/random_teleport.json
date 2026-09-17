@@ -12,7 +12,7 @@
 			"default": 8.0
 		},
 		"heightmap": {
-			"type": "string"
+			"$ref": "$ref(apoli:types/heightmap_type)"
 		},
 		"attempts": {
 			"type": "integer"

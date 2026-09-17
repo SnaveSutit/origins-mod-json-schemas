@@ -1,22 +1,27 @@
 {
 	"$schema": "https://json-schema.org/draft-07/schema#",
-	"$docsUrl": "https://apugli.readthedocs.io/en/latest/types/entity_condition_types/compare_resource/",
+	"$docsUrl": "https://apugli.readthedocs.io/en/latest/types/entity_condition_types/dimensions/",
 	"type": "object",
-	"required": ["resource", "compare_to"],
+	"required": ["compare_to"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n",
 			"markdownDescription": "### ⚠️ Requires [Apugli](https://apugli.readthedocs.io/en/latest/) to be installed! ⚠️\n\n"
 		},
-		"resource": {
-			"$ref": "$ref(apoli:types/identifier)"
-		},
-		"compare_to": {
-			"$ref": "$ref(apoli:types/identifier)"
+		"dimensions": {
+			"type": "array",
+			"items": {
+				"enum": ["width", "height"]
+			},
+			"uniqueItems": true,
+			"default": ["width", "height"]
 		},
 		"comparison": {
 			"default": ">=",
 			"$ref": "$ref(apoli:types/comparison)"
+		},
+		"compare_to": {
+			"type": "number"
 		}
 	}
 }

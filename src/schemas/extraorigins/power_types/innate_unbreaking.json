@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": ["level"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nGrants innate Unbreaking to items held or worn by the entity.",
+			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nGrants innate Unbreaking to items held or worn by the entity."
+		},
+		"item_condition": {
+			"$ref": "$ref(apoli:item_condition)",
+			"description": "If specified, only items that fulfill this item condition will be granted innate Unbreaking.",
+			"markdownDescription": "If specified, only items that fulfill this item condition will be granted innate Unbreaking."
+		},
+		"level": {
+			"type": "integer",
+			"minimum": 0,
+			"description": "The level of Unbreaking to grant.",
+			"markdownDescription": "The level of Unbreaking to grant."
+		}
+	}
+}

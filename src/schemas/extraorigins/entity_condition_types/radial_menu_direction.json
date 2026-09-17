@@ -1,15 +1,20 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
-	"required": ["direction"],
+	"required": ["power", "direction"],
 	"properties": {
 		"type": {
 			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the entity's radial direction from a Radial Menu power is the same as the `direction` field",
 			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nReturns true if the entity's radial direction from a Radial Menu power is the same as the `direction` field"
 		},
+		"power": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"description": "The namespace and ID of the Radial Menu power to check the direction of.",
+			"markdownDescription": "The namespace and ID of the Radial Menu power to check the direction of."
+		},
 		"direction": {
 			"type": "string",
-			"enum": ["up", "down", "left", "right", "forward", "backward"],
+			"enum": ["up", "down", "left", "right"],
 			"description": "The direction of the radial menu.",
 			"markdownDescription": "The direction of the radial menu."
 		}

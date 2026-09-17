@@ -1,0 +1,41 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": ["item_condition", "slot"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nModifies the attributes of items held or worn by the entity.",
+			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nModifies the attributes of items held or worn by the entity."
+		},
+		"modifier": {
+			"$ref": "$ref(apoli:types/attributed_attribute_modifier_arrayable)"
+		},
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attributed_attribute_modifier_arrayable)"
+			}
+		},
+		"update_health": {
+			"type": "boolean",
+			"default": true
+		},
+		"item_condition": {
+			"$ref": "$ref(apoli:item_condition)",
+			"description": "Only items that fulfill this item condition will have their attributes modified.",
+			"markdownDescription": "Only items that fulfill this item condition will have their attributes modified."
+		},
+		"slot": {
+			"enum": ["any", "mainhand", "offhand", "hand", "head", "chest", "legs", "feet", "armor", "body"],
+			"description": "The equipment slot(s) the item must be in for its attributes to be modified.",
+			"markdownDescription": "The equipment slot(s) the item must be in for its attributes to be modified."
+		},
+		"tick_rate": {
+			"type": "integer",
+			"minimum": 0,
+			"default": 10,
+			"description": "How often (in ticks) the entity's equipped items should be re-checked.",
+			"markdownDescription": "How often (in ticks) the entity's equipped items should be re-checked."
+		}
+	}
+}

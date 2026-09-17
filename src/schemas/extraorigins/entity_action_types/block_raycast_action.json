@@ -1,0 +1,34 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": ["block_condition"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nRaycasts for a block in front of the entity, and runs the specified block/entity actions if it fulfills the block condition.",
+			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nRaycasts for a block in front of the entity, and runs the specified block/entity actions if it fulfills the block condition."
+		},
+		"block_condition": {
+			"$ref": "$ref(apoli:block_condition)",
+			"description": "The block condition the raycasted block must fulfill for the block/entity actions to run.",
+			"markdownDescription": "The block condition the raycasted block must fulfill for the block/entity actions to run."
+		},
+		"block_action": {
+			"$ref": "$ref(apoli:block_action)"
+		},
+		"block_actions": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:block_action)"
+			}
+		},
+		"entity_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"entity_actions": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:entity_action)"
+			}
+		}
+	}
+}

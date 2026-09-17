@@ -1,0 +1,19 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nModifies the range at which hostile mobs can detect the entity.",
+			"markdownDescription": "### ⚠️ Requires [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) to be installed! ⚠️\n\nModifies the range at which hostile mobs can detect the entity."
+		},
+		"modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier_arrayable)"
+		},
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier_arrayable)"
+			}
+		}
+	}
+}
