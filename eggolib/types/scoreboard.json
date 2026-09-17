@@ -1,0 +1,1 @@
+{"type":"object","required":["name","objective"],"properties":{"name":{"type":"string","description":"The name of the score holder or a target selector.","markdownDescription":"The name of the score holder or a target selector."},"objective":{"type":"string","description":"The name of the scoreboard objective.","markdownDescription":"The name of the scoreboard objective."}}}
