@@ -16,6 +16,8 @@
 		"build": "tsx ./src/index.ts --once",
 		"dev": "tsx ./src/index.ts --dev",
 		"generate-templates": "tsx ./src/generateTemplates.ts",
+		"validate": "tsx ./src/validateSchemas.ts",
+		"test": "yarn build --workflow && yarn validate",
 		"format": "prettier --write src/**/*"
 	},
 	"devDependencies": {
@@ -26,6 +28,7 @@
 		"@types/terminal-kit": "^2.5.6",
 		"@typescript-eslint/eslint-plugin": "^7.0.2",
 		"@typescript-eslint/parser": "^7.0.2",
+		"ajv": "^8.20.0",
 		"esbuild": "^0.20.1",
 		"eslint": "^8.56.0",
 		"marked": "^15.0.7",

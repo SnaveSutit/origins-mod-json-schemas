@@ -12,8 +12,7 @@
 			"$ref": "$ref(apoli:types/identifier)"
 		},
 		"block_state": {
-			"type": "string",
-			"enum": []
+			"type": "string"
 		},
 		"blocks": {
 			"type": "array",
@@ -24,8 +23,7 @@
 		"block_states": {
 			"type": "array",
 			"items": {
-				"type": "array",
-				"enum": []
+				"type": "string"
 			}
 		},
 		"block_action": {

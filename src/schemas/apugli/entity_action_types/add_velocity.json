@@ -56,7 +56,7 @@
 			}
 		},
 		"space": {
-			"type": "space",
+			"$ref": "$ref(apoli:types/space)",
 			"default": "world"
 		},
 		"client": {
