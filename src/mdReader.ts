@@ -101,8 +101,19 @@ async function fetchMDFileCached(url: string): Promise<string> {
 function processDescription(description: string, mdFile: MDFile) {
 	let link = MD_LINK_REGEX.exec(description)
 	while (link) {
-		const { name } = normalizeLinkMatch(link)
-		description = description.replace(link[0], `[${name}](${mdFile.docsUrl})`)
+		const { name, target } = normalizeLinkMatch(link)
+		// Reference-style targets (eggolib's `[name][2]` links) are footnote markers,
+		// not resolvable paths - there's no footnote-definition pass to resolve them
+		// against, so those fall back to the file's own docsUrl like before.
+		// Absolute URLs (eg. links to other doc sites) are left untouched, relative
+		// links are resolved against the current file's path to find their docsUrl.
+		const url =
+			link.groups!.refTarget !== undefined
+				? mdFile.docsUrl
+				: /^https?:\/\//.test(target)
+					? target
+					: MDFile.fromRawURL(pathToUrl(mdFile.url, target)).docsUrl
+		description = description.replace(link[0], `[${name}](${url})`)
 		link = MD_LINK_REGEX.exec(description)
 	}
 
