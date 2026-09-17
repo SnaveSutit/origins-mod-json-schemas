@@ -1905,8 +1905,8 @@
 																]
 															}
 														},
-														"description": "Specifies which character in the pattern corresponds to which [Ingredient](https://origins.readthedocs.io/en/latest/types/data_types/crafting_recipe).",
-														"markdownDescription": "Specifies which character in the pattern corresponds to which [Ingredient](https://origins.readthedocs.io/en/latest/types/data_types/crafting_recipe)."
+														"description": "Specifies which character in the pattern corresponds to which [Ingredient](https://origins.readthedocs.io/en/latest/types/data_types/ingredient).",
+														"markdownDescription": "Specifies which character in the pattern corresponds to which [Ingredient](https://origins.readthedocs.io/en/latest/types/data_types/ingredient)."
 													}
 												}
 											}

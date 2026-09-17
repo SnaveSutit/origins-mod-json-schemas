@@ -243,8 +243,8 @@
 					],
 					"properties": {
 						"key": {
-							"description": "A string specifying the keybinding. See [Keybindings](https://origins.readthedocs.io/en/latest/types/data_types/key) for possible values.",
-							"markdownDescription": "A string specifying the keybinding. See [Keybindings](https://origins.readthedocs.io/en/latest/types/data_types/key) for possible values.",
+							"description": "A string specifying the keybinding. See [Keybindings](https://origins.readthedocs.io/en/latest/misc/extras/keybindings) for possible values.",
+							"markdownDescription": "A string specifying the keybinding. See [Keybindings](https://origins.readthedocs.io/en/latest/misc/extras/keybindings) for possible values.",
 							"anyOf": {
 								"$ref": "#/properties/key/definitions/key/anyOf"
 							}
