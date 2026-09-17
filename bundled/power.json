@@ -27131,7 +27131,7 @@
 																			"power_type": {
 																				"allOf": [
 																					{
-																						"$ref": "#/"
+																						"$ref": "#"
 																					}
 																				],
 																				"description": "Left side of the equation, and the resource that stores the result.Right side of the equation, and the resource that stores the value.",
