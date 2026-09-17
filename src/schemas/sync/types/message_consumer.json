@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=data_types/message_consumer",
+	"type": "object",
+	"properties": {
+		"filter": {
+			"type": "string"
+		},
+		"before_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"after_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"replacement": {
+			"type": "string"
+		},
+		"prevent": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/entity_set_size",
+	"type": "object",
+	"required": ["set", "comparison", "compare_to"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"set": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"description": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to check.",
+			"markdownDescription": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to check."
+		},
+		"comparison": {
+			"$ref": "$ref(apoli:types/comparison)"
+		},
+		"compare_to": {
+			"type": "integer"
+		}
+	}
+}

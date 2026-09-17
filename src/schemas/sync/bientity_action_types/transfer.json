@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_actions/transfer",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"mode": {
+			"enum": ["steal", "give", "auto"],
+			"default": "steal"
+		},
+		"source": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"transfer_source": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"default": "sync:transferred"
+		},
+		"strip_from_donor": {
+			"type": "boolean",
+			"default": true
+		},
+		"actor_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"target_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		}
+	}
+}

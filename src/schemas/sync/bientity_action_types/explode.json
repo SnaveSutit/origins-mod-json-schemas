@@ -1,0 +1,33 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_actions/explode",
+	"type": "object",
+	"required": ["power"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"power": {
+			"type": "number"
+		},
+		"destruction_type": {
+			"$ref": "$ref(apoli:types/destruction_type)",
+			"default": "destroy"
+		},
+		"create_fire": {
+			"type": "boolean",
+			"default": false
+		},
+		"at_target": {
+			"type": "boolean",
+			"default": false
+		},
+		"indestructible": {
+			"$ref": "$ref(apoli:block_condition)"
+		},
+		"destructible": {
+			"$ref": "$ref(apoli:block_condition)"
+		}
+	}
+}

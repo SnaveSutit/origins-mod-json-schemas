@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/print",
+	"type": "object",
+	"required": ["message"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"message": {
+			"type": "string"
+		},
+		"show_in_chat": {
+			"type": "boolean",
+			"default": false
+		},
+		"logger_id": {
+			"type": "string",
+			"default": "Sync/PrintAction"
+		}
+	}
+}

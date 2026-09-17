@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=power_types/action_on_death",
+	"type": "object",
+	"required": ["bientity_action"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		},
+		"damage_condition": {
+			"$ref": "$ref(apoli:damage_condition)"
+		}
+	}
+}

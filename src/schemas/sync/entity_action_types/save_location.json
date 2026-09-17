@@ -1,0 +1,19 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/save_location",
+	"type": "object",
+	"required": ["id"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"id": {
+			"type": "string"
+		},
+		"overwrite": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

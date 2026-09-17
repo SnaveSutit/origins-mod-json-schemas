@@ -24,6 +24,7 @@ export const BUNDLE_ENTRY_POINTS: Record<string, string> = {
 	'apoli/global_power_set.json': 'global_power_set.json',
 	'skillful/skill_tree_json.json': 'skill_tree_json.json',
 	'skillful/keybinding.json': 'keybinding.json',
+	'sync/keybind.json': 'sync_keybind.json',
 }
 
 /** Replaces object-identity cycles from dereference() with a `{ $ref }` to the first-visited path. */

@@ -1,0 +1,90 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=power_types/custom_projectile",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"cooldown": {
+			"type": "integer",
+			"default": 1
+		},
+		"hud_render": {
+			"$ref": "$ref(apoli:types/hud_render)",
+			"default": { "should_render": false }
+		},
+		"key": {
+			"$ref": "$ref(apoli:types/key)",
+			"default": { "key": "key.use" }
+		},
+		"texture_location": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"count": {
+			"type": "integer",
+			"default": 1
+		},
+		"interval": {
+			"type": "integer",
+			"default": 0
+		},
+		"start_delay": {
+			"type": "integer",
+			"default": 0
+		},
+		"speed": {
+			"type": "number",
+			"default": 1.5
+		},
+		"divergence": {
+			"type": "number",
+			"default": 1.0
+		},
+		"sound": {
+			"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)"
+		},
+		"tag": {
+			"$ref": "$ref(apoli:types/nbt)"
+		},
+		"allow_conditional_cancelling": {
+			"type": "boolean",
+			"default": false
+		},
+		"block_action_cancels_miss_action": {
+			"type": "boolean",
+			"default": false
+		},
+		"entity_action_before_firing": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"bientity_action_after_firing": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"block_action_on_hit": {
+			"$ref": "$ref(apoli:block_action)"
+		},
+		"bientity_action_on_miss": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"bientity_action_on_hit": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"owner_target_bientity_action_on_hit": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"tick_bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"block_condition": {
+			"$ref": "$ref(apoli:block_condition)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		},
+		"owner_bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		}
+	}
+}

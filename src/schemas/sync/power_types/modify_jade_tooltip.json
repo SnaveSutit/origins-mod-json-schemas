@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=mod_compat/modify_jade_tooltip",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) AND [Jade](https://modrinth.com/mod/jade) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) AND [Jade](https://modrinth.com/mod/jade) to be installed! ⚠️\n\n"
+		},
+		"hide_tooltip": {
+			"type": "boolean",
+			"default": false
+		},
+		"display_name": {
+			"$ref": "$ref(apoli:types/text_component)"
+		},
+		"hide_health": {
+			"type": "boolean",
+			"default": false
+		},
+		"hide_armor": {
+			"type": "boolean",
+			"default": false
+		},
+		"hide_potion_effects": {
+			"type": "boolean",
+			"default": false
+		},
+		"priority": {
+			"type": "integer",
+			"default": 0
+		},
+		"entity_condition": {
+			"$ref": "$ref(apoli:entity_condition)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		}
+	}
+}

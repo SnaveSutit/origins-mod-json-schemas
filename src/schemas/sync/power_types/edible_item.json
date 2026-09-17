@@ -1,0 +1,51 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=power_types/edible_item",
+	"type": "object",
+	"required": ["food_component"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"item_condition": {
+			"$ref": "$ref(apoli:item_condition)"
+		},
+		"food_component": {
+			"$ref": "$ref(apoli:types/food_component)"
+		},
+		"entity_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"item_action": {
+			"$ref": "$ref(apoli:item_action)"
+		},
+		"result_item_action": {
+			"$ref": "$ref(apoli:item_action)"
+		},
+		"result_stack": {
+			"$ref": "$ref(apoli:types/item_stack)"
+		},
+		"consume_animation": {
+			"enum": ["EAT", "DRINK"],
+			"default": "EAT"
+		},
+		"consume_sound": {
+			"$ref": "$ref(apoli:types/autofill_helpers/sound_identifier)",
+			"default": "minecraft:entity.generic.eat"
+		},
+		"consuming_time_modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"consuming_time_modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		},
+		"priority": {
+			"type": "integer",
+			"default": 0
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/change_slot",
+	"type": "object",
+	"required": ["slot_a", "slot_b"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"slot_a": {
+			"$ref": "$ref(apoli:types/item_slot)"
+		},
+		"slot_b": {
+			"$ref": "$ref(apoli:types/item_slot)"
+		},
+		"operation": {
+			"enum": ["swap", "move"],
+			"default": "swap"
+		},
+		"inventory_type": {
+			"$ref": "$ref(apoli:types/inventory_type)",
+			"default": "inventory"
+		},
+		"power": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"description": "Required when `inventory_type` is `power`. Points to an `apoli:inventory` power.",
+			"markdownDescription": "Required when `inventory_type` is `power`. Points to an `apoli:inventory` power."
+		}
+	}
+}

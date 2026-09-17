@@ -1,0 +1,57 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=data_types/body_part_modifier_entry",
+	"type": "object",
+	"properties": {
+		"body_part": {
+			"enum": [
+				"any",
+				"head",
+				"torso",
+				"chest",
+				"back",
+				"left_arm",
+				"right_arm",
+				"legs",
+				"feet",
+				"achilles_heel"
+			]
+		},
+		"x_min": {
+			"type": "number",
+			"default": -1.0
+		},
+		"x_max": {
+			"type": "number",
+			"default": 1.0
+		},
+		"y_min": {
+			"type": "number",
+			"default": 0.0
+		},
+		"y_max": {
+			"type": "number",
+			"default": 1.0
+		},
+		"z_min": {
+			"type": "number",
+			"default": -1.0
+		},
+		"z_max": {
+			"type": "number",
+			"default": 1.0
+		},
+		"modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		}
+	}
+}

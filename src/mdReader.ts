@@ -29,6 +29,10 @@ export const MODULES = {
 		rawUrl: 'https://raw.githubusercontent.com/UltrusBot/Mob-Origin-Docs/master/docs/',
 		docsUrl: 'https://moborigins.ultrusmods.me/en/latest/',
 	},
+	sync: {
+		rawUrl: 'https://raw.githubusercontent.com/0vergrown/Sync-Documentation-Website/main/docs/',
+		docsUrl: 'https://0vergrown.github.io/Sync-Documentation-Website/?file=',
+	},
 	// proviorigins: {
 	// 	rawUrl: 'https://raw.githubusercontent.com/ThatRobin/ProviOrigins/main/docs/',
 	// 	docsUrl: 'https://github.com/Provismet/Provi-Origins/wiki/',
@@ -224,6 +228,7 @@ export class MDFile {
 		let path = url.replace(docsUrl, '')
 
 		if (path.endsWith('/')) path = path.slice(0, -1) + '.md'
+		else if (!path.endsWith('.md')) path = path + '.md'
 		return new MDFile(path, docsUrl, rawUrl)
 	}
 

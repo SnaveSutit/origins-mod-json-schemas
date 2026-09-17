@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/radial_menu",
+	"type": "object",
+	"required": ["entries"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"entries": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(sync:types/radial_menu_entry)"
+			}
+		},
+		"sprite_location": {
+			"$ref": "$ref(apoli:types/identifier)"
+		}
+	}
+}

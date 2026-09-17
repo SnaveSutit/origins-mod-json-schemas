@@ -1,0 +1,52 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/raycast",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"distance": {
+			"type": "number"
+		},
+		"block": {
+			"type": "boolean",
+			"default": true
+		},
+		"entity": {
+			"type": "boolean",
+			"default": true
+		},
+		"shape_type": {
+			"$ref": "$ref(apoli:types/shape_type)",
+			"default": "visual"
+		},
+		"fluid_handling": {
+			"$ref": "$ref(apoli:types/fluid_handling)",
+			"default": "any"
+		},
+		"space": {
+			"$ref": "$ref(apoli:types/space)",
+			"default": "world"
+		},
+		"direction": {
+			"$ref": "$ref(apoli:types/vector)"
+		},
+		"entity_distance": {
+			"type": "number"
+		},
+		"block_distance": {
+			"type": "number"
+		},
+		"match_bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		},
+		"hit_bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		},
+		"block_condition": {
+			"$ref": "$ref(apoli:block_condition)"
+		}
+	}
+}

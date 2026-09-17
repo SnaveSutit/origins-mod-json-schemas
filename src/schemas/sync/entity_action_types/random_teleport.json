@@ -1,0 +1,44 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/random_teleport",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"area_width": {
+			"type": "number",
+			"default": 8.0
+		},
+		"area_height": {
+			"type": "number",
+			"default": 8.0
+		},
+		"heightmap": {
+			"$ref": "$ref(apoli:types/heightmap_type)"
+		},
+		"attempts": {
+			"type": "integer"
+		},
+		"landing_block_condition": {
+			"$ref": "$ref(apoli:block_condition)"
+		},
+		"landing_condition": {
+			"$ref": "$ref(apoli:entity_condition)"
+		},
+		"landing_offset": {
+			"$ref": "$ref(apoli:types/vector)"
+		},
+		"loaded_chunks_only": {
+			"type": "boolean",
+			"default": true
+		},
+		"success_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"fail_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		}
+	}
+}

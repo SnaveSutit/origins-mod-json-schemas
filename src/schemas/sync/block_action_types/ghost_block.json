@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=block_actions/ghost_block",
+	"type": "object",
+	"required": ["block"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"block": {
+			"$ref": "$ref(apoli:types/autofill_helpers/block_identifier)"
+		},
+		"nbt": {
+			"$ref": "$ref(apoli:types/nbt)"
+		},
+		"tick": {
+			"type": "integer",
+			"default": 20
+		},
+		"block_action": {
+			"$ref": "$ref(apoli:block_action)"
+		},
+		"add_block": {
+			"type": "boolean",
+			"default": false
+		},
+		"end_action": {
+			"$ref": "$ref(apoli:block_action)"
+		}
+	}
+}

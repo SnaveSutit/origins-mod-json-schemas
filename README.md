@@ -21,6 +21,7 @@
   - [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds)
   - [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki)
   - [Skillful](https://skillful-docs.readthedocs.io/en/latest/)
+  - [Sync](https://modrinth.com/mod/sync)
 
 > [!IMPORTANT]
 > These schemas only officially support the latest version of Origins. If you are using an older version, some fields may be validated incorrectly.
@@ -77,6 +78,13 @@ When writing a JSON File, you can add the following field to the top of each JSO
   "$schema": "https://raw.githubusercontent.com/SnaveSutit/origins-mod-json-schemas/refs/heads/schemas/apoli/skill_tree.json"
   ```
   ⚠️ Requires the [Skillful](https://skillful-docs.readthedocs.io/en/latest/) mod to be installed!
+
+- For Sync Keybinds (`data/namespace/keybinds/`):
+
+  ```json
+  "$schema": "https://raw.githubusercontent.com/SnaveSutit/origins-mod-json-schemas/refs/heads/schemas/sync/keybind.json"
+  ```
+  ⚠️ Requires the [Sync](https://modrinth.com/mod/sync) mod to be installed!
 
 > [!TIP]
 > Building a tool that loads these schemas from **local files** rather than over HTTP (e.g. a VS Code extension bundling them via `contributes.jsonValidation`)? Use the self-contained versions under [`schemas/bundled/`](https://github.com/SnaveSutit/origins-mod-json-schemas/tree/schemas/bundled) instead of the per-file schemas elsewhere in the `schemas` branch. VS Code's local (`file://`) schema resolver has a longstanding bug where relative `$ref`s between files resolve against the wrong directory once a schema has more than ~10 `allOf`/`if`-`then` branches - the bundled files avoid that entirely by inlining everything into one file per entry point.

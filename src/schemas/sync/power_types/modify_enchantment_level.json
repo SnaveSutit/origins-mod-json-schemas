@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=power_types/modify_enchantment_level",
+	"type": "object",
+	"required": ["enchantment"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"enchantment": {
+			"$ref": "$ref(apoli:types/autofill_helpers/enchantment_identifier)"
+		},
+		"item_condition": {
+			"$ref": "$ref(apoli:item_condition)"
+		},
+		"modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/action_on_entity_set",
+	"type": "object",
+	"required": ["set", "bientity_action"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"set": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"description": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to act upon.",
+			"markdownDescription": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to act upon."
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		},
+		"limit": {
+			"type": "integer",
+			"default": 0
+		},
+		"reverse": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

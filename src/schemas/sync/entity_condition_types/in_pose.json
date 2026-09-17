@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/in_pose",
+	"type": "object",
+	"required": ["pose"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"pose": {
+			"enum": [
+				"STANDING",
+				"FALL_FLYING",
+				"SLEEPING",
+				"SWIMMING",
+				"SPIN_ATTACK",
+				"CROUCHING",
+				"LONG_JUMPING",
+				"DYING",
+				"CROAKING",
+				"USING_TONGUE",
+				"SITTING",
+				"ROARING",
+				"SNIFFING",
+				"EMERGING",
+				"DIGGING"
+			]
+		}
+	}
+}

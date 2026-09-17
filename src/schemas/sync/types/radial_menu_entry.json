@@ -1,0 +1,64 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=data_types/radial_menu_entry",
+	"type": "object",
+	"required": ["entity_action"],
+	"properties": {
+		"item": {
+			"$ref": "$ref(apoli:types/item_stack)"
+		},
+		"button_texture": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"icon": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"highlight_icon_texture": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"highlight_button_texture": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"entity_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"condition": {
+			"$ref": "$ref(apoli:entity_condition)"
+		},
+		"distance": {
+			"type": "integer",
+			"default": -1
+		},
+		"velocity": {
+			"type": "integer",
+			"default": -1
+		},
+		"tooltip": {
+			"$ref": "$ref(apoli:types/text_component)"
+		},
+		"button_width": {
+			"type": "integer",
+			"default": 16
+		},
+		"button_height": {
+			"type": "integer",
+			"default": 20
+		},
+		"icon_width": {
+			"type": "integer",
+			"default": 16
+		},
+		"icon_height": {
+			"type": "integer",
+			"default": 16
+		},
+		"item_width": {
+			"type": "integer",
+			"default": 16
+		},
+		"item_height": {
+			"type": "integer",
+			"default": 16
+		}
+	}
+}

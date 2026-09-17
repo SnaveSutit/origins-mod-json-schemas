@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/set_no_gravity",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"value": {
+			"type": "boolean",
+			"description": "If present, sets the entity's no-gravity flag to this value. If omitted, toggles the current value.",
+			"markdownDescription": "If present, sets the entity's no-gravity flag to this value. If omitted, toggles the current value."
+		}
+	}
+}

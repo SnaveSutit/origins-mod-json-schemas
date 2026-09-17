@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=data_types/model_part_transformations",
+	"type": "object",
+	"properties": {
+		"model_part": {
+			"enum": ["head", "hat", "body", "rightarm", "leftarm", "rightleg", "leftleg"]
+		},
+		"type": {
+			"enum": [
+				"pitch",
+				"yaw",
+				"roll",
+				"visible",
+				"hidden",
+				"xscale",
+				"yscale",
+				"zscale",
+				"pivotx",
+				"pivoty",
+				"pivotz"
+			]
+		},
+		"value": {
+			"type": "number"
+		},
+		"override_animation": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

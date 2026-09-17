@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_actions/summon_minion",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n"
+		},
+		"texture": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"default": "sync:textures/entity/minion_template.png"
+		},
+		"follow_owner": {
+			"type": "boolean"
+		},
+		"follow_offset": {
+			"$ref": "$ref(apoli:types/vector)"
+		},
+		"scale": {
+			"type": "number",
+			"default": 1.0
+		},
+		"invulnerable": {
+			"type": "boolean",
+			"default": false
+		},
+		"max_life_ticks": {
+			"type": "integer",
+			"default": 1200
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		}
+	}
+}

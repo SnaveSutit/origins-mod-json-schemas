@@ -1,0 +1,23 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://0vergrown.github.io/Sync-Documentation-Website/?file=data_types/data_driven_keybinds",
+	"type": "object",
+	"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\nDefines a server-side data-driven keybind, registered on the client when they join. Belongs at `data/<namespace>/keybinds/<id>.json`.",
+	"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\nDefines a server-side data-driven keybind, registered on the client when they join. Belongs at `data/<namespace>/keybinds/<id>.json`.",
+	"required": ["key", "category"],
+	"properties": {
+		"key": {
+			"type": "string",
+			"description": "The default GLFW key translation key (e.g. `key.keyboard.h`).",
+			"markdownDescription": "The default GLFW key translation key (e.g. `key.keyboard.h`)."
+		},
+		"category": {
+			"type": "string",
+			"description": "The Controls screen category this keybind is grouped under (e.g. `key.categories.misc`).",
+			"markdownDescription": "The Controls screen category this keybind is grouped under (e.g. `key.categories.misc`)."
+		},
+		"name": {
+			"type": "string"
+		}
+	}
+}

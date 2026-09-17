@@ -1,0 +1,28 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": ["id"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\nLets the actor save the target's location under the given ID, for later teleportation via [Teleport To Location](../entity_action_types/teleport_to_location.md).",
+			"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\nLets the actor save the target's location under the given ID, for later teleportation via [Teleport To Location](../entity_action_types/teleport_to_location.md)."
+		},
+		"id": {
+			"type": "string",
+			"description": "Unique identifier for this saved location.",
+			"markdownDescription": "Unique identifier for this saved location."
+		},
+		"overwrite": {
+			"type": "boolean",
+			"default": true,
+			"description": "Whether to overwrite an existing location with the same ID.",
+			"markdownDescription": "Whether to overwrite an existing location with the same ID."
+		},
+		"track_entity": {
+			"type": "boolean",
+			"default": false,
+			"description": "If true, the saved location follows the target across future ticks (resolved at teleport time); otherwise the target's current position is frozen as a static location.",
+			"markdownDescription": "If true, the saved location follows the target across future ticks (resolved at teleport time); otherwise the target's current position is frozen as a static location."
+		}
+	}
+}
