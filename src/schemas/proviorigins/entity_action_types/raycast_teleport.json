@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Raycast-Teleport",
+	"type": "object",
+	"required": ["distance", "destination"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"distance": {
+			"type": "number"
+		},
+		"destination": {
+			"enum": ["direct", "on_top"]
+		},
+		"allow_water": {
+			"type": "boolean",
+			"default": false
+		},
+		"allow_lava": {
+			"type": "boolean",
+			"default": false
+		},
+		"shape_type": {
+			"$ref": "$ref(apoli:types/shape_type)",
+			"default": "outline"
+		},
+		"fluid_handling": {
+			"$ref": "$ref(apoli:types/fluid_handling)",
+			"default": "any"
+		},
+		"success_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"miss_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		}
+	}
+}

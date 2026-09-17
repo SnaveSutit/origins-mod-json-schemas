@@ -1,0 +1,19 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Modify-Passenger-Height",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"offset_add": {
+			"type": "number",
+			"default": 0.0
+		},
+		"offset_multiply": {
+			"type": "number",
+			"default": 1.0
+		}
+	}
+}

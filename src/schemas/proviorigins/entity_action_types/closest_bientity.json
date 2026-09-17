@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Act-On-Closest",
+	"type": "object",
+	"required": ["distance", "bientity_action", "bientity_condition"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"distance": {
+			"type": "number"
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		}
+	}
+}

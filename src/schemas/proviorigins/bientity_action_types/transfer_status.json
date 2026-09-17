@@ -1,0 +1,35 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Status-Transfer",
+	"type": "object",
+	"required": ["cleanse_self"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"status_types": {
+			"type": "array",
+			"items": {
+				"enum": ["beneficial", "neutral", "harmful"]
+			}
+		},
+		"effects": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/autofill_helpers/status_effect_identifier)"
+			}
+		},
+		"cleanse_self": {
+			"type": "boolean"
+		},
+		"amplifier_multiplier": {
+			"type": "number",
+			"default": 1.0
+		},
+		"duration_multiplier": {
+			"type": "number",
+			"default": 1.0
+		}
+	}
+}

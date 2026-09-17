@@ -1,0 +1,49 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Particle-Ring",
+	"type": "object",
+	"required": ["radius", "step_size", "particle"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"radius": {
+			"type": "number"
+		},
+		"step_size": {
+			"type": "number"
+		},
+		"count": {
+			"type": "integer",
+			"default": 1
+		},
+		"offset_x": {
+			"type": "number",
+			"default": 0.0
+		},
+		"offset_y": {
+			"type": "number",
+			"default": 0.25
+		},
+		"offset_z": {
+			"type": "number",
+			"default": 0.0
+		},
+		"space": {
+			"$ref": "$ref(apoli:types/space)",
+			"default": "local"
+		},
+		"on_ground": {
+			"type": "boolean",
+			"default": true
+		},
+		"speed": {
+			"type": "number",
+			"default": 0.0
+		},
+		"particle": {
+			"$ref": "$ref(apoli:types/particle_effect)"
+		}
+	}
+}

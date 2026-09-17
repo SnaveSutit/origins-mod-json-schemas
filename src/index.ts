@@ -86,7 +86,9 @@ async function processSchemaProperties(schema: JSONSchema, path: string) {
 			!ignoredProperties.includes('type') &&
 			(url.match(/.+(?:action|condition|power)_types/) ||
 				// Epoli uses a worse naming convention :(
-				url.match(/.+(?:action|condition|powertype)s/))
+				url.match(/.+(?:action|condition|powertype)s/) ||
+				// Provi's Origins wiki pages have no category segment in their URL at all.
+				url.match(/github\.com\/Provismet\/Provi-Origins\/wiki\//))
 		) {
 			schema.properties ??= {}
 			const typeObj = (schema.properties.type ??= {})

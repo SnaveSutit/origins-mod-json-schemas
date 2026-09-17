@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Action-On-Detect-Vibration",
+	"type": "object",
+	"required": ["range", "bientity_action"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"range": {
+			"type": "number"
+		},
+		"game_event_tag": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"default": "minecraft:warden_can_listen"
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		}
+	}
+}

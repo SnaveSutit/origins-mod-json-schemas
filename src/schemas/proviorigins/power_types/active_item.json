@@ -1,0 +1,41 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Active-Item",
+	"type": "object",
+	"required": ["entity_action"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"entity_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"item_condition": {
+			"$ref": "$ref(apoli:item_condition)"
+		},
+		"consume_condition": {
+			"$ref": "$ref(apoli:entity_condition)"
+		},
+		"consume_amount": {
+			"type": "integer",
+			"default": 1
+		},
+		"swing_arm": {
+			"type": "boolean",
+			"default": true
+		},
+		"cooldown": {
+			"type": "integer",
+			"default": 1
+		},
+		"hud_render": {
+			"$ref": "$ref(apoli:types/hud_render)",
+			"default": { "should_render": false }
+		},
+		"key": {
+			"$ref": "$ref(apoli:types/key)",
+			"default": { "key": "key.origins.primary_active" }
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Action-On-Gain-Experience",
+	"type": "object",
+	"required": ["entity_action"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"entity_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"comparison": {
+			"default": ">=",
+			"$ref": "$ref(apoli:types/comparison)"
+		},
+		"compare_to": {
+			"type": "integer",
+			"default": 1
+		}
+	}
+}

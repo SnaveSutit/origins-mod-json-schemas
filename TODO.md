@@ -8,7 +8,7 @@
 - [x] Add [Origins Extra Keybinds](https://www.curseforge.com/minecraft/mc-mods/origins-extra-keybinds) Support
 - [x] Add [Origins: Sync](https://modrinth.com/mod/sync) Support
   - [ ] AspectsLib-gated `set_entity_aspects` power and `has_aspect` condition are undocumented upstream - excluded for now.
-- [ ] Add [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) Support
+- [x] Add [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) Support
 
 - [x] Add autocompletion for particles, sounds, entities, blocks, and items.
 - [x] Add more autocompletion for string enums.

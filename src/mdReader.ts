@@ -33,10 +33,10 @@ export const MODULES = {
 		rawUrl: 'https://raw.githubusercontent.com/0vergrown/Sync-Documentation-Website/main/docs/',
 		docsUrl: 'https://0vergrown.github.io/Sync-Documentation-Website/?file=',
 	},
-	// proviorigins: {
-	// 	rawUrl: 'https://raw.githubusercontent.com/ThatRobin/ProviOrigins/main/docs/',
-	// 	docsUrl: 'https://github.com/Provismet/Provi-Origins/wiki/',
-	// },
+	proviorigins: {
+		rawUrl: 'https://raw.githubusercontent.com/wiki/Provismet/Provi-Origins/',
+		docsUrl: 'https://github.com/Provismet/Provi-Origins/wiki/',
+	},
 }
 
 // Matches both inline links `[name](target)` and reference-style links `[name][target]`
@@ -57,7 +57,9 @@ const FIELD_CAPTURE_REGEX =
 	/^\|?\s*(?<field>[^|\n\s]+?)\s*\|\s*(?<type>[^|\n]+?)\s*\|\s*(?<defaultValue>[^|\n]+?)?\s*\|\s*(?<description>[^|\n]+?)\s*?\|?$/gm
 const VALUES_TITLE_REGEX = /Value\s+?\| Description\n-+\|-+\n/gm
 const VALUE_CAPTURE_REGEX = /^(?<value>[^|]+?)\s*\|\s*(?<description>[^|\n]+?)$/gm
-const EXAMPLES_REGEX = /###\s*?Examples?\s*([^]+)/
+// Provi's Origins wiki pages use `##` for their section headings instead of the `###`
+// every other addon uses.
+const EXAMPLES_REGEX = /#{2,3}\s*?Examples?\s*([^]+)/
 const NOTE_REGEX = /^!!! (?<type>.+)\n\n(?<content>.+)$/gm
 
 const MDFILE_CACHE_PATH = './.mdFileCache.json'

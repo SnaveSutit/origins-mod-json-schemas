@@ -1,0 +1,26 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Illusioner-Mirror",
+	"type": "object",
+	"required": ["distance", "layers", "illusion_spread"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"distance": {
+			"type": "number"
+		},
+		"layers": {
+			"type": "integer"
+		},
+		"illusion_spread": {
+			"enum": ["line", "spread"]
+		},
+		"resource": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"description": "If present, the distance will be multiplied by the value of this Resource or Cooldown power. This allows the illusion distance to be variable.",
+			"markdownDescription": "If present, the distance will be multiplied by the value of this Resource or Cooldown power. This allows the illusion distance to be variable."
+		}
+	}
+}

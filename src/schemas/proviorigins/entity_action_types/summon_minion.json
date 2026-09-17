@@ -1,0 +1,37 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://github.com/Provismet/Provi-Origins/wiki/Summon-Minion",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Provi's Origins](https://github.com/Provismet/Provi-Origins/wiki) to be installed! ⚠️\n\n"
+		},
+		"texture": {
+			"$ref": "$ref(apoli:types/identifier)",
+			"default": "proviorigins:textures/entity/minion_template.png"
+		},
+		"follow_owner": {
+			"type": "boolean"
+		},
+		"follow_offset": {
+			"$ref": "$ref(apoli:types/vector)",
+			"default": { "x": 0, "y": 0, "z": 0 }
+		},
+		"scale": {
+			"type": "number",
+			"default": 1.0
+		},
+		"invulnerable": {
+			"type": "boolean",
+			"default": false
+		},
+		"max_life_ticks": {
+			"type": "integer",
+			"default": 1200
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		}
+	}
+}
