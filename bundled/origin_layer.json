@@ -8820,6 +8820,136 @@
 																},
 																"x-intellij-html-description": "<h1>Is Dye</h1>\n<p>Checks if the item is a dye.</p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;item_condition&quot;: {\n        &quot;type&quot;: &quot;moborigins:is_dye&quot;\n    }\n}\n</code></pre>\n<p>Checks if the item is a dye.</p>\n"
 															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:fuel"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Fuel\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/fuel)\n\nChecks whether the item stack’s item is registered as fuel in the Fabric API's [Fuel Registry](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/fuel) and compares its burn time (in ticks) against a specified value.\n\nType ID: `sync:fuel`\n\n---\n\n### Examples\n```json\n{\n  \"type\": \"sync:fuel\",\n  \"comparison\": \">\",\n  \"compare_to\": 0\n}\n```\nCheck if the item is any fuel.\n```json\n{\n  \"type\": \"sync:fuel\",\n  \"comparison\": \">=\",\n  \"compare_to\": 100\n}\n```\nCheck if the item burns for at least 5 seconds (100 ticks).\n```json\n{\n  \"type\": \"sync:fuel\",\n  \"comparison\": \"<\",\n  \"compare_to\": 200\n}\n```\nCheck if the item burns for less than 10 seconds.",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Fuel\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/fuel)\n\nChecks whether the item stack’s item is registered as fuel in the Fabric API's [Fuel Registry](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/fuel) and compares its burn time (in ticks) against a specified value.\n\nType ID: `sync:fuel`\n\n---\n\n### Examples\n```json\n{\n  \"type\": \"sync:fuel\",\n  \"comparison\": \">\",\n  \"compare_to\": 0\n}\n```\nCheck if the item is any fuel.\n```json\n{\n  \"type\": \"sync:fuel\",\n  \"comparison\": \">=\",\n  \"compare_to\": 100\n}\n```\nCheck if the item burns for at least 5 seconds (100 ticks).\n```json\n{\n  \"type\": \"sync:fuel\",\n  \"comparison\": \"<\",\n  \"compare_to\": 200\n}\n```\nCheck if the item burns for less than 10 seconds."
+																	},
+																	"comparison": {
+																		"default": ">",
+																		"description": "How the item’s fuel burn time should be compared to `compare_to`.",
+																		"markdownDescription": "How the item’s fuel burn time should be compared to `compare_to`.",
+																		"enum": {
+																			"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/2/then/properties/comparison/enum"
+																		}
+																	},
+																	"compare_to": {
+																		"type": "integer",
+																		"default": 0,
+																		"description": "The value to compare the burn time against.",
+																		"markdownDescription": "The value to compare the burn time against."
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: Fuel (Item Condition Type)\ndate: 2024-12-20</h2>\n<h1>Fuel</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/item_condition_types/\">Item Condition Types</a></p>\n<p>Checks whether the item stack’s item is registered as fuel in the Fabric API&#39;s <a href=\"https://docs.fabricmc.net/develop/items/first-item#making-the-item-compostable-or-a-fuel\">Fuel Registry</a> and compares its burn time (in ticks) against a specified value.</p>\n<p>Type ID: <code>sync:fuel</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>comparison</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td><code>&gt;</code></td>\n<td>How the item’s fuel burn time should be compared to <code>compare_to</code>.</td>\n</tr>\n<tr>\n<td><code>compare_to</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td><code>0</code></td>\n<td>The value to compare the burn time against.</td>\n</tr>\n</tbody></table>\n<h3>How It Works</h3>\n<ul>\n<li>Queries the Fabric API&#39;s <code>FuelRegistry</code> to get the burn time (in ticks) for the item.</li>\n<li>If the item is not registered as fuel, the condition returns <code>false</code>.</li>\n<li>Otherwise, it compares the burn time to <code>compare_to</code> using the given <code>comparison</code>.</li>\n<li>Burn times are typically measured in game ticks (20 ticks = 1 second).</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:fuel&quot;,\n  &quot;comparison&quot;: &quot;&gt;&quot;,\n  &quot;compare_to&quot;: 0\n}\n</code></pre>\n<p>Check if the item is any fuel.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:fuel&quot;,\n  &quot;comparison&quot;: &quot;&gt;=&quot;,\n  &quot;compare_to&quot;: 100\n}\n</code></pre>\n<p>Check if the item burns for at least 5 seconds (100 ticks).</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:fuel&quot;,\n  &quot;comparison&quot;: &quot;&lt;&quot;,\n  &quot;compare_to&quot;: 200\n}\n</code></pre>\n<p>Check if the item burns for less than 10 seconds.</p>\n"
+															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:holder_condition"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Holder Condition\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/holder_condition)\n\nChecks whether the entity holding this item stack meets a given [Entity Condition](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/holder_condition). If the item stack has no holder, the condition returns `false`.\n\nType ID: `sync:holder_condition`\n\n---\n\n### Examples\n```json\n{\n  \"type\": \"sync:holder_condition\",\n  \"condition\": {\n    \"type\": \"apoli:entity_type\",\n    \"entity_type\": \"minecraft:player\"\n  }\n}\n```\nCheck if the holder is a player.\n```json\n{\n  \"type\": \"sync:holder_condition\",\n  \"condition\": {\n    \"type\": \"apoli:sneaking\"\n  }\n}\n```\nCheck if the holder is sneaking.\n```json\n{\n  \"type\": \"sync:holder_condition\"\n}\n```\nCheck if the stack is being held at all.",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Holder Condition\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/holder_condition)\n\nChecks whether the entity holding this item stack meets a given [Entity Condition](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/holder_condition). If the item stack has no holder, the condition returns `false`.\n\nType ID: `sync:holder_condition`\n\n---\n\n### Examples\n```json\n{\n  \"type\": \"sync:holder_condition\",\n  \"condition\": {\n    \"type\": \"apoli:entity_type\",\n    \"entity_type\": \"minecraft:player\"\n  }\n}\n```\nCheck if the holder is a player.\n```json\n{\n  \"type\": \"sync:holder_condition\",\n  \"condition\": {\n    \"type\": \"apoli:sneaking\"\n  }\n}\n```\nCheck if the holder is sneaking.\n```json\n{\n  \"type\": \"sync:holder_condition\"\n}\n```\nCheck if the stack is being held at all."
+																	},
+																	"condition": {
+																		"description": "The condition to test on the holder. If omitted, the condition simply returns `true` when a holder exists.",
+																		"markdownDescription": "The condition to test on the holder. If omitted, the condition simply returns `true` when a holder exists.",
+																		"type": "object",
+																		"required": {
+																			"$ref": "#/properties/origins/items/oneOf/1/properties/condition/required"
+																		},
+																		"properties": {
+																			"$ref": "#/properties/origins/items/oneOf/1/properties/condition/properties"
+																		},
+																		"allOf": {
+																			"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf"
+																		},
+																		"x-intellij-html-description": "<hr>\n<h2>title: Entity Condition Types\ndate: 2021-04-04</h2>\n<h1>Entity Condition Types</h1>\n<p>Entity Condition Types operate on an Entity, which also allows access to the world. These are available to be used in most powers in the <code>condition</code> object field (or <code>entity_condition</code> in other power/condition types), which restricts when a power is active.</p>\n<h3>List</h3>\n<ul>\n<li><a href=\"entity_condition_types/ability.md\">Ability</a></li>\n<li><a href=\"entity_condition_types/advancement.md\">Advancement</a></li>\n<li><a href=\"entity_condition_types/air.md\">Air</a></li>\n<li><a href=\"entity_condition_types/attribute.md\">Attribute</a></li>\n<li><a href=\"entity_condition_types/biome.md\">Biome</a></li>\n<li><a href=\"entity_condition_types/block_collision.md\">Block Collision</a></li>\n<li><a href=\"entity_condition_types/block_in_radius.md\">Block In Radius</a></li>\n<li><a href=\"entity_condition_types/brightness.md\">Brightness</a></li>\n<li><a href=\"entity_condition_types/climbing.md\">Climbing</a></li>\n<li><a href=\"entity_condition_types/collided_horizontally.md\">Collided Horizontally</a></li>\n<li><a href=\"entity_condition_types/command.md\">Command</a></li>\n<li><a href=\"entity_condition_types/creative_flying.md\">Creative Flying</a></li>\n<li><a href=\"entity_condition_types/daytime.md\">Daytime</a></li>\n<li><a href=\"entity_condition_types/dimension.md\">Dimension</a></li>\n<li><a href=\"entity_condition_types/distance_from_coordinates.md\">Distance From Coordinates</a></li>\n<li><a href=\"entity_condition_types/elytra_flight_possible.md\">Elytra Flight Possible</a></li>\n<li><a href=\"entity_condition_types/enchantment.md\">Enchantment</a></li>\n<li><a href=\"entity_condition_types/entity_group.md\">Entity Group</a></li>\n<li><a href=\"entity_condition_types/entity_type.md\">Entity Type</a></li>\n<li><a href=\"entity_condition_types/equipped_item.md\">Equipped Item</a></li>\n<li><a href=\"entity_condition_types/exists.md\">Exists</a></li>\n<li><a href=\"entity_condition_types/exposed_to_sky.md\">Exposed to Sky</a></li>\n<li><a href=\"entity_condition_types/exposed_to_sun.md\">Exposed to Sun</a></li>\n<li><a href=\"entity_condition_types/fall_distance.md\">Fall Distance</a></li>\n<li><a href=\"entity_condition_types/fall_flying.md\">Fall Flying</a></li>\n<li><a href=\"entity_condition_types/fluid_height.md\">Fluid Height</a></li>\n<li><a href=\"entity_condition_types/food_level.md\">Food Level</a></li>\n<li><a href=\"entity_condition_types/gamemode.md\">Gamemode</a></li>\n<li><a href=\"entity_condition_types/glowing.md\">Glowing</a></li>\n<li><a href=\"entity_condition_types/health.md\">Health</a></li>\n<li><a href=\"entity_condition_types/in_block_anywhere.md\">In Block Anywhere</a></li>\n<li><a href=\"entity_condition_types/in_block.md\">In Block</a></li>\n<li><a href=\"entity_condition_types/in_rain.md\">In Rain</a></li>\n<li><a href=\"entity_condition_types/in_snow.md\">In Snow</a></li>\n<li><a href=\"entity_condition_types/in_tag.md\">In Tag</a></li>\n<li><a href=\"entity_condition_types/in_thunderstorm.md\">In Thunderstorm</a></li>\n<li><a href=\"entity_condition_types/inventory.md\">Inventory</a></li>\n<li><a href=\"entity_condition_types/invisible.md\">Invisible</a></li>\n<li><a href=\"entity_condition_types/living.md\">Living</a></li>\n<li><a href=\"entity_condition_types/moving.md\">Moving</a></li>\n<li><a href=\"entity_condition_types/nbt.md\">NBT</a></li>\n<li><a href=\"entity_condition_types/on_block.md\">On Block</a></li>\n<li><a href=\"entity_condition_types/on_fire.md\">On Fire</a></li>\n<li><a href=\"entity_condition_types/origin.md\">Origin</a></li>\n<li><a href=\"entity_condition_types/passenger_recursive.md\">Passenger Recursive</a></li>\n<li><a href=\"entity_condition_types/passenger.md\">Passenger</a></li>\n<li><a href=\"entity_condition_types/power_active.md\">Power Active</a></li>\n<li><a href=\"entity_condition_types/power_type.md\">Power Type</a></li>\n<li><a href=\"entity_condition_types/power.md\">Power</a></li>\n<li><a href=\"entity_condition_types/predicate.md\">Predicate</a></li>\n<li><a href=\"entity_condition_types/raycast.md\">Raycast</a></li>\n<li><a href=\"entity_condition_types/relative_health.md\">Relative Health</a></li>\n<li><a href=\"entity_condition_types/resource.md\">Resource</a></li>\n<li><a href=\"entity_condition_types/riding_recursive.md\">Riding Recursive</a></li>\n<li><a href=\"entity_condition_types/riding_root.md\">Riding Root</a></li>\n<li><a href=\"entity_condition_types/riding.md\">Riding</a></li>\n<li><a href=\"entity_condition_types/saturation_level.md\">Saturation Level</a></li>\n<li><a href=\"entity_condition_types/scoreboard.md\">Scoreboard</a></li>\n<li><a href=\"entity_condition_types/set_size.md\">Set Size</a></li>\n<li><a href=\"entity_condition_types/sneaking.md\">Sneaking</a></li>\n<li><a href=\"entity_condition_types/sprinting.md\">Sprinting</a></li>\n<li><a href=\"entity_condition_types/status_effect.md\">Status Effect</a></li>\n<li><a href=\"entity_condition_types/submerged_in.md\">Submerged In</a></li>\n<li><a href=\"entity_condition_types/swimming.md\">Swimming</a></li>\n<li><a href=\"entity_condition_types/tamed.md\">Tamed</a></li>\n<li><a href=\"entity_condition_types/time_of_day.md\">Time Of Day</a></li>\n<li><a href=\"entity_condition_types/using_effective_tool.md\">Using Effective Tool</a></li>\n<li><a href=\"entity_condition_types/using_item.md\">Using Item</a></li>\n<li><a href=\"entity_condition_types/xp_levels.md\">XP Levels</a></li>\n<li><a href=\"entity_condition_types/xp_points.md\">XP Points</a></li>\n</ul>\n"
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: Holder Condition (Item Condition Type)\ndate: 2024-12-20</h2>\n<h1>Holder Condition</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/item_condition_types/\">Item Condition Types</a></p>\n<p>Checks whether the entity holding this item stack meets a given <a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition</a>. If the item stack has no holder, the condition returns <code>false</code>.</p>\n<p>Type ID: <code>sync:holder_condition</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>condition</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition</a></td>\n<td><em>optional</em></td>\n<td>The condition to test on the holder. If omitted, the condition simply returns <code>true</code> when a holder exists.</td>\n</tr>\n</tbody></table>\n<h3>How It Works</h3>\n<ul>\n<li>The item stack must be linked to a holder (as described in <a href=\"../item_actions/holder_action.md\"><code>Holder Action</code></a> Item Action).</li>\n<li>If <code>condition</code> is provided, it is evaluated on the holder entity; the overall condition succeeds if the holder exists and the condition passes.</li>\n<li>If <code>condition</code> is omitted, the condition succeeds if the stack has any holder at all.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:holder_condition&quot;,\n  &quot;condition&quot;: {\n    &quot;type&quot;: &quot;apoli:entity_type&quot;,\n    &quot;entity_type&quot;: &quot;minecraft:player&quot;\n  }\n}\n</code></pre>\n<p>Check if the holder is a player.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:holder_condition&quot;,\n  &quot;condition&quot;: {\n    &quot;type&quot;: &quot;apoli:sneaking&quot;\n  }\n}\n</code></pre>\n<p>Check if the holder is sneaking.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:holder_condition&quot;\n}\n</code></pre>\n<p>Check if the stack is being held at all.</p>\n"
+															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:mod_loaded"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Mod Loaded\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/mod_loaded)\n\nChecks whether one or more mods are currently loaded.\n\nType ID: `sync:mod_loaded`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:mod_loaded\",\n    \"mod\": \"simplyswords\"\n}\n```\nThis example checks if the Simply Swords mod is loaded.\n\n```json\n{\n    \"type\": \"apoli:and\",\n    \"conditions\": [\n        {\n            \"type\": \"apoli:ingredient\",\n            \"ingredient\": {\n                \"item\": \"simplyswords:iron_twinblade\"\n            }\n        },\n        {\n            \"type\": \"sync:mod_loaded\",\n            \"mod\": \"simplyswords\"\n        }\n    ]\n}\n```\nThis example checks if the item is a Simply Swords weapon AND the mod is loaded, preventing errors when the mod isn't installed.\n",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Mod Loaded\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/mod_loaded)\n\nChecks whether one or more mods are currently loaded.\n\nType ID: `sync:mod_loaded`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:mod_loaded\",\n    \"mod\": \"simplyswords\"\n}\n```\nThis example checks if the Simply Swords mod is loaded.\n\n```json\n{\n    \"type\": \"apoli:and\",\n    \"conditions\": [\n        {\n            \"type\": \"apoli:ingredient\",\n            \"ingredient\": {\n                \"item\": \"simplyswords:iron_twinblade\"\n            }\n        },\n        {\n            \"type\": \"sync:mod_loaded\",\n            \"mod\": \"simplyswords\"\n        }\n    ]\n}\n```\nThis example checks if the item is a Simply Swords weapon AND the mod is loaded, preventing errors when the mod isn't installed.\n"
+																	},
+																	"mod": {
+																		"type": "string",
+																		"description": "A single mod ID to check for",
+																		"markdownDescription": "A single mod ID to check for"
+																	},
+																	"mods": {
+																		"type": "array",
+																		"items": {
+																			"type": "string"
+																		},
+																		"description": "Multiple mod IDs (all must be loaded)",
+																		"markdownDescription": "Multiple mod IDs (all must be loaded)"
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: Mod Loaded (Item Condition)\ndate: 2024-12-20</h2>\n<h1>Mod Loaded</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/item_condition_types/\">Item Condition Types</a></p>\n<p>Checks whether one or more mods are currently loaded.</p>\n<p>Type ID: <code>sync:mod_loaded</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>mod</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>optional</em></td>\n<td>A single mod ID to check for</td>\n</tr>\n<tr>\n<td><code>mods</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/array/\">Array</a> of <a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>optional</em></td>\n<td>Multiple mod IDs (all must be loaded)</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>At least one of <code>mod</code> or <code>mods</code> must be provided</li>\n<li>If <code>mods</code> is used, ALL listed mods must be loaded for the condition to be true</li>\n<li>Use <code>&quot;inverted&quot;: true</code> to check if a mod is <strong>not</strong> loaded</li>\n<li>Mod IDs are case-sensitive (check your mod&#39;s <code>fabric.mod.json</code>)</li>\n<li>This is a runtime condition; it doesn&#39;t affect power JSON parsing</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:mod_loaded&quot;,\n    &quot;mod&quot;: &quot;simplyswords&quot;\n}\n</code></pre>\n<p>This example checks if the Simply Swords mod is loaded.</p>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;apoli:and&quot;,\n    &quot;conditions&quot;: [\n        {\n            &quot;type&quot;: &quot;apoli:ingredient&quot;,\n            &quot;ingredient&quot;: {\n                &quot;item&quot;: &quot;simplyswords:iron_twinblade&quot;\n            }\n        },\n        {\n            &quot;type&quot;: &quot;sync:mod_loaded&quot;,\n            &quot;mod&quot;: &quot;simplyswords&quot;\n        }\n    ]\n}\n</code></pre>\n<p>This example checks if the item is a Simply Swords weapon AND the mod is loaded, preventing errors when the mod isn&#39;t installed.</p>\n"
+															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:on_cooldown"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## On Cooldown\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/on_cooldown)\n\nChecks whether the item stack is currently on cooldown. Returns `true` if the item's type has an active cooldown in the holder's item cooldown manager.\n\nType ID: `sync:on_cooldown`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:on_cooldown\"\n}\n```\nReturns `true` if the item is currently on cooldown.\n",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## On Cooldown\n\n---\n\n\n[Item Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=item_conditions/on_cooldown)\n\nChecks whether the item stack is currently on cooldown. Returns `true` if the item's type has an active cooldown in the holder's item cooldown manager.\n\nType ID: `sync:on_cooldown`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:on_cooldown\"\n}\n```\nReturns `true` if the item is currently on cooldown.\n"
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: On Cooldown (Item Condition)\ndate: 2024-12-20</h2>\n<h1>On Cooldown</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/item_condition_types/\">Item Condition Types</a></p>\n<p>Checks whether the item stack is currently on cooldown. Returns <code>true</code> if the item&#39;s type has an active cooldown in the holder&#39;s item cooldown manager.</p>\n<p>Type ID: <code>sync:on_cooldown</code></p>\n<h3>Fields</h3>\n<p>This condition has no fields.</p>\n<h3>How It Works</h3>\n<ul>\n<li>The condition requires the item to be linked to a <code>PlayerEntity</code> (typically an item in the player&#39;s inventory or being held).</li>\n<li>Returns <code>true</code> if the player&#39;s item cooldown manager has an active cooldown for this item type.</li>\n<li>Returns <code>false</code> if the item is not being held by a player or if the item is not on cooldown.</li>\n<li>The cooldown is tracked by item type, so all instances of the same item share the same cooldown.</li>\n<li>Cooldowns are set using the <a href=\"../item_actions/cooldown.md\">Cooldown</a> item action or the <a href=\"../entity_actions/item_cooldown.md\">Item Cooldown</a> entity action.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:on_cooldown&quot;\n}\n</code></pre>\n<p>Returns <code>true</code> if the item is currently on cooldown.</p>\n"
+															}
 														}
 													],
 													"x-intellij-html-description": "<hr>\n<h2>title: Item Condition Types\ndate: 2021-04-05</h2>\n<h1>Item Condition Types</h1>\n<p>Item Condition Types operate on a combination of <code>World</code> and <code>ItemStack</code>, allowing to evaluate not only the stack of items, but also access the world for certain things, like accessing the recipe manager of the world (which is used by the <a href=\"item_condition_types/smeltable.md\">Smeltable (Item Condition Type)</a>).</p>\n<h3>List</h3>\n<ul>\n<li><a href=\"item_condition_types/amount.md\">Amount</a></li>\n<li><a href=\"item_condition_types/armor_value.md\">Armor Value</a></li>\n<li><a href=\"item_condition_types/durability.md\">Durability</a></li>\n<li><a href=\"item_condition_types/empty.md\">Empty</a></li>\n<li><a href=\"item_condition_types/enchantable.md\">Enchantable</a></li>\n<li><a href=\"item_condition_types/enchantment.md\">Enchantment</a></li>\n<li><a href=\"item_condition_types/fireproof.md\">Fireproof</a></li>\n<li><a href=\"item_condition_types/food.md\">Food</a></li>\n<li><a href=\"item_condition_types/fuel.md\">Fuel</a></li>\n<li><a href=\"item_condition_types/harvest_level.md\">Harvest Level</a></li>\n<li><a href=\"item_condition_types/has_power.md\">Has Power</a></li>\n<li><a href=\"item_condition_types/ingredient.md\">Ingredient</a></li>\n<li><a href=\"item_condition_types/is_damageable.md\">Is Damageable</a></li>\n<li><a href=\"item_condition_types/is_equippable.md\">Is Equippable</a></li>\n<li><a href=\"item_condition_types/meat.md\">Meat</a></li>\n<li><a href=\"item_condition_types/nbt.md\">NBT</a></li>\n<li><a href=\"item_condition_types/power_count.md\">Power Count</a></li>\n<li><a href=\"item_condition_types/relative_durability.md\">Relative Durability</a></li>\n<li><a href=\"item_condition_types/smeltable.md\">Smeltable</a></li>\n</ul>\n"
@@ -10682,6 +10812,145 @@
 																	}
 																},
 																"x-intellij-html-description": "<hr>\n<h2>title: Owner (Bi-entity Condition Type)\ndate: 2021-06-20</h2>\n<h1>Owner</h1>\n<p><a href=\"../bientity_condition_types.md\">Bi-entity Condition Type</a>.</p>\n<p>Checks if the target entity has the actor entity as its owner.</p>\n<p>Type ID: <code>apugli:hits_on_target</code></p>\n<p>!!! note\n    Unlike Apoli&#39;s <code>owner</code> bi-entity condition. This is additionally able to pick up the owner for projectiles and area effect clouds. If you&#39;re just using a Tameable entity, you can use that.</p>\n<h3>Fields</h3>\n<p><em>None.</em></p>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;apugli:owner&quot;\n}\n</code></pre>\n<p>This example checks if the target entity has the actor entity as the owner.</p>\n"
+															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:colliding"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Colliding\n\n---\n\n\n[Bi-entity Action Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/colliding)\n\nReturns `true` if the __actor__ entity's bounding box intersects the __target__ entity's bounding box. An optional offset can shift the actor's box before the test.\n\nType ID: `sync:colliding`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:colliding\"\n}\n```\nReturns `true` if the actor and target are physically overlapping.\n\n```json\n{\n  \"type\":\"sync:colliding\",\n  \"offset\":{\n    \"x\":0,\n    \"y\":0,\n    \"z\":1.5\n  }\n}\n```\nChecks if the actor's bounding box, shifted 1.5 blocks forward, overlaps the target.",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Colliding\n\n---\n\n\n[Bi-entity Action Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/colliding)\n\nReturns `true` if the __actor__ entity's bounding box intersects the __target__ entity's bounding box. An optional offset can shift the actor's box before the test.\n\nType ID: `sync:colliding`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:colliding\"\n}\n```\nReturns `true` if the actor and target are physically overlapping.\n\n```json\n{\n  \"type\":\"sync:colliding\",\n  \"offset\":{\n    \"x\":0,\n    \"y\":0,\n    \"z\":1.5\n  }\n}\n```\nChecks if the actor's bounding box, shifted 1.5 blocks forward, overlaps the target."
+																	},
+																	"offset": {
+																		"description": "Offsets the actor's bounding box by this amount before the intersection test",
+																		"markdownDescription": "Offsets the actor's bounding box by this amount before the intersection test",
+																		"type": "object",
+																		"properties": {
+																			"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/5/then/properties/block_condition/allOf/7/then/properties/offset/properties"
+																		}
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: Colliding (Bi-entity Condition)\ndate: 2024-01-07</h2>\n<h1>Colliding</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/bientity_action_types/\">Bi-entity Action Types</a></p>\n<p>Returns <code>true</code> if the <strong>actor</strong> entity&#39;s bounding box intersects the <strong>target</strong> entity&#39;s bounding box. An optional offset can shift the actor&#39;s box before the test.</p>\n<p>Type ID: <code>sync:colliding</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>offset</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/vector/\">Vector</a></td>\n<td><em>optional</em></td>\n<td>Offsets the actor&#39;s bounding box by this amount before the intersection test</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Both bounding boxes are used as-is from the entity&#39;s current position, no expansion or margin is applied.</li>\n<li>Returns <code>false</code> if either entity has no bounding box (e.g. spectators).</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:colliding&quot;\n}\n</code></pre>\n<p>Returns <code>true</code> if the actor and target are physically overlapping.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:colliding&quot;,\n  &quot;offset&quot;:{\n    &quot;x&quot;:0,\n    &quot;y&quot;:0,\n    &quot;z&quot;:1.5\n  }\n}\n</code></pre>\n<p>Checks if the actor&#39;s bounding box, shifted 1.5 blocks forward, overlaps the target.</p>\n"
+															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:command"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"required": [
+																	"command",
+																	"comparison",
+																	"compare_to"
+																],
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Command\n\n---\n\nCoded By: [Jade Juno](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/command)\n\n[Bi-entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/command)\n\nExecutes a command and checks its result (an integer) against a comparison. The command runs with the __actor__ entity as the command source. Placeholders in the command string are replaced with the UUIDs of the actor and target entities.\n\nType ID: `sync:command`\n\n---\n\n### Examples\n```json\n{\n  \"type\": \"sync:command\",\n  \"command\": \"execute store result score @s sync.distance run execute unless entity @s[distance=..10]\",\n  \"comparison\": \"==\",\n  \"compare_to\": 0\n}\n```\nCheck if the actor is within 10 blocks of the target (using `/execute store`). This is a bit contrived; in practice you would use an actual distance condition, but it demonstrates the concept.\n```json\n{\n  \"type\": \"sync:command\",\n  \"command\": \"data get entity %t Tags[0]\",\n  \"comparison\": \"==\",\n  \"compare_to\": 1\n}\n```\nCheck if the target has a specific tag. (Not a real use case; the point is that any command that returns a success count or a value can be used.)\n\n```json\n{\n  \"type\": \"sync:command\",\n  \"command\": \"data get entity %a XpLevel\",\n  \"comparison\": \">=\",\n  \"compare_to\": 5\n}\n```\nCheck if a player has a certain amount of XP. This condition would be `true` if the actor (a player) has at least 5 experience levels.\n\n### Notes\n- The command result is the __return value__ of the command. Usually this is the success count or the value stored by `/execute store ... run ...`.",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Command\n\n---\n\nCoded By: [Jade Juno](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/command)\n\n[Bi-entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/command)\n\nExecutes a command and checks its result (an integer) against a comparison. The command runs with the __actor__ entity as the command source. Placeholders in the command string are replaced with the UUIDs of the actor and target entities.\n\nType ID: `sync:command`\n\n---\n\n### Examples\n```json\n{\n  \"type\": \"sync:command\",\n  \"command\": \"execute store result score @s sync.distance run execute unless entity @s[distance=..10]\",\n  \"comparison\": \"==\",\n  \"compare_to\": 0\n}\n```\nCheck if the actor is within 10 blocks of the target (using `/execute store`). This is a bit contrived; in practice you would use an actual distance condition, but it demonstrates the concept.\n```json\n{\n  \"type\": \"sync:command\",\n  \"command\": \"data get entity %t Tags[0]\",\n  \"comparison\": \"==\",\n  \"compare_to\": 1\n}\n```\nCheck if the target has a specific tag. (Not a real use case; the point is that any command that returns a success count or a value can be used.)\n\n```json\n{\n  \"type\": \"sync:command\",\n  \"command\": \"data get entity %a XpLevel\",\n  \"comparison\": \">=\",\n  \"compare_to\": 5\n}\n```\nCheck if a player has a certain amount of XP. This condition would be `true` if the actor (a player) has at least 5 experience levels.\n\n### Notes\n- The command result is the __return value__ of the command. Usually this is the success count or the value stored by `/execute store ... run ...`."
+																	},
+																	"command": {
+																		"type": "string",
+																		"description": "The command to execute. Can contain placeholders `%a` (actor UUID) and `%t` (target UUID) which will be replaced before execution.",
+																		"markdownDescription": "The command to execute. Can contain placeholders `%a` (actor UUID) and `%t` (target UUID) which will be replaced before execution."
+																	},
+																	"actor_selector": {
+																		"type": "string",
+																		"default": "%a",
+																		"description": "The string in the command that should be replaced with the actor entity's UUID.",
+																		"markdownDescription": "The string in the command that should be replaced with the actor entity's UUID."
+																	},
+																	"target_selector": {
+																		"type": "string",
+																		"default": "%t",
+																		"description": "The string in the command that should be replaced with the target entity's UUID.",
+																		"markdownDescription": "The string in the command that should be replaced with the target entity's UUID."
+																	},
+																	"comparison": {
+																		"description": "How the command’s result value (an integer) should be compared to the specified value.",
+																		"markdownDescription": "How the command’s result value (an integer) should be compared to the specified value.",
+																		"enum": {
+																			"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/2/then/properties/comparison/enum"
+																		}
+																	},
+																	"compare_to": {
+																		"type": "integer",
+																		"description": "The value to compare the command result against.",
+																		"markdownDescription": "The value to compare the command result against."
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: Command (Bi-entity Condition Type)\ndate: 2026-03-01\ncoder: JadeJuno</h2>\n<h1>Command</h1>\n<p>Coded By: <a href=\"https://github.com/JadeJuno\">Jade Juno</a></p>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/bientity_condition_types/\">Bi-entity Condition Types</a></p>\n<p>Executes a command and checks its result (an integer) against a comparison. The command runs with the <strong>actor</strong> entity as the command source. Placeholders in the command string are replaced with the UUIDs of the actor and target entities.</p>\n<p>Type ID: <code>sync:command</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>command</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td></td>\n<td>The command to execute. Can contain placeholders <code>%a</code> (actor UUID) and <code>%t</code> (target UUID) which will be replaced before execution.</td>\n</tr>\n<tr>\n<td><code>actor_selector</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><code>&quot;%a&quot;</code></td>\n<td>The string in the command that should be replaced with the actor entity&#39;s UUID.</td>\n</tr>\n<tr>\n<td><code>target_selector</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><code>&quot;%t&quot;</code></td>\n<td>The string in the command that should be replaced with the target entity&#39;s UUID.</td>\n</tr>\n<tr>\n<td><code>comparison</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td></td>\n<td>How the command’s result value (an integer) should be compared to the specified value.</td>\n</tr>\n<tr>\n<td><code>compare_to</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td></td>\n<td>The value to compare the command result against.</td>\n</tr>\n</tbody></table>\n<h3>How It Works</h3>\n<ul>\n<li>The command is executed <strong>as the actor entity</strong> (same as <a href=\"../bientity_actions/execute_command.md\">Execute Command</a> Bi-Entity Action).</li>\n<li>Placeholders are replaced with the corresponding entity UUIDs.</li>\n<li>The command must return an integer result. This result is compared to <code>compare_to</code> using the given <code>comparison</code>.</li>\n<li>If the comparison succeeds, the condition returns <code>true</code>; otherwise <code>false</code>.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:command&quot;,\n  &quot;command&quot;: &quot;execute store result score @s sync.distance run execute unless entity @s[distance=..10]&quot;,\n  &quot;comparison&quot;: &quot;==&quot;,\n  &quot;compare_to&quot;: 0\n}\n</code></pre>\n<p>Check if the actor is within 10 blocks of the target (using <code>/execute store</code>). This is a bit contrived; in practice you would use an actual distance condition, but it demonstrates the concept.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:command&quot;,\n  &quot;command&quot;: &quot;data get entity %t Tags[0]&quot;,\n  &quot;comparison&quot;: &quot;==&quot;,\n  &quot;compare_to&quot;: 1\n}\n</code></pre>\n<p>Check if the target has a specific tag. (Not a real use case; the point is that any command that returns a success count or a value can be used.)</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:command&quot;,\n  &quot;command&quot;: &quot;data get entity %a XpLevel&quot;,\n  &quot;comparison&quot;: &quot;&gt;=&quot;,\n  &quot;compare_to&quot;: 5\n}\n</code></pre>\n<p>Check if a player has a certain amount of XP. This condition would be <code>true</code> if the actor (a player) has at least 5 experience levels.</p>\n<h3>Notes</h3>\n<ul>\n<li>The command result is the <strong>return value</strong> of the command. Usually this is the success count or the value stored by <code>/execute store ... run ...</code>.</li>\n</ul>\n"
+															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:disguised"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Disguised\n\n---\n\n\n[Bi-entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/disguised)\n\nChecks whether the __actor__ entity is disguised specifically as the __target__ entity.\n\nType ID: `sync:disguised`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:disguised\",\n  \"inverted\": true\n}\n```\nTrue when the actor is either not disguised, or disguised as something else than the target.",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Disguised\n\n---\n\n\n[Bi-entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/disguised)\n\nChecks whether the __actor__ entity is disguised specifically as the __target__ entity.\n\nType ID: `sync:disguised`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:disguised\",\n  \"inverted\": true\n}\n```\nTrue when the actor is either not disguised, or disguised as something else than the target."
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: Disguised (Bi-entity Condition Type)\ndate: 2026-03-01</h2>\n<h1>Disguised</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/bientity_condition_types/\">Bi-entity Condition Types</a></p>\n<p>Checks whether the <strong>actor</strong> entity is disguised specifically as the <strong>target</strong> entity.</p>\n<p>Type ID: <code>sync:disguised</code></p>\n<h3>Fields</h3>\n<p><em>This condition type has no fields.</em></p>\n<h3>How It Works</h3>\n<ul>\n<li>For <strong>player disguises</strong>, the condition returns <code>true</code> if the actor’s disguise target has the same UUID as the given target entity.</li>\n<li>For <strong>entity disguises</strong>, it returns <code>true</code> if the actor’s disguise target has the same entity type ID as the given target entity.</li>\n<li>Works on both server and client sides.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:disguised&quot;,\n  &quot;inverted&quot;: true\n}\n</code></pre>\n<p>True when the actor is either not disguised, or disguised as something else than the target.</p>\n"
+															}
+														},
+														{
+															"if": {
+																"required": [
+																	"type"
+																],
+																"properties": {
+																	"type": {
+																		"const": "sync:in_entity_set"
+																	}
+																}
+															},
+															"then": {
+																"type": "object",
+																"required": [
+																	"set"
+																],
+																"properties": {
+																	"type": {
+																		"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## In Entity Set\n\n---\n\n\nChecks if the target entity is contained within the actor's [Entity Set](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/in_entity_set) (Power Type).\n\nType ID: `sync:in_entity_set`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:in_entity_set\",\n    \"set\": {\n        \"power\": \"mymod:minion_set\"\n    }\n}\n```\nThis example checks if the target entity is one of the actor's minions.",
+																		"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## In Entity Set\n\n---\n\n\nChecks if the target entity is contained within the actor's [Entity Set](https://0vergrown.github.io/Sync-Documentation-Website/?file=bientity_conditions/in_entity_set) (Power Type).\n\nType ID: `sync:in_entity_set`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:in_entity_set\",\n    \"set\": {\n        \"power\": \"mymod:minion_set\"\n    }\n}\n```\nThis example checks if the target entity is one of the actor's minions."
+																	},
+																	"set": {
+																		"description": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to check.The Entity Set power to check",
+																		"markdownDescription": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to check.The Entity Set power to check",
+																		"type": "string",
+																		"pattern": "^(([a-z0-9_\\/\\-\\.\\*]+):)?[a-z0-9_\\/\\-\\.\\*]+$"
+																	}
+																},
+																"x-intellij-html-description": "<hr>\n<h2>title: In Entity Set (Bientity Condition)\ndate: 2024-01-07</h2>\n<h1>In Entity Set</h1>\n<p>Checks if the target entity is contained within the actor&#39;s <a href=\"../power_types/entity_set.md\">Entity Set</a> (Power Type).</p>\n<p>Type ID: <code>sync:in_entity_set</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>set</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/power_type/\">Power Type</a></td>\n<td></td>\n<td>The Entity Set power to check</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Checks if <code>target</code> is in <code>actor</code>&#39;s entity set</li>\n<li>Both entities must be valid and loaded</li>\n<li>Can be used to filter actions to only affect entities in a set</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:in_entity_set&quot;,\n    &quot;set&quot;: {\n        &quot;power&quot;: &quot;mymod:minion_set&quot;\n    }\n}\n</code></pre>\n<p>This example checks if the target entity is one of the actor&#39;s minions.</p>\n"
 															}
 														}
 													],
@@ -13656,6 +13925,581 @@
 												}
 											},
 											"x-intellij-html-description": "<h1>Time Since Rest</h1>\n<p>Checks how long the player has been sleeping, time is in ticks.</p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>comparison</td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td></td>\n<td>The comparison to use.</td>\n</tr>\n<tr>\n<td>compare_to</td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td></td>\n<td>The value to compare to.</td>\n</tr>\n</tbody></table>\n<h3>Example</h3>\n<pre><code class=\"language-json\">{\n        &quot;entity_condition&quot;: {\n            &quot;type&quot;: &quot;moborigins:time_since_rest&quot;,\n            &quot;comparison&quot;: &quot;greater_than&quot;,\n            &quot;compare_to&quot;: 100\n        }\n    }\n</code></pre>\n<p>Checks how long the player has been sleeping.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:attached_to_rope"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Attached to Rope\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope)\n\nChecks how many ropes a player currently has attached via [Attach Rope](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope), [Attach Rope Entity](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope), or [Rope Leash](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope) and compares that count against a target value.\n\nType ID: `sync:attached_to_rope`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\"\n}\n```\nTrue when the player holds at least one rope of any kind.\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\",\n  \"comparison\": \">=\",\n  \"compare_to\": 3\n}\n```\nTrue when the player is holding three or more ropes.\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\",\n  \"anchor_type\": \"leash\",\n  \"comparison\": \">\",\n  \"compare_to\": 0\n}\n```\nTrue when the player is holding at least one leash rope regardless of other rope types.\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\",\n  \"anchor_type\": \"swing\",\n  \"comparison\": \"==\",\n  \"compare_to\": 0\n}\n```\nTrue when the player has no swing-style ropes (they may still be holding leashes).\n",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Attached to Rope\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope)\n\nChecks how many ropes a player currently has attached via [Attach Rope](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope), [Attach Rope Entity](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope), or [Rope Leash](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/attached_to_rope) and compares that count against a target value.\n\nType ID: `sync:attached_to_rope`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\"\n}\n```\nTrue when the player holds at least one rope of any kind.\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\",\n  \"comparison\": \">=\",\n  \"compare_to\": 3\n}\n```\nTrue when the player is holding three or more ropes.\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\",\n  \"anchor_type\": \"leash\",\n  \"comparison\": \">\",\n  \"compare_to\": 0\n}\n```\nTrue when the player is holding at least one leash rope regardless of other rope types.\n\n```json\n{\n  \"type\": \"sync:attached_to_rope\",\n  \"anchor_type\": \"swing\",\n  \"comparison\": \"==\",\n  \"compare_to\": 0\n}\n```\nTrue when the player has no swing-style ropes (they may still be holding leashes).\n"
+												},
+												"anchor_type": {
+													"enum": [
+														"any",
+														"block",
+														"entity",
+														"leash",
+														"swing"
+													],
+													"default": "any",
+													"description": "Filters which ropes to count. One of `any`, `block`, `entity`, `leash`, `swing`.",
+													"markdownDescription": "Filters which ropes to count. One of `any`, `block`, `entity`, `leash`, `swing`."
+												},
+												"comparison": {
+													"default": ">=",
+													"description": "Comparison operator applied between the matching rope count and `compare_to`.",
+													"markdownDescription": "Comparison operator applied between the matching rope count and `compare_to`.",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/2/then/properties/comparison/enum"
+													}
+												},
+												"compare_to": {
+													"type": "integer",
+													"default": 1,
+													"description": "Value the rope count is compared against.",
+													"markdownDescription": "Value the rope count is compared against."
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Attached to Rope (Entity Condition)\ndate: 2026-04-19</h2>\n<h1>Attached to Rope</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Checks how many ropes a player currently has attached via <a href=\"../entity_actions/attach_rope.md\">Attach Rope</a>, <a href=\"../entity_actions/attach_rope_entity.md\">Attach Rope Entity</a>, or <a href=\"../bientity_actions/rope_leash.md\">Rope Leash</a> and compares that count against a target value.</p>\n<p>Type ID: <code>sync:attached_to_rope</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>anchor_type</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><code>any</code></td>\n<td>Filters which ropes to count. One of <code>any</code>, <code>block</code>, <code>entity</code>, <code>leash</code>, <code>swing</code>.</td>\n</tr>\n<tr>\n<td><code>comparison</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td><code>&gt;=</code></td>\n<td>Comparison operator applied between the matching rope count and <code>compare_to</code>.</td>\n</tr>\n<tr>\n<td><code>compare_to</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td><code>1</code></td>\n<td>Value the rope count is compared against.</td>\n</tr>\n</tbody></table>\n<h3>Anchor Types</h3>\n<table>\n<thead>\n<tr>\n<th>Filter</th>\n<th>Counts</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>any</code></td>\n<td>Every rope the player owns.</td>\n</tr>\n<tr>\n<td><code>block</code></td>\n<td>Ropes anchored to a static world-space point (produced by <code>sync:attach_rope</code>).</td>\n</tr>\n<tr>\n<td><code>entity</code></td>\n<td>Ropes whose anchor follows an entity - includes both self-swing and leash-style ropes.</td>\n</tr>\n<tr>\n<td><code>leash</code></td>\n<td>Leash-style ropes that pull the anchor toward the player (produced by <code>sync:rope_leash</code>).</td>\n</tr>\n<tr>\n<td><code>swing</code></td>\n<td>Non-leash ropes - block anchors plus entity anchors that pull the player toward the anchor.</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Always returns <code>false</code> for non-player entities.</li>\n<li>The condition reflects server-side rope state; it updates the moment a rope is attached or detached.</li>\n<li>With the defaults (<code>anchor_type: any</code>, <code>comparison: &gt;=</code>, <code>compare_to: 1</code>) the condition behaves as a simple &quot;has at least one rope&quot; check.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:attached_to_rope&quot;\n}\n</code></pre>\n<p>True when the player holds at least one rope of any kind.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:attached_to_rope&quot;,\n  &quot;comparison&quot;: &quot;&gt;=&quot;,\n  &quot;compare_to&quot;: 3\n}\n</code></pre>\n<p>True when the player is holding three or more ropes.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:attached_to_rope&quot;,\n  &quot;anchor_type&quot;: &quot;leash&quot;,\n  &quot;comparison&quot;: &quot;&gt;&quot;,\n  &quot;compare_to&quot;: 0\n}\n</code></pre>\n<p>True when the player is holding at least one leash rope regardless of other rope types.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:attached_to_rope&quot;,\n  &quot;anchor_type&quot;: &quot;swing&quot;,\n  &quot;comparison&quot;: &quot;==&quot;,\n  &quot;compare_to&quot;: 0\n}\n</code></pre>\n<p>True when the player has no swing-style ropes (they may still be holding leashes).</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:disguised"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Disguised\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/disguised)\n\nChecks whether the entity is currently disguised by the `Disguise` Bi-entity action.\n\nType ID: `sync:disguised`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:disguised\",\n  \"inverted\": true\n}\n```\nChecks when the entity is __not__ disguised.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Disguised\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/disguised)\n\nChecks whether the entity is currently disguised by the `Disguise` Bi-entity action.\n\nType ID: `sync:disguised`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:disguised\",\n  \"inverted\": true\n}\n```\nChecks when the entity is __not__ disguised."
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Disguised (Entity Condition Type)\ndate: 2026-03-01</h2>\n<h1>Disguised</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Checks whether the entity is currently disguised by the <code>Disguise</code> Bi-entity action.</p>\n<p>Type ID: <code>sync:disguised</code></p>\n<h3>Fields</h3>\n<p><em>This condition type has no fields.</em></p>\n<h3>How It Works</h3>\n<ul>\n<li>Works on both the <strong>server</strong> (using the server‑side disguise registry) and the <strong>client</strong> (using the client’s cached disguise data).</li>\n<li>Returns <code>true</code> if the entity has an active disguise of any kind (player skin swap or entity model replacement).</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:disguised&quot;,\n  &quot;inverted&quot;: true\n}\n</code></pre>\n<p>Checks when the entity is <strong>not</strong> disguised.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:entity_in_radius"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"required": [
+												"radius"
+											],
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Entity In Radius\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/entity_in_radius)\n\nCounts entities within a specified radius and compares the count against a value. Can filter entities with bi-entity conditions.\n\nType ID: `sync:entity_in_radius`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:entity_in_radius\",\n    \"bientity_condition\": {\n        \"type\": \"apoli:target_condition\",\n        \"condition\": {\n            \"type\": \"apoli:entity_type\",\n            \"entity_type\": \"minecraft:player\"\n        }\n    },\n    \"shape\": \"sphere\",\n    \"radius\": 10.0,\n    \"comparison\": \">=\",\n    \"compare_to\": 3\n}\n```\nThis example checks if there are at least 3 other players within 10 blocks.\n",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Entity In Radius\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/entity_in_radius)\n\nCounts entities within a specified radius and compares the count against a value. Can filter entities with bi-entity conditions.\n\nType ID: `sync:entity_in_radius`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:entity_in_radius\",\n    \"bientity_condition\": {\n        \"type\": \"apoli:target_condition\",\n        \"condition\": {\n            \"type\": \"apoli:entity_type\",\n            \"entity_type\": \"minecraft:player\"\n        }\n    },\n    \"shape\": \"sphere\",\n    \"radius\": 10.0,\n    \"comparison\": \">=\",\n    \"compare_to\": 3\n}\n```\nThis example checks if there are at least 3 other players within 10 blocks.\n"
+												},
+												"bientity_condition": {
+													"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/44/then/properties/bientity_condition/allOf/17/then/properties/conditions/items"
+												},
+												"shape": {
+													"default": "cube",
+													"description": "Determines the shape of the area used for checking how many entities fulfill the bi-entity condition.",
+													"markdownDescription": "Determines the shape of the area used for checking how many entities fulfill the bi-entity condition.",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/14/then/properties/shape/enum"
+													}
+												},
+												"radius": {
+													"type": "number",
+													"description": "Radius/distance for detection",
+													"markdownDescription": "Radius/distance for detection"
+												},
+												"comparison": {
+													"default": ">=",
+													"description": "How to compare the count",
+													"markdownDescription": "How to compare the count",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/2/then/properties/comparison/enum"
+													}
+												},
+												"compare_to": {
+													"type": "integer",
+													"default": 1,
+													"description": "Minimum number of entities required",
+													"markdownDescription": "Minimum number of entities required"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Entity In Radius (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Entity In Radius</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Counts entities within a specified radius and compares the count against a value. Can filter entities with bi-entity conditions.</p>\n<p>Type ID: <code>sync:entity_in_radius</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>bientity_condition</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/bientity_condition_types/\">Bi-Entity Condition</a></td>\n<td><em>optional</em></td>\n<td>Optional condition to filter counted entities</td>\n</tr>\n<tr>\n<td><code>shape</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/shape/\">Shape</a></td>\n<td><code>cube</code></td>\n<td>Determines the shape of the area used for checking how many entities fulfill the bi-entity condition.</td>\n</tr>\n<tr>\n<td><code>radius</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td></td>\n<td>Radius/distance for detection</td>\n</tr>\n<tr>\n<td><code>comparison</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td><code>&gt;=</code></td>\n<td>How to compare the count</td>\n</tr>\n<tr>\n<td><code>compare_to</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td><code>1</code></td>\n<td>Minimum number of entities required</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Counts entities at foot level (bounding box <code>minY</code>)</li>\n<li>Excludes the actor entity from the count</li>\n<li>Bi-entity condition receives: (<code>actor</code>, <code>target_entity</code>)</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:entity_in_radius&quot;,\n    &quot;bientity_condition&quot;: {\n        &quot;type&quot;: &quot;apoli:target_condition&quot;,\n        &quot;condition&quot;: {\n            &quot;type&quot;: &quot;apoli:entity_type&quot;,\n            &quot;entity_type&quot;: &quot;minecraft:player&quot;\n        }\n    },\n    &quot;shape&quot;: &quot;sphere&quot;,\n    &quot;radius&quot;: 10.0,\n    &quot;comparison&quot;: &quot;&gt;=&quot;,\n    &quot;compare_to&quot;: 3\n}\n</code></pre>\n<p>This example checks if there are at least 3 other players within 10 blocks.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:entity_set_size"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"required": [
+												"set",
+												"comparison",
+												"compare_to"
+											],
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Entity Set Size\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/entity_set_size)\n\nCompares the number of entities in an [Entity Set power](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/entity_set_size) against a value.\n\nType ID: `sync:entity_set_size`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:entity_set_size\",\n    \"set\": {\n        \"power\": \"mymod:minion_set\"\n    },\n    \"comparison\": \"<\",\n    \"compare_to\": 5\n}\n```\nThis example checks if the entity has fewer than 5 minions in its set.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Entity Set Size\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/entity_set_size)\n\nCompares the number of entities in an [Entity Set power](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/entity_set_size) against a value.\n\nType ID: `sync:entity_set_size`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:entity_set_size\",\n    \"set\": {\n        \"power\": \"mymod:minion_set\"\n    },\n    \"comparison\": \"<\",\n    \"compare_to\": 5\n}\n```\nThis example checks if the entity has fewer than 5 minions in its set."
+												},
+												"set": {
+													"description": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to check.The Entity Set power to check",
+													"markdownDescription": "The namespace and ID of the [Entity Set](../power_types/entity_set.md) power to check.The Entity Set power to check",
+													"type": "string",
+													"pattern": "^(([a-z0-9_\\/\\-\\.\\*]+):)?[a-z0-9_\\/\\-\\.\\*]+$"
+												},
+												"comparison": {
+													"description": "How to compare the size",
+													"markdownDescription": "How to compare the size",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/2/then/properties/comparison/enum"
+													}
+												},
+												"compare_to": {
+													"type": "integer",
+													"description": "Value to compare against",
+													"markdownDescription": "Value to compare against"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Entity Set Size (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Entity Set Size</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Compares the number of entities in an <a href=\"../power_types/entity_set.md\">Entity Set power</a> against a value.</p>\n<p>Type ID: <code>sync:entity_set_size</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>set</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/power_type/\">Power Type</a></td>\n<td></td>\n<td>The Entity Set power to check</td>\n</tr>\n<tr>\n<td><code>comparison</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td></td>\n<td>How to compare the size</td>\n</tr>\n<tr>\n<td><code>compare_to</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/integer/\">Integer</a></td>\n<td></td>\n<td>Value to compare against</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Only works on entities that have the specified Entity Set power</li>\n<li>Counts all entities currently in the set (including temporary ones)</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:entity_set_size&quot;,\n    &quot;set&quot;: {\n        &quot;power&quot;: &quot;mymod:minion_set&quot;\n    },\n    &quot;comparison&quot;: &quot;&lt;&quot;,\n    &quot;compare_to&quot;: 5\n}\n</code></pre>\n<p>This example checks if the entity has fewer than 5 minions in its set.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:has_command_tag"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Has Command Tag\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/has_command_tag)\n\nChecks if an entity has specific command tags. Command tags are metadata that can be added to entities using the `/tag` command.\n\nType ID: `sync:has_command_tag`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:has_command_tag\",\n    \"command_tag\": \"marked_for_death\"\n}\n```\nThis example checks if an entity has the `marked_for_death` tag.\n```json\n{\n    \"type\": \"sync:has_command_tag\",\n    \"command_tags\": [\n      \"team_red\",\n      \"alive\"\n    ]\n}\n```\nThis example checks if an entity has both \"team_red\" and \"alive\" tags.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Has Command Tag\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/has_command_tag)\n\nChecks if an entity has specific command tags. Command tags are metadata that can be added to entities using the `/tag` command.\n\nType ID: `sync:has_command_tag`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:has_command_tag\",\n    \"command_tag\": \"marked_for_death\"\n}\n```\nThis example checks if an entity has the `marked_for_death` tag.\n```json\n{\n    \"type\": \"sync:has_command_tag\",\n    \"command_tags\": [\n      \"team_red\",\n      \"alive\"\n    ]\n}\n```\nThis example checks if an entity has both \"team_red\" and \"alive\" tags."
+												},
+												"command_tag": {
+													"type": "string",
+													"description": "Single tag to check for",
+													"markdownDescription": "Single tag to check for"
+												},
+												"command_tags": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													},
+													"description": "Multiple tags that must all be present",
+													"markdownDescription": "Multiple tags that must all be present"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Has Command Tag (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Has Command Tag</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Checks if an entity has specific command tags. Command tags are metadata that can be added to entities using the <code>/tag</code> command.</p>\n<p>Type ID: <code>sync:has_command_tag</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>command_tag</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>optional</em></td>\n<td>Single tag to check for</td>\n</tr>\n<tr>\n<td><code>command_tags</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/array/\">Array</a> of <a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>optional</em></td>\n<td>Multiple tags that must all be present</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>If both fields are omitted, checks if the entity has any command tags</li>\n<li>Command tags are different from NBT tags - they&#39;re managed with <code>/tag</code></li>\n<li>Works with any entity, not just players</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:has_command_tag&quot;,\n    &quot;command_tag&quot;: &quot;marked_for_death&quot;\n}\n</code></pre>\n<p>This example checks if an entity has the <code>marked_for_death</code> tag.</p>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:has_command_tag&quot;,\n    &quot;command_tags&quot;: [\n      &quot;team_red&quot;,\n      &quot;alive&quot;\n    ]\n}\n</code></pre>\n<p>This example checks if an entity has both &quot;team_red&quot; and &quot;alive&quot; tags.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:in_pose"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"required": [
+												"pose"
+											],
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## In Pose\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/in_pose)\n\nChecks if an entity is in a specific pose. Poses include standing, crouching, swimming, sleeping, etc.\n\nType ID: `sync:in_pose`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:in_pose\",\n    \"pose\": \"crouching\"\n}\n```\nThis example checks if an entity is sneaking/crouching.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## In Pose\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/in_pose)\n\nChecks if an entity is in a specific pose. Poses include standing, crouching, swimming, sleeping, etc.\n\nType ID: `sync:in_pose`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:in_pose\",\n    \"pose\": \"crouching\"\n}\n```\nThis example checks if an entity is sneaking/crouching."
+												},
+												"pose": {
+													"enum": [
+														"STANDING",
+														"FALL_FLYING",
+														"SLEEPING",
+														"SWIMMING",
+														"SPIN_ATTACK",
+														"CROUCHING",
+														"LONG_JUMPING",
+														"DYING",
+														"CROAKING",
+														"USING_TONGUE",
+														"SITTING",
+														"ROARING",
+														"SNIFFING",
+														"EMERGING",
+														"DIGGING"
+													],
+													"description": "The pose to check for",
+													"markdownDescription": "The pose to check for"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: In Pose (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>In Pose</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Checks if an entity is in a specific pose. Poses include standing, crouching, swimming, sleeping, etc.</p>\n<p>Type ID: <code>sync:in_pose</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>pose</code></td>\n<td><a href=\"../power_types/pose#available-poses.md\">Entity Pose</a></td>\n<td></td>\n<td>The pose to check for</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Works on all entities that support poses</li>\n<li>Some poses are specific to certain entities (e.g., <code>using_tongue</code> for frogs)</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:in_pose&quot;,\n    &quot;pose&quot;: &quot;crouching&quot;\n}\n</code></pre>\n<p>This example checks if an entity is sneaking/crouching.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:is_selected_stolen_power"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Is Selected Stolen Power\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/is_selected_stolen_power)\n\nReturns `true` if the entity currently has a stolen power package selected (via [Cycle Stolen Power](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/is_selected_stolen_power)), optionally checking whether the selection matches a specific source identifier.\n\nType ID: `sync:is_selected_stolen_power`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:is_selected_stolen_power\"\n}\n```\nReturns `true` if the entity has any stolen power package selected.\n\n```json\n{\n    \"type\": \"sync:is_selected_stolen_power\",\n    \"source\": \"my_datapack:origin_powers\"\n}\n```\nReturns `true` only if the currently selected package originally came from `my_datapack:origin_powers`.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Is Selected Stolen Power\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/is_selected_stolen_power)\n\nReturns `true` if the entity currently has a stolen power package selected (via [Cycle Stolen Power](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/is_selected_stolen_power)), optionally checking whether the selection matches a specific source identifier.\n\nType ID: `sync:is_selected_stolen_power`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:is_selected_stolen_power\"\n}\n```\nReturns `true` if the entity has any stolen power package selected.\n\n```json\n{\n    \"type\": \"sync:is_selected_stolen_power\",\n    \"source\": \"my_datapack:origin_powers\"\n}\n```\nReturns `true` only if the currently selected package originally came from `my_datapack:origin_powers`."
+												},
+												"source": {
+													"description": "If provided, returns `true` only if the currently selected stolen package came from this source identifier",
+													"markdownDescription": "If provided, returns `true` only if the currently selected stolen package came from this source identifier",
+													"type": "string",
+													"pattern": "^(([a-z0-9_\\/\\-\\.\\*]+):)?[a-z0-9_\\/\\-\\.\\*]+$"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Is Selected Stolen Power (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Is Selected Stolen Power</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Returns <code>true</code> if the entity currently has a stolen power package selected (via <a href=\"../entity_actions/cycle_stolen_power.md\">Cycle Stolen Power</a>), optionally checking whether the selection matches a specific source identifier.</p>\n<p>Type ID: <code>sync:is_selected_stolen_power</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>source</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/identifier/\">Identifier</a></td>\n<td><em>optional</em></td>\n<td>If provided, returns <code>true</code> only if the currently selected stolen package came from this source identifier</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>If <code>source</code> is omitted, the condition simply checks whether the entity has <strong>any</strong> stolen power package selected at all.</li>\n<li>This is useful for gating a <a href=\"../entity_actions/use_selected_stolen_power.md\">Use Selected Stolen Power</a> or <a href=\"../bientity_actions/transfer.md\">Transfer (give mode)</a> call behind a UI check.</li>\n<li>Returns <code>false</code> for entities that have never stolen any powers.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:is_selected_stolen_power&quot;\n}\n</code></pre>\n<p>Returns <code>true</code> if the entity has any stolen power package selected.</p>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:is_selected_stolen_power&quot;,\n    &quot;source&quot;: &quot;my_datapack:origin_powers&quot;\n}\n</code></pre>\n<p>Returns <code>true</code> only if the currently selected package originally came from <code>my_datapack:origin_powers</code>.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:key_pressed"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"required": [
+												"key"
+											],
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Key Pressed\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/key_pressed)\n\nChecks if a player is pressing a specific key. Tracks both continuous holding and individual key presses.\n\nType ID: `sync:key_pressed`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:key_pressed\",\n  \"key\": {\n    \"key\": \"key.attack\",\n    \"continuous\": false\n  }\n}\n```\nThis example checks if the player just pressed the attack button (left click).",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Key Pressed\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/key_pressed)\n\nChecks if a player is pressing a specific key. Tracks both continuous holding and individual key presses.\n\nType ID: `sync:key_pressed`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:key_pressed\",\n  \"key\": {\n    \"key\": \"key.attack\",\n    \"continuous\": false\n  }\n}\n```\nThis example checks if the player just pressed the attack button (left click)."
+												},
+												"key": {
+													"description": "Translation key of the key to check",
+													"markdownDescription": "Translation key of the key to check",
+													"examples": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/88/then/properties/key/examples"
+													},
+													"definitions": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/88/then/properties/key/definitions"
+													},
+													"oneOf": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/88/then/properties/key/oneOf"
+													}
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Key Pressed (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Key Pressed</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Checks if a player is pressing a specific key. Tracks both continuous holding and individual key presses.</p>\n<p>Type ID: <code>sync:key_pressed</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>key</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/key/\">Key</a></td>\n<td></td>\n<td>Translation key of the key to check</td>\n</tr>\n<tr>\n<td><code>continuous</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/boolean/\">Boolean</a></td>\n<td><code>true</code></td>\n<td>Whether to check for continuous press or just the initial press</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Only works on player entities</li>\n<li>Key states are tracked client-side and synced to server</li>\n<li><code>continuous: false</code> only returns true on the tick when the key was first pressed</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:key_pressed&quot;,\n  &quot;key&quot;: {\n    &quot;key&quot;: &quot;key.attack&quot;,\n    &quot;continuous&quot;: false\n  }\n}\n</code></pre>\n<p>This example checks if the player just pressed the attack button (left click).</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:mod_loaded"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Mod Loaded\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/mod_loaded)\n\nChecks whether one or more Fabric mods are currently loaded. This is useful for enabling features that depend on other mods being present, without crashing the game if they're not installed.\n\nType ID: `sync:mod_loaded`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\":\"sync:mod_loaded\",\n  \"mod\":\"icarus\"\n}\n```\nThis example checks if the Icarus mod is loaded.\n\n```json\n{\n  \"type\":\"sync:mod_loaded\",\n  \"mods\":[\n    \"icarus\",\n    \"aspectslib\"\n  ]\n}\n```\nThis example checks if both Icarus and AspectsLib are loaded.\n\n```json\n{\n  \"type\":\"sync:mod_loaded\",\n  \"mod\":\"icarus\",\n  \"inverted\":true\n}\n```\nThis example checks if the Icarus mod is __not__ loaded.\n\n```json\n{\n  \"type\":\"apoli:multiple\",\n  \"icarus_wings\":{\n    \"type\":\"icarae_origin:wings\",\n    \"wings_type\":\"icarus:white_feathered_wings\",\n    \"condition\":{\n      \"type\":\"sync:mod_loaded\",\n      \"mod\":\"icarae_origin\",\n      \"inverted\":false\n    }\n  },\n  \"vanilla_wings\":{\n    \"type\":\"apoli:elytra_flight\",\n    \"render_elytra\":true,\n    \"texture_location\":\"minecraft:textures/entity/elytra.png\",\n    \"condition\":{\n      \"type\":\"sync:mod_loaded\",\n      \"mod\":\"icarae_origin\",\n      \"inverted\":true\n    }\n  }\n}\n```\n\nThis power uses Icarae Origin's `wings` if available, otherwise falls back to Apoli's `elytra_flight`.\n",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Mod Loaded\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/mod_loaded)\n\nChecks whether one or more Fabric mods are currently loaded. This is useful for enabling features that depend on other mods being present, without crashing the game if they're not installed.\n\nType ID: `sync:mod_loaded`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\":\"sync:mod_loaded\",\n  \"mod\":\"icarus\"\n}\n```\nThis example checks if the Icarus mod is loaded.\n\n```json\n{\n  \"type\":\"sync:mod_loaded\",\n  \"mods\":[\n    \"icarus\",\n    \"aspectslib\"\n  ]\n}\n```\nThis example checks if both Icarus and AspectsLib are loaded.\n\n```json\n{\n  \"type\":\"sync:mod_loaded\",\n  \"mod\":\"icarus\",\n  \"inverted\":true\n}\n```\nThis example checks if the Icarus mod is __not__ loaded.\n\n```json\n{\n  \"type\":\"apoli:multiple\",\n  \"icarus_wings\":{\n    \"type\":\"icarae_origin:wings\",\n    \"wings_type\":\"icarus:white_feathered_wings\",\n    \"condition\":{\n      \"type\":\"sync:mod_loaded\",\n      \"mod\":\"icarae_origin\",\n      \"inverted\":false\n    }\n  },\n  \"vanilla_wings\":{\n    \"type\":\"apoli:elytra_flight\",\n    \"render_elytra\":true,\n    \"texture_location\":\"minecraft:textures/entity/elytra.png\",\n    \"condition\":{\n      \"type\":\"sync:mod_loaded\",\n      \"mod\":\"icarae_origin\",\n      \"inverted\":true\n    }\n  }\n}\n```\n\nThis power uses Icarae Origin's `wings` if available, otherwise falls back to Apoli's `elytra_flight`.\n"
+												},
+												"mod": {
+													"type": "string",
+													"description": "A single mod ID to check for",
+													"markdownDescription": "A single mod ID to check for"
+												},
+												"mods": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													},
+													"description": "Multiple mod IDs (all must be loaded)",
+													"markdownDescription": "Multiple mod IDs (all must be loaded)"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Mod Loaded (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Mod Loaded</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Checks whether one or more Fabric mods are currently loaded. This is useful for enabling features that depend on other mods being present, without crashing the game if they&#39;re not installed.</p>\n<p>Type ID: <code>sync:mod_loaded</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>mod</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>optional</em></td>\n<td>A single mod ID to check for</td>\n</tr>\n<tr>\n<td><code>mods</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/array/\">Array</a> of <a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>optional</em></td>\n<td>Multiple mod IDs (all must be loaded)</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>At least one of <code>mod</code> or <code>mods</code> must be provided</li>\n<li>If <code>mods</code> is used, ALL listed mods must be loaded for the condition to be true</li>\n<li>Use <code>&quot;inverted&quot;: true</code> to check if a mod is <strong>not</strong> loaded</li>\n<li>Mod IDs are case-sensitive (check your mod&#39;s <code>fabric.mod.json</code>)</li>\n<li>This is a runtime condition; it doesn&#39;t affect power JSON parsing</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:mod_loaded&quot;,\n  &quot;mod&quot;:&quot;icarus&quot;\n}\n</code></pre>\n<p>This example checks if the Icarus mod is loaded.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:mod_loaded&quot;,\n  &quot;mods&quot;:[\n    &quot;icarus&quot;,\n    &quot;aspectslib&quot;\n  ]\n}\n</code></pre>\n<p>This example checks if both Icarus and AspectsLib are loaded.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:mod_loaded&quot;,\n  &quot;mod&quot;:&quot;icarus&quot;,\n  &quot;inverted&quot;:true\n}\n</code></pre>\n<p>This example checks if the Icarus mod is <strong>not</strong> loaded.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;apoli:multiple&quot;,\n  &quot;icarus_wings&quot;:{\n    &quot;type&quot;:&quot;icarae_origin:wings&quot;,\n    &quot;wings_type&quot;:&quot;icarus:white_feathered_wings&quot;,\n    &quot;condition&quot;:{\n      &quot;type&quot;:&quot;sync:mod_loaded&quot;,\n      &quot;mod&quot;:&quot;icarae_origin&quot;,\n      &quot;inverted&quot;:false\n    }\n  },\n  &quot;vanilla_wings&quot;:{\n    &quot;type&quot;:&quot;apoli:elytra_flight&quot;,\n    &quot;render_elytra&quot;:true,\n    &quot;texture_location&quot;:&quot;minecraft:textures/entity/elytra.png&quot;,\n    &quot;condition&quot;:{\n      &quot;type&quot;:&quot;sync:mod_loaded&quot;,\n      &quot;mod&quot;:&quot;icarae_origin&quot;,\n      &quot;inverted&quot;:true\n    }\n  }\n}\n</code></pre>\n<p>This power uses Icarae Origin&#39;s <code>wings</code> if available, otherwise falls back to Apoli&#39;s <code>elytra_flight</code>.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:perspective"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"required": [
+												"perspectives"
+											],
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Perspective\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/perspective)\n\nReturns `true` if the player's current camera perspective matches one of the specified values. The perspective is tracked server-side via a client-to-server packet sent whenever the player switches view.\n\nType ID: `sync:perspective`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\":\"sync:perspective\",\n  \"perspectives\":[\n    \"first_person\"\n  ]\n}\n```\nReturns `true` while the player is in first-person view.\n\n```json\n{\n  \"type\":\"sync:perspective\",\n  \"perspectives\":[\n    \"third_person_back\",\n    \"third_person_front\"\n  ]\n}\n```\nReturns `true` whenever the player is in any third-person perspective.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Perspective\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/perspective)\n\nReturns `true` if the player's current camera perspective matches one of the specified values. The perspective is tracked server-side via a client-to-server packet sent whenever the player switches view.\n\nType ID: `sync:perspective`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\":\"sync:perspective\",\n  \"perspectives\":[\n    \"first_person\"\n  ]\n}\n```\nReturns `true` while the player is in first-person view.\n\n```json\n{\n  \"type\":\"sync:perspective\",\n  \"perspectives\":[\n    \"third_person_back\",\n    \"third_person_front\"\n  ]\n}\n```\nReturns `true` whenever the player is in any third-person perspective."
+												},
+												"perspectives": {
+													"type": "array",
+													"items": {
+														"enum": [
+															"first_person",
+															"third_person_back",
+															"third_person_front"
+														]
+													},
+													"description": "One or more perspective names the entity must match",
+													"markdownDescription": "One or more perspective names the entity must match"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Perspective (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Perspective</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Returns <code>true</code> if the player&#39;s current camera perspective matches one of the specified values. The perspective is tracked server-side via a client-to-server packet sent whenever the player switches view.</p>\n<p>Type ID: <code>sync:perspective</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>perspectives</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/array/\">Array</a> of <a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>required</em></td>\n<td>One or more perspective names the entity must match</td>\n</tr>\n</tbody></table>\n<h3>Perspective Values</h3>\n<table>\n<thead>\n<tr>\n<th>Value</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>first_person</code></td>\n<td>Standard first-person view</td>\n</tr>\n<tr>\n<td><code>third_person_back</code></td>\n<td>Third-person camera behind player</td>\n</tr>\n<tr>\n<td><code>third_person_front</code></td>\n<td>Third-person camera facing player</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>Only works for <strong>player</strong> entities (non-players always return <code>false</code>).</li>\n<li>Defaults to <code>&quot;first_person&quot;</code> if the player has not yet sent a perspective packet (e.g. just joined).</li>\n<li>The condition is evaluated <strong>server-side</strong> using the last-received client state.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:perspective&quot;,\n  &quot;perspectives&quot;:[\n    &quot;first_person&quot;\n  ]\n}\n</code></pre>\n<p>Returns <code>true</code> while the player is in first-person view.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:perspective&quot;,\n  &quot;perspectives&quot;:[\n    &quot;third_person_back&quot;,\n    &quot;third_person_front&quot;\n  ]\n}\n</code></pre>\n<p>Returns <code>true</code> whenever the player is in any third-person perspective.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:player_model_type"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"required": [
+												"model_type"
+											],
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Player Model Type\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/player_model_type)\n\nChecks whether a player is using the \"wide\" (classic/default) or \"slim\" (Alex) player model variant.\n\nType ID: `sync:player_model_type`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:player_model_type\",\n    \"model_type\": \"wide\"\n}\n```\nThis example checks if the player is using the wide/classic model.\n\n```json\n{\n    \"type\": \"apoli:and\",\n    \"conditions\": [\n        {\n            \"type\": \"sync:player_model_type\",\n            \"model_type\": \"slim\"\n        },\n        {\n            \"type\": \"apoli:equipped_item\",\n            \"equipment_slot\": \"chest\",\n            \"item_condition\": {\n                \"type\": \"apoli:ingredient\",\n                \"ingredient\": {\n                    \"item\": \"minecraft:elytra\"\n                }\n            }\n        }\n    ]\n}\n```\nThis example checks if the player has a slim model and is wearing an elytra.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Player Model Type\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/player_model_type)\n\nChecks whether a player is using the \"wide\" (classic/default) or \"slim\" (Alex) player model variant.\n\nType ID: `sync:player_model_type`\n\n---\n\n### Examples\n\n```json\n{\n    \"type\": \"sync:player_model_type\",\n    \"model_type\": \"wide\"\n}\n```\nThis example checks if the player is using the wide/classic model.\n\n```json\n{\n    \"type\": \"apoli:and\",\n    \"conditions\": [\n        {\n            \"type\": \"sync:player_model_type\",\n            \"model_type\": \"slim\"\n        },\n        {\n            \"type\": \"apoli:equipped_item\",\n            \"equipment_slot\": \"chest\",\n            \"item_condition\": {\n                \"type\": \"apoli:ingredient\",\n                \"ingredient\": {\n                    \"item\": \"minecraft:elytra\"\n                }\n            }\n        }\n    ]\n}\n```\nThis example checks if the player has a slim model and is wearing an elytra."
+												},
+												"model_type": {
+													"enum": [
+														"wide",
+														"slim"
+													],
+													"description": "The model type to check for. Valid values: `\"wide\"` or `\"slim\"`",
+													"markdownDescription": "The model type to check for. Valid values: `\"wide\"` or `\"slim\"`"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Player Model Type (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Player Model Type</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Checks whether a player is using the &quot;wide&quot; (classic/default) or &quot;slim&quot; (Alex) player model variant.</p>\n<p>Type ID: <code>sync:player_model_type</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>model_type</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td></td>\n<td>The model type to check for. Valid values: <code>&quot;wide&quot;</code> or <code>&quot;slim&quot;</code></td>\n</tr>\n</tbody></table>\n<h3>How It Works</h3>\n<p>This condition checks the player&#39;s skin model type, which is determined by their Minecraft account settings. The player model type is automatically detected client-side and synchronized to the server.</p>\n<ul>\n<li><strong>&quot;wide&quot;</strong> - The classic/default player model (Steve) with 4-pixel wide arms</li>\n<li><strong>&quot;slim&quot;</strong> - The slim player model (Alex) with 3-pixel wide arms</li>\n</ul>\n<h3>Notes</h3>\n<ul>\n<li>Only works on player entities (returns false for non-players)</li>\n<li>Model type is cached and automatically updated when players change skins</li>\n<li>Model type information is cleared when players disconnect</li>\n<li>Case-insensitive comparison</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;sync:player_model_type&quot;,\n    &quot;model_type&quot;: &quot;wide&quot;\n}\n</code></pre>\n<p>This example checks if the player is using the wide/classic model.</p>\n<pre><code class=\"language-json\">{\n    &quot;type&quot;: &quot;apoli:and&quot;,\n    &quot;conditions&quot;: [\n        {\n            &quot;type&quot;: &quot;sync:player_model_type&quot;,\n            &quot;model_type&quot;: &quot;slim&quot;\n        },\n        {\n            &quot;type&quot;: &quot;apoli:equipped_item&quot;,\n            &quot;equipment_slot&quot;: &quot;chest&quot;,\n            &quot;item_condition&quot;: {\n                &quot;type&quot;: &quot;apoli:ingredient&quot;,\n                &quot;ingredient&quot;: {\n                    &quot;item&quot;: &quot;minecraft:elytra&quot;\n                }\n            }\n        }\n    ]\n}\n</code></pre>\n<p>This example checks if the player has a slim model and is wearing an elytra.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:raycast"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Raycast\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/raycast)\n\nReturns `true` if a ray cast from the entity's eye position hits something that satisfies all specified conditions. Mirrors the fields of the [Raycast (Entity Action)](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/raycast) that relate to targeting, but is purely a test (no actions are executed).\n\nType ID: `sync:raycast`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:raycast\",\n  \"distance\": 6.0,\n  \"block\": false,\n  \"hit_bientity_condition\": {\n    \"type\": \"apoli:target_condition\",\n    \"condition\": {\n      \"type\": \"apoli:status_effect\",\n      \"effect\": \"minecraft:poison\"\n    }\n  }\n}\n```\nReturns `true` if the entity is looking at a poisoned entity within 6 blocks.\n\n```json\n{\n  \"type\": \"sync:raycast\",\n  \"entity\": false,\n  \"block_condition\": {\n    \"type\": \"apoli:in_tag\",\n    \"tag\": \"minecraft:logs\"\n  }\n}\n```\nReturns `true` if the entity's line of sight hits a log block within default reach.\n\n```json\n{\n  \"type\": \"sync:raycast\",\n  \"distance\": 12.0,\n  \"match_bientity_condition\": {\n    \"type\": \"apoli:target_condition\",\n    \"condition\": {\n      \"type\": \"apoli:entity_type\",\n      \"entity_type\": \"minecraft:creeper\"\n    }\n  },\n  \"hit_bientity_condition\": {\n    \"type\": \"apoli:target_condition\",\n    \"condition\": {\n      \"type\": \"apoli:nbt\",\n      \"nbt\": \"{ignited:1b}\"\n    }\n  }\n}\n```\nReturns `true` only when the first creeper in the line of sight (up to 12 blocks away) is already ignited. Non-creeper entities are ignored entirely during the sweep.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Raycast\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/raycast)\n\nReturns `true` if a ray cast from the entity's eye position hits something that satisfies all specified conditions. Mirrors the fields of the [Raycast (Entity Action)](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/raycast) that relate to targeting, but is purely a test (no actions are executed).\n\nType ID: `sync:raycast`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\": \"sync:raycast\",\n  \"distance\": 6.0,\n  \"block\": false,\n  \"hit_bientity_condition\": {\n    \"type\": \"apoli:target_condition\",\n    \"condition\": {\n      \"type\": \"apoli:status_effect\",\n      \"effect\": \"minecraft:poison\"\n    }\n  }\n}\n```\nReturns `true` if the entity is looking at a poisoned entity within 6 blocks.\n\n```json\n{\n  \"type\": \"sync:raycast\",\n  \"entity\": false,\n  \"block_condition\": {\n    \"type\": \"apoli:in_tag\",\n    \"tag\": \"minecraft:logs\"\n  }\n}\n```\nReturns `true` if the entity's line of sight hits a log block within default reach.\n\n```json\n{\n  \"type\": \"sync:raycast\",\n  \"distance\": 12.0,\n  \"match_bientity_condition\": {\n    \"type\": \"apoli:target_condition\",\n    \"condition\": {\n      \"type\": \"apoli:entity_type\",\n      \"entity_type\": \"minecraft:creeper\"\n    }\n  },\n  \"hit_bientity_condition\": {\n    \"type\": \"apoli:target_condition\",\n    \"condition\": {\n      \"type\": \"apoli:nbt\",\n      \"nbt\": \"{ignited:1b}\"\n    }\n  }\n}\n```\nReturns `true` only when the first creeper in the line of sight (up to 12 blocks away) is already ignited. Non-creeper entities are ignored entirely during the sweep."
+												},
+												"distance": {
+													"type": "number",
+													"description": "Maximum range for both block and entity raycasting. Defaults to the entity's effective reach (respecting `reach-entity-attributes` if present)",
+													"markdownDescription": "Maximum range for both block and entity raycasting. Defaults to the entity's effective reach (respecting `reach-entity-attributes` if present)"
+												},
+												"block": {
+													"type": "boolean",
+													"default": true,
+													"description": "Whether the ray can hit blocks",
+													"markdownDescription": "Whether the ray can hit blocks"
+												},
+												"entity": {
+													"type": "boolean",
+													"default": true,
+													"description": "Whether the ray can hit entities",
+													"markdownDescription": "Whether the ray can hit entities"
+												},
+												"shape_type": {
+													"default": "visual",
+													"description": "The shape type used for block collision detection",
+													"markdownDescription": "The shape type used for block collision detection",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/44/then/properties/bientity_condition/allOf/4/then/properties/shape_type/enum"
+													}
+												},
+												"fluid_handling": {
+													"default": "any",
+													"description": "How fluids are treated during block raycasting",
+													"markdownDescription": "How fluids are treated during block raycasting",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/44/then/properties/bientity_condition/allOf/4/then/properties/fluid_handling/enum"
+													}
+												},
+												"space": {
+													"default": "world",
+													"description": "The coordinate space in which `direction` is interpreted",
+													"markdownDescription": "The coordinate space in which `direction` is interpreted",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/50/then/properties/space/enum"
+													}
+												},
+												"direction": {
+													"description": "Custom ray direction. If omitted, uses the entity's current look direction",
+													"markdownDescription": "Custom ray direction. If omitted, uses the entity's current look direction",
+													"type": "object",
+													"properties": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/5/then/properties/block_condition/allOf/7/then/properties/offset/properties"
+													}
+												},
+												"entity_distance": {
+													"type": "number",
+													"description": "Maximum range for entity detection only. Overrides `distance` for entities",
+													"markdownDescription": "Maximum range for entity detection only. Overrides `distance` for entities"
+												},
+												"block_distance": {
+													"type": "number",
+													"description": "Maximum range for block detection only. Overrides `distance` for blocks",
+													"markdownDescription": "Maximum range for block detection only. Overrides `distance` for blocks"
+												},
+												"match_bientity_condition": {
+													"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/44/then/properties/bientity_condition/allOf/17/then/properties/conditions/items"
+												},
+												"hit_bientity_condition": {
+													"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/44/then/properties/bientity_condition/allOf/17/then/properties/conditions/items"
+												},
+												"block_condition": {
+													"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/5/then/properties/block_condition/allOf/21/then/properties/conditions/items"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Raycast (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Raycast</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Returns <code>true</code> if a ray cast from the entity&#39;s eye position hits something that satisfies all specified conditions. Mirrors the fields of the <a href=\"../entity_actions/raycast.md\">Raycast (Entity Action)</a> that relate to targeting, but is purely a test (no actions are executed).</p>\n<p>Type ID: <code>sync:raycast</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>distance</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td><em>optional</em></td>\n<td>Maximum range for both block and entity raycasting. Defaults to the entity&#39;s effective reach (respecting <code>reach-entity-attributes</code> if present)</td>\n</tr>\n<tr>\n<td><code>block</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/boolean/\">Boolean</a></td>\n<td><code>true</code></td>\n<td>Whether the ray can hit blocks</td>\n</tr>\n<tr>\n<td><code>entity</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/boolean/\">Boolean</a></td>\n<td><code>true</code></td>\n<td>Whether the ray can hit entities</td>\n</tr>\n<tr>\n<td><code>shape_type</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/shape_type/\">Shape Type</a></td>\n<td><code>visual</code></td>\n<td>The shape type used for block collision detection</td>\n</tr>\n<tr>\n<td><code>fluid_handling</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/fluid_handling/\">Fluid Handling</a></td>\n<td><code>any</code></td>\n<td>How fluids are treated during block raycasting</td>\n</tr>\n<tr>\n<td><code>space</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/space/\">Space</a></td>\n<td><code>world</code></td>\n<td>The coordinate space in which <code>direction</code> is interpreted</td>\n</tr>\n<tr>\n<td><code>direction</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/vector/\">Vector</a></td>\n<td><em>optional</em></td>\n<td>Custom ray direction. If omitted, uses the entity&#39;s current look direction</td>\n</tr>\n<tr>\n<td><code>entity_distance</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td><em>optional</em></td>\n<td>Maximum range for entity detection only. Overrides <code>distance</code> for entities</td>\n</tr>\n<tr>\n<td><code>block_distance</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td><em>optional</em></td>\n<td>Maximum range for block detection only. Overrides <code>distance</code> for blocks</td>\n</tr>\n<tr>\n<td><code>match_bientity_condition</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/bientity_condition_types/\">Bi-entity Condition</a></td>\n<td><em>optional</em></td>\n<td>If specified, only entities passing this condition (actor = source, target = candidate) are considered valid entity hits</td>\n</tr>\n<tr>\n<td><code>hit_bientity_condition</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/bientity_condition_types/\">Bi-entity Condition</a></td>\n<td><em>optional</em></td>\n<td>If specified, the condition returns <code>true</code> only if the closest hit entity satisfies this condition (actor = source, target = hit entity)</td>\n</tr>\n<tr>\n<td><code>block_condition</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/block_condition_types/\">Block Condition</a></td>\n<td><em>optional</em></td>\n<td>If specified, the condition returns <code>true</code> only if the hit block satisfies this condition</td>\n</tr>\n</tbody></table>\n<h3>Notes</h3>\n<ul>\n<li>The ray originates from the entity&#39;s <strong>eye position</strong> in the look direction (or <code>direction</code> if set).</li>\n<li>When both <code>block</code> and <code>entity</code> are enabled, the <strong>closest</strong> hit is evaluated. A hit is only considered valid if it also passes any applicable <code>hit_bientity_condition</code> or <code>block_condition</code>.</li>\n<li><code>match_bientity_condition</code> acts as a filter during the sweep — candidates that fail it are invisible to the ray. <code>hit_bientity_condition</code> is an extra check applied only to the final closest hit.</li>\n<li>If the ray misses entirely, the condition returns <code>false</code>.</li>\n<li><code>distance</code>, <code>entity_distance</code>, and <code>block_distance</code> follow the same resolution rules as the <a href=\"../entity_actions/raycast.md\">Raycast Action</a>.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:raycast&quot;,\n  &quot;distance&quot;: 6.0,\n  &quot;block&quot;: false,\n  &quot;hit_bientity_condition&quot;: {\n    &quot;type&quot;: &quot;apoli:target_condition&quot;,\n    &quot;condition&quot;: {\n      &quot;type&quot;: &quot;apoli:status_effect&quot;,\n      &quot;effect&quot;: &quot;minecraft:poison&quot;\n    }\n  }\n}\n</code></pre>\n<p>Returns <code>true</code> if the entity is looking at a poisoned entity within 6 blocks.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:raycast&quot;,\n  &quot;entity&quot;: false,\n  &quot;block_condition&quot;: {\n    &quot;type&quot;: &quot;apoli:in_tag&quot;,\n    &quot;tag&quot;: &quot;minecraft:logs&quot;\n  }\n}\n</code></pre>\n<p>Returns <code>true</code> if the entity&#39;s line of sight hits a log block within default reach.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;: &quot;sync:raycast&quot;,\n  &quot;distance&quot;: 12.0,\n  &quot;match_bientity_condition&quot;: {\n    &quot;type&quot;: &quot;apoli:target_condition&quot;,\n    &quot;condition&quot;: {\n      &quot;type&quot;: &quot;apoli:entity_type&quot;,\n      &quot;entity_type&quot;: &quot;minecraft:creeper&quot;\n    }\n  },\n  &quot;hit_bientity_condition&quot;: {\n    &quot;type&quot;: &quot;apoli:target_condition&quot;,\n    &quot;condition&quot;: {\n      &quot;type&quot;: &quot;apoli:nbt&quot;,\n      &quot;nbt&quot;: &quot;{ignited:1b}&quot;\n    }\n  }\n}\n</code></pre>\n<p>Returns <code>true</code> only when the first creeper in the line of sight (up to 12 blocks away) is already ignited. Non-creeper entities are ignored entirely during the sweep.</p>\n"
+										}
+									},
+									{
+										"if": {
+											"required": [
+												"type"
+											],
+											"properties": {
+												"type": {
+													"const": "sync:velocity"
+												}
+											}
+										},
+										"then": {
+											"type": "object",
+											"properties": {
+												"type": {
+													"description": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Velocity\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/velocity)\n\nTests an entity's current velocity. Supports two modes: __per-axis exact checks__ (using `x`, `y`, `z`) and a __multi-axis combined check__ (using `axes` + `compare_to`).\n\nType ID: `sync:velocity`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"y\":-0.1,\n  \"comparison\":\"<=\"\n}\n```\nReturns `true` when the entity is falling (Y velocity ≤ -0.1).\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"y\":0.0,\n  \"comparison\":\">\"\n}\n```\nReturns `true` when the entity is moving upward.\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"axes\":[\n    \"x\",\n    \"z\"\n  ],\n  \"comparison\":\">=\",\n  \"compare_to\":0.3\n}\n```\nReturns `true` when the combined horizontal velocity (X + Z) is at least 0.3\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"x\":0.0,\n  \"y\":0.0,\n  \"z\":0.0,\n  \"comparison\":\"==\"\n}\n```\nReturns `true` only when the entity is completely stationary on all three axes.",
+													"markdownDescription": "### ⚠️ Requires [Sync](https://modrinth.com/mod/sync) to be installed! ⚠️\n\n## Velocity\n\n---\n\n\n[Entity Condition Types](https://0vergrown.github.io/Sync-Documentation-Website/?file=entity_conditions/velocity)\n\nTests an entity's current velocity. Supports two modes: __per-axis exact checks__ (using `x`, `y`, `z`) and a __multi-axis combined check__ (using `axes` + `compare_to`).\n\nType ID: `sync:velocity`\n\n---\n\n### Examples\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"y\":-0.1,\n  \"comparison\":\"<=\"\n}\n```\nReturns `true` when the entity is falling (Y velocity ≤ -0.1).\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"y\":0.0,\n  \"comparison\":\">\"\n}\n```\nReturns `true` when the entity is moving upward.\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"axes\":[\n    \"x\",\n    \"z\"\n  ],\n  \"comparison\":\">=\",\n  \"compare_to\":0.3\n}\n```\nReturns `true` when the combined horizontal velocity (X + Z) is at least 0.3\n\n```json\n{\n  \"type\":\"sync:velocity\",\n  \"x\":0.0,\n  \"y\":0.0,\n  \"z\":0.0,\n  \"comparison\":\"==\"\n}\n```\nReturns `true` only when the entity is completely stationary on all three axes."
+												},
+												"x": {
+													"type": "number",
+													"description": "Compares the X component of velocity using `comparison`",
+													"markdownDescription": "Compares the X component of velocity using `comparison`"
+												},
+												"y": {
+													"type": "number",
+													"description": "Compares the Y component of velocity using `comparison`",
+													"markdownDescription": "Compares the Y component of velocity using `comparison`"
+												},
+												"z": {
+													"type": "number",
+													"description": "Compares the Z component of velocity using `comparison`",
+													"markdownDescription": "Compares the Z component of velocity using `comparison`"
+												},
+												"axes": {
+													"type": "array",
+													"items": {
+														"enum": [
+															"x",
+															"y",
+															"z"
+														]
+													},
+													"description": "List of axes (`\"x\"`, `\"y\"`, `\"z\"`) whose velocity values are summed and compared to `compare_to`",
+													"markdownDescription": "List of axes (`\"x\"`, `\"y\"`, `\"z\"`) whose velocity values are summed and compared to `compare_to`"
+												},
+												"comparison": {
+													"default": ">=",
+													"description": "The comparison operator used in both modes",
+													"markdownDescription": "The comparison operator used in both modes",
+													"enum": {
+														"$ref": "#/properties/origins/items/oneOf/1/properties/condition/allOf/2/then/properties/comparison/enum"
+													}
+												},
+												"compare_to": {
+													"type": "number",
+													"default": 0,
+													"description": "The value to compare against in `axes` mode",
+													"markdownDescription": "The value to compare against in `axes` mode"
+												}
+											},
+											"x-intellij-html-description": "<hr>\n<h2>title: Velocity (Entity Condition)\ndate: 2024-01-07</h2>\n<h1>Velocity</h1>\n<p><a href=\"https://origins.readthedocs.io/en/latest/types/entity_condition_types/\">Entity Condition Types</a></p>\n<p>Tests an entity&#39;s current velocity. Supports two modes: <strong>per-axis exact checks</strong> (using <code>x</code>, <code>y</code>, <code>z</code>) and a <strong>multi-axis combined check</strong> (using <code>axes</code> + <code>compare_to</code>).</p>\n<p>Type ID: <code>sync:velocity</code></p>\n<h3>Fields</h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>x</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td><em>optional</em></td>\n<td>Compares the X component of velocity using <code>comparison</code></td>\n</tr>\n<tr>\n<td><code>y</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td><em>optional</em></td>\n<td>Compares the Y component of velocity using <code>comparison</code></td>\n</tr>\n<tr>\n<td><code>z</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td><em>optional</em></td>\n<td>Compares the Z component of velocity using <code>comparison</code></td>\n</tr>\n<tr>\n<td><code>axes</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/array/\">Array</a> of <a href=\"https://origins.readthedocs.io/en/latest/types/data_types/string/\">String</a></td>\n<td><em>optional</em></td>\n<td>List of axes (<code>&quot;x&quot;</code>, <code>&quot;y&quot;</code>, <code>&quot;z&quot;</code>) whose velocity values are summed and compared to <code>compare_to</code></td>\n</tr>\n<tr>\n<td><code>comparison</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/comparison/\">Comparison</a></td>\n<td><code>&gt;=</code></td>\n<td>The comparison operator used in both modes</td>\n</tr>\n<tr>\n<td><code>compare_to</code></td>\n<td><a href=\"https://origins.readthedocs.io/en/latest/types/data_types/float/\">Float</a></td>\n<td><code>0.0</code></td>\n<td>The value to compare against in <code>axes</code> mode</td>\n</tr>\n</tbody></table>\n<h3>Modes</h3>\n<p><strong>Per-axis mode</strong>: Triggered when any of <code>x</code>, <code>y</code>, or <code>z</code> are present. Each specified component is compared individually using <code>comparison</code>. All specified components must pass for the condition to return <code>true</code>. <code>compare_to</code> is not used in this mode.</p>\n<p><strong>Multi-axis mode</strong>: Triggered when <code>axes</code> is present. The signed velocity values of all listed axes are <strong>summed</strong> and compared to <code>compare_to</code> using <code>comparison</code>.</p>\n<p>If neither mode&#39;s fields are specified, the condition returns <code>true</code> vacuously.</p>\n<h3>Notes</h3>\n<ul>\n<li>Velocity values are <strong>signed</strong>: negative Y means falling, negative X/Z means moving in the negative direction on that axis.</li>\n<li>In multi-axis mode, summing signed values means opposing velocities can cancel out. Use a single axis in <code>axes</code> if you only care about one direction.</li>\n<li>Velocity is read server-side from the entity&#39;s current tick state.</li>\n</ul>\n<h3>Examples</h3>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:velocity&quot;,\n  &quot;y&quot;:-0.1,\n  &quot;comparison&quot;:&quot;&lt;=&quot;\n}\n</code></pre>\n<p>Returns <code>true</code> when the entity is falling (Y velocity ≤ -0.1).</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:velocity&quot;,\n  &quot;y&quot;:0.0,\n  &quot;comparison&quot;:&quot;&gt;&quot;\n}\n</code></pre>\n<p>Returns <code>true</code> when the entity is moving upward.</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:velocity&quot;,\n  &quot;axes&quot;:[\n    &quot;x&quot;,\n    &quot;z&quot;\n  ],\n  &quot;comparison&quot;:&quot;&gt;=&quot;,\n  &quot;compare_to&quot;:0.3\n}\n</code></pre>\n<p>Returns <code>true</code> when the combined horizontal velocity (X + Z) is at least 0.3</p>\n<pre><code class=\"language-json\">{\n  &quot;type&quot;:&quot;sync:velocity&quot;,\n  &quot;x&quot;:0.0,\n  &quot;y&quot;:0.0,\n  &quot;z&quot;:0.0,\n  &quot;comparison&quot;:&quot;==&quot;\n}\n</code></pre>\n<p>Returns <code>true</code> only when the entity is completely stationary on all three axes.</p>\n"
 										}
 									}
 								],
