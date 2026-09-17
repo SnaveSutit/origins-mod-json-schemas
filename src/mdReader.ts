@@ -18,7 +18,7 @@ export const MODULES = {
 		docsUrl: 'https://epoli-docs.readthedocs.io/en/latest/',
 	},
 	eggolib: {
-		rawUrl: 'RAW DOCS LINK MISSING',
+		rawUrl: 'https://raw.githubusercontent.com/eggolib/eggolib.github.io/1.9.x/docs/',
 		docsUrl: 'https://eggolib.github.io/latest/',
 	},
 	skillful: {
@@ -39,7 +39,16 @@ export const MODULES = {
 	// },
 }
 
-const MD_LINK_REGEX = /\[(?<name>[^\n[]+?)\]\((?<target>[^\n ]+?)\)/g
+// Matches both inline links `[name](target)` and reference-style links `[name][target]`
+// (eggolib's docs use the latter). The two alternatives use distinct group names since a
+// single match can only come from one branch.
+const MD_LINK_REGEX =
+	/\[(?<name>[^\n[\]]+?)\]\((?<target>[^\n)]+?)\)|\[(?<refName>[^\n[\]]+?)\]\[(?<refTarget>[^\n\]]+?)\]/g
+
+function normalizeLinkMatch(match: RegExpExecArray): { name: string; target: string } {
+	const g = match.groups!
+	return { name: g.name ?? g.refName!, target: g.target ?? g.refTarget! }
+}
 const DESCRIPTION_REGEX = /^#+\s*(?<title>.+)\n(?<description>[^]+?)\s*###\s*.*$/gm
 const LOOSE_DESCRIPTION_REGEX = /(?<description>[^]+?)\s*#{1,3}\s*.*$/gm
 const FIELD_TITLE_REGEX =
@@ -57,7 +66,7 @@ export function parseMDLink(url: string): { name: string; target: string } | und
 	MD_LINK_REGEX.lastIndex = 0
 	const match = MD_LINK_REGEX.exec(url)
 	if (!match) return
-	return match.groups as { name: string; target: string }
+	return normalizeLinkMatch(match)
 }
 
 export function pathToUrl(from: string, path: string) {
@@ -90,9 +99,7 @@ async function fetchMDFileCached(url: string): Promise<string> {
 function processDescription(description: string, mdFile: MDFile) {
 	let link = MD_LINK_REGEX.exec(description)
 	while (link) {
-		// term.brightRed(link[0])('\n')
-		const { name } = link.groups!
-		// term.brightGreen(`[${name}](${mdFile.docsUrl})`)('\n')
+		const { name } = normalizeLinkMatch(link)
 		description = description.replace(link[0], `[${name}](${mdFile.docsUrl})`)
 		link = MD_LINK_REGEX.exec(description)
 	}

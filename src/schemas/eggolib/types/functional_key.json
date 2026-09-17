@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/data_types/functional_key/",
+	"oneOf": [
+		{
+			"type": "string"
+		},
+		{
+			"type": "object",
+			"required": ["key"],
+			"properties": {
+				"key": {
+					"type": "string"
+				},
+				"continuous": {
+					"type": "boolean",
+					"default": false
+				},
+				"action": {
+					"$ref": "$ref(apoli:entity_action)"
+				}
+			}
+		}
+	]
+}

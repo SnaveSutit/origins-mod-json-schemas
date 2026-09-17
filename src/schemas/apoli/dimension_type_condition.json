@@ -1,0 +1,56 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/dimension_type_condition_types/",
+	"type": "object",
+	"required": ["type"],
+	"properties": {
+		"inverted": {
+			"description": "If true, the condition will be inverted.",
+			"markdownDescription": "If true, the condition will be inverted.",
+			"type": "boolean",
+			"default": true
+		}
+	},
+
+	"$IMPORT": [
+		{
+			"type": "import_files_into_array",
+			"path": "$ref(eggolib:dimension_type_condition_types)",
+			"output_key": "allOf",
+			"schema_structure": {
+				"if": {
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"const": "eggolib:$fileName"
+						}
+					}
+				},
+				"then": {
+					"$ref": "$fileRef"
+				}
+			}
+		},
+		{
+			"type": "import_file_contents_into_array",
+			"path": "$ref(apoli:meta_condition_types)",
+			"output_key": "allOf",
+			"variables": {
+				"conditionRef": "#"
+			},
+			"schema_structure": {
+				"if": {
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"enum": ["apoli:$fileName", "origins:$fileName"]
+						}
+					}
+				},
+				"then": "$fileRef"
+			}
+		}
+	],
+
+	"allOf": []
+}

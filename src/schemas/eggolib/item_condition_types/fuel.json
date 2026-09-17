@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/item_condition_types/fuel/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\nIf `comparison` and `compare_to` are omitted, this checks whether the item stack is considered fuel at all.",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\nIf `comparison` and `compare_to` are omitted, this checks whether the item stack is considered fuel at all."
+		},
+		"comparison": {
+			"$ref": "$ref(apoli:types/comparison)"
+		},
+		"compare_to": {
+			"type": "integer"
+		}
+	}
+}

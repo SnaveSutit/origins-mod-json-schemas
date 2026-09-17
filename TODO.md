@@ -1,7 +1,7 @@
 - [x] Add [Apugli](https://apugli.readthedocs.io/en/latest/) Support
 - [x] Add [Epoli](https://epoli-docs.readthedocs.io/en/latest/) Support
-- [ ] Add [Eggolib](https://eggolib.github.io/latest/) Support
-  - [ ] Get access to the raw documentation - Currently waiting on a response from the developer.
+- [x] Add [Eggolib](https://eggolib.github.io/latest/) Support
+  - [ ] The mod's dev branch has moved past what the published 1.9.x ("latest") docs cover - several entity actions on the docs site (`damage`, `drop_inventory`, `fire_projectile`, `grant_advancement`/`revoke_advancement`, `play_sound`, `remove_power`, `replace_inventory`, `selector_action`, `spawn_entity`) weren't found in the current source; schemas were written from the published docs regardless, since that's what's actually released.
 - [x] Add [Skillful](https://skillful-docs.readthedocs.io/en/latest/) Support
 - [x] Add [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki) Support
 - [x] Add [Mob Origins](https://moborigins.ultrusmods.me/en/latest/) Support

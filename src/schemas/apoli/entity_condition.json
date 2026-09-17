@@ -126,6 +126,25 @@
 					"$ref": "$fileRef"
 				}
 			}
+		},
+
+		{
+			"type": "import_files_into_array",
+			"path": "$ref(eggolib:entity_condition_types)",
+			"output_key": "allOf",
+			"schema_structure": {
+				"if": {
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"const": "eggolib:$fileName"
+						}
+					}
+				},
+				"then": {
+					"$ref": "$fileRef"
+				}
+			}
 		}
 	],
 

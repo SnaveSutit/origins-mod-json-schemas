@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/data_types/moon_phase/",
+	"enum": [
+		"full_moon",
+		"waning_gibbus",
+		"last_quarter",
+		"waning_crescent",
+		"new_moon",
+		"waxing_crescent",
+		"first_quarter",
+		"waxing_gibbus"
+	]
+}

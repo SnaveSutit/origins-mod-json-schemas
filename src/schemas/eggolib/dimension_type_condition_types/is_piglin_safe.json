@@ -1,0 +1,11 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/dimension_type_condition_types/is_piglin_safe/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		}
+	}
+}

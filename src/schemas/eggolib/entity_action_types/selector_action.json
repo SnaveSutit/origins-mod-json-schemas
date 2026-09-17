@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/entity_action_types/selector_action/",
+	"type": "object",
+	"required": ["selector"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"selector": {
+			"type": "string"
+		},
+		"bientity_action": {
+			"$ref": "$ref(apoli:bientity_action)"
+		},
+		"bientity_condition": {
+			"$ref": "$ref(apoli:bientity_condition)"
+		}
+	}
+}

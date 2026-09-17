@@ -1,0 +1,77 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/power_types/modify_breathing/",
+	"type": "object",
+	"required": ["breathable_block_condition"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"breathable_block_condition": {
+			"$ref": "$ref(apoli:block_condition)"
+		},
+		"breathing_status_effect": {
+			"$ref": "$ref(apoli:types/autofill_helpers/status_effect_identifier)"
+		},
+		"breathing_status_effects": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/autofill_helpers/status_effect_identifier)"
+			}
+		},
+		"gain_air_modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"gain_air_modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		},
+		"gain_air_interval": {
+			"$ref": "$ref(eggolib:types/positive_integer)",
+			"default": 1
+		},
+		"lose_air_modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"lose_air_modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		},
+		"lose_air_interval": {
+			"$ref": "$ref(eggolib:types/positive_integer)",
+			"default": 1
+		},
+		"damage_source": {
+			"$ref": "$ref(apoli:types/damage_source)"
+		},
+		"damage_modifier": {
+			"$ref": "$ref(apoli:types/attribute_modifier)"
+		},
+		"damage_modifiers": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(apoli:types/attribute_modifier)"
+			}
+		},
+		"damage_interval": {
+			"$ref": "$ref(eggolib:types/positive_integer)",
+			"default": 20
+		},
+		"particle": {
+			"$ref": "$ref(apoli:types/particle_effect)"
+		},
+		"ignore_respiration": {
+			"type": "boolean",
+			"default": false
+		},
+		"priority": {
+			"type": "integer",
+			"default": 0
+		}
+	}
+}

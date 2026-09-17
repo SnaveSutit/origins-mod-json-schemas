@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/bientity_condition_types/compare_score/",
+	"type": "object",
+	"required": ["actor_objective", "target_objective"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"actor_objective": {
+			"type": "string"
+		},
+		"target_objective": {
+			"type": "string"
+		},
+		"comparison": {
+			"default": "==",
+			"$ref": "$ref(apoli:types/comparison)"
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/item_action_types/copy_to_storage/",
+	"type": "object",
+	"required": ["id", "ops"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"id": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"ops": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(eggolib:types/copy_operation)"
+			}
+		}
+	}
+}

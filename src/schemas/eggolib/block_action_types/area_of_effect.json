@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/block_action_types/area_of_effect/",
+	"type": "object",
+	"required": ["radius", "block_action"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"radius": {
+			"type": "integer"
+		},
+		"shape": {
+			"enum": ["cube", "star", "sphere"],
+			"default": "cube"
+		},
+		"block_action": {
+			"$ref": "$ref(apoli:block_action)"
+		},
+		"block_condition": {
+			"$ref": "$ref(apoli:block_condition)"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/entity_action_types/grant_advancement/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"advancement": {
+			"$ref": "$ref(apoli:types/autofill_helpers/advancement_identifier)"
+		},
+		"criterion": {
+			"type": "string"
+		},
+		"criteria": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"selection": {
+			"$ref": "$ref(apoli:types/advancement_selection)",
+			"default": "only"
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/meta_action_types/loop/",
+	"type": "object",
+	"properties": {
+		"before_action": {
+			"$ref": "$actionRef"
+		},
+		"action": {
+			"$ref": "$actionRef"
+		},
+		"after_action": {
+			"$ref": "$actionRef"
+		},
+		"score": {
+			"$ref": "$ref(eggolib:types/scoreboard)"
+		},
+		"value": {
+			"type": "integer"
+		}
+	}
+}

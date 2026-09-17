@@ -1,0 +1,18 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/data_types/key/",
+	"oneOf": [
+		{
+			"type": "string"
+		},
+		{
+			"type": "object",
+			"required": ["key"],
+			"properties": {
+				"key": {
+					"type": "string"
+				}
+			}
+		}
+	]
+}

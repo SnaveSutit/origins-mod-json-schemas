@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/data_types/copy_operation/",
+	"type": "object",
+	"required": ["source", "target", "op"],
+	"properties": {
+		"source": {
+			"$ref": "$ref(eggolib:types/nbt_path)"
+		},
+		"target": {
+			"$ref": "$ref(eggolib:types/nbt_path)"
+		},
+		"op": {
+			"enum": ["replace", "merge", "append"]
+		}
+	}
+}

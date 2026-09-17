@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/data_types/sound_category/",
+	"enum": [
+		"ambient",
+		"blocks",
+		"hostile",
+		"master",
+		"music",
+		"neutral",
+		"players",
+		"records",
+		"voice",
+		"weather"
+	]
+}

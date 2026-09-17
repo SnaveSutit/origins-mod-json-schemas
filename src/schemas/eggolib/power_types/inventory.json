@@ -1,0 +1,33 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/power_types/inventory/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"title": {
+			"type": "string",
+			"default": "container.inventory"
+		},
+		"container_type": {
+			"$ref": "$ref(apoli:types/container_type)",
+			"default": "dropper"
+		},
+		"drop_on_death": {
+			"type": "boolean",
+			"default": false
+		},
+		"drop_on_death_filter": {
+			"$ref": "$ref(apoli:item_condition)"
+		},
+		"recoverable": {
+			"type": "boolean",
+			"default": true
+		},
+		"key": {
+			"$ref": "$ref(apoli:types/key)"
+		}
+	}
+}

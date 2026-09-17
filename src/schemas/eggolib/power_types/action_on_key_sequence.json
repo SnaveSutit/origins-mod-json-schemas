@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/power_types/action_on_key_sequence/",
+	"type": "object",
+	"required": ["keys", "key_sequence"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"success_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"fail_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"cooldown": {
+			"type": "integer",
+			"default": 0
+		},
+		"hud_render": {
+			"$ref": "$ref(apoli:types/hud_render)",
+			"default": { "should_render": false }
+		},
+		"keys": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(eggolib:types/functional_key)"
+			}
+		},
+		"key_sequence": {
+			"type": "array",
+			"items": {
+				"$ref": "$ref(eggolib:types/key)"
+			}
+		}
+	}
+}

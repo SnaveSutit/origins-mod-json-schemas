@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/power_types/stat/",
+	"type": "object",
+	"required": ["stat"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"stat": {
+			"$ref": "$ref(apoli:types/stat)"
+		},
+		"on_change_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"min_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"max_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"hud_render": {
+			"$ref": "$ref(apoli:types/hud_render)"
+		},
+		"min": {
+			"type": "integer",
+			"default": 0
+		},
+		"max": {
+			"type": "integer",
+			"default": 2147483647
+		},
+		"start_value": {
+			"type": "integer"
+		}
+	}
+}

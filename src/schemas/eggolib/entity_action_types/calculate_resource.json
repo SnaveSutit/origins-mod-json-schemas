@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/entity_action_types/calculate_resource/",
+	"type": "object",
+	"required": ["target", "source"],
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"target": {
+			"$ref": "$ref(apoli:types/identifier)"
+		},
+		"operation": {
+			"$ref": "$ref(eggolib:types/math_operation)",
+			"default": "add"
+		},
+		"source": {
+			"$ref": "$ref(apoli:types/identifier)"
+		}
+	}
+}

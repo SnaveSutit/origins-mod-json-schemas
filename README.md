@@ -15,6 +15,7 @@
 
 - Support for the following Origins Add-ons:
   - [Apugli](https://apugli.readthedocs.io/en/latest/)
+  - [Eggolib](https://eggolib.github.io/latest/)
   - [Epoli](https://epoli-docs.readthedocs.io/en/latest/)
   - [Extra Origins](https://github.com/MoriyaShiine/extra-origins/wiki)
   - [Mob Origins](https://moborigins.ultrusmods.me/en/latest/)

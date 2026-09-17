@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/data_types/abstract_team/",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"friendly_fire": {
+			"type": "boolean"
+		},
+		"show_friendly_invisibles": {
+			"type": "boolean"
+		},
+		"nametag_visibility": {
+			"$ref": "$ref(eggolib:types/visibility_rule)"
+		},
+		"death_message_visibility": {
+			"$ref": "$ref(eggolib:types/visibility_rule)"
+		},
+		"collision_rule": {
+			"$ref": "$ref(eggolib:types/collision_rule)"
+		}
+	}
+}

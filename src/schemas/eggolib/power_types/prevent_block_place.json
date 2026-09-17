@@ -1,0 +1,52 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$docsUrl": "https://eggolib.github.io/latest/types/power_types/prevent_block_place/",
+	"type": "object",
+	"properties": {
+		"type": {
+			"description": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n",
+			"markdownDescription": "### ⚠️ Requires [Eggolib](https://eggolib.github.io/latest/) to be installed! ⚠️\n\n"
+		},
+		"entity_action": {
+			"$ref": "$ref(apoli:entity_action)"
+		},
+		"held_item_action": {
+			"$ref": "$ref(apoli:item_action)"
+		},
+		"result_item_action": {
+			"$ref": "$ref(apoli:item_action)"
+		},
+		"place_to_action": {
+			"$ref": "$ref(apoli:block_action)"
+		},
+		"place_on_action": {
+			"$ref": "$ref(apoli:block_action)"
+		},
+		"item_condition": {
+			"$ref": "$ref(apoli:item_condition)"
+		},
+		"place_to_condition": {
+			"$ref": "$ref(apoli:block_condition)"
+		},
+		"place_on_condition": {
+			"$ref": "$ref(apoli:block_condition)"
+		},
+		"directions": {
+			"type": "array",
+			"items": {
+				"enum": ["up", "down", "north", "south", "east", "west"]
+			},
+			"default": ["up", "down", "north", "south", "east", "west"]
+		},
+		"hands": {
+			"type": "array",
+			"items": {
+				"enum": ["main_hand", "off_hand"]
+			},
+			"default": ["main_hand", "off_hand"]
+		},
+		"result_stack": {
+			"$ref": "$ref(apoli:types/item_stack)"
+		}
+	}
+}
